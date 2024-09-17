@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import { menuElemenets, websiteName } from "../../constants/textValues";
 
-import { useHome } from "../../context/home";
+import { useAuthors } from "../../context/authors";
 
 import logo from "../../assets/countryBooks.logo.png";
 
@@ -46,7 +46,7 @@ const menuElements: MenuElements[] = [
 
 export const Menu = () => {
   const [value, setValue] = useState<string>(menuElemenets.values.home);
-  const { handleNavigate } = useHome();
+  const { handleNavigate } = useAuthors();
 
   const handleChange = (event: React.SyntheticEvent, newValue: string) => {
     setValue(newValue);

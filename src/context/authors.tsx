@@ -8,9 +8,10 @@ type ProviderValues = {
 type Props = {
   children: ReactNode;
 };
-export const HomeContext = createContext({} as ProviderValues);
+export const AuthorContext = createContext({} as ProviderValues);
 
-export const HomeProvider = ({ children }: Props) => {
+export const AuthorProvider = ({ children }: Props) => {
+
   const navigate = useNavigate();
 
   const handleNavigate = (link: string | undefined) => link && navigate(link);
@@ -20,16 +21,16 @@ export const HomeProvider = ({ children }: Props) => {
   };
 
   return (
-    <HomeContext.Provider value={providerValue}>
+    <AuthorContext.Provider value={providerValue}>
       {children}
-    </HomeContext.Provider>
+    </AuthorContext.Provider>
   );
 };
 
-export const useHome = () => {
-  const homeContext = useContext(HomeContext);
-  if (homeContext) {
-    return homeContext;
+export const useAuthors = () => {
+  const authorContext = useContext(AuthorContext);
+  if (authorContext) {
+    return authorContext;
   } else {
     throw Error("No context like useHome");
   }

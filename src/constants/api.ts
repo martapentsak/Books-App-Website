@@ -1,0 +1,1 @@
+export const authorsAPi = "https://freetestapi.com/api/v1/authors"
