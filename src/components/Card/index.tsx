@@ -9,7 +9,7 @@ type CardProps = {
   isAuthorCard: boolean;
   image: string;
   name: string;
-  genre: string,
+  genre: string[],
 };
 
 export const Card = ({ isAuthorCard, image, name,genre }: CardProps) => {
@@ -29,7 +29,9 @@ export const Card = ({ isAuthorCard, image, name,genre }: CardProps) => {
           <CardContent>
             {!isAuthorCard && <span className="book-author"></span>}
             <h2 className="card-name">{name}</h2>
-            <span className="book-category">{genre}</span>
+           {genre.map((g : string, index) => (
+            <span className="book-category" key={index}>{g},</span>
+           ))}
           </CardContent>
         </CardActionArea>
       </CardElement>

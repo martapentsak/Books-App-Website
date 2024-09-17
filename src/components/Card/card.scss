@@ -1,11 +1,12 @@
 .author-card {
-    height: 330px;
-    width: 220px;
+    height: 300px;
+    width: 360px;
+    margin-right: 15px;
 
     .author-image {
-        height: 280px !important;
-        width: 100% !important;
-        background-size: cover;
+        height: 220px !important;
+        // width: 100% !important;
+        background-size: contain;
         border-radius: 14px !important;
     }
 
@@ -13,8 +14,11 @@
         height: auto !important;
         width: 100% !important;
         background-size: cover;
-        border-radius: 14px !important;
     }
+}
+
+.author-card:hover {
+    opacity: 0.8;
 }
 
 .css-xiduvl-MuiPaper-root-MuiCard-root {
@@ -25,7 +29,10 @@
 
 .css-1oitmrd-MuiButtonBase-root-MuiCardActionArea-root {
     width: 100% !important;
+    border-radius: 14px !important;
+
 }
+
 
 //Crd content
 .css-46bh2p-MuiCardContent-root {
