@@ -1,0 +1,71 @@
+.menu {
+    height: $menuHeight;
+    width: 100%;
+    border-bottom: 1px solid $coarseWool;
+
+    .menu-wrapper {
+        width: 90%;
+        height: 100%;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+
+        .menu-logo-section {
+            display: flex;
+            align-items: center;
+            width: 30%;
+
+
+            .logo {
+                height: $logoHeight;
+                width: $logoWidth;
+                margin-right: 10px;
+
+            }
+
+            .website-name {
+                color: $white;
+                display: flex;
+                flex-direction: column;
+                font-size: 16px;
+
+                .website-name-span {
+                    font-size: 22px;
+                }
+            }
+        }
+
+        .css-8atqhb {
+            width: 50% !important;
+        }
+
+        .css-heg063-MuiTabs-flexContainer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between !important;
+        }
+
+        .css-19wsa2m-MuiButtonBase-root-MuiTab-root.Mui-selected,
+        .css-19wsa2m-MuiButtonBase-root-MuiTab-root {
+            text-transform: capitalize !important;
+            font-size: 14px !important;
+            font-weight: 400 !important;
+            font-family: $defaultFontFamily;
+            padding: 26px 16px;
+        }
+
+        .css-19wsa2m-MuiButtonBase-root-MuiTab-root.Mui-selected {
+            color: $white !important;
+
+        }
+
+        .css-19wsa2m-MuiButtonBase-root-MuiTab-root {
+            color: $blackishGrey !important;
+        }
+
+        .css-1sj2jcg-MuiTabs-indicator {
+            background-color: $white !important;
+            height: $tabHeight !important;
+        }
+    }
+}
