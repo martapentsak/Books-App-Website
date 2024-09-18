@@ -4,21 +4,28 @@ import CardElement from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardActionArea from "@mui/material/CardActionArea";
 
-
 type CardProps = {
   isAuthorCard: boolean;
   image: string;
   name: string;
-  genre: string,
+  genre: string[];
+  author?: string;
 };
 
-export const Card = ({ isAuthorCard, image, name,genre }: CardProps) => {
+export const Card = ({
+  isAuthorCard,
+  image,
+  name,
+  genre,
+  author,
+}: CardProps) => {
   const { handleNavigate } = useAuthors();
 
+  const linkname = name.replace(/\s/g, "");
   return (
     <div className={isAuthorCard ? "author-card" : "book-card"}>
-      <CardElement sx={{ maxWidth: 345 }}>
-        <CardActionArea onClick={() => handleNavigate(name)}>
+      <CardElement>
+        <CardActionArea onClick={() => handleNavigate(linkname)}>
           <div>
             <img
               src={image}
@@ -27,9 +34,14 @@ export const Card = ({ isAuthorCard, image, name,genre }: CardProps) => {
             />
           </div>
           <CardContent>
-            {!isAuthorCard && <span className="book-author"></span>}
+            {!isAuthorCard && <span className="book-author">{author}</span>}
             <h2 className="card-name">{name}</h2>
-            <span className="book-category">{genre}</span>
+            {genre.map((g: string, index) => (
+              <span className="book-category" key={index}>
+                {g}
+                {index < genre.length - 1 ? ", " : ""}
+              </span>
+            ))}
           </CardContent>
         </CardActionArea>
       </CardElement>

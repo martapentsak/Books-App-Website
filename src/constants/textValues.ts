@@ -19,3 +19,10 @@ export const menuElemenets = {
     wishList: "/wishlist",
   },
 };
+
+export const homepage = {
+  postContainerTitle: "The most popular poets of all the time",
+  works: "Works",
+  popularWriter: "Popular writer",
+  popularBook: "Popular book",
+};

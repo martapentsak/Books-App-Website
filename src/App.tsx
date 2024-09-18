@@ -6,9 +6,7 @@ import { HomePage } from "./pages/HomePage";
 import { menuElemenets } from "./constants/textValues";
 
 import { AuthorProvider } from "./context/authors.tsx";
-
-
-
+import { BooksProvider } from "./context/books.tsx";
 
 import "./App.css";
 import "./styles/global.scss";
@@ -18,10 +16,12 @@ function App() {
     <div className="books-app">
       <BrowserRouter>
         <AuthorProvider>
-          <Menu />
-          <Routes>
-            <Route path={menuElemenets.links.home}  element={<HomePage/>}/> 
-          </Routes>
+          <BooksProvider>
+            <Menu />
+            <Routes>
+              <Route path={menuElemenets.links.home} element={<HomePage />} />
+            </Routes>
+          </BooksProvider>
         </AuthorProvider>
       </BrowserRouter>
     </div>
