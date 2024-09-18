@@ -9,6 +9,8 @@ import {
 import { useNavigate } from "react-router-dom";
 
 import { authorsAPi, poetsApi } from "../constants/api";
+import { sleep } from "../helpers/sleep";
+import { animationDuration } from "./animationDuration";
 
 type Author = {
   name: string;
@@ -21,6 +23,7 @@ type Author = {
 };
 
 type ProviderValues = {
+  loading: boolean,
   authorsList: Author[];
   poetsList: Author[];
   handleNavigate: (link: string | undefined) => void;
@@ -35,12 +38,22 @@ export const AuthorProvider = ({ children }: Props) => {
   const [authorsList, setAuthorsList] = useState<Author[]>([]);
   const [poetsList, setPoetsList] = useState<Author[]>([]);
 
+  const [loading, setLoading] = useState<boolean>(false)
+
+  const navigate = useNavigate();
+
+  const handleNavigate = (link: string | undefined) => link && navigate(link);
+
+  console.log(loading)
+
   useEffect(() => {
     handleGetAuthorList();
     handleGetPoetsList();
   }, []);
 
   const handleGetAuthorList = async () => {
+    setLoading(true)
+    await sleep(animationDuration)
     try {
       const response = await axios.get(authorsAPi);
       const list = response.data.map(({ id, name, image, genre }: Author) => ({
@@ -53,10 +66,16 @@ export const AuthorProvider = ({ children }: Props) => {
     } catch (err) {
       console.error("handleGetAuthorList", err);
       alert(err);
+    } finally {
+    setLoading(false)
+
     }
   };
 
+
   const handleGetPoetsList = async () => {
+    setLoading(true)
+    await sleep(animationDuration)
     try {
       const response = await axios.get(poetsApi);
       const list = response.data.map(
@@ -72,14 +91,15 @@ export const AuthorProvider = ({ children }: Props) => {
     } catch (err) {
       console.error("handleGetPoetsList", err);
       alert(err);
+    } finally {
+    setLoading(false)
     }
   };
 
-  const navigate = useNavigate();
 
-  const handleNavigate = (link: string | undefined) => link && navigate(link);
 
   const providerValue: ProviderValues = {
+    loading,
     poetsList,
     authorsList,
     handleNavigate,

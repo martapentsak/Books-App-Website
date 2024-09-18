@@ -8,6 +8,8 @@ import {
 } from "react";
 
 import { booksApi } from "../constants/api";
+import { sleep } from "../helpers/sleep";
+import { animationDuration } from "./animationDuration";
 
 type Book = {
   id: number;
@@ -19,6 +21,7 @@ type Book = {
 };
 
 type ProviderValues = {
+    loading: boolean,
   booksList: Book[];
 };
 
@@ -31,14 +34,18 @@ export const BooksContext = createContext({} as ProviderValues);
 export const BooksProvider = ({ children }: Props) => {
   const [booksList, setBooksList] = useState<Book[]>([]);
 
+  const [loading, setLoading] = useState<boolean>(false)
+
+
   useEffect(() => {
     handleGetBooks();
   }, []);
 
   const handleGetBooks = async () => {
+    setLoading(true)
+    await sleep(animationDuration)
     try {
       const reponse = await axios.get(booksApi);
-      console.log(reponse.data);
       const list = reponse.data.map(
         ({ id, title, author, genre, cover_image }: Book) => ({
           id,
@@ -52,10 +59,13 @@ export const BooksProvider = ({ children }: Props) => {
     } catch (err) {
       console.error("handleGetBooks", err);
       alert(err);
+    } finally {
+        setLoading(false)
     }
   };
 
   const providervalues: ProviderValues = {
+    loading,
     booksList,
   };
   return (

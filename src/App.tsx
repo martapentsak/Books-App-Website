@@ -1,9 +1,6 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 
-import { Menu } from "./components/Menu";
-import { HomePage } from "./pages/HomePage";
-
-import { menuElemenets } from "./constants/textValues";
+import { RoutesPage } from "./pages/Routes/index.tsx";
 
 import { AuthorProvider } from "./context/authors.tsx";
 import { BooksProvider } from "./context/books.tsx";
@@ -17,10 +14,7 @@ function App() {
       <BrowserRouter>
         <AuthorProvider>
           <BooksProvider>
-            <Menu />
-            <Routes>
-              <Route path={menuElemenets.links.home} element={<HomePage />} />
-            </Routes>
+            <RoutesPage />
           </BooksProvider>
         </AuthorProvider>
       </BrowserRouter>
