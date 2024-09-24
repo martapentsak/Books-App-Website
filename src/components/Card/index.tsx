@@ -18,6 +18,7 @@ export const Card = ({
   genres,
   author,
 }: CardProps) => {
+
   const handleRoute = () => {
     const navigate = useNavigate();
     navigate(author.replace(/\s/g, ""));
@@ -37,7 +38,7 @@ export const Card = ({
           <CardContent>
             {!isAuthorCard && <span className="book-author">{author}</span>}
             <h2 className="card-name">{isAuthorCard ? author : title}</h2>
-            {genres.map((g: string, index) => (
+            {genres.map((g,index) => (
               <span className="book-category" key={index}>
                 {g}
                 {index < genres.length - 1 ? ", " : ""}
