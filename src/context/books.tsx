@@ -14,6 +14,7 @@ type Book = {
   title: string;
   author: string;
   genre: string[];
+  genres: string[];
   coverImage: string;
   cover_image?: string;
 };
@@ -38,13 +39,13 @@ export const BooksProvider = ({ children }: Props) => {
   const handleGetBooks = async () => {
     try {
       const reponse = await axios.get(booksApi);
-      console.log(reponse.data);
+
       const list = reponse.data.map(
         ({ id, title, author, genre, cover_image }: Book) => ({
           id,
           title,
           author,
-          genre,
+          genres: genre,
           coverImage: cover_image,
         })
       );
@@ -54,6 +55,8 @@ export const BooksProvider = ({ children }: Props) => {
       alert(err);
     }
   };
+
+  console.log(booksList)
 
   const providervalues: ProviderValues = {
     booksList,

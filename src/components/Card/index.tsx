@@ -1,31 +1,32 @@
-import { useAuthors } from "../../context/authors.tsx";
-
 import CardElement from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardActionArea from "@mui/material/CardActionArea";
+import { useNavigate } from "react-router-dom";
 
 type CardProps = {
   isAuthorCard: boolean;
   image: string;
-  name: string;
-  genre: string[];
-  author?: string;
+  title?: string;
+  genres: string[];
+  author: string;
 };
 
 export const Card = ({
   isAuthorCard,
   image,
-  name,
-  genre,
+  title,
+  genres,
   author,
 }: CardProps) => {
-  const { handleNavigate } = useAuthors();
+  const handleRoute = () => {
+    const navigate = useNavigate();
+    navigate(author.replace(/\s/g, ""));
+  };
 
-  const linkname = name.replace(/\s/g, "");
   return (
     <div className={isAuthorCard ? "author-card" : "book-card"}>
       <CardElement>
-        <CardActionArea onClick={() => handleNavigate(linkname)}>
+        <CardActionArea onClick={() => handleRoute()}>
           <div>
             <img
               src={image}
@@ -35,11 +36,11 @@ export const Card = ({
           </div>
           <CardContent>
             {!isAuthorCard && <span className="book-author">{author}</span>}
-            <h2 className="card-name">{name}</h2>
-            {genre.map((g: string, index) => (
+            <h2 className="card-name">{isAuthorCard ? author : title}</h2>
+            {genres.map((g: string, index) => (
               <span className="book-category" key={index}>
                 {g}
-                {index < genre.length - 1 ? ", " : ""}
+                {index < genres.length - 1 ? ", " : ""}
               </span>
             ))}
           </CardContent>

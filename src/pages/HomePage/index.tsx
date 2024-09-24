@@ -25,8 +25,9 @@ export const HomePage = () => {
           )}
         </div>
         <div className="author-list">
-          {poetsList.map(({ image, name }, index) => (
+          {poetsList.map(({ image, author }, index) => (
             <div
+            key={index}
               onClick={() => setSelectedPoetIndex(index)}
               className={
                 selectedPoetIndex === index
@@ -34,10 +35,10 @@ export const HomePage = () => {
                   : "poet-section"
               }
             >
-              <img key={index} src={image} alt={name} className="poet-image" />
+              <img key={index} src={image} alt={author} className="poet-image" />
               {selectedPoetIndex === index && (
                 <span style={{ color: "white" }} className="poet-name">
-                  {name}
+                  {author}
                 </span>
               )}
             </div>
@@ -64,14 +65,14 @@ export const HomePage = () => {
         <div className="popular-books-section">
           <h2 className="container-list-title">{homepage.popularBook}</h2>
           <div className="books-list-section">
-            {booksList.map(({ title, author, coverImage, genre }, index) => (
+            {booksList.map(({ title, author, coverImage, genres }, index) => (
               <Card
                 isAuthorCard={false}
-                name={title}
+                title={title}
                 author={author}
                 key={index}
                 image={coverImage}
-                genre={genre}
+                genres={genres}
               />
             ))}
           </div>

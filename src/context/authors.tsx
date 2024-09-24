@@ -11,10 +11,12 @@ import {
 import { authorsAPi, poetsApi } from "../constants/api";
 
 type Author = {
+  author: string;
   name: string;
   image: string;
   cover_image?: string;
   genre: string[];
+  genres: string[];
   notable_works?: string[];
   works?: string[];
   id: string;
@@ -44,10 +46,11 @@ export const AuthorProvider = ({ children }: Props) => {
       const response = await axios.get(authorsAPi);
       const list = response.data.map(({ id, name, image, genre }: Author) => ({
         id,
-        name,
+        author: name,
         image,
-        genre,
+        genres: genre,
       }));
+    
       setAuthorsList(list);
     } catch (err) {
       console.error("handleGetAuthorList", err);
@@ -55,18 +58,24 @@ export const AuthorProvider = ({ children }: Props) => {
     }
   };
 
+
+
   const handleGetPoetsList = async () => {
     try {
       const response = await axios.get(poetsApi);
       const list = response.data.map(
         ({ id, name, image, genre, notable_works }: Author) => ({
           id,
-          name,
+          author: name,
           image,
-          genre,
+          genres: genre,
           works: notable_works,
         })
       );
+
+
+
+
       setPoetsList(list);
     } catch (err) {
       console.error("handleGetPoetsList", err);
