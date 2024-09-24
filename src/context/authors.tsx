@@ -6,7 +6,7 @@ import {
   useEffect,
   useState,
 } from "react";
-import { useNavigate } from "react-router-dom";
+
 
 import { authorsAPi, poetsApi } from "../constants/api";
 
@@ -23,7 +23,6 @@ type Author = {
 type ProviderValues = {
   authorsList: Author[];
   poetsList: Author[];
-  handleNavigate: (link: string | undefined) => void;
 };
 
 type Props = {
@@ -75,14 +74,11 @@ export const AuthorProvider = ({ children }: Props) => {
     }
   };
 
-  const navigate = useNavigate();
-
-  const handleNavigate = (link: string | undefined) => link && navigate(link);
+ 
 
   const providerValue: ProviderValues = {
     poetsList,
-    authorsList,
-    handleNavigate,
+    authorsList
   };
 
   return (
