@@ -1,4 +1,6 @@
 import './App.css'
+import "./styles/global.scss"
+
 
 function App() {
 
@@ -6,6 +8,7 @@ function App() {
   return (
    <div>
 Books app
+
    </div>
   )
 }

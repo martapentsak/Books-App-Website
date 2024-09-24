@@ -1,0 +1,93 @@
+.author-card {
+    height: 280px;
+    width: 360px;
+    margin-right: 25px;
+    opacity: 0.8;
+
+
+
+    .author-image {
+        height: 180px !important;
+        width: 140px !important;
+        background-size: contain;
+        border-radius: 14px !important;
+    }
+
+    .book-image {
+        height: auto !important;
+        width: 100% !important;
+        background-size: cover;
+        border-radius: 14px !important;
+
+    }
+}
+
+.author-card:hover {
+    opacity: 1;
+}
+
+.css-xiduvl-MuiPaper-root-MuiCard-root {
+    width: 100% !important;
+    height: 100% !important;
+    background-color: transparent !important;
+
+}
+
+.css-1oitmrd-MuiButtonBase-root-MuiCardActionArea-root {
+    width: 100% !important;
+    border-radius: 14px !important;
+
+
+
+
+}
+
+
+//Crd content
+.css-46bh2p-MuiCardContent-root {
+    padding: 8px 10px !important;
+    font-family: $defaultFontFamily !important;
+    // background-color: transparent !important;
+
+}
+
+.css-6fm6rz-MuiPaper-root-MuiCard-root {
+    background-color: transparent !important;
+    border-radius: 14px !important;
+
+}
+
+.card-name {
+    color: $white;
+    font-size: 15px;
+    margin: 5px 0 !important;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+.book-author,
+.book-category {
+    color: $blackishGrey;
+    font-size: 12px;
+}
+
+
+.book-card {
+    height: 350px;
+    width: 180px;
+    margin-right: 30px;
+    opacity: 0.8;
+    margin-bottom: 8px;
+
+
+    .book-image {
+        height: 240px !important;
+        width: 180px !important;
+        background-size: cover;
+        border-radius: 14px !important;
+    }
+}
+
+.book-card:hover {
+    opacity: 1;
+}
