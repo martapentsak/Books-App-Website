@@ -11,6 +11,8 @@ import { errors } from "../constants/textValues";
 import { authorsAPi, poetsApi } from "../constants/api";
 
 import useAsyncEffect from "../hooks/useAsyncEffect";
+import { sleep } from "../helpers/sleep";
+import { loadingDuration } from "../constants/duration";
 
 type Author = {
   author: string;
@@ -42,6 +44,7 @@ export const AuthorProvider = ({ children }: Props) => {
   const [authorListError, setAuthorListError] = useState<string>("");
 
   useAsyncEffect(async () => {
+    await sleep(loadingDuration)
     try {
       const authorResponse = await axios.get(authorsAPi);
       const poetsResponse = await axios.get(poetsApi);

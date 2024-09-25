@@ -11,6 +11,8 @@ import { errors } from "../constants/textValues";
 import { booksApi } from "../constants/api";
 
 import useAsyncEffect from "../hooks/useAsyncEffect";
+import { sleep } from "../helpers/sleep";
+import { loadingDuration } from "../constants/duration";
 
 type Book = {
   id: number;
@@ -39,6 +41,7 @@ export const BooksProvider = ({ children }: Props) => {
   const [bookListError, setBookListError] = useState<string>("");
 
   useAsyncEffect(async () => {
+    await sleep(loadingDuration)
     try {
       const reponse = await axios.get(booksApi);
       const list = reponse.data.map(
