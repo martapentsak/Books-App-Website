@@ -1,7 +1,6 @@
 interface Provider<TProps> {
-    Component: React.ComponentType<React.PropsWithChildren<TProps>>;
-    props?: Omit<TProps, "children">;
-  }
+  (props: React.PropsWithChildren<TProps>): JSX.Element;
+}
   
   export function composeProviders<TProviders extends Array<Provider<any>>>(
     providers: TProviders
@@ -12,8 +11,8 @@ interface Provider<TProps> {
       const initialJSX = <>{children}</>;
   
       return providers.reduceRight<JSX.Element>(
-        (prevJSX, { Component: CurrentProvider, props = {} }) => {
-          return <CurrentProvider {...props}>{prevJSX}</CurrentProvider>;
+        (prevJSX, CurrentProvider) => {
+          return <CurrentProvider>{prevJSX}</CurrentProvider>;
         },
         initialJSX
       );

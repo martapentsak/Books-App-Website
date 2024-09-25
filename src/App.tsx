@@ -15,11 +15,7 @@ import "./App.css";
 import "./styles/global.scss";
 
 
-const providers = [
-  { Component: BrowserRouter },
-  { Component: AuthorProvider },
-  { Component: BooksProvider },
-];
+const providers = [BrowserRouter, AuthorProvider, BooksProvider ];
 
 const CombinedProviders = composeProviders(providers);
 
