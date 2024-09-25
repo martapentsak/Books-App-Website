@@ -15,6 +15,8 @@ export const HomePage = () => {
     useAuthors();
   const { booksList, bookListError, handleCloseBooksError } = useBooks();
 
+  const currentPoet = poetsList.length > 0 && poetsList[selectedPoetIndex] 
+
   return (
     <div className="home-page">
       {authorListError ||
@@ -35,9 +37,9 @@ export const HomePage = () => {
       <div className="poets-section">
         <div className="selecled-poet-section">
           <p className="selecled-poet-title">{homepage.postContainerTitle}</p>
-          {poetsList.length > 0 && poetsList[selectedPoetIndex]?.image && (
+          {currentPoet && (
             <img
-              src={poetsList[selectedPoetIndex].image}
+              src={currentPoet.image}
               className="selected-poet-image"
             />
           )}
