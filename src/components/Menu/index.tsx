@@ -9,6 +9,7 @@ import logo from "../../assets/countryBooks.logo.png";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Box from "@mui/material/Box";
+import { useNavigate } from "react-router-dom";
 
 type MenuElements = {
   value: string;
@@ -46,12 +47,14 @@ const menuElements: MenuElements[] = [
 
 export const Menu = () => {
   const [value, setValue] = useState<string>(menuElemenets.values.home);
-  const { handleNavigate } = useAuthors();
+
+  const navigate = useNavigate()
 
   const handleChange = (event: React.SyntheticEvent, newValue: string) => {
     setValue(newValue);
     const currentTabLink = menuElements.find((v) => v.value === newValue);
-    handleNavigate(currentTabLink?.link);
+    const link = currentTabLink? currentTabLink.link : "/"
+    navigate(link);
   };
 
   return (

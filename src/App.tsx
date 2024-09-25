@@ -8,9 +8,12 @@ import { menuElemenets } from "./constants/textValues";
 import { AuthorProvider } from "./context/authors.tsx";
 import { BooksProvider } from "./context/books.tsx";
 
+import { composeProviders } from "./utils/composeProviders.tsx";
+
+
 import "./App.css";
 import "./styles/global.scss";
-import { composeProviders } from "./utils/composeProviders.ts";
+
 
 const providers = [
   { Component: BrowserRouter },
