@@ -10,20 +10,27 @@ import { BooksProvider } from "./context/books.tsx";
 
 import "./App.css";
 import "./styles/global.scss";
+import { composeProviders } from "./utils/composeProviders.ts";
+
+const providers = [
+  { Component: BrowserRouter },
+  { Component: AuthorProvider },
+  { Component: BooksProvider },
+];
+
+const CombinedProviders = composeProviders(providers);
 
 function App() {
   return (
     <div className="books-app">
-      <BrowserRouter>
-        <AuthorProvider>
-          <BooksProvider>
-            <Menu />
-            <Routes>
-              <Route path={menuElemenets.links.home} element={<HomePage />} />
-            </Routes>
-          </BooksProvider>
-        </AuthorProvider>
-      </BrowserRouter>
+     <CombinedProviders>
+      <div className="books-app">
+        <Menu />
+        <Routes>
+          <Route path={menuElemenets.links.home} element={<HomePage />} />
+        </Routes>
+      </div>
+    </CombinedProviders>
     </div>
   );
 }
