@@ -36,6 +36,9 @@ export const AuthorProvider = ({ children }: Props) => {
   const [authorsList, setAuthorsList] = useState<Author[]>([]);
   const [poetsList, setPoetsList] = useState<Author[]>([]);
 
+
+  
+
   useEffect(() => {
     handleGetAuthorList();
     handleGetPoetsList();

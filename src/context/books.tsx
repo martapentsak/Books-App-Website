@@ -3,11 +3,11 @@ import {
   ReactNode,
   createContext,
   useContext,
-  useEffect,
   useState,
 } from "react";
 
 import { booksApi } from "../constants/api";
+import useAsyncEffect from "../hooks/useAsyncEffect";
 
 type Book = {
   id: number;
@@ -32,14 +32,10 @@ export const BooksContext = createContext({} as ProviderValues);
 export const BooksProvider = ({ children }: Props) => {
   const [booksList, setBooksList] = useState<Book[]>([]);
 
-  useEffect(() => {
-    handleGetBooks();
-  }, []);
 
-  const handleGetBooks = async () => {
+  useAsyncEffect(async () => {
     try {
       const reponse = await axios.get(booksApi);
-
       const list = reponse.data.map(
         ({ id, title, author, genre, cover_image }: Book) => ({
           id,
@@ -54,9 +50,8 @@ export const BooksProvider = ({ children }: Props) => {
       console.error("handleGetBooks", err);
       alert(err);
     }
-  };
+  }, []);
 
-  console.log(booksList)
 
   const providervalues: ProviderValues = {
     booksList,
