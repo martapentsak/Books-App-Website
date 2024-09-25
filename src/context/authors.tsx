@@ -7,8 +7,8 @@ import {
   useState,
 } from "react";
 
-
 import { authorsAPi, poetsApi } from "../constants/api";
+import useAsyncEffect from "../hooks/useAsyncEffect";
 
 type Author = {
   author: string;
@@ -36,61 +36,42 @@ export const AuthorProvider = ({ children }: Props) => {
   const [authorsList, setAuthorsList] = useState<Author[]>([]);
   const [poetsList, setPoetsList] = useState<Author[]>([]);
 
-
-  
-
-  useEffect(() => {
-    handleGetAuthorList();
-    handleGetPoetsList();
-  }, []);
-
-  const handleGetAuthorList = async () => {
+  useAsyncEffect(async () => {
     try {
-      const response = await axios.get(authorsAPi);
-      const list = response.data.map(({ id, name, image, genre }: Author) => ({
-        id,
-        author: name,
-        image,
-        genres: genre,
-      }));
-    
-      setAuthorsList(list);
-    } catch (err) {
-      console.error("handleGetAuthorList", err);
-      alert(err);
-    }
-  };
-
-
-
-  const handleGetPoetsList = async () => {
-    try {
-      const response = await axios.get(poetsApi);
-      const list = response.data.map(
-        ({ id, name, image, genre, notable_works }: Author) => ({
-          id,
-          author: name,
-          image,
-          genres: genre,
-          works: notable_works,
-        })
+      const authorResponse = await axios.get(authorsAPi);
+      const poetsResponse = await axios.get(poetsApi);
+      Promise.all([authorResponse, poetsResponse]).then(
+        ([authorResponse, poetsResponse]) => {
+          const authors = authorResponse.data.map(
+            ({ id, name, image, genre }: Author) => ({
+              id,
+              author: name,
+              image,
+              genres: genre,
+            })
+          );
+          setAuthorsList(authors);
+          const poets = poetsResponse.data.map(
+            ({ id, name, image, genre, notable_works }: Author) => ({
+              id,
+              author: name,
+              image,
+              genres: genre,
+              works: notable_works,
+            })
+          );
+          setPoetsList(poets);
+        }
       );
-
-
-
-
-      setPoetsList(list);
     } catch (err) {
-      console.error("handleGetPoetsList", err);
+      console.error("Get authors list", err);
       alert(err);
     }
-  };
-
- 
+  }, []);
 
   const providerValue: ProviderValues = {
     poetsList,
-    authorsList
+    authorsList,
   };
 
   return (
