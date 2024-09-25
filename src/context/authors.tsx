@@ -9,10 +9,11 @@ import {
 
 import { errors } from "../constants/textValues";
 import { authorsAPi, poetsApi } from "../constants/api";
+import { loadingDuration } from "../constants/duration";
 
 import useAsyncEffect from "../hooks/useAsyncEffect";
+
 import { sleep } from "../helpers/sleep";
-import { loadingDuration } from "../constants/duration";
 
 type Author = {
   author: string;
@@ -27,7 +28,7 @@ type Author = {
 };
 
 type ProviderValues = {
-  loading: boolean,
+  loading: boolean;
   authorListError: string;
   authorsList: Author[];
   poetsList: Author[];
@@ -45,46 +46,43 @@ export const AuthorProvider = ({ children }: Props) => {
 
   const [authorListError, setAuthorListError] = useState<string>("");
 
-  const [loading, setLoading] = useState<boolean>(false)
+  const [loading, setLoading] = useState<boolean>(false);
 
   useAsyncEffect(async () => {
-    setLoading(true)
-    await sleep(loadingDuration)
+    setLoading(true);
+    await sleep(loadingDuration);
     try {
       const authorResponse = await axios.get(authorsAPi);
       const poetsResponse = await axios.get(poetsApi);
-      Promise.all([authorResponse, poetsResponse]).then(
-        ([authorResponse, poetsResponse]) => {
-          const authors = authorResponse.data.map(
-            ({ id, name, image, genre }: Author) => ({
-              id,
-              author: name,
-              image,
-              genres: genre,
-            })
-          );
-          setAuthorsList(authors);
-          const poets = poetsResponse.data.map(
-            ({ id, name, image, genre, notable_works }: Author) => ({
-              id,
-              author: name,
-              image,
-              genres: genre,
-              works: notable_works,
-            })
-          );
-          setPoetsList(poets);
-        }
+      const allPromises = await Promise.all([authorResponse, poetsResponse]);
+      const authors = allPromises[0].data.map(
+        ({ id, name, image, genre }: Author) => ({
+          id,
+          author: name,
+          image,
+          genres: genre,
+        })
       );
+      setAuthorsList(authors);
+      const poets = allPromises[1].data.map(
+        ({ id, name, image, genre, notable_works }: Author) => ({
+          id,
+          author: name,
+          image,
+          genres: genre,
+          works: notable_works,
+        })
+      );
+      setPoetsList(poets);
     } catch (err) {
       console.error("Get authors list", err);
       setAuthorListError(errors.getAuthorsList);
     } finally {
-      setLoading(false)
+      setLoading(false);
     }
   }, []);
 
-  const handleCloseAuthorsError = useCallback(() => setAuthorListError(""),[]);
+  const handleCloseAuthorsError = useCallback(() => setAuthorListError(""), []);
 
   const providerValue: ProviderValues = {
     loading,
