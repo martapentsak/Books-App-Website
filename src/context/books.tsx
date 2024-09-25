@@ -68,9 +68,7 @@ export const BooksProvider = ({ children }: Props) => {
     }
   }, []);
 
-  const handleCloseBooksError = useCallback(() => {
-    setBookListError("");
-  }, []);
+  const handleCloseBooksError = useCallback(() => setBookListError(""), [])
 
   const providervalues: ProviderValues = {
     loading,
