@@ -7,13 +7,31 @@ import { useBooks } from "../../context/books";
 
 import { homepage } from "../../constants/textValues";
 
+import { Alert, Box } from "@mui/material";
+
 export const HomePage = () => {
   const [selectedPoetIndex, setSelectedPoetIndex] = useState<number>(0);
-  const { authorsList, poetsList } = useAuthors();
-  const { booksList } = useBooks();
+  const { authorsList, poetsList, authorListError, handleCloseAuthorsError } =
+    useAuthors();
+  const { booksList, bookListError, handleCloseBooksError } = useBooks();
 
   return (
     <div className="home-page">
+      {authorListError ||
+        (bookListError && (
+          <Box className="alert-section">
+            <Alert
+              severity="error"
+              onClose={() =>
+                bookListError
+                  ? handleCloseBooksError()
+                  : handleCloseAuthorsError()
+              }
+            >
+              {authorListError || bookListError}
+            </Alert>
+          </Box>
+        ))}
       <div className="poets-section">
         <div className="selecled-poet-section">
           <p className="selecled-poet-title">{homepage.postContainerTitle}</p>
@@ -27,7 +45,7 @@ export const HomePage = () => {
         <div className="author-list">
           {poetsList.map(({ image, author }, index) => (
             <div
-            key={index}
+              key={index}
               onClick={() => setSelectedPoetIndex(index)}
               className={
                 selectedPoetIndex === index
@@ -35,7 +53,12 @@ export const HomePage = () => {
                   : "poet-section"
               }
             >
-              <img key={index} src={image} alt={author} className="poet-image" />
+              <img
+                key={index}
+                src={image}
+                alt={author}
+                className="poet-image"
+              />
               {selectedPoetIndex === index && (
                 <span style={{ color: "white" }} className="poet-name">
                   {author}

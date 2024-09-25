@@ -2,12 +2,14 @@ import axios from "axios";
 import {
   ReactNode,
   createContext,
+  useCallback,
   useContext,
-  useEffect,
   useState,
 } from "react";
 
+import { errors } from "../constants/textValues";
 import { authorsAPi, poetsApi } from "../constants/api";
+
 import useAsyncEffect from "../hooks/useAsyncEffect";
 
 type Author = {
@@ -23,8 +25,10 @@ type Author = {
 };
 
 type ProviderValues = {
+  authorListError: string;
   authorsList: Author[];
   poetsList: Author[];
+  handleCloseAuthorsError: () => void;
 };
 
 type Props = {
@@ -35,6 +39,7 @@ export const AuthorContext = createContext({} as ProviderValues);
 export const AuthorProvider = ({ children }: Props) => {
   const [authorsList, setAuthorsList] = useState<Author[]>([]);
   const [poetsList, setPoetsList] = useState<Author[]>([]);
+  const [authorListError, setAuthorListError] = useState<string>("");
 
   useAsyncEffect(async () => {
     try {
@@ -65,13 +70,19 @@ export const AuthorProvider = ({ children }: Props) => {
       );
     } catch (err) {
       console.error("Get authors list", err);
-      alert(err);
+      setAuthorListError(errors.getAuthorsList);
     }
   }, []);
 
+  const handleCloseAuthorsError = useCallback(() => {
+    setAuthorListError("");
+  }, []);
+
   const providerValue: ProviderValues = {
+    authorListError,
     poetsList,
     authorsList,
+    handleCloseAuthorsError,
   };
 
   return (

@@ -26,3 +26,8 @@ export const homepage = {
   popularWriter: "Popular writer",
   popularBook: "Popular book",
 };
+
+export const errors = {
+  getAuthorsList: "ERROR! Can`t get authors list",
+  getBooksList: "ERROR! Can`t get books list",
+};
