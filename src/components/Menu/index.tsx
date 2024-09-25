@@ -1,15 +1,13 @@
 import { useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 
 import { menuElemenets, websiteName } from "../../constants/textValues";
-
-import { useAuthors } from "../../context/authors";
 
 import logo from "../../assets/countryBooks.logo.png";
 
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Box from "@mui/material/Box";
-import { useNavigate } from "react-router-dom";
 
 type MenuElements = {
   value: string;
@@ -46,9 +44,11 @@ const menuElements: MenuElements[] = [
 ];
 
 export const Menu = () => {
-  const [value, setValue] = useState<string>(menuElemenets.values.home);
-
+  const location = useLocation()
   const navigate = useNavigate()
+  const currentMenuElement= menuElements.find(({link}) => link === location.pathname) 
+
+  const [value, setValue] = useState<string>(currentMenuElement ? currentMenuElement.value : menuElemenets.values.home);
 
   const handleChange = (event: React.SyntheticEvent, newValue: string) => {
     setValue(newValue);
