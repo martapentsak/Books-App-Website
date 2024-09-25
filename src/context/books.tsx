@@ -39,7 +39,6 @@ export const BooksProvider = ({ children }: Props) => {
   const [bookListError, setBookListError] = useState<string>("");
 
   useAsyncEffect(async () => {
-    setBookListError(errors.getBooksList);
     try {
       const reponse = await axios.get(booksApi);
       const list = reponse.data.map(
