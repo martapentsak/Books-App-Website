@@ -6,6 +6,7 @@ import {
   useContext,
   useState,
 } from "react";
+import { v4 as uuidv4 } from 'uuid';
 
 import { errors } from "../constants/textValues";
 import { authorsAPi, poetsApi } from "../constants/api";
@@ -56,8 +57,8 @@ export const AuthorProvider = ({ children }: Props) => {
       const poetsResponse = await axios.get(poetsApi);
       const allPromises = await Promise.all([authorResponse, poetsResponse]);
       const authors = allPromises[0].data.map(
-        ({ id, name, image, genre }: Author) => ({
-          id,
+        ({name, image, genre }: Author) => ({
+          id: uuidv4(),
           author: name,
           image,
           genres: genre,
@@ -65,8 +66,8 @@ export const AuthorProvider = ({ children }: Props) => {
       );
       setAuthorsList(authors);
       const poets = allPromises[1].data.map(
-        ({ id, name, image, genre, notable_works }: Author) => ({
-          id,
+        ({name, image, genre, notable_works }: Author) => ({
+          id: uuidv4(),
           author: name,
           image,
           genres: genre,

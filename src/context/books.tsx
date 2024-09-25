@@ -6,6 +6,7 @@ import {
   useContext,
   useState,
 } from "react";
+import { v4 as uuidv4 } from 'uuid';
 
 import { errors } from "../constants/textValues";
 import { booksApi } from "../constants/api";
@@ -15,7 +16,7 @@ import { sleep } from "../helpers/sleep";
 import { loadingDuration } from "../constants/duration";
 
 type Book = {
-  id: number;
+  id: string;
   title: string;
   author: string;
   genre: string[];
@@ -50,8 +51,8 @@ export const BooksProvider = ({ children }: Props) => {
     try {
       const reponse = await axios.get(booksApi);
       const list = reponse.data.map(
-        ({ id, title, author, genre, cover_image }: Book) => ({
-          id,
+        ({ title, author, genre, cover_image }: Book) => ({
+          id: uuidv4(),
           title,
           author,
           genres: genre,

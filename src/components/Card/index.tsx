@@ -5,6 +5,7 @@ import CardActionArea from "@mui/material/CardActionArea";
 import { useNavigate } from "react-router-dom";
 
 type CardProps = {
+  id: string,
   isAuthorCard: boolean;
   image: string;
   title?: string;
@@ -13,6 +14,7 @@ type CardProps = {
 };
 
 export const Card = ({
+  id,
   isAuthorCard,
   image,
   title,
@@ -23,8 +25,7 @@ export const Card = ({
   const navigate = useNavigate();
 
   const handleRoute = () => {
-    const value = title ? title : author;
-    navigate(value.replace(/\s/g, ""));
+    navigate(id);
   };
 
   return (
