@@ -50,7 +50,7 @@ export const Menu = () => {
 
   const [value, setValue] = useState<string>(currentMenuElement ? currentMenuElement.value : menuElemenets.values.home);
 
-  const handleChange = (event: React.SyntheticEvent, newValue: string) => {
+  const handleTabChange = (event: React.SyntheticEvent, newValue: string) => {
     setValue(newValue);
     const currentTabLink = menuElements.find((v) => v.value === newValue);
     const link = currentTabLink? currentTabLink.link : "/"
@@ -68,7 +68,7 @@ export const Menu = () => {
           </h2>
         </div>
         <Box sx={{ width: "100%" }}>
-          <Tabs className="tabs" value={value} onChange={handleChange}>
+          <Tabs className="tabs" value={value} onChange={handleTabChange}>
             {menuElements.map(({ value, label }, index) => (
               <Tab key={index} value={value} label={label} />
             ))}
