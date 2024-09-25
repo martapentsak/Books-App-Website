@@ -27,6 +27,7 @@ type Author = {
 };
 
 type ProviderValues = {
+  loading: boolean,
   authorListError: string;
   authorsList: Author[];
   poetsList: Author[];
@@ -41,9 +42,13 @@ export const AuthorContext = createContext({} as ProviderValues);
 export const AuthorProvider = ({ children }: Props) => {
   const [authorsList, setAuthorsList] = useState<Author[]>([]);
   const [poetsList, setPoetsList] = useState<Author[]>([]);
+
   const [authorListError, setAuthorListError] = useState<string>("");
 
+  const [loading, setLoading] = useState<boolean>(false)
+
   useAsyncEffect(async () => {
+    setLoading(true)
     await sleep(loadingDuration)
     try {
       const authorResponse = await axios.get(authorsAPi);
@@ -74,6 +79,8 @@ export const AuthorProvider = ({ children }: Props) => {
     } catch (err) {
       console.error("Get authors list", err);
       setAuthorListError(errors.getAuthorsList);
+    } finally {
+      setLoading(false)
     }
   }, []);
 
@@ -82,6 +89,7 @@ export const AuthorProvider = ({ children }: Props) => {
   }, []);
 
   const providerValue: ProviderValues = {
+    loading,
     authorListError,
     poetsList,
     authorsList,
