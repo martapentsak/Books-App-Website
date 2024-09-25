@@ -7,7 +7,8 @@ import { useBooks } from "../../context/books";
 
 import { homepage } from "../../constants/textValues";
 
-import { Alert, Box } from "@mui/material";
+import Alert from "@mui/material/Alert";
+import Stack from "@mui/material/Stack";
 
 export const HomePage = () => {
   const [selectedPoetIndex, setSelectedPoetIndex] = useState<number>(0);
@@ -15,13 +16,14 @@ export const HomePage = () => {
     useAuthors();
   const { booksList, bookListError, handleCloseBooksError } = useBooks();
 
-  const currentPoet = poetsList.length > 0 && poetsList[selectedPoetIndex] 
+  const currentPoet = poetsList.length > 0 && poetsList[selectedPoetIndex];
+  const errorExist = authorListError || bookListError;
 
   return (
     <div className="home-page">
-      {authorListError ||
-        (bookListError && (
-          <Box className="alert-section">
+      <div className="alert-section">
+        {errorExist && (
+          <Stack sx={{ width: "100%" }}>
             <Alert
               severity="error"
               onClose={() =>
@@ -32,16 +34,14 @@ export const HomePage = () => {
             >
               {authorListError || bookListError}
             </Alert>
-          </Box>
-        ))}
+          </Stack>
+        )}
+      </div>
       <div className="poets-section">
         <div className="selecled-poet-section">
           <p className="selecled-poet-title">{homepage.postContainerTitle}</p>
           {currentPoet && (
-            <img
-              src={currentPoet.image}
-              className="selected-poet-image"
-            />
+            <img src={currentPoet.image} className="selected-poet-image" />
           )}
         </div>
         <div className="author-list">

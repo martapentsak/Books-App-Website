@@ -84,9 +84,7 @@ export const AuthorProvider = ({ children }: Props) => {
     }
   }, []);
 
-  const handleCloseAuthorsError = useCallback(() => {
-    setAuthorListError("");
-  }, []);
+  const handleCloseAuthorsError = useCallback(() => setAuthorListError(""),[]);
 
   const providerValue: ProviderValues = {
     loading,
