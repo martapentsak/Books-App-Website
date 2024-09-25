@@ -1,9 +1,11 @@
 import { websiteName } from "../../constants/textValues";
 
+const createArrayOfLetters = `${websiteName.span} ${websiteName.name}`.split(
+  ""
+);
+
 export const LoadingPage = () => {
-  const createArrayOfLetters = `${websiteName.span} ${websiteName.name}`.split(
-    ""
-  );
+
   
   return (
     <div className="loading-page">
