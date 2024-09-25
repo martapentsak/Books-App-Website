@@ -1,6 +1,7 @@
 import CardElement from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardActionArea from "@mui/material/CardActionArea";
+
 import { useNavigate } from "react-router-dom";
 
 type CardProps = {
@@ -18,10 +19,12 @@ export const Card = ({
   genres,
   author,
 }: CardProps) => {
+  
+  const navigate = useNavigate();
 
   const handleRoute = () => {
-    const navigate = useNavigate();
-    navigate(author.replace(/\s/g, ""));
+    const value = title ? title : author;
+    navigate(value.replace(/\s/g, ""));
   };
 
   return (
@@ -38,7 +41,7 @@ export const Card = ({
           <CardContent>
             {!isAuthorCard && <span className="book-author">{author}</span>}
             <h2 className="card-name">{isAuthorCard ? author : title}</h2>
-            {genres.map((g,index) => (
+            {genres.map((g, index) => (
               <span className="book-category" key={index}>
                 {g}
                 {index < genres.length - 1 ? ", " : ""}
