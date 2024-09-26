@@ -1,17 +1,14 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 
-import { Menu } from "./components/Menu";
-import { HomePage } from "./pages/HomePage";
+import { AuthorProvider } from "./context/authors";
+import { BooksProvider } from "./context/books";
 
-import { menuElemenets } from "./constants/textValues";
-
-import { AuthorProvider } from "./context/authors.tsx";
-import { BooksProvider } from "./context/books.tsx";
-
-import { composeProviders } from "./utils/composeProviders.tsx";
+import { composeProviders } from "./utils/composeProviders";
 
 import "./App.css";
 import "./styles/global.scss";
+
+import { AllRoutes } from "./pages/Routes";
 
 const providers = [BrowserRouter, AuthorProvider, BooksProvider];
 
@@ -21,12 +18,7 @@ function App() {
   return (
     <div className="books-app">
       <CombinedProviders>
-        <div className="books-app">
-          <Menu />
-          <Routes>
-            <Route path={menuElemenets.links.home} element={<HomePage />} />
-          </Routes>
-        </div>
+        <AllRoutes />
       </CombinedProviders>
     </div>
   );
