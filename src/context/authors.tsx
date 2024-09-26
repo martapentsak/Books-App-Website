@@ -55,8 +55,8 @@ export const AuthorProvider = ({ children }: Props) => {
     try {
       const authorResponse = await axios.get(authorsAPi);
       const poetsResponse = await axios.get(poetsApi);
-      const allPromises = await Promise.all([authorResponse, poetsResponse]);
-      const authors = allPromises[0].data.map(
+      const [authorList, poetList] = await Promise.all([authorResponse, poetsResponse]);
+      const authors = authorList.data.map(
         ({ name, image, genre }: Author) => ({
           id: uuidv4(),
           author: name,
@@ -65,7 +65,7 @@ export const AuthorProvider = ({ children }: Props) => {
         })
       );
       setAuthorsList(authors);
-      const poets = allPromises[1].data.map(
+      const poets = poetList.data.map(
         ({ name, image, genre, notable_works }: Author) => ({
           id: uuidv4(),
           author: name,
