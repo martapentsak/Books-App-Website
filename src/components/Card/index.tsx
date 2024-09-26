@@ -23,14 +23,10 @@ export const Card = ({
 }: CardProps) => {
   const navigate = useNavigate();
 
-  const handleRoute = () => {
-    navigate(id);
-  };
-
   return (
     <div className={isAuthorCard ? "author-card" : "book-card"}>
       <CardElement>
-        <CardActionArea onClick={() => handleRoute()}>
+        <CardActionArea onClick={() => navigate(id)}>
           <div>
             <img
               src={image}
