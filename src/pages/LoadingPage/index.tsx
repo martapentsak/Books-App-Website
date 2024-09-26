@@ -5,8 +5,6 @@ const createArrayOfLetters = `${websiteName.span} ${websiteName.name}`.split(
 );
 
 export const LoadingPage = () => {
-
-  
   return (
     <div className="loading-page">
       <div className="flipping-text">
