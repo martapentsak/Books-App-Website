@@ -1,0 +1,18 @@
+.container-list-title {
+    color: $white;
+    font-family: $defaultFontFamily;
+    padding-bottom: 10px;
+    font-weight: 400;
+    font-size: 22px;
+}
+
+.author-list {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    overflow-x: scroll;
+}
+
+.author-list::-webkit-scrollbar {
+    display: none;
+}

@@ -1,0 +1,1 @@
+export const loadingDuration = 3000

@@ -1,6 +1,9 @@
 @import "./colors.scss";
 @import "./sizes.scss";
 @import "./fontFamilies.scss";
+@import "./globalStyles.scss";
 
-@import "../pages/LoadingPage/loadingPage.scss";
+@import "../components/Menu/Menu.scss";
+@import "../components/Card/card.scss";
 
+@import "../pages/HomePage/homePage.scss";
