@@ -6,7 +6,7 @@ import {
   useContext,
   useState,
 } from "react";
-import { v4 as uuidv4 } from 'uuid';
+import { v4 as uuidv4 } from "uuid";
 
 import { errors } from "../constants/textValues";
 import { booksApi } from "../constants/api";
@@ -26,7 +26,7 @@ type Book = {
 };
 
 type ProviderValues = {
-  loading: boolean,
+  loading: boolean;
   bookListError: string;
   booksList: Book[];
   handleCloseBooksError: () => void;
@@ -43,11 +43,11 @@ export const BooksProvider = ({ children }: Props) => {
 
   const [bookListError, setBookListError] = useState<string>("");
 
-  const [loading, setLoading] = useState<boolean>(false)
+  const [loading, setLoading] = useState<boolean>(false);
 
   useAsyncEffect(async () => {
-    setLoading(true)
-    await sleep(loadingDuration)
+    setLoading(true);
+    await sleep(loadingDuration);
     try {
       const reponse = await axios.get(booksApi);
       const list = reponse.data.map(
@@ -65,11 +65,11 @@ export const BooksProvider = ({ children }: Props) => {
       setBookListError(errors.getBooksList);
       alert(err);
     } finally {
-      setLoading(false)
+      setLoading(false);
     }
   }, []);
 
-  const handleCloseBooksError = useCallback(() => setBookListError(""), [])
+  const handleCloseBooksError = useCallback(() => setBookListError(""), []);
 
   const providervalues: ProviderValues = {
     loading,

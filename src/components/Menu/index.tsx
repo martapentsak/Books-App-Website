@@ -44,16 +44,20 @@ const menuElements: MenuElements[] = [
 ];
 
 export const Menu = () => {
-  const location = useLocation()
-  const navigate = useNavigate()
-  const currentMenuElement= menuElements.find(({link}) => link === location.pathname) 
+  const location = useLocation();
+  const navigate = useNavigate();
+  const currentMenuElement = menuElements.find(
+    ({ link }) => link === location.pathname
+  );
 
-  const [value, setValue] = useState<string>(currentMenuElement ? currentMenuElement.value : menuElemenets.values.home);
+  const [value, setValue] = useState<string>(
+    currentMenuElement ? currentMenuElement.value : menuElemenets.values.home
+  );
 
   const handleTabChange = (event: React.SyntheticEvent, newValue: string) => {
     setValue(newValue);
     const currentTabLink = menuElements.find((v) => v.value === newValue);
-    const link = currentTabLink? currentTabLink.link : "/"
+    const link = currentTabLink ? currentTabLink.link : "/";
     navigate(link);
   };
 

@@ -18,7 +18,7 @@ export const HomePage = () => {
 
   const currentPoet = poetsList.length > 0 && poetsList[selectedPoetIndex];
   const errorExist = authorListError || bookListError;
-  console.log(booksList)
+  console.log(booksList);
 
   return (
     <div className="home-page">
@@ -84,24 +84,26 @@ export const HomePage = () => {
           <h2 className="container-list-title ">{homepage.popularWriter}</h2>
           <div className="author-list">
             {authorsList.map((attributes, index) => (
-              <Card isAuthorCard={true} {...attributes} key={index}/>
+              <Card isAuthorCard={true} {...attributes} key={index} />
             ))}
           </div>
         </div>
         <div className="popular-books-section">
           <h2 className="container-list-title">{homepage.popularBook}</h2>
           <div className="books-list-section">
-            {booksList.map(({ title, author, coverImage, genres ,id}, index) => (
-              <Card
-                isAuthorCard={false}
-                title={title}
-                author={author}
-                key={index}
-                image={coverImage}
-                genres={genres}
-                id={id}
-              />
-            ))}
+            {booksList.map(
+              ({ title, author, coverImage, genres, id }, index) => (
+                <Card
+                  isAuthorCard={false}
+                  title={title}
+                  author={author}
+                  key={index}
+                  image={coverImage}
+                  genres={genres}
+                  id={id}
+                />
+              )
+            )}
           </div>
         </div>
       </div>

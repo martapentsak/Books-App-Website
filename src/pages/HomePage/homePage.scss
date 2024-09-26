@@ -5,17 +5,13 @@
     padding-top: 40px;
     height: 80%;
 
-
-.alert-section {
-    position: absolute !important; 
-    top: 2%;
-    width: 40%;
-    right: 30%;
-    background-color: rgb(22 11 11) !important;
-
-}
-
-  
+    .alert-section {
+        position: absolute !important;
+        top: 2%;
+        width: 40%;
+        right: 30%;
+        background-color: rgb(22 11 11) !important;
+    }
 
     .poets-section {
         width: 48%;
@@ -51,12 +47,12 @@
             cursor: pointer;
 
             .poet-name {
-             text-align: center;
+                text-align: center;
                 font-size: 22px;
                 width: 120px;
             }
         }
-        
+
         .poet-section {
             opacity: 0.6;
             display: flex;
@@ -68,10 +64,6 @@
         .poet-section:hover {
             opacity: 1;
         }
-
-        // .poets-list::-webkit-scrollbar {
-        //     display: none;
-        // }
 
         .popular-poet-work-title {
             color: $blackishGrey;
@@ -115,18 +107,16 @@
     .authors-books-section {
         width: 45%;
 
-            .authors-list-section {
-                display: flex;
-                align-items: center;
-                overflow-x: scroll;
-                width: 100%;
-            }
+        .authors-list-section {
+            display: flex;
+            align-items: center;
+            overflow-x: scroll;
+            width: 100%;
+        }
 
-            .authors-list-section::-webkit-scrollbar {
-                display: none;
-            }
-
-        
+        .authors-list-section::-webkit-scrollbar {
+            display: none;
+        }
 
         .books-list-section {
             display: flex;
@@ -134,7 +124,6 @@
             justify-content: space-between;
             height: 600px;
             overflow-y: auto;
-
         }
 
         .books-list-section::-webkit-scrollbar {
@@ -142,7 +131,6 @@
         }
     }
 }
-
 
 .poet-image {
     width: 70px;
@@ -152,9 +140,3 @@
 }
 
 
-.alert-section {
-    position: absolute;
-    top: 2%;
-    width: 40%;
-    right: 30%;
-}
