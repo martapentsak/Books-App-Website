@@ -18,7 +18,6 @@ export const HomePage = () => {
 
   const currentPoet = poetsList.length > 0 && poetsList[selectedPoetIndex];
   const errorExist = authorListError || bookListError;
-  console.log(booksList);
 
   return (
     <div className="home-page">
