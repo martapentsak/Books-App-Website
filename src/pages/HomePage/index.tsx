@@ -74,7 +74,9 @@ export const HomePage = () => {
           <div key={index} className="poet-work-section">
             <span className="work-number">{index + 1}</span>
             <p className="work-name">{value}</p>
-            <span className="author">{poetsList[selectedPoetIndex].name}</span>
+            <span className="author">
+              {poetsList[selectedPoetIndex].author}
+            </span>
           </div>
         ))}
       </div>
@@ -90,19 +92,9 @@ export const HomePage = () => {
         <div className="popular-books-section">
           <h2 className="container-list-title">{homepage.popularBook}</h2>
           <div className="books-list-section">
-            {booksList.map(
-              ({ title, author, coverImage, genres, id }, index) => (
-                <Card
-                  isAuthorCard={false}
-                  title={title}
-                  author={author}
-                  key={index}
-                  image={coverImage}
-                  genres={genres}
-                  id={id}
-                />
-              )
-            )}
+            {booksList.map((attributes, index) => (
+              <Card {...attributes} isAuthorCard={false} key={index} />
+            ))}
           </div>
         </div>
       </div>

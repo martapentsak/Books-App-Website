@@ -1324,7 +1324,7 @@
               "id": 15,
               "title": "The Odyssey",
               "author": "Homer",
-              "publication_year": "8th century BCE",
+              "publication_year": "8th century",
               "genre": [
                 "Epic",
                 "Mythology"
@@ -1336,7 +1336,7 @@
               "id": 16,
               "title": "The Divine Comedy",
               "author": "Dante Alighieri",
-              "publication_year": "1320",
+              "publication_year": 1320,
               "genre": [
                 "Epic",
                 "Poetry"
@@ -1398,7 +1398,7 @@
               "id": 21,
               "title": "The Iliad",
               "author": "Homer",
-              "publication_year": "8th century BCE",
+              "publication_year": "8th century",
               "genre": [
                 "Epic",
                 "Mythology"

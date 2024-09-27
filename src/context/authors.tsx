@@ -16,23 +16,13 @@ import useAsyncEffect from "../hooks/useAsyncEffect";
 
 import { sleep } from "../helpers/sleep";
 
-type Author = {
-  author: string;
-  name: string;
-  image: string;
-  cover_image?: string;
-  genre: string[];
-  genres: string[];
-  notable_works?: string[];
-  works?: string[];
-  id: string;
-};
+import { UniversalListItem } from "../types/UniversalListItem";
 
 type ProviderValues = {
   loading: boolean;
   authorListError: string;
-  authorsList: Author[];
-  poetsList: Author[];
+  authorsList: UniversalListItem[];
+  poetsList: UniversalListItem[];
   handleCloseAuthorsError: () => void;
 };
 
@@ -42,8 +32,8 @@ type Props = {
 export const AuthorContext = createContext({} as ProviderValues);
 
 export const AuthorProvider = ({ children }: Props) => {
-  const [authorsList, setAuthorsList] = useState<Author[]>([]);
-  const [poetsList, setPoetsList] = useState<Author[]>([]);
+  const [authorsList, setAuthorsList] = useState<UniversalListItem[]>([]);
+  const [poetsList, setPoetsList] = useState<UniversalListItem[]>([]);
 
   const [authorListError, setAuthorListError] = useState<string>("");
 
@@ -55,23 +45,29 @@ export const AuthorProvider = ({ children }: Props) => {
     try {
       const authorResponse = await axios.get(authorsAPi);
       const poetsResponse = await axios.get(poetsApi);
-      const [authorList, poetList] = await Promise.all([authorResponse, poetsResponse]);
+      const [authorList, poetList] = await Promise.all([
+        authorResponse,
+        poetsResponse,
+      ]);
       const authors = authorList.data.map(
-        ({ name, image, genre }: Author) => ({
-          id: uuidv4(),
-          author: name,
-          image,
-          genres: genre,
-        })
-      );
-      setAuthorsList(authors);
-      const poets = poetList.data.map(
-        ({ name, image, genre, notable_works }: Author) => ({
+        ({ name, image, genre, nationality, notable_works }: any) => ({
           id: uuidv4(),
           author: name,
           image,
           genres: genre,
           works: notable_works,
+          nationality: nationality,
+        })
+      );
+      setAuthorsList(authors);
+      const poets = poetList.data.map(
+        ({ name, image, genre, notable_works, nationality }: any) => ({
+          id: uuidv4(),
+          author: name,
+          image,
+          genres: genre,
+          works: notable_works,
+          nationality: nationality,
         })
       );
       setPoetsList(poets);

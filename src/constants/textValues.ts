@@ -31,3 +31,5 @@ export const errors = {
   getAuthorsList: "ERROR! Can`t get authors list",
   getBooksList: "ERROR! Can`t get books list",
 };
+
+export const all = "All"

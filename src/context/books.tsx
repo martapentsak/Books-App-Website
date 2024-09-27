@@ -15,20 +15,12 @@ import useAsyncEffect from "../hooks/useAsyncEffect";
 import { sleep } from "../helpers/sleep";
 import { loadingDuration } from "../constants/duration";
 
-type Book = {
-  id: string;
-  title: string;
-  author: string;
-  genre: string[];
-  genres: string[];
-  coverImage: string;
-  cover_image?: string;
-};
+import { UniversalListItem } from "../types/UniversalListItem";
 
 type ProviderValues = {
   loading: boolean;
   bookListError: string;
-  booksList: Book[];
+  booksList: UniversalListItem[];
   handleCloseBooksError: () => void;
 };
 
@@ -39,7 +31,7 @@ type Props = {
 export const BooksContext = createContext({} as ProviderValues);
 
 export const BooksProvider = ({ children }: Props) => {
-  const [booksList, setBooksList] = useState<Book[]>([]);
+  const [booksList, setBooksList] = useState<UniversalListItem[]>([]);
 
   const [bookListError, setBookListError] = useState<string>("");
 
@@ -51,12 +43,13 @@ export const BooksProvider = ({ children }: Props) => {
     try {
       const reponse = await axios.get(booksApi);
       const list = reponse.data.map(
-        ({ title, author, genre, cover_image }: Book) => ({
+        ({ title, author, genre, cover_image, publication_year }: any) => ({
           id: uuidv4(),
           title,
           author,
           genres: genre,
-          coverImage: cover_image,
+          image: cover_image,
+          year: publication_year,
         })
       );
       setBooksList(list);
