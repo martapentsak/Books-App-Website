@@ -1,0 +1,132 @@
+.author-page {
+    height: calc(100vh - $menuHeight - 40px);
+    padding-top: 40px;
+    overflow: none;
+
+    .wrapper {
+        height: 100%;
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+
+        .author-image-section {
+            height: 100%;
+            width: 40%;
+            margin-right: 40px;
+
+            .author-image {
+                width: 100%;
+                height: auto;
+                max-height: 100%;
+            }
+        }
+
+        .author-info-section {
+            width: 60%;
+
+            .author-name {
+                font-size: 70px;
+                font-family: $titleFontFamily;
+                color: $leadBelcher;
+            }
+
+            .author-nationality {
+                margin: 10px 0;
+                color: $blackishGrey;
+            }
+
+            .author-biography {
+                color: $leadBelcher;
+                margin: 10px 0;
+                line-height: 25px;
+            }
+
+            .author-award {
+                color: $blackishGrey;
+                margin: 15px 0;
+            }
+
+            .award {
+                color: $leadBelcher;
+            }
+
+            .author-birth-section {
+                display: flex;
+                align-items: center;
+            }
+
+            .born-section,
+            .death-section {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+
+                .born-section-category {
+                    color: $blackishGrey;
+                }
+            }
+
+            .born-section {
+                padding-right: 30px;
+            }
+
+            .death-section {
+                padding-left: 30px;
+            }
+
+            .space {
+                border-bottom: 1px solid $leadBelcher;
+                width: 20%;
+            }
+
+            .birth-year,
+            .death-year {
+                font-size: 50px;
+                color: $leadBelcher;
+            }
+
+            .author-works {
+                margin-top: 30px;
+
+                .works-title {
+                    margin: 10px 0;
+                    font-family: $titleFontFamily;
+                    font-weight: 400;
+                    font-size: 20px;
+                    color: $leadBelcher;
+                }
+
+                .works-list {
+                    display: flex;
+                    align-items: center;
+                    width: 100%;
+                    overflow: auto;
+
+                    .work-element {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        cursor: pointer;
+
+                        .work-name {
+                            margin: 15px 0;
+                            color: $leadBelcher;
+                        }
+                    }
+
+                    .work-image {
+                        height: 300px;
+                        margin-right: 30px;
+                        width: 200px;
+                        border-radius: 14px;
+                    }
+                }
+
+
+                .works-list::-webkit-scrollbar {
+                    display: none;
+                }
+            }
+        }
+    }
+}
