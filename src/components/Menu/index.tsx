@@ -73,8 +73,8 @@ export const Menu = () => {
         </div>
         <Box sx={{ width: "100%" }}>
           <Tabs className="tabs" value={value} onChange={handleTabChange}>
-            {menuElements.map(({ value, label }, index) => (
-              <Tab key={index} value={value} label={label} />
+            {menuElements.map(({ value, label, link }, index) => (
+              <Tab key={index} value={value} label={label} onClick={()=> navigate(link)}/>
             ))}
           </Tabs>
         </Box>
