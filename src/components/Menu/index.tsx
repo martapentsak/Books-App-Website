@@ -8,6 +8,7 @@ import logo from "../../assets/countryBooks.logo.png";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Box from "@mui/material/Box";
+import Badge from '@mui/material/Badge';
 
 type MenuElements = {
   value: string;
@@ -43,7 +44,7 @@ const menuElements: MenuElements[] = [
   },
 ];
 
-export const Menu = () => {
+export const Menu = ({wishlist} : any) => {
   const location = useLocation();
   const navigate = useNavigate();
   const currentMenuElement = menuElements.find(
@@ -74,8 +75,13 @@ export const Menu = () => {
         <Box sx={{ width: "100%" }}>
           <Tabs className="tabs" value={value} onChange={handleTabChange}>
             {menuElements.map(({ value, label, link }, index) => (
-              <Tab key={index} value={value} label={label} onClick={()=> navigate(link)}/>
-            ))}
+              value === menuElemenets.values.wishList && wishlist.length > 0 ? 
+                <Badge color="secondary" badgeContent={100}>
+                {label}
+              </Badge> :
+
+              <Tab key={index} value={value} label={label} onClick={() => navigate(link)}/>
+            ))}    
           </Tabs>
         </Box>
       </div>
