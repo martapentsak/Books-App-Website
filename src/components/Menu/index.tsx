@@ -3,12 +3,13 @@ import { useLocation, useNavigate } from "react-router-dom";
 
 import { menuElemenets, websiteName } from "../../constants/textValues";
 
+import { useWishlist } from "../../context/wishlist";
+
 import logo from "../../assets/countryBooks.logo.png";
 
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Box from "@mui/material/Box";
-import Badge from '@mui/material/Badge';
 
 type MenuElements = {
   value: string;
@@ -44,7 +45,8 @@ const menuElements: MenuElements[] = [
   },
 ];
 
-export const Menu = ({wishlist} : any) => {
+export const Menu = () => {
+  const { wishList } = useWishlist();
   const location = useLocation();
   const navigate = useNavigate();
   const currentMenuElement = menuElements.find(
@@ -75,14 +77,17 @@ export const Menu = ({wishlist} : any) => {
         <Box sx={{ width: "100%" }}>
           <Tabs className="tabs" value={value} onChange={handleTabChange}>
             {menuElements.map(({ value, label, link }, index) => (
-              value === menuElemenets.values.wishList && wishlist.length > 0 ? 
-                <Badge color="secondary" badgeContent={100}>
-                {label}
-              </Badge> :
-
-              <Tab key={index} value={value} label={label} onClick={() => navigate(link)}/>
-            ))}    
+              <Tab
+                key={index}
+                value={value}
+                label={label}
+                onClick={() => navigate(link)}
+              />
+            ))}
           </Tabs>
+          {wishList.length > 0 && (
+            <span className="wishlist-badge">{wishList.length}</span>
+          )}
         </Box>
       </div>
     </div>

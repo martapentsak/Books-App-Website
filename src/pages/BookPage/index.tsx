@@ -1,5 +1,9 @@
 import { useNavigate } from "react-router";
 
+import { useWishlist } from "../../context/wishlist";
+
+import { Button } from "@mui/material";
+
 type BookProp = {
   id: string;
   title: string;
@@ -19,8 +23,11 @@ type Props = {
 export const BookPage = ({ book, list, blockTitle }: Props) => {
   const { title, coverImage, author, publicationYear, description, genres } =
     book;
+  const { handleAddBookToWishlist, wishList } = useWishlist();
 
   const navigate = useNavigate();
+
+  const isBookInWishList = wishList.find((v) => v.title === title);
 
   return (
     <div className="book-page">
@@ -30,7 +37,18 @@ export const BookPage = ({ book, list, blockTitle }: Props) => {
         </div>
         <div className="book-info-section">
           <h2 className="book-name">{title}</h2>
-          <div className="book-author">{author}</div>
+          <div
+            className="book-author"
+            onClick={() => navigate(`/${author.replace(/ /g, "")}`)}
+          >
+            {author}
+          </div>
+          <Button
+            className="add-to-wishlist-btn"
+            onClick={() => handleAddBookToWishlist(book)}
+          >
+            {isBookInWishList ? "Remove from wishlist" : "Want to read"}
+          </Button>
           <div className="book-describtion">{description}</div>
           <div className="book-publication">
             Publication year:{" "}

@@ -35,6 +35,7 @@
 
         .css-8atqhb {
             width: 50% !important;
+            position: relative;
         }
 
         .css-heg063-MuiTabs-flexContainer {
@@ -50,6 +51,7 @@
             font-weight: 400 !important;
             font-family: $defaultFontFamily;
             padding: 26px 16px;
+
         }
 
         .css-19wsa2m-MuiButtonBase-root-MuiTab-root.Mui-selected {
@@ -65,5 +67,17 @@
             background-color: $white !important;
             height: $tabHeight !important;
         }
+
+        .wishlist-badge {
+            position: absolute;
+            right: 1%;
+            top: 48%;
+            background-color: $blackishGrey;
+            color: $leadBelcher;
+            padding: 2px 6px;
+            border-radius: 50%;
+        }
+
+      
     }
 }

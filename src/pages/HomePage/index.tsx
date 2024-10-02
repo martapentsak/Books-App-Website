@@ -12,6 +12,7 @@ import Stack from "@mui/material/Stack";
 
 export const HomePage = () => {
   const [selectedPoetIndex, setSelectedPoetIndex] = useState<number>(0);
+
   const { authorsList, poetsList, authorListError, handleCloseAuthorsError } =
     useAuthors();
   const { booksList, bookListError, handleCloseBooksError } = useBooks();

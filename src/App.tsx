@@ -1,16 +1,18 @@
 import { BrowserRouter } from "react-router-dom";
 
+import { AllRoutes } from "./pages/Routes";
+
 import { AuthorProvider } from "./context/authors";
 import { BooksProvider } from "./context/books";
+import { WishListProvider } from "./context/wishlist";
 
 import { composeProviders } from "./utils/composeProviders";
 
 import "./App.css";
 import "./styles/global.scss";
 
-import { AllRoutes } from "./pages/Routes";
 
-const providers = [BrowserRouter, AuthorProvider, BooksProvider];
+const providers = [BrowserRouter, AuthorProvider, BooksProvider, WishListProvider];
 
 const CombinedProviders = composeProviders(providers);
 

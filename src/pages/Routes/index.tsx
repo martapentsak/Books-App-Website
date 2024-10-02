@@ -4,12 +4,12 @@ import { Menu } from "../../components/Menu";
 
 import { HomePage } from "../HomePage";
 import { LoadingPage } from "../LoadingPage";
+import { BookPage } from "../BookPage";
 
 import { menuElemenets } from "../../constants/textValues";
 
 import { useAuthors } from "../../context/authors";
 import { useBooks } from "../../context/books";
-import { BookPage } from "../BookPage";
 
 type BookProp = {
   id: string;
@@ -49,17 +49,15 @@ export const AllRoutes = () => {
         (b) => b.author === currentBook.author && b.title !== currentBook.title
       );
       const currentBookGenres = currentBook.genres;
-    
-        array = booksList.filter((book) => {
-          return book.genres
-            .filter(
-              (v) =>
+
+      array = booksList.filter((book) => {
+        return book.genres
+          .filter(
+            (v) =>
               currentBookGenres.includes(v) && book.title !== currentBook.title
-            )
-            .join("");
-        });
-      
-      console.log(array);
+          )
+          .join("");
+      });
       if (currentAuthorBooks.length > 0) {
         result.data = currentAuthorBooks;
         result.title = `Other works of ${currentBook.author}`;
@@ -67,13 +65,9 @@ export const AllRoutes = () => {
         result.data = array;
         result.title = `Other works in genres ${currentBook.genres.join(", ")}`;
       }
-
       return result;
     }
   };
-
-  console.log(otherBooksList());
-  // console.log(currentAuthorBooks)
 
   return (
     <div className="books-app">

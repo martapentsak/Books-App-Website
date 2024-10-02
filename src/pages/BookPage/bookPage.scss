@@ -1,7 +1,6 @@
 .book-page {
     height: calc(100vh - $menuHeight - 41px);
     padding-top: 40px;
-    // height: 100vh;
     overflow: none;
 
     .wrapper {
@@ -9,6 +8,7 @@
         width: 90%;
         margin: 0 auto;
         display: flex;
+        position: relative;
 
         .book-cover-section {
             height: 100%;
@@ -16,9 +16,9 @@
             margin-right: 40px;
 
             .book-cover {
-                width: 100%;
                 height: auto;
-                max-height: 100%;
+                max-height: 92%;
+                max-width: 100%;
             }
         }
 
@@ -26,21 +26,39 @@
             width: 60%;
 
             .book-name {
-                font-size: 70px;
+                font-size: 68px;
                 font-family: $titleFontFamily;
                 color: $leadBelcher;
             }
 
             .book-author{
-                margin: 10px 0;
+                margin: 5px 0;
                 color: $blackishGrey;
                 font-size: 20px;
+                cursor: pointer;
+            }
+
+            .book-author:hover {
+                color: $leadBelcher;
+            }
+
+            .add-to-wishlist-btn {
+                margin: 10px 0;
+                padding: 8px 15px;
+                background-color: transparent;
+                border: 1px solid $blackishGrey;
+                
+            }
+
+            .add-to-wishlist-btn:hover {
+                border: 1px solid $leadBelcher;
+
             }
 
             .book-publication,
             .book-genre {
                 color: $blackishGrey;
-                margin: 15px 0;
+                margin: 8px 0;
                 display: flex;
             }
 
@@ -60,12 +78,12 @@
 
             .book-describtion {
                 color: $leadBelcher;
-                margin: 15px 0;
+                margin: 8px 0;
                 line-height: 25px;
             }
 
             .author-works {
-                margin-top: 30px;
+                margin-top: 15px;
 
                 .other-books-title {
                     margin: 10px 0;
