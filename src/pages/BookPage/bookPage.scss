@@ -1,0 +1,123 @@
+.book-page {
+    height: calc(100vh - $menuHeight - 41px);
+    padding-top: 40px;
+    // height: 100vh;
+    overflow: none;
+
+    .wrapper {
+        height: 100%;
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+
+        .book-cover-section {
+            height: 100%;
+            width: 40%;
+            margin-right: 40px;
+
+            .book-cover {
+                width: 100%;
+                height: auto;
+                max-height: 100%;
+            }
+        }
+
+        .book-info-section {
+            width: 60%;
+
+            .book-name {
+                font-size: 70px;
+                font-family: $titleFontFamily;
+                color: $leadBelcher;
+            }
+
+            .book-author{
+                margin: 10px 0;
+                color: $blackishGrey;
+                font-size: 20px;
+            }
+
+            .book-publication,
+            .book-genre {
+                color: $blackishGrey;
+                margin: 15px 0;
+                display: flex;
+            }
+
+            .genre-list {
+                margin-left: 5px;
+            }
+
+            .book-category {
+                color: $leadBelcher;
+                font-size: 16px;
+            }
+
+            .publication-year {
+                color: $leadBelcher;
+
+            }
+
+            .book-describtion {
+                color: $leadBelcher;
+                margin: 15px 0;
+                line-height: 25px;
+            }
+
+            .author-works {
+                margin-top: 30px;
+
+                .other-books-title {
+                    margin: 10px 0;
+                    font-family: $titleFontFamily;
+                    font-weight: 400;
+                    font-size: 20px;
+                    color: $leadBelcher;
+                }
+
+                .other-books-list {
+                    display: flex;
+                    align-items: center;
+                    width: 100%;
+                    overflow: auto;
+
+                    .other-books-section{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        cursor: pointer;
+                        margin-right: 30px;
+
+
+                        .book-name {
+                            margin: 15px 0 10px 0;
+                            color: $leadBelcher;
+                            font-size: 14px;
+                        }
+
+                        .genres {
+                            display: flex;
+                        }
+
+                        .book-category {
+                            font-size: 12px;
+                            color: $blackishGrey;
+                            margin-right: 5px;
+       
+                        }
+
+                        .other-book-image {
+                            height: 280px;
+                            width: 180px;
+                            border-radius: 14px;
+                        }
+                    }
+                }
+
+                .other-books-list::-webkit-scrollbar {
+                    display: none;
+                }
+            }
+        }
+    }
+}
