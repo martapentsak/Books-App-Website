@@ -26,6 +26,14 @@ type ProviderValues = {
   handleCloseAuthorsError: () => void;
 };
 
+type ResponseProps = {
+  name: string, 
+  image: string, 
+  genre: string[], 
+  nationality: string, 
+  notable_works: string[]
+}
+
 type Props = {
   children: ReactNode;
 };
@@ -50,24 +58,24 @@ export const AuthorProvider = ({ children }: Props) => {
         poetsResponse,
       ]);
       const authors = authorList.data.map(
-        ({ name, image, genre, nationality, notable_works }: any) => ({
+        ({ name, image, genre, nationality, notable_works }: ResponseProps) => ({
           id: uuidv4(),
           author: name,
           image,
           genres: genre,
           works: notable_works,
-          nationality: nationality,
+          nationality
         })
       );
       setAuthorsList(authors);
       const poets = poetList.data.map(
-        ({ name, image, genre, notable_works, nationality }: any) => ({
+        ({ name, image, genre, notable_works, nationality }: ResponseProps) => ({
           id: uuidv4(),
           author: name,
           image,
           genres: genre,
           works: notable_works,
-          nationality: nationality,
+          nationality,
         })
       );
       setPoetsList(poets);
