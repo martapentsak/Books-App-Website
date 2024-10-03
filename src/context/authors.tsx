@@ -29,6 +29,18 @@ type Author = {
   award: string;
 };
 
+type Response = {
+  name: string,
+  image: string
+  genre: string[],
+  id: string
+  birth_year: number,
+  death_year: number,
+  biography: string, 
+  nationality: string,
+  award: string,
+  notable_works: string[]
+}
 
 
 
@@ -53,7 +65,7 @@ export const AuthorProvider = ({ children }: Props) => {
 
   const [loading, setLoading] = useState<boolean>(false);
 
-  const mapResponse = (data: any[]): Author[] => {
+  const mapResponse = (data: Response[]): Author[] => {
     return data.map(
       ({
         name,
