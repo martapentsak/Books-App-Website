@@ -32,6 +32,15 @@ type ProviderValues = {
   handleCloseBooksError: () => void;
 };
 
+type Response = {
+  title: string,
+  author: string,
+  genre: string[],
+  cover_image: string,
+  publication_year: number,
+  description: string
+}
+
 type Props = {
   children: ReactNode;
 };
@@ -58,7 +67,7 @@ export const BooksProvider = ({ children }: Props) => {
           cover_image,
           publication_year,
           description,
-        }: any) => ({
+        }: Response) => ({
           id: uuidv4(),
           title,
           author,
