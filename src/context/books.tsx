@@ -72,7 +72,7 @@ export const BooksProvider = ({ children }: Props) => {
           title,
           author,
           publicationYear: publication_year,
-          genres: genre,
+          genres: genre, // On server he have genre: []
           description,
           coverImage: cover_image,
         })
