@@ -13,9 +13,8 @@ type Props = {
   authorInfo: Author;
 };
 
-export const AuthorPage = ({ authorInfo }: Props) => {
-  const { image, author, birth, death, biography, nationality, award, works } =
-    authorInfo;
+export const AuthorPage = ({ authorInfo : {image, author, birth, death, biography, nationality, award, works }}: Props) => {
+
   return (
     <div className="author-page">
       <div className="wrapper">
