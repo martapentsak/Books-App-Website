@@ -11,8 +11,12 @@ import { composeProviders } from "./utils/composeProviders";
 import "./App.css";
 import "./styles/global.scss";
 
-
-const providers = [BrowserRouter, AuthorProvider, BooksProvider, WishListProvider];
+const providers = [
+  BrowserRouter,
+  AuthorProvider,
+  BooksProvider,
+  WishListProvider,
+];
 
 const CombinedProviders = composeProviders(providers);
 
