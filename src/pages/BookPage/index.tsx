@@ -1,8 +1,9 @@
-import { useNavigate } from "react-router";
+import { useNavigate, useLocation } from "react-router";
 
 import { useWishlist } from "../../context/wishlist";
 
 import { Button } from "@mui/material";
+import { useBooks } from "../../context/books";
 
 type BookProp = {
   id: string;
@@ -14,18 +15,59 @@ type BookProp = {
   description: string;
 };
 
-type Props = {
-  book: BookProp;
-  list: BookProp[] | undefined;
-  blockTitle: string | undefined;
+type Result = {
+  data: BookProp[];
+  title: string;
 };
 
-export const BookPage = ({ book, list, blockTitle }: Props) => {
-  const { title, coverImage, author, publicationYear, description, genres } =
-    book;
+export const BookPage = () => {
   const { handleAddBookToWishlist, wishList } = useWishlist();
+  const { booksList } = useBooks();
 
   const navigate = useNavigate();
+  const location = useLocation();
+
+  const currentBook =
+    booksList &&
+    booksList.find(
+      (book) =>
+        book.title.replace(/ /g, "") === location.pathname.replace("/", "")
+    );
+  if (!currentBook) {
+    return null;
+  }
+  const { title, coverImage, author, publicationYear, description, genres } =
+    currentBook;
+
+  const otherBooksList = (): Result | undefined => {
+    let result: Result = {
+      data: [],
+      title: "",
+    };
+    let array: BookProp[] = [];
+    if (currentBook && booksList) {
+      const currentAuthorBooks = booksList.filter(
+        (b) => b.author === currentBook.author && b.title !== currentBook.title
+      );
+      const currentBookGenres = currentBook.genres;
+      array = booksList.filter((book) => {
+        return book.genres
+          .filter(
+            (v) =>
+              currentBookGenres.includes(v) && book.title !== currentBook.title
+          )
+          .join("");
+      });
+      if (currentAuthorBooks.length > 0) {
+        result.data = currentAuthorBooks;
+        result.title = `Other works of ${currentBook.author}`;
+      } else {
+        result.data = array;
+        result.title = `Other works in genres ${currentBook.genres.join(", ")}`;
+      }
+      return result;
+    }
+  };
 
   const isBookInWishList = wishList.find((v) => v.title === title);
 
@@ -45,7 +87,7 @@ export const BookPage = ({ book, list, blockTitle }: Props) => {
           </div>
           <Button
             className="add-to-wishlist-btn"
-            onClick={() => handleAddBookToWishlist(book)}
+            onClick={() => handleAddBookToWishlist(currentBook)}
           >
             {isBookInWishList ? "Remove from wishlist" : "Want to read"}
           </Button>
@@ -66,9 +108,9 @@ export const BookPage = ({ book, list, blockTitle }: Props) => {
             </div>
           </div>
           <div className="author-works">
-            <h3 className="other-books-title">{blockTitle}</h3>
+            <h3 className="other-books-title">{otherBooksList()?.title}</h3>
             <div className="other-books-list">
-              {list?.map(({ coverImage, title }, index) => (
+              {otherBooksList()?.data?.map(({ coverImage, title }, index) => (
                 <div
                   className="other-books-section"
                   key={index}
