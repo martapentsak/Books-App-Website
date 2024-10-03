@@ -78,7 +78,7 @@ export const AuthorProvider = ({ children }: Props) => {
         nationality,
         award,
         notable_works,
-      }: any) => ({
+      }: Response) => ({
         id,
         author: name,
         image,
