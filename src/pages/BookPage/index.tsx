@@ -4,6 +4,7 @@ import { useWishlist } from "../../context/wishlist";
 
 import { Button } from "@mui/material";
 import { useBooks } from "../../context/books";
+import { AlertWindow } from "../../components/Alert";
 
 type BookProp = {
   id: string;
@@ -22,7 +23,7 @@ type Result = {
 
 export const BookPage = () => {
   const { handleAddBookToWishlist, wishList } = useWishlist();
-  const { booksList } = useBooks();
+  const { booksList, bookListError , handleCloseBooksError} = useBooks();
 
   const navigate = useNavigate();
   const location = useLocation();
@@ -78,6 +79,8 @@ export const BookPage = () => {
 
   return (
     <div className="book-page">
+         {bookListError &&
+        <AlertWindow error={bookListError} onClose={handleCloseBooksError}/>}
       <div className="wrapper">
         <div className="book-cover-section">
           <img src={coverImage} alt={`${title} cover`} className="book-cover" />
@@ -113,30 +116,34 @@ export const BookPage = () => {
             </div>
           </div>
           <div className="author-works">
-            <h3 className="other-books-title">{recommendationBookList()?.title}</h3>
+            <h3 className="other-books-title">
+              {recommendationBookList()?.title}
+            </h3>
             <div className="other-books-list">
-              {recommendationBookList()?.data?.map(({ coverImage, title }, index) => (
-                <div
-                  className="other-books-section"
-                  key={index}
-                  onClick={() => navigate(`/${title.replace(/ /g, "")}`)}
-                >
-                  <img
-                    src={coverImage}
-                    alt={title}
-                    className="other-book-image"
-                  />
-                  <span className="book-name">{title}</span>
-                  <div className="genres">
-                    {genres.map((g, index) => (
-                      <span className="book-category" key={index}>
-                        {g}
-                        {index < genres.length - 1 ? ", " : " "}
-                      </span>
-                    ))}
+              {recommendationBookList()?.data?.map(
+                ({ coverImage, title }, index) => (
+                  <div
+                    className="other-books-section"
+                    key={index}
+                    onClick={() => navigate(`/${title.replace(/ /g, "")}`)}
+                  >
+                    <img
+                      src={coverImage}
+                      alt={title}
+                      className="other-book-image"
+                    />
+                    <span className="book-name">{title}</span>
+                    <div className="genres">
+                      {genres.map((g, index) => (
+                        <span className="book-category" key={index}>
+                          {g}
+                          {index < genres.length - 1 ? ", " : " "}
+                        </span>
+                      ))}
+                    </div>
                   </div>
-                </div>
-              ))}
+                )
+              )}
             </div>
           </div>
         </div>
