@@ -60,8 +60,7 @@ export const WishListProvider = ({ children }: Props) => {
         await axios.delete(`${wishListApi}/${bookId}`);
       } catch (err) {
         console.error(handleRemoveBookFromWishlist, err);
-      } finally {
-      }
+      } 
     },
     []
   );
