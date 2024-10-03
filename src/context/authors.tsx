@@ -6,7 +6,6 @@ import {
   useContext,
   useState,
 } from "react";
-import { v4 as uuidv4 } from "uuid";
 
 import { errors } from "../constants/textValues";
 import { authorsAPi, poetsApi } from "../constants/api";
@@ -21,7 +20,6 @@ type Author = {
   name: string;
   image: string;
   cover_image?: string;
-  genre: string[];
   genres: string[];
   notable_works?: string[];
   works?: string[];
@@ -55,22 +53,25 @@ export const AuthorProvider = ({ children }: Props) => {
     try {
       const authorResponse = await axios.get(authorsAPi);
       const poetsResponse = await axios.get(poetsApi);
-      const [authorList, poetList] = await Promise.all([authorResponse, poetsResponse]);
+      const [authorList, poetList] = await Promise.all([
+        authorResponse,
+        poetsResponse,
+      ]);
       const authors = authorList.data.map(
-        ({ name, image, genre }: Author) => ({
-          id: uuidv4(),
+        ({ name, image, genres, id }: Author) => ({
+          id: id,
           author: name,
           image,
-          genres: genre,
+          genres,
         })
       );
       setAuthorsList(authors);
       const poets = poetList.data.map(
-        ({ name, image, genre, notable_works }: Author) => ({
-          id: uuidv4(),
+        ({ name, image, genres, notable_works, id }: Author) => ({
+          id: id,
           author: name,
           image,
-          genres: genre,
+          genres,
           works: notable_works,
         })
       );

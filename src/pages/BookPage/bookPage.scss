@@ -1,5 +1,6 @@
 .book-page {
-    height: calc(100vh - $menuHeight - 41px);
+    height: calc(100% - $menuHeight - 41px);
+    min-height: calc(100vh - $menuHeight - 41px);;
     padding-top: 40px;
     overflow: none;
 
@@ -11,7 +12,7 @@
         position: relative;
 
         .book-cover-section {
-            height: 100%;
+            max-height: 100%;
             width: 40%;
             margin-right: 40px;
 
@@ -56,13 +57,13 @@
             }
 
             .book-publication,
-            .book-genre {
+            .book-genres {
                 color: $blackishGrey;
                 margin: 8px 0;
                 display: flex;
             }
 
-            .genre-list {
+            .genres-list {
                 margin-left: 5px;
             }
 

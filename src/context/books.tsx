@@ -6,14 +6,14 @@ import {
   useContext,
   useState,
 } from "react";
-import { v4 as uuidv4 } from "uuid";
 
 import { errors } from "../constants/textValues";
 import { booksApi } from "../constants/api";
+import { loadingDuration } from "../constants/duration";
 
 import useAsyncEffect from "../hooks/useAsyncEffect";
+
 import { sleep } from "../helpers/sleep";
-import { loadingDuration } from "../constants/duration";
 
 type Book = {
   id: string;
@@ -33,13 +33,14 @@ type ProviderValues = {
 };
 
 type Response = {
-  title: string,
-  author: string,
-  genre: string[],
-  cover_image: string,
-  publication_year: number,
-  description: string
-}
+  id: string;
+  title: string;
+  author: string;
+  genres: string[];
+  cover_image: string;
+  publication_year: number;
+  description: string;
+};
 
 type Props = {
   children: ReactNode;
@@ -63,16 +64,17 @@ export const BooksProvider = ({ children }: Props) => {
         ({
           title,
           author,
-          genre,
+          genres,
           cover_image,
           publication_year,
           description,
+          id,
         }: Response) => ({
-          id: uuidv4(),
+          id: id,
           title,
           author,
           publicationYear: publication_year,
-          genres: genre, // On server he have genre: []
+          genres,
           description,
           coverImage: cover_image,
         })

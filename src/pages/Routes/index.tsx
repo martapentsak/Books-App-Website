@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 
 import { Menu } from "../../components/Menu";
 
@@ -14,6 +14,8 @@ import { useBooks } from "../../context/books";
 export const AllRoutes = () => {
   const { loading: authorLoading } = useAuthors();
   const { loading: booksLoading } = useBooks();
+
+  const location = useLocation();
 
   return (
     <div className="books-app">
