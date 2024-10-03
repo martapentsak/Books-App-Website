@@ -1,19 +1,17 @@
-type Author = {
-  image: string;
-  author: string;
-  birth: number;
-  death: number;
-  biography: string;
-  nationality: string;
-  award: string;
-  works: string[];
-};
+import { useAuthors } from "../../context/authors";
 
-type Props = {
-  authorInfo: Author;
-};
+export const AuthorPage = () => {
+  const { authorsList } = useAuthors();
 
-export const AuthorPage = ({ authorInfo : {image, author, birth, death, biography, nationality, award, works }}: Props) => {
+  const currentAuthor = authorsList.find(
+    (v) => v.author.replace(/ /g, "") === location.pathname.replace("/", "")
+  );
+
+  if (!currentAuthor) {
+    return <div>Author not found</div>;
+  }
+  const { image, author, birth, death, biography, nationality, award, works } =
+    currentAuthor;
 
   return (
     <div className="author-page">

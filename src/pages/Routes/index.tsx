@@ -12,15 +12,11 @@ import { useAuthors } from "../../context/authors";
 import { useBooks } from "../../context/books";
 
 export const AllRoutes = () => {
-  const { loading: authorLoading, authorsList } = useAuthors();
-  const { loading: booksLoading } = useBooks();
+  const { loading: authorLoading} = useAuthors();
+  const { loading: booksLoading} = useBooks();
 
   const location = useLocation();
-  const currentAuthor =
-    authorsList &&
-    authorsList.find(
-      (v) => v.author.replace(/ /g, "") === location.pathname.replace("/", "")
-    );
+
 
   return (
     <div className="books-app">
@@ -31,12 +27,10 @@ export const AllRoutes = () => {
           <Menu />
           <Routes>
             <Route path={menuElemenets.links.home} element={<HomePage />} />
-            {currentAuthor && (
               <Route
                 path={location.pathname}
-                element={<AuthorPage authorInfo={currentAuthor} />}
+                element={<AuthorPage />}
               />
-            )}
           </Routes>
         </div>
       )}
