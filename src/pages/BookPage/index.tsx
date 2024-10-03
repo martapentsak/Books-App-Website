@@ -39,34 +39,39 @@ export const BookPage = () => {
   const { title, coverImage, author, publicationYear, description, genres } =
     currentBook;
 
-  const otherBooksList = (): Result | undefined => {
+  const handleGetOtherBookOfAuthor = () =>
+    booksList.filter(
+      (b) => b.author === currentBook.author && b.title !== currentBook.title
+    );
+
+  const handleGetOtherBooksOfEachGenre = () => {
+    const currentBookGenres = currentBook.genres;
+    return booksList.filter((book) => {
+      return book.genres
+        .filter(
+          (v) =>
+            currentBookGenres.includes(v) && book.title !== currentBook.title
+        )
+        .join("");
+    });
+  };
+
+  const recommendationBookList = (): Result | undefined => {
     let result: Result = {
       data: [],
       title: "",
     };
-    let array: BookProp[] = [];
-    if (currentBook && booksList) {
-      const currentAuthorBooks = booksList.filter(
-        (b) => b.author === currentBook.author && b.title !== currentBook.title
-      );
-      const currentBookGenres = currentBook.genres;
-      array = booksList.filter((book) => {
-        return book.genres
-          .filter(
-            (v) =>
-              currentBookGenres.includes(v) && book.title !== currentBook.title
-          )
-          .join("");
-      });
-      if (currentAuthorBooks.length > 0) {
-        result.data = currentAuthorBooks;
-        result.title = `Other works of ${currentBook.author}`;
-      } else {
-        result.data = array;
-        result.title = `Other works in genres ${currentBook.genres.join(", ")}`;
-      }
-      return result;
+    const otherAuthorBooks = handleGetOtherBookOfAuthor();
+    const otherGenreBooks = handleGetOtherBooksOfEachGenre();
+    if (otherAuthorBooks) {
+      result.data = otherAuthorBooks;
+      result.title = `Other works of ${currentBook.author}`;
     }
+    if (otherGenreBooks) {
+      result.data = otherGenreBooks;
+      result.title = `Other works in genres ${currentBook.genres.join(", ")}`;
+    }
+    return result;
   };
 
   const isBookInWishList = wishList.find((v) => v.title === title);
@@ -108,9 +113,9 @@ export const BookPage = () => {
             </div>
           </div>
           <div className="author-works">
-            <h3 className="other-books-title">{otherBooksList()?.title}</h3>
+            <h3 className="other-books-title">{recommendationBookList()?.title}</h3>
             <div className="other-books-list">
-              {otherBooksList()?.data?.map(({ coverImage, title }, index) => (
+              {recommendationBookList()?.data?.map(({ coverImage, title }, index) => (
                 <div
                   className="other-books-section"
                   key={index}
