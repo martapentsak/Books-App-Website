@@ -74,7 +74,7 @@ export const HomePage = () => {
           <div key={index} className="poet-work-section">
             <span className="work-number">{index + 1}</span>
             <p className="work-name">{value}</p>
-            <span className="author">{poetsList[selectedPoetIndex].name}</span>
+            <span className="author">{poetsList[selectedPoetIndex].author}</span>
           </div>
         ))}
       </div>

@@ -1,5 +1,6 @@
 .author-page {
-    height: calc(100vh - $menuHeight - 40px);
+    height: calc(100% - $menuHeight - 40px);
+    min-height: calc(100vh - $menuHeight - 40px);
     padding-top: 40px;
     overflow: none;
 

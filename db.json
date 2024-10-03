@@ -6,7 +6,7 @@
               "birth_year": 1564,
               "death_year": 1616,
               "nationality": "English",
-              "genre": [
+              "genres": [
                 "Drama",
                 "Poetry"
               ],
@@ -27,7 +27,7 @@
               "birth_year": 1830,
               "death_year": 1886,
               "nationality": "American",
-              "genre": [
+              "genres": [
                 "Poetry"
               ],
               "notable_works": [
@@ -45,7 +45,7 @@
               "birth_year": 1809,
               "death_year": 1849,
               "nationality": "American",
-              "genre": [
+              "genres": [
                 "Poetry"
               ],
               "notable_works": [
@@ -55,7 +55,7 @@
                 "The Bells"
               ],
               "award": "None",
-              "biography": "Edgar Allan Poe was an American writer, poet, and literary critic. He is best known for his macabre and Gothic tales and poems, which have greatly influenced the horror genre.",
+              "biography": "Edgar Allan Poe was an American writer, poet, and literary critic. He is best known for his macabre and Gothic tales and poems, which have greatly influenced the horror genres.",
               "image": "https://i.pinimg.com/originals/90/62/36/906236b33d76a67d0c7b4c1f86c0e29a.jpg"
             },
             {
@@ -64,7 +64,7 @@
               "birth_year": 1770,
               "death_year": 1850,
               "nationality": "British",
-              "genre": [
+              "genres": [
                 "Poetry"
               ],
               "notable_works": [
@@ -83,7 +83,7 @@
               "birth_year": 1795,
               "death_year": 1821,
               "nationality": "British",
-              "genre": [
+              "genres": [
                 "Poetry"
               ],
               "notable_works": [
@@ -102,7 +102,7 @@
               "birth_year": 1819,
               "death_year": 1892,
               "nationality": "American",
-              "genre": [
+              "genres": [
                 "Poetry"
               ],
               "notable_works": [
@@ -121,7 +121,7 @@
               "birth_year": 1894,
               "death_year": 1962,
               "nationality": "American",
-              "genre": [
+              "genres": [
                 "Poetry"
               ],
               "notable_works": [
@@ -139,7 +139,7 @@
               "birth_year": 1902,
               "death_year": 1967,
               "nationality": "American",
-              "genre": [
+              "genres": [
                 "Poetry",
                 "Novel",
                 "Essay"
@@ -161,7 +161,7 @@
               "birth_year": 1207,
               "death_year": 1273,
               "nationality": "Persian",
-              "genre": [
+              "genres": [
                 "Poetry"
               ],
               "notable_works": [
@@ -180,7 +180,7 @@
               "birth_year": 1928,
               "death_year": 2014,
               "nationality": "American",
-              "genre": [
+              "genres": [
                 "Poetry",
                 "Autobiography"
               ],
@@ -201,7 +201,7 @@
               "birth_year": 1932,
               "death_year": 1963,
               "nationality": "American",
-              "genre": [
+              "genres": [
                 "Poetry"
               ],
               "notable_works": [
@@ -222,7 +222,7 @@
               "birth_year": 1861,
               "death_year": 1941,
               "nationality": "Indian",
-              "genre": [
+              "genres": [
                 "Poetry"
               ],
               "notable_works": [
@@ -243,7 +243,7 @@
               "birth_year": 1830,
               "death_year": 1894,
               "nationality": "British",
-              "genre": [
+              "genres": [
                 "Poetry"
               ],
               "notable_works": [
@@ -264,7 +264,7 @@
               "birth_year": 1874,
               "death_year": 1963,
               "nationality": "American",
-              "genre": [
+              "genres": [
                 "Poetry"
               ],
               "notable_works": [
@@ -283,7 +283,7 @@
               "birth_year": 1939,
               "death_year": 2013,
               "nationality": "Irish",
-              "genre": [
+              "genres": [
                 "Poetry",
                 "Translation"
               ],
@@ -303,7 +303,7 @@
               "birth_year": 1928,
               "death_year": 1974,
               "nationality": "American",
-              "genre": [
+              "genres": [
                 "Poetry"
               ],
               "notable_works": [
@@ -321,7 +321,7 @@
               "birth_year": 1946,
               "death_year": null,
               "nationality": "American",
-              "genre": [
+              "genres": [
                 "Poetry",
                 "Rock"
               ],
@@ -345,7 +345,7 @@
               "birth_year": 1564,
               "death_year": 1616,
               "nationality": "English",
-              "genre": [
+              "genres": [
                 "Drama",
                 "Poetry"
               ],
@@ -367,7 +367,7 @@
               "birth_year": 1828,
               "death_year": 1910,
               "nationality": "Russian",
-              "genre": [
+              "genres": [
                 "Historical Fiction",
                 "Realism"
               ],
@@ -387,7 +387,7 @@
               "birth_year": 1835,
               "death_year": 1910,
               "nationality": "American",
-              "genre": [
+              "genres": [
                 "Humor",
                 "Adventure"
               ],
@@ -406,7 +406,7 @@
               "birth_year": 1819,
               "death_year": 1891,
               "nationality": "American",
-              "genre": [
+              "genres": [
                 "Adventure",
                 "Sea Fiction"
               ],
@@ -425,7 +425,7 @@
               "birth_year": 1821,
               "death_year": 1881,
               "nationality": "Russian",
-              "genre": [
+              "genres": [
                 "Psychological Fiction",
                 "Philosophical"
               ],
@@ -444,7 +444,7 @@
               "birth_year": 1812,
               "death_year": 1870,
               "nationality": "English",
-              "genre": [
+              "genres": [
                 "Classic",
                 "Victorian Fiction"
               ],
@@ -464,7 +464,7 @@
               "birth_year": 1821,
               "death_year": 1880,
               "nationality": "French",
-              "genre": [
+              "genres": [
                 "Realism",
                 "Novel"
               ],
@@ -483,7 +483,7 @@
               "birth_year": 1809,
               "death_year": 1849,
               "nationality": "American",
-              "genre": [
+              "genres": [
                 "Gothic",
                 "Horror"
               ],
@@ -493,7 +493,7 @@
                 "The Fall of the House of Usher"
               ],
               "award": "None",
-              "biography": "Edgar Allan Poe was an American writer, poet, and literary critic. He is best known for his macabre and Gothic tales and his influential contributions to the development of the mystery and horror genres.",
+              "biography": "Edgar Allan Poe was an American writer, poet, and literary critic. He is best known for his macabre and Gothic tales and his influential contributions to the development of the mystery and horror genress.",
               "image": "https://i.pinimg.com/originals/90/62/36/906236b33d76a67d0c7b4c1f86c0e29a.jpg"
             },
             {
@@ -502,7 +502,7 @@
               "birth_year": 1797,
               "death_year": 1851,
               "nationality": "English",
-              "genre": [
+              "genres": [
                 "Gothic",
                 "Science Fiction"
               ],
@@ -521,7 +521,7 @@
               "birth_year": 1830,
               "death_year": 1886,
               "nationality": "American",
-              "genre": [
+              "genres": [
                 "Poetry"
               ],
               "notable_works": [
@@ -539,7 +539,7 @@
               "birth_year": 1775,
               "death_year": 1817,
               "nationality": "English",
-              "genre": [
+              "genres": [
                 "Romance",
                 "Classic"
               ],
@@ -559,7 +559,7 @@
               "birth_year": 1926,
               "death_year": 2016,
               "nationality": "American",
-              "genre": [
+              "genres": [
                 "Southern Gothic",
                 "Coming-of-Age"
               ],
@@ -578,7 +578,7 @@
               "birth_year": 1890,
               "death_year": 1976,
               "nationality": "English",
-              "genre": [
+              "genres": [
                 "Mystery",
                 "Detective Fiction"
               ],
@@ -597,7 +597,7 @@
               "birth_year": 1892,
               "death_year": 1973,
               "nationality": "English",
-              "genre": [
+              "genres": [
                 "Fantasy",
                 "High Fantasy"
               ],
@@ -607,7 +607,7 @@
                 "The Silmarillion"
               ],
               "award": "None",
-              "biography": "J.R.R. Tolkien was an English writer, poet, philologist, and university professor. He is best known for his high-fantasy works, 'The Hobbit' and 'The Lord of the Rings,' which have had a major impact on the fantasy genre.",
+              "biography": "J.R.R. Tolkien was an English writer, poet, philologist, and university professor. He is best known for his high-fantasy works, 'The Hobbit' and 'The Lord of the Rings,' which have had a major impact on the fantasy genres.",
               "image": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Tolkien-color.png"
             },
             {
@@ -616,7 +616,7 @@
               "birth_year": 1882,
               "death_year": 1941,
               "nationality": "English",
-              "genre": [
+              "genres": [
                 "Modernist",
                 "Feminist Literature"
               ],
@@ -636,7 +636,7 @@
               "birth_year": 1882,
               "death_year": 1941,
               "nationality": "Irish",
-              "genre": [
+              "genres": [
                 "Modernist",
                 "Stream of Consciousness"
               ],
@@ -656,7 +656,7 @@
               "birth_year": 1856,
               "death_year": 1950,
               "nationality": "Irish",
-              "genre": [
+              "genres": [
                 "Drama",
                 "Satire"
               ],
@@ -675,7 +675,7 @@
               "birth_year": 1903,
               "death_year": 1950,
               "nationality": "English",
-              "genre": [
+              "genres": [
                 "Dystopian",
                 "Political Fiction"
               ],
@@ -696,7 +696,7 @@
               "birth_year": 1861,
               "death_year": 1941,
               "nationality": "Indian",
-              "genre": [
+              "genres": [
                 "Poetry",
                 "Short Stories"
               ],
@@ -715,7 +715,7 @@
               "birth_year": 1927,
               "death_year": 2014,
               "nationality": "Colombian",
-              "genre": [
+              "genres": [
                 "Magical Realism",
                 "Literary Fiction"
               ],
@@ -733,7 +733,7 @@
               "name": "Haruki Murakami",
               "birth_year": 1949,
               "nationality": "Japanese",
-              "genre": [
+              "genres": [
                 "Magical Realism",
                 "Contemporary Fiction"
               ],
@@ -752,7 +752,7 @@
               "birth_year": 1919,
               "death_year": 2010,
               "nationality": "American",
-              "genre": [
+              "genres": [
                 "Coming-of-Age",
                 "Literary Fiction"
               ],
@@ -771,7 +771,7 @@
               "birth_year": 1883,
               "death_year": 1924,
               "nationality": "Czech",
-              "genre": [
+              "genres": [
                 "Absurdist Fiction",
                 "Existentialism"
               ],
@@ -791,7 +791,7 @@
               "birth_year": 1894,
               "death_year": 1963,
               "nationality": "English",
-              "genre": [
+              "genres": [
                 "Dystopian",
                 "Science Fiction"
               ],
@@ -810,7 +810,7 @@
               "birth_year": 1877,
               "death_year": 1962,
               "nationality": "German",
-              "genre": [
+              "genres": [
                 "Siddhartha",
                 "Steppenwolf"
               ],
@@ -829,7 +829,7 @@
               "birth_year": 1922,
               "death_year": 2007,
               "nationality": "American",
-              "genre": [
+              "genres": [
                 "Satire",
                 "Science Fiction"
               ],
@@ -848,7 +848,7 @@
               "birth_year": 1947,
               "death_year": 2006,
               "nationality": "American",
-              "genre": [
+              "genres": [
                 "Science Fiction",
                 "Afrofuturism"
               ],
@@ -858,7 +858,7 @@
                 "Dawn"
               ],
               "award": "MacArthur Fellowship (1995)",
-              "biography": "Octavia E. Butler was an American science fiction writer, considered one of the most significant voices in the genre. She was the first science fiction writer to receive the MacArthur Fellowship.",
+              "biography": "Octavia E. Butler was an American science fiction writer, considered one of the most significant voices in the genres. She was the first science fiction writer to receive the MacArthur Fellowship.",
               "image": "https://images.squarespace-cdn.com/content/v1/5af9a86fc3c16a3922fe3d13/1633709567752-YTANLX708KW0LXMZGU0Q/OEBHR-21070462_0084B_RBJ.jpeg"
             },
             {
@@ -867,7 +867,7 @@
               "birth_year": 1913,
               "death_year": 1960,
               "nationality": "French",
-              "genre": [
+              "genres": [
                 "Existentialism",
                 "Absurdist Fiction"
               ],
@@ -886,7 +886,7 @@
               "birth_year": 1902,
               "death_year": 1968,
               "nationality": "American",
-              "genre": [
+              "genres": [
                 "Grapes of Wrath",
                 "Of Mice and Men"
               ],
@@ -906,7 +906,7 @@
               "birth_year": 1899,
               "death_year": 1961,
               "nationality": "American",
-              "genre": [
+              "genres": [
                 "Modernist",
                 "War Fiction"
               ],
@@ -926,7 +926,7 @@
               "birth_year": 1854,
               "death_year": 1900,
               "nationality": "Irish",
-              "genre": [
+              "genres": [
                 "Comedy",
                 "Satire"
               ],
@@ -945,7 +945,7 @@
               "birth_year": 1899,
               "death_year": 1986,
               "nationality": "Argentine",
-              "genre": [
+              "genres": [
                 "Magic Realism",
                 "Short Stories"
               ],
@@ -964,7 +964,7 @@
               "birth_year": 1896,
               "death_year": 1940,
               "nationality": "American",
-              "genre": [
+              "genres": [
                 "Jazz Age",
                 "Lost Generation"
               ],
@@ -983,7 +983,7 @@
               "birth_year": 1265,
               "death_year": 1321,
               "nationality": "Italian",
-              "genre": [
+              "genres": [
                 "Epic Poetry",
                 "Allegory"
               ],
@@ -1003,7 +1003,7 @@
               "birth_year": 1925,
               "death_year": 1970,
               "nationality": "Japanese",
-              "genre": [
+              "genres": [
                 "Modernist",
                 "Historical Fiction"
               ],
@@ -1021,7 +1021,7 @@
               "name": "Margaret Atwood",
               "birth_year": 1939,
               "nationality": "Canadian",
-              "genre": [
+              "genres": [
                 "Dystopian",
                 "Speculative Fiction"
               ],
@@ -1040,7 +1040,7 @@
               "birth_year": 1891,
               "death_year": 1960,
               "nationality": "American",
-              "genre": [
+              "genres": [
                 "African-American Literature",
                 "Anthropology"
               ],
@@ -1060,7 +1060,7 @@
               "birth_year": 1892,
               "death_year": 1973,
               "nationality": "British",
-              "genre": [
+              "genres": [
                 "Fantasy",
                 "Adventure"
               ],
@@ -1070,7 +1070,7 @@
                 "The Silmarillion"
               ],
               "award": "None",
-              "biography": "J.R.R. Tolkien was a British writer, poet, philologist, and university professor. He is best known for his high-fantasy works 'The Lord of the Rings' and 'The Hobbit,' which have become classics of the genre.",
+              "biography": "J.R.R. Tolkien was a British writer, poet, philologist, and university professor. He is best known for his high-fantasy works 'The Lord of the Rings' and 'The Hobbit,' which have become classics of the genres.",
               "image": "https://upload.wikimedia.org/wikipedia/commons/d/d4/J._R._R._Tolkien%2C_ca._1925.jpg"
             },
           
@@ -1079,7 +1079,7 @@
               "name": "Khaled Hosseini",
               "birth_year": 1965,
               "nationality": "Afghan-American",
-              "genre": [
+              "genres": [
                 "Contemporary Fiction",
                 "Historical Fiction"
               ],
@@ -1098,7 +1098,7 @@
               "birth_year": 1920,
               "death_year": 2012,
               "nationality": "American",
-              "genre": [
+              "genres": [
                 "Science Fiction",
                 "Fantasy"
               ],
@@ -1108,7 +1108,7 @@
                 "Something Wicked This Way Comes"
               ],
               "award": "National Medal of Arts (2004)",
-              "biography": "Ray Bradbury was an American author and screenwriter known for his works in the genres of science fiction, fantasy, and horror. His novel 'Fahrenheit 451' is regarded as a classic of dystopian literature.",
+              "biography": "Ray Bradbury was an American author and screenwriter known for his works in the genress of science fiction, fantasy, and horror. His novel 'Fahrenheit 451' is regarded as a classic of dystopian literature.",
               "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Ray_Bradbury_%281975%29.jpg/800px-Ray_Bradbury_%281975%29.jpg"
             },
             {
@@ -1117,7 +1117,7 @@
               "birth_year": 1931,
               "death_year": 2019,
               "nationality": "American",
-              "genre": [
+              "genres": [
                 "African-American Literature",
                 "Magical Realism"
               ],
@@ -1136,7 +1136,7 @@
             "name": "J.K. Rowling",
             "birth_year": 1965,
             "nationality": "British",
-            "genre": [
+            "genres": [
               "Fantasy",
               "Young Adult"
             ],
@@ -1157,7 +1157,7 @@
               "title": "The Brothers Karamazov",
               "author": "Fyodor Dostoevsky",
               "publication_year": 1880,
-              "genre": [
+              "genres": [
                 "Classic",
                 "Philosophical Fiction"
               ],
@@ -1169,7 +1169,7 @@
               "title": "Crime and Punishment",
               "author": "Fyodor Dostoevsky",
               "publication_year": 1866,
-              "genre": [
+              "genres": [
                 "Classic",
                 "Psychological Fiction"
               ],
@@ -1181,7 +1181,7 @@
               "title": "The Picture of Dorian Gray",
               "author": "Oscar Wilde",
               "publication_year": 1890,
-              "genre": [
+              "genres": [
                 "Gothic",
                 "Philosophical Fiction"
               ],
@@ -1193,7 +1193,7 @@
               "title": "The Count of Monte Cristo",
               "author": "Alexandre Dumas",
               "publication_year": 1844,
-              "genre": [
+              "genres": [
                 "Adventure",
                 "Historical Fiction"
               ],
@@ -1205,7 +1205,7 @@
               "title": "To Kill a Mockingbird",
               "author": "Harper Lee",
               "publication_year": 1960,
-              "genre": [
+              "genres": [
                 "Fiction",
                 "Classic"
               ],
@@ -1217,7 +1217,7 @@
               "title": "1984",
               "author": "George Orwell",
               "publication_year": 1949,
-              "genre": [
+              "genres": [
                 "Dystopian",
                 "Science Fiction"
               ],
@@ -1229,7 +1229,7 @@
               "title": "Pride and Prejudice",
               "author": "Jane Austen",
               "publication_year": 1813,
-              "genre": [
+              "genres": [
                 "Classic",
                 "Romance"
               ],
@@ -1241,7 +1241,7 @@
               "title": "The Great Gatsby",
               "author": "F. Scott Fitzgerald",
               "publication_year": 1925,
-              "genre": [
+              "genres": [
                 "Fiction",
                 "Classic"
               ],
@@ -1253,7 +1253,7 @@
               "title": "Moby-Dick",
               "author": "Herman Melville",
               "publication_year": 1851,
-              "genre": [
+              "genres": [
                 "Fiction",
                 "Adventure"
               ],
@@ -1265,7 +1265,7 @@
               "title": "The Lord of the Rings",
               "author": "J.R.R. Tolkien",
               "publication_year": 1954,
-              "genre": [
+              "genres": [
                 "Fantasy",
                 "Adventure"
               ],
@@ -1277,7 +1277,7 @@
               "title": "The Catcher in the Rye",
               "author": "J.D. Salinger",
               "publication_year": 1951,
-              "genre": [
+              "genres": [
                 "Fiction",
                 "Coming-of-age"
               ],
@@ -1289,7 +1289,7 @@
               "title": "The Hobbit",
               "author": "J.R.R. Tolkien",
               "publication_year": 1937,
-              "genre": [
+              "genres": [
                 "Fantasy",
                 "Adventure"
               ],
@@ -1301,7 +1301,7 @@
               "title": "One Hundred Years of Solitude",
               "author": "Gabriel Garcia Marquez",
               "publication_year": 1967,
-              "genre": [
+              "genres": [
                 "Magical Realism",
                 "Literary Fiction"
               ],
@@ -1313,7 +1313,7 @@
               "title": "War and Peace",
               "author": "Leo Tolstoy",
               "publication_year": 1869,
-              "genre": [
+              "genres": [
                 "Historical Fiction",
                 "Epic"
               ],
@@ -1325,7 +1325,7 @@
               "title": "The Odyssey",
               "author": "Homer",
               "publication_year": "8th century BCE",
-              "genre": [
+              "genres": [
                 "Epic",
                 "Mythology"
               ],
@@ -1337,7 +1337,7 @@
               "title": "The Divine Comedy",
               "author": "Dante Alighieri",
               "publication_year": "1320",
-              "genre": [
+              "genres": [
                 "Epic",
                 "Poetry"
               ],
@@ -1350,7 +1350,7 @@
               "title": "Brave New World",
               "author": "Aldous Huxley",
               "publication_year": 1932,
-              "genre": [
+              "genres": [
                 "Dystopian",
                 "Science Fiction"
               ],
@@ -1363,7 +1363,7 @@
               "title": "Anna Karenina",
               "author": "Leo Tolstoy",
               "publication_year": 1877,
-              "genre": [
+              "genres": [
                 "Classic",
                 "Romance"
               ],
@@ -1375,7 +1375,7 @@
               "title": "The Alchemist",
               "author": "Paulo Coelho",
               "publication_year": 1988,
-              "genre": [
+              "genres": [
                 "Fiction",
                 "Philosophical"
               ],
@@ -1387,7 +1387,7 @@
               "title": "The Adventures of Huckleberry Finn",
               "author": "Mark Twain",
               "publication_year": 1884,
-              "genre": [
+              "genres": [
                 "Adventure",
                 "Satire"
               ],
@@ -1399,7 +1399,7 @@
               "title": "The Iliad",
               "author": "Homer",
               "publication_year": "8th century BCE",
-              "genre": [
+              "genres": [
                 "Epic",
                 "Mythology"
               ],
@@ -1411,7 +1411,7 @@
               "title": "Don Quixote",
               "author": "Miguel de Cervantes",
               "publication_year": 1605,
-              "genre": [
+              "genres": [
                 "Classic",
                 "Satire"
               ],
@@ -1423,7 +1423,7 @@
               "title": "Frankenstein",
               "author": "Mary Shelley",
               "publication_year": 1818,
-              "genre": [
+              "genres": [
                 "Gothic",
                 "Science Fiction"
               ],
@@ -1435,7 +1435,7 @@
               "title": "Alice's Adventures in Wonderland",
               "author": "Lewis Carroll",
               "publication_year": 1865,
-              "genre": [
+              "genres": [
                 "Fantasy",
                 "Children's Literature"
               ],
@@ -1447,7 +1447,7 @@
               "title": "The Little Prince",
               "author": "Antoine de Saint-Exupéry",
               "publication_year": 1943,
-              "genre": [
+              "genres": [
                 "Fable",
                 "Children's Literature"
               ],
@@ -1459,7 +1459,7 @@
               "title": "The Book Thief",
               "author": "Markus Zusak",
               "publication_year": 2005,
-              "genre": [
+              "genres": [
                 "Historical Fiction",
                 "War"
               ],
@@ -1471,7 +1471,7 @@
               "title": "Slaughterhouse-Five",
               "author": "Kurt Vonnegut",
               "publication_year": 1969,
-              "genre": [
+              "genres": [
                 "Satire",
                 "Science Fiction"
               ],
@@ -1483,7 +1483,7 @@
               "title": "The Grapes of Wrath",
               "author": "John Steinbeck",
               "publication_year": 1939,
-              "genre": [
+              "genres": [
                 "Historical Fiction",
                 "Social Commentary"
               ],
@@ -1495,7 +1495,7 @@
               "title": "Fahrenheit 451",
               "author": "Ray Bradbury",
               "publication_year": 1953,
-              "genre": [
+              "genres": [
                 "Dystopian",
                 "Science Fiction"
               ],
@@ -1507,7 +1507,7 @@
               "title": "The Lord of the Flies",
               "author": "William Golding",
               "publication_year": 1954,
-              "genre": [
+              "genres": [
                 "Dystopian",
                 "Psychological Fiction"
               ],
@@ -1519,7 +1519,7 @@
               "title": "The Hitchhiker's Guide to the Galaxy",
               "author": "Douglas Adams",
               "publication_year": 1979,
-              "genre": [
+              "genres": [
                 "Science Fiction",
                 "Comedy"
               ],
@@ -1531,7 +1531,7 @@
               "title": "A Tale of Two Cities",
               "author": "Charles Dickens",
               "publication_year": 1859,
-              "genre": [
+              "genres": [
                 "Historical Fiction",
                 "Classic"
               ],
@@ -1543,7 +1543,7 @@
               "title": "The Chronicles of Narnia",
               "author": "C.S. Lewis",
               "publication_year": 1950,
-              "genre": [
+              "genres": [
                 "Fantasy",
                 "Children's Literature"
               ],
@@ -1555,7 +1555,7 @@
               "title": "The Handmaid's Tale",
               "author": "Margaret Atwood",
               "publication_year": 1985,
-              "genre": [
+              "genres": [
                 "Dystopian",
                 "Feminist Fiction"
               ],
@@ -1567,7 +1567,7 @@
               "title": "The Name of the Rose",
               "author": "Umberto Eco",
               "publication_year": 1980,
-              "genre": [
+              "genres": [
                 "Historical Fiction",
                 "Mystery"
               ],
@@ -1579,7 +1579,7 @@
               "title": "The Trial",
               "author": "Franz Kafka",
               "publication_year": 1925,
-              "genre": [
+              "genres": [
                 "Absurdist Fiction",
                 "Existential"
               ],
@@ -1591,7 +1591,7 @@
               "title": "The Kite Runner",
               "author": "Khaled Hosseini",
               "publication_year": 2003,
-              "genre": [
+              "genres": [
                 "Historical Fiction",
                 "Drama"
               ],
@@ -1603,7 +1603,7 @@
               "title": "The Pillars of the Earth",
               "author": "Ken Follett",
               "publication_year": 1989,
-              "genre": [
+              "genres": [
                 "Historical Fiction",
                 "Adventure"
               ],
@@ -1615,7 +1615,7 @@
               "title": "The Shadow of the Wind",
               "author": "Carlos Ruiz Zafón",
               "publication_year": 2001,
-              "genre": [
+              "genres": [
                 "Mystery",
                 "Gothic"
               ],
@@ -1627,7 +1627,7 @@
               "title": "The Secret Garden",
               "author": "Frances Hodgson Burnett",
               "publication_year": 1911,
-              "genre": [
+              "genres": [
                 "Children's Literature",
                 "Classic"
               ],
@@ -1639,7 +1639,7 @@
               "title": "The Giver",
               "author": "Lois Lowry",
               "publication_year": 1993,
-              "genre": [
+              "genres": [
                 "Dystopian",
                 "Young Adult"
               ],
@@ -1651,7 +1651,7 @@
               "title": "The Metamorphosis",
               "author": "Franz Kafka",
               "publication_year": 1915,
-              "genre": [
+              "genres": [
                 "Absurdist Fiction",
                 "Existential"
               ],
@@ -1663,7 +1663,7 @@
               "title": "Gone with the Wind",
               "author": "Margaret Mitchell",
               "publication_year": 1936,
-              "genre": [
+              "genres": [
                 "Historical Fiction",
                 "Romance"
               ],
@@ -1675,7 +1675,7 @@
               "title": "The Wind in the Willows",
               "author": "Kenneth Grahame",
               "publication_year": 1908,
-              "genre": [
+              "genres": [
                 "Children's Literature",
                 "Fantasy"
               ],
@@ -1687,7 +1687,7 @@
               "title": "Dracula",
               "author": "Bram Stoker",
               "publication_year": 1897,
-              "genre": [
+              "genres": [
                 "Gothic",
                 "Horror"
               ],
@@ -1699,7 +1699,7 @@
               "title": "The Call of the Wild",
               "author": "Jack London",
               "publication_year": 1903,
-              "genre": [
+              "genres": [
                 "Adventure",
                 "Nature"
               ],
@@ -1711,7 +1711,7 @@
               "title": "The Stand",
               "author": "Stephen King",
               "publication_year": 1978,
-              "genre": [
+              "genres": [
                 "Horror",
                 "Post-Apocalyptic"
               ],
@@ -1723,7 +1723,7 @@
               "title": "The Color Purple",
               "author": "Alice Walker",
               "publication_year": 1982,
-              "genre": [
+              "genres": [
                 "Fiction",
                 "Historical"
               ],
@@ -1735,7 +1735,7 @@
               "title": "The Silmarillion",
               "author": "J.R.R. Tolkien",
               "publication_year": 1977,
-              "genre": [
+              "genres": [
                 "Fantasy",
                 "Mythopoeia"
               ],

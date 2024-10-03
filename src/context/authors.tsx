@@ -32,7 +32,7 @@ type Author = {
 type Response = {
   name: string,
   image: string
-  genre: string[],
+  genres: string[],
   id: string
   birth_year: number,
   death_year: number,
@@ -70,7 +70,7 @@ export const AuthorProvider = ({ children }: Props) => {
       ({
         name,
         image,
-        genre,
+        genres,
         id,
         birth_year,
         death_year,
@@ -82,7 +82,7 @@ export const AuthorProvider = ({ children }: Props) => {
         id,
         author: name,
         image,
-        genres: genre,
+        genres,
         birth: birth_year,
         death: death_year,
         biography,
