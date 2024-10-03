@@ -77,13 +77,22 @@
         .list-section {
             margin-top: 20px;
             width: 100%;
+            height: 100%;
             display: flex;
             flex-wrap: wrap;
             align-items: center;
 
             .item {
-                flex: 1 1 180px;
                 min-width: 150px;
+            }
+
+            .no-found {
+                height: calc(100vh - $menuHeight - 200px);
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: $white;
             }
         }
     }
