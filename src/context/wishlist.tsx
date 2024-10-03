@@ -63,7 +63,7 @@ export const WishListProvider = ({ children }: Props) => {
       } finally {
       }
     },
-    [wishList]
+    []
   );
 
   const handleAddBookToWishlist = useCallback(
