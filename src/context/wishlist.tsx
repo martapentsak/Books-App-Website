@@ -68,7 +68,8 @@ export const WishListProvider = ({ children }: Props) => {
   const handleAddBookToWishlist = useCallback(
     async (book: Book) => {
       try {
-        if (!wishList.find((v) => v.title === book.title)) {
+        const bookAlreadyExist = wishList.find((v) => v.title === book.title)
+        if (!bookAlreadyExist) {
           setWishList((prev) => [...prev, book]);
           await axios.post(wishListApi, book);
         } else {
