@@ -1,7 +1,5 @@
 import React, { ErrorInfo } from "react";
 
-import somethinWrong from "../../assets/somethingWrong.png";
-
 interface ErrorBoundaryProps {
   children: React.ReactNode;
 }
@@ -32,12 +30,10 @@ class ErrorBoundary extends React.Component<
     if (this.state.hasError) {
       return (
         <div className="error-boundary-page">
-          <img src={somethinWrong} className="something-wring-icon" />
           <h1 className="error">Oops! Something went wrong ....</h1>
         </div>
       );
     }
-
     return this.props.children;
   }
 }
