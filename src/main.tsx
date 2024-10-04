@@ -8,13 +8,21 @@ import { BooksProvider } from "./context/books.tsx";
 
 import { composeProviders } from "./utils/composeProviders.tsx";
 import { WishListProvider } from "./context/wishlist.tsx";
+import ErrorBoundary from "./components/ErrorBoundary/ErrorBoundary.tsx";
 
-const providers = [BrowserRouter, AuthorProvider, BooksProvider, WishListProvider];
+const providers = [
+  BrowserRouter,
+  AuthorProvider,
+  BooksProvider,
+  WishListProvider,
+];
 
 const CombinedProviders = composeProviders(providers);
 
 createRoot(document.getElementById("root")!).render(
-  <CombinedProviders>
-    <App />
-  </CombinedProviders>
+  <ErrorBoundary>
+    <CombinedProviders>
+      <App />
+    </CombinedProviders>
+  </ErrorBoundary>
 );

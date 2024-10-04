@@ -79,6 +79,7 @@ export const AuthorProvider = ({ children }: Props) => {
     } catch (err) {
       console.error("Get authors list", err);
       setAuthorListError(errors.getAuthorsList);
+      throw err;
     } finally {
       setAuthorLoading(false);
     }
