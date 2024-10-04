@@ -7,4 +7,5 @@ export type UniversalListItem = {
     nationality: string
     title?: string;
     year?: number | undefined;
+    century?: string,
   };

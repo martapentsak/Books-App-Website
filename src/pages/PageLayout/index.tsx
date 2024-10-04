@@ -48,7 +48,6 @@ export const PageLayout = ({ listArray, isAuthorCard }: Props) => {
     nationality: "",
     century: "",
   });
-
   const { authorsList, poetsList } = useAuthors();
   const { booksList } = useBooks();
 
@@ -129,28 +128,76 @@ export const PageLayout = ({ listArray, isAuthorCard }: Props) => {
 
   const filteredArray = useMemo(() => {
     let newFileredArray = [...listArray];
+
     const { genres, nationality, century } = filteredValues;
-    if (genres && genres !== "All") {
-      newFileredArray = newFileredArray.filter((v) =>
-        v.genres.find((v) => v === genres)
+
+    let newFilteredArray = newFileredArray.filter((v) => {
+      console.log(genres === "All" ? v : v.genres.includes(genres))
+      return (
+        (genres === "All"  || genres && v.genres.includes(genres)) ||
+        (nationality === "All" || nationality && v.nationality === nationality) ||
+        (century === "All" || century &&  centuryFromYear(v.year) + "th century" === century)
       );
-    }
-    if (nationality && nationality !== "All") {
-      newFileredArray = newFileredArray.filter(
-        (v) => v.nationality === nationality
-      );
-    }
-    if (century && century !== "All") {
-      newFileredArray = newFileredArray.filter(
-        (v) => centuryFromYear(v.year) + "th century" == century
-      );
-    }
-    if (searchValue.length > 0) {
-      newFileredArray = newFileredArray.filter((v) =>
-        v.author.toLocaleLowerCase().includes(searchValue)
-      );
-    }
-    return newFileredArray;
+    });
+
+    console.log(newFilteredArray)
+
+    return newFilteredArray
+
+
+    // if (genres !== "All") {
+    //   console.log(genres)
+    //   newFileredArray = newFileredArray.filter((v) =>
+    //     v.genres.includes(genres)
+    //   );
+    // }
+    
+    // if (nationality !== "All") {
+    //   newFileredArray = newFileredArray.filter((v) =>
+    //     v.nationality === nationality
+    //   );
+    // }
+    
+    // if (century !== "All") {
+    //   newFileredArray = newFileredArray.filter(
+    //     (v) => centuryFromYear(v.year) + "th century" === century
+    //   );
+    // }
+
+
+    // if (genres === "All" || nationality === "All" || century === "All") {
+    //   newFileredArray = [...listArray]; 
+    // }  else if (genres ) {
+    //     newFileredArray = newFileredArray.filter((v) =>
+    //       v.genres.find((v) => v === genres)
+    //     );
+    //   }
+    //    else if (nationality ) {
+    //     console.log(genres)
+
+    //     newFileredArray = newFileredArray.filter(
+    //       (v) => v.nationality === nationality
+    //     );
+    //   }
+    //    if (century) {
+    //     newFileredArray = newFileredArray.filter(
+    //       (v) => centuryFromYear(v.year) + "th century" == century
+    //     );
+      
+    // }
+     
+    
+
+
+
+
+     
+    //  if (searchValue.length > 0) {
+    //   newFileredArray = newFileredArray.filter((v) =>
+    //     v.author.toLocaleLowerCase().includes(searchValue)
+    //   );
+    // }
+    // return newFileredArray;
   }, [searchValue, filteredValues, listArray]);
 
   const currentSelector = selectors.find((v) => v.link === location.pathname);
