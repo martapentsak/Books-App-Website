@@ -52,21 +52,14 @@ export const WishListProvider = ({ children }: Props) => {
       setWishList(reponse.data);
     } catch (err) {
       setWishlistError("Error! Can`t show wishlist");
-      console.error("handleGetWishList", err);
-      alert(err);
     } finally {
       setLoading(false);
     }
   }, []);
 
   const handleRemoveBookFromWishlist = useCallback(async (bookId: string) => {
-    try {
       setWishList((prev) => prev.filter((v) => v.id !== bookId));
       await axios.delete(`${wishListApi}/${bookId}`);
-    } catch (err) {
-      setWishlistError("Error! Can`t delete book from wishlist");
-      console.error("handleRemoveBookFromWishlist", err);
-    }
   }, []);
 
   const handleAddBookToWishlist = useCallback(
@@ -81,7 +74,6 @@ export const WishListProvider = ({ children }: Props) => {
         }
       } catch (err) {
         setWishlistError("Error! Can`t add book to wishlist");
-        console.error("handleAddBookToWishlist", err);
       }
     },
     [wishList]

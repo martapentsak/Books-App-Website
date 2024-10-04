@@ -26,7 +26,7 @@ type Book = {
 };
 
 type ProviderValues = {
-  loading: boolean;
+  booksLoading: boolean;
   bookListError: string;
   booksList: Book[];
   handleCloseBooksError: () => void;
@@ -53,10 +53,10 @@ export const BooksProvider = ({ children }: Props) => {
 
   const [bookListError, setBookListError] = useState<string>("");
 
-  const [loading, setLoading] = useState<boolean>(false);
+  const [booksLoading, setBooksLoading] = useState<boolean>(false);
 
   useAsyncEffect(async () => {
-    setLoading(true);
+    setBooksLoading(true);
     await sleep(loadingDuration);
     try {
       const reponse = await axios.get(booksApi);
@@ -85,14 +85,14 @@ export const BooksProvider = ({ children }: Props) => {
       setBookListError(errors.getBooksList);
       alert(err);
     } finally {
-      setLoading(false);
+      setBooksLoading(false);
     }
   }, []);
 
   const handleCloseBooksError = useCallback(() => setBookListError(""), []);
 
   const providervalues: ProviderValues = {
-    loading,
+    booksLoading,
     bookListError,
     booksList,
     handleCloseBooksError,
