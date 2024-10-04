@@ -1,25 +1,18 @@
-import { BrowserRouter } from "react-router-dom";
+import { useAuthors } from "./context/authors";
+import { useBooks } from "./context/books";
 
-import { AuthorProvider } from "./context/authors";
-import { BooksProvider } from "./context/books";
-
-import { composeProviders } from "./utils/composeProviders";
+import { AllRoutes } from "./pages/Routes";
+import { LoadingPage } from "./pages/LoadingPage";
 
 import "./App.css";
 import "./styles/global.scss";
 
-import { AllRoutes } from "./pages/Routes";
-
-const providers = [BrowserRouter, AuthorProvider, BooksProvider];
-
-const CombinedProviders = composeProviders(providers);
-
 function App() {
+  const { booksLoading } = useBooks();
+  const { authorLoading } = useAuthors();
   return (
     <div className="books-app">
-      <CombinedProviders>
-        <AllRoutes />
-      </CombinedProviders>
+      {authorLoading || booksLoading ? <LoadingPage /> : <AllRoutes />}
     </div>
   );
 }
