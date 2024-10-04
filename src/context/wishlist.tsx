@@ -58,8 +58,8 @@ export const WishListProvider = ({ children }: Props) => {
   }, []);
 
   const handleRemoveBookFromWishlist = useCallback(async (bookId: string) => {
-      setWishList((prev) => prev.filter((v) => v.id !== bookId));
-      await axios.delete(`${wishListApi}/${bookId}`);
+    setWishList((prev) => prev.filter((v) => v.id !== bookId));
+    await axios.delete(`${wishListApi}/${bookId}`);
   }, []);
 
   const handleAddBookToWishlist = useCallback(
