@@ -30,22 +30,20 @@ type Author = {
 };
 
 type Response = {
-  name: string,
-  image: string
-  genres: string[],
-  id: string
-  birth_year: number,
-  death_year: number,
-  biography: string, 
-  nationality: string,
-  award: string,
-  notable_works: string[]
-}
-
-
+  name: string;
+  image: string;
+  genres: string[];
+  id: string;
+  birth_year: number;
+  death_year: number;
+  biography: string;
+  nationality: string;
+  award: string;
+  notable_works: string[];
+};
 
 type ProviderValues = {
-  loading: boolean;
+  authorLoading: boolean;
   authorListError: string;
   authorsList: Author[];
   poetsList: Author[];
@@ -63,7 +61,7 @@ export const AuthorProvider = ({ children }: Props) => {
 
   const [authorListError, setAuthorListError] = useState<string>("");
 
-  const [loading, setLoading] = useState<boolean>(false);
+  const [authorLoading, setAuthorsLoading] = useState<boolean>(false);
 
   const mapResponse = (data: Response[]): Author[] => {
     return data.map(
@@ -94,7 +92,7 @@ export const AuthorProvider = ({ children }: Props) => {
   };
 
   useAsyncEffect(async () => {
-    setLoading(true);
+    setAuthorsLoading(true);
     await sleep(loadingDuration);
     try {
       const authorResponse = await axios.get(authorsAPi);
@@ -103,21 +101,21 @@ export const AuthorProvider = ({ children }: Props) => {
         authorResponse,
         poetsResponse,
       ]);
-     
+
       setAuthorsList(mapResponse(authorList.data));
       setPoetsList(mapResponse(poetList.data));
     } catch (err) {
       console.error("Get authors list", err);
       setAuthorListError(errors.getAuthorsList);
     } finally {
-      setLoading(false);
+      setAuthorsLoading(false);
     }
   }, []);
 
   const handleCloseAuthorsError = useCallback(() => setAuthorListError(""), []);
 
   const providerValue: ProviderValues = {
-    loading,
+    authorLoading,
     authorListError,
     poetsList,
     authorsList,
