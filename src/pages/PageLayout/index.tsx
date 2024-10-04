@@ -129,24 +129,24 @@ export const PageLayout = ({ listArray, isAuthorCard }: Props) => {
   const filteredArray = useMemo(() => {
     let newFileredArray = [...listArray];
     const { genres, nationality, century } = filteredValues;
-    if (genres && genres !== "All") {
-      console.log(genres);
+    const notAllValue = (value: string) => value && value !== "All";
+    if (notAllValue(genres)) {
       newFileredArray = newFileredArray.filter((v) =>
         v.genres.includes(genres)
       );
     }
-
-    if (nationality && nationality !== "All") {
+    if (notAllValue(nationality)) {
       newFileredArray = newFileredArray.filter(
         (v) => v.nationality === nationality
       );
     }
 
-    if (century && century !== "All") {
+    if (notAllValue(century)) {
       newFileredArray = newFileredArray.filter(
         (v) => centuryFromYear(v.year) + "th century" === century
       );
     }
+
     if (searchValue.length > 0) {
       newFileredArray = newFileredArray.filter((v) =>
         v.author.toLocaleLowerCase().includes(searchValue)
