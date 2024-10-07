@@ -68,7 +68,7 @@ export const AuthorProvider = ({ children }: Props) => {
       setAuthorsList(authors);
       const poets = poetList.data.map(
         ({ name, image, genres, notable_works, id }: Author) => ({
-          id: id,
+          id,
           author: name,
           image,
           genres,
