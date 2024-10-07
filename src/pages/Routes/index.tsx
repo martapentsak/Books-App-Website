@@ -5,12 +5,14 @@ import { HomePage } from "../HomePage";
 import { AuthorPage } from "../AuthorPage";
 
 import { menuElemenets } from "../../constants/textValues";
+import { Loading } from "../../components/Loading";
 
 export const AllRoutes = () => {
   const location = useLocation();
 
   return (
     <div className="books-app">
+      <Loading />
       <div>
         <Menu />
         <Routes>

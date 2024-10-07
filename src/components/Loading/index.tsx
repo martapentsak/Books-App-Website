@@ -1,12 +1,21 @@
 import { websiteName } from "../../constants/textValues";
+import { useAuthors } from "../../context/authors";
+import { useBooks } from "../../context/books";
 
 const createArrayOfLetters = `${websiteName.span} ${websiteName.name}`.split(
   ""
 );
 
-export const LoadingPage = () => {
+export const Loading = () => {
+  const { authorLoading } = useAuthors();
+  const { booksLoading } = useBooks();
+
+  if (!authorLoading && !booksLoading) {
+    return null;
+  }
+
   return (
-    <div className="loading-page">
+    <div className="loading">
       <div className="flipping-text">
         {createArrayOfLetters.map((letter, index) => (
           <span
