@@ -13,7 +13,6 @@ import { authorsAPi, poetsApi } from "../constants/api";
 import useAsyncEffect from "../hooks/useAsyncEffect";
 
 import { waitForAnimationFinish } from "../helpers/waitForAnimationFinish";
-import { LoadingPage } from "../pages/LoadingPage";
 
 type Author = {
   author: string;
@@ -43,11 +42,9 @@ export const AuthorProvider = ({ children }: Props) => {
   const [authorsList, setAuthorsList] = useState<Author[]>([]);
   const [poetsList, setPoetsList] = useState<Author[]>([]);
 
-  const [authorListError, setAuthorListError] = useState<string>("");
-
   const [authorLoading, setAuthorLoading] = useState<boolean>(false);
 
-  console.log(authorLoading);
+  const [authorListError, setAuthorListError] = useState<string>("");
 
   useAsyncEffect(async () => {
     setAuthorLoading(true);
@@ -60,21 +57,17 @@ export const AuthorProvider = ({ children }: Props) => {
         poetsResponse,
       ]);
       const authors = authorList.data.map(
-        ({ name, image, genres, id }: Author) => ({
-          id,
+        ({ author, name, ...others }: Author) => ({
           author: name,
-          image,
-          genres,
+          ...others,
         })
       );
       setAuthorsList(authors);
       const poets = poetList.data.map(
-        ({ name, image, genres, notable_works, id }: Author) => ({
-          id,
+        ({ name, author, notable_works, ...others }: Author) => ({
           author: name,
-          image,
-          genres,
           works: notable_works,
+          ...others,
         })
       );
       setPoetsList(poets);
@@ -84,6 +77,8 @@ export const AuthorProvider = ({ children }: Props) => {
       setAuthorLoading(false);
     }
   }, []);
+
+  console.log(poetsList);
 
   const handleCloseAuthorsError = useCallback(() => setAuthorListError(""), []);
 
@@ -97,7 +92,6 @@ export const AuthorProvider = ({ children }: Props) => {
 
   return (
     <AuthorContext.Provider value={providerValue}>
-      {authorLoading && <LoadingPage />}
       {children}
     </AuthorContext.Provider>
   );

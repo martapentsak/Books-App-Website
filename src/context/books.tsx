@@ -13,7 +13,6 @@ import { booksApi } from "../constants/api";
 import useAsyncEffect from "../hooks/useAsyncEffect";
 
 import { waitForAnimationFinish } from "../helpers/waitForAnimationFinish";
-import { LoadingPage } from "../pages/LoadingPage";
 
 type Book = {
   id: string;
@@ -61,22 +60,10 @@ export const BooksProvider = ({ children }: Props) => {
     try {
       const reponse = await axios.get(booksApi);
       const list = reponse.data.map(
-        ({
-          title,
-          author,
-          genres,
-          cover_image,
-          publication_year,
-          description,
-          id,
-        }: Response) => ({
-          id,
-          title,
-          author,
+        ({ cover_image, publication_year, ...others }: Response) => ({
           publicationYear: publication_year,
-          genres,
-          description,
           coverImage: cover_image,
+          ...others,
         })
       );
       setBooksList(list);
@@ -97,7 +84,6 @@ export const BooksProvider = ({ children }: Props) => {
   };
   return (
     <BooksContext.Provider value={providervalues}>
-      {booksLoading && <LoadingPage />}
       {children}
     </BooksContext.Provider>
   );

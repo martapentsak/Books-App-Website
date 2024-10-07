@@ -12,7 +12,6 @@ import { wishListApi } from "../constants/api";
 import useAsyncEffect from "../hooks/useAsyncEffect";
 
 import { waitForAnimationFinish } from "../helpers/waitForAnimationFinish";
-import { LoadingPage } from "../pages/LoadingPage";
 
 type Book = {
   id: string;
@@ -41,7 +40,6 @@ export const WishlistContext = createContext({} as ProviderValues);
 export const WishListProvider = ({ children }: Props) => {
   const [wishList, setWishList] = useState<Book[]>([]);
   const [wishlistError, setWishlistError] = useState<string>("");
-
   const [loading, setLoading] = useState<boolean>(false);
 
   useAsyncEffect(async () => {
@@ -90,7 +88,6 @@ export const WishListProvider = ({ children }: Props) => {
   };
   return (
     <WishlistContext.Provider value={providervalues}>
-      {loading && <LoadingPage />}
       {children}
     </WishlistContext.Provider>
   );
