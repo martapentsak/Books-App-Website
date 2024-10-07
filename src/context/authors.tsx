@@ -48,7 +48,7 @@ export const AuthorProvider = ({ children }: Props) => {
 
   useAsyncEffect(async () => {
     setAuthorLoading(true);
-    waitForAnimationFinish()
+    waitForAnimationFinish();
     try {
       const authorResponse = await axios.get(authorsAPi);
       const poetsResponse = await axios.get(poetsApi);

@@ -1727,6 +1727,18 @@
       ],
       "description": "A complex novel exploring themes of spirituality, morality, and human nature.",
       "coverImage": "https://cdn.kobo.com/book-images/c3a484bc-73d8-4412-94d0-cf36f9e21bbe/1200/1200/False/the-brothers-karamazov-7.jpg"
+    },
+    {
+      "id": "2",
+      "title": "Crime and Punishment",
+      "author": "Fyodor Dostoevsky",
+      "publicationYear": 1866,
+      "genres": [
+        "Classic",
+        "Psychological Fiction"
+      ],
+      "description": "A psychological thriller revolving around guilt, conscience, and redemption.",
+      "coverImage": "https://m.media-amazon.com/images/I/71++AI6Lk+L._AC_UF1000,1000_QL80_.jpg"
     }
   ]
 }

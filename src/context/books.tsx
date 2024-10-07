@@ -56,7 +56,7 @@ export const BooksProvider = ({ children }: Props) => {
 
   useAsyncEffect(async () => {
     setBooksLoading(true);
-    waitForAnimationFinish()
+    waitForAnimationFinish();
     try {
       const reponse = await axios.get(booksApi);
       const list = reponse.data.map(
