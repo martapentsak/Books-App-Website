@@ -59,7 +59,7 @@ export const AuthorProvider = ({ children }: Props) => {
       ]);
       const authors = authorList.data.map(
         ({ name, image, genres, id }: Author) => ({
-          id: id,
+          id,
           author: name,
           image,
           genres,
@@ -76,10 +76,8 @@ export const AuthorProvider = ({ children }: Props) => {
         })
       );
       setPoetsList(poets);
-    } catch (err) {
-      console.error("Get authors list", err);
+    } catch  {
       setAuthorListError(errors.getAuthorsList);
-      throw err;
     } finally {
       setAuthorLoading(false);
     }
