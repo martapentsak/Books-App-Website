@@ -1,14 +1,17 @@
+import { useParams } from "react-router-dom";
 import { useAuthors } from "../../context/authors";
 
 export const AuthorPage = () => {
   const { authorsList } = useAuthors();
 
-  const currentAuthor = authorsList.find(
-    (v) => v.author.replace(/ /g, "") === location.pathname.replace("/", "")
-  );
+  const { authorId } = useParams();
+  console.log(authorId);
+
+  const currentAuthor = authorsList.find((v) => v.id == authorId);
 
   if (!currentAuthor) {
-    return <div>Author not found</div>;
+    return <>
+      <span>Author not found</span></>;
   }
   const { image, author, birth, death, biography, nationality, award, works } =
     currentAuthor;
