@@ -80,8 +80,7 @@ export const BooksProvider = ({ children }: Props) => {
         })
       );
       setBooksList(list);
-    } catch (err) {
-      console.error("handleGetBooks", err);
+    } catch {
       setBookListError(errors.getBooksList);
     } finally {
       setBooksLoading(false);
