@@ -1,4 +1,4 @@
-import { useNavigate, useLocation } from "react-router";
+import { useNavigate, useParams } from "react-router";
 
 import { useWishlist } from "../../context/wishlist";
 
@@ -22,68 +22,60 @@ type Result = {
 };
 
 export const BookPage = () => {
-  const { handleAddBookToWishlist, wishList, wishlistError, handleCloseWishlistError } = useWishlist();
-  const { booksList, bookListError , handleCloseBooksError} = useBooks();
+  const {
+    handleAddBookToWishlist,
+    wishList,
+    wishlistError,
+    handleCloseWishlistError,
+  } = useWishlist();
+  const { booksList, bookListError, handleCloseBooksError } = useBooks();
 
   const navigate = useNavigate();
-  const location = useLocation();
+  const { bookId } = useParams();
 
-  const currentBook = booksList.find(
-      (book) =>
-        book.title.replace(/ /g, "") === location.pathname.replace("/", "")
-    );
-
+  const currentBook = booksList.find((book) => book.id === bookId);
   if (!currentBook) {
     return null;
   }
   const { title, coverImage, author, publicationYear, description, genres } =
     currentBook;
 
-  const handleGetOtherBookOfAuthor = () =>
-    booksList.filter(
+  const handleGetRecommendationBookList = (): Result => {
+    const otherAuthorBooks = booksList.filter(
       (b) => b.author === author && b.title !== title
     );
-
-  const handleGetOtherBooksOfEachgenres = () => {
-    const currentBookgenres = genres;
-    return booksList.filter((book) => {
-      return book.genres
-        .filter(
-          (v) =>
-            currentBookgenres.includes(v) && book.title !== title
-        )
-      
-    });
-  };
-
-  const handleGetRecommendationBookList = (): Result | undefined => {
-    const result: Result = {
-      data: [],
-      title: "",
+    const othergenresBooks = booksList.filter((book) =>
+      book.genres.some((genre) => genres.includes(genre) && book.id !== bookId)
+    );
+    return {
+      data: otherAuthorBooks.length > 0 ? otherAuthorBooks : othergenresBooks,
+      title:
+        otherAuthorBooks.length > 0
+          ? `Other works of ${author}`
+          : `Other works in genres ${genres.join(", ")}`,
     };
-    const otherAuthorBooks = handleGetOtherBookOfAuthor();
-    const othergenresBooks = handleGetOtherBooksOfEachgenres();
-    if (otherAuthorBooks) {
-      result.data = otherAuthorBooks;
-      result.title = `Other works of ${author}`;
-    }
-    if (othergenresBooks) {
-      result.data = othergenresBooks;
-      result.title = `Other works in genres ${genres.join(", ")}`;
-    }
-    return result;
   };
 
-  const isBookInWishList = wishList.find((v) => v.title === title);
+  const isBookInWishList = wishList.find((v) => v.id === bookId);
 
-  const recommendationBlockTitle = handleGetRecommendationBookList()?.title
-  const recommendationBookList = handleGetRecommendationBookList()?.data
-  
+  const recommendationBlockTitle = handleGetRecommendationBookList()?.title;
+  const recommendationBookList = handleGetRecommendationBookList()?.data;
+
+  if (bookListError || wishlistError) {
+    throw new Error(bookListError || wishlistError);
+  }
 
   return (
     <div className="book-page">
-         {bookListError  || wishlistError &&
-        <AlertWindow error={bookListError  || wishlistError} onClose={bookListError? handleCloseBooksError : handleCloseWishlistError}/>}
+      {bookListError ||
+        (wishlistError && (
+          <AlertWindow
+            error={bookListError || wishlistError}
+            onClose={
+              bookListError ? handleCloseBooksError : handleCloseWishlistError
+            }
+          />
+        ))}
       <div className="wrapper">
         <div className="book-cover-section">
           <img src={coverImage} alt={`${title} cover`} className="book-cover" />
@@ -119,34 +111,30 @@ export const BookPage = () => {
             </div>
           </div>
           <div className="author-works">
-            <h3 className="other-books-title">
-              {recommendationBlockTitle}
-            </h3>
+            <h3 className="other-books-title">{recommendationBlockTitle}</h3>
             <div className="other-books-list">
-              {recommendationBookList?.map(
-                ({ coverImage, title }, index) => (
-                  <div
-                    className="other-books-section"
-                    key={index}
-                    onClick={() => navigate(`/${title.replace(/ /g, "")}`)}
-                  >
-                    <img
-                      src={coverImage}
-                      alt={title}
-                      className="other-book-image"
-                    />
-                    <span className="book-name">{title}</span>
-                    <div className="genres">
-                      {genres.map((g, index) => (
-                        <span className="book-category" key={index}>
-                          {g}
-                          {index < genres.length - 1 ? ", " : " "}
-                        </span>
-                      ))}
-                    </div>
+              {recommendationBookList?.map(({ coverImage, title }, index) => (
+                <div
+                  className="other-books-section"
+                  key={index}
+                  onClick={() => navigate(`/${title.replace(/ /g, "")}`)}
+                >
+                  <img
+                    src={coverImage}
+                    alt={title}
+                    className="other-book-image"
+                  />
+                  <span className="book-name">{title}</span>
+                  <div className="genres">
+                    {genres.map((g, index) => (
+                      <span className="book-category" key={index}>
+                        {g}
+                        {index < genres.length - 1 ? ", " : " "}
+                      </span>
+                    ))}
                   </div>
-                )
-              )}
+                </div>
+              ))}
             </div>
           </div>
         </div>

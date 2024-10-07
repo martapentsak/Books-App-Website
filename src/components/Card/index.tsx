@@ -14,6 +14,7 @@ type CardProps = {
 };
 
 export const Card = ({
+  id,
   isAuthorCard,
   image,
   title,
@@ -22,15 +23,11 @@ export const Card = ({
 }: CardProps) => {
   const navigate = useNavigate();
 
-  const handleRoute = () => {
-    const link = title ? title : author;
-    navigate(link.replace(/ /g, ""));
-  };
 
   return (
     <div className={isAuthorCard ? "author-card" : "book-card"}>
       <CardElement>
-        <CardActionArea onClick={handleRoute}>
+        <CardActionArea onClick={() => navigate(`${isAuthorCard ? "authorId" : "bookId"}/${id}`)}>
           <div>
             <img
               src={image}
