@@ -9,11 +9,10 @@ import {
 
 import { errors } from "../constants/textValues";
 import { booksApi } from "../constants/api";
-import { loadingDuration } from "../constants/duration";
 
 import useAsyncEffect from "../hooks/useAsyncEffect";
 
-import { sleep } from "../helpers/sleep";
+import { waitForAnimationFinish } from "../helpers/waitForAnimationFinish";
 
 type Book = {
   id: string;
@@ -57,7 +56,7 @@ export const BooksProvider = ({ children }: Props) => {
 
   useAsyncEffect(async () => {
     setBooksLoading(true);
-    await sleep(loadingDuration);
+    waitForAnimationFinish()
     try {
       const reponse = await axios.get(booksApi);
       const list = reponse.data.map(

@@ -7,12 +7,11 @@ import {
   useState,
 } from "react";
 
-import { loadingDuration } from "../constants/duration";
 import { wishListApi } from "../constants/api";
 
 import useAsyncEffect from "../hooks/useAsyncEffect";
 
-import { sleep } from "../helpers/sleep";
+import { waitForAnimationFinish } from "../helpers/waitForAnimationFinish";
 
 type Book = {
   id: string;
@@ -46,11 +45,11 @@ export const WishListProvider = ({ children }: Props) => {
 
   useAsyncEffect(async () => {
     setLoading(true);
-    await sleep(loadingDuration);
+    waitForAnimationFinish()
     try {
       const reponse = await axios.get(wishListApi);
       setWishList(reponse.data);
-    } catch (err) {
+    } catch {
       setWishlistError("Error! Can`t show wishlist");
     } finally {
       setLoading(false);
@@ -72,7 +71,7 @@ export const WishListProvider = ({ children }: Props) => {
           setWishList((prev) => [...prev, book]);
           await axios.post(wishListApi, book);
         }
-      } catch (err) {
+      } catch {
         setWishlistError("Error! Can`t add book to wishlist");
       }
     },

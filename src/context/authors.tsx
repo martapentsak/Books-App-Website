@@ -9,11 +9,10 @@ import {
 
 import { errors } from "../constants/textValues";
 import { authorsAPi, poetsApi } from "../constants/api";
-import { loadingDuration } from "../constants/duration";
 
 import useAsyncEffect from "../hooks/useAsyncEffect";
 
-import { sleep } from "../helpers/sleep";
+import { waitForAnimationFinish } from "../helpers/waitForAnimationFinish";
 
 type Author = {
   author: string;
@@ -49,7 +48,7 @@ export const AuthorProvider = ({ children }: Props) => {
 
   useAsyncEffect(async () => {
     setAuthorLoading(true);
-    await sleep(loadingDuration);
+    waitForAnimationFinish()
     try {
       const authorResponse = await axios.get(authorsAPi);
       const poetsResponse = await axios.get(poetsApi);
@@ -76,7 +75,7 @@ export const AuthorProvider = ({ children }: Props) => {
         })
       );
       setPoetsList(poets);
-    } catch  {
+    } catch {
       setAuthorListError(errors.getAuthorsList);
     } finally {
       setAuthorLoading(false);
