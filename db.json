@@ -1716,6 +1716,17 @@
     }
   ],
   "wishlist": [
-  
+    {
+      "id": "1",
+      "title": "The Brothers Karamazov",
+      "author": "Fyodor Dostoevsky",
+      "publicationYear": 1880,
+      "genres": [
+        "Classic",
+        "Philosophical Fiction"
+      ],
+      "description": "A complex novel exploring themes of spirituality, morality, and human nature.",
+      "coverImage": "https://cdn.kobo.com/book-images/c3a484bc-73d8-4412-94d0-cf36f9e21bbe/1200/1200/False/the-brothers-karamazov-7.jpg"
+    }
   ]
 }
