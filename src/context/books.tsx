@@ -49,19 +49,14 @@ export const BooksProvider = ({ children }: Props) => {
     try {
       const reponse = await axios.get(booksApi);
       const list = reponse.data.map(
-        ({ title, author, genres, cover_image, id }: Book) => ({
-          id: id,
-          title,
-          author,
-          genres,
+        ({ coverImage, cover_image, ...others }: Book) => ({
           coverImage: cover_image,
+          ...others,
         })
       );
       setBooksList(list);
     } catch (err) {
-      console.error("handleGetBooks", err);
       setBookListError(errors.getBooksList);
-      alert(err);
     } finally {
       setBooksLoading(false);
     }

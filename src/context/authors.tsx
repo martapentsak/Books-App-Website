@@ -67,26 +67,16 @@ export const AuthorProvider = ({ children }: Props) => {
     return data.map(
       ({
         name,
-        image,
-        genres,
-        id,
         birth_year,
         death_year,
-        biography,
-        nationality,
-        award,
         notable_works,
+        ...others
       }: Response) => ({
-        id,
         author: name,
-        image,
-        genres,
         birth: birth_year,
         death: death_year,
-        biography,
-        nationality,
-        award,
         works: notable_works,
+        ...others
       })
     );
   };
@@ -101,11 +91,9 @@ export const AuthorProvider = ({ children }: Props) => {
         authorResponse,
         poetsResponse,
       ]);
-
       setAuthorsList(mapResponse(authorList.data));
       setPoetsList(mapResponse(poetList.data));
     } catch (err) {
-      console.error("Get authors list", err);
       setAuthorListError(errors.getAuthorsList);
     } finally {
       setAuthorsLoading(false);
