@@ -13,6 +13,7 @@ import { authorsAPi, poetsApi } from "../constants/api";
 import useAsyncEffect from "../hooks/useAsyncEffect";
 
 import { waitForAnimationFinish } from "../helpers/waitForAnimationFinish";
+import { LoadingPage } from "../pages/LoadingPage";
 
 type Author = {
   author: string;
@@ -46,9 +47,11 @@ export const AuthorProvider = ({ children }: Props) => {
 
   const [authorLoading, setAuthorLoading] = useState<boolean>(false);
 
+  console.log(authorLoading);
+
   useAsyncEffect(async () => {
     setAuthorLoading(true);
-    waitForAnimationFinish();
+    await waitForAnimationFinish();
     try {
       const authorResponse = await axios.get(authorsAPi);
       const poetsResponse = await axios.get(poetsApi);
@@ -94,6 +97,7 @@ export const AuthorProvider = ({ children }: Props) => {
 
   return (
     <AuthorContext.Provider value={providerValue}>
+      {authorLoading && <LoadingPage />}
       {children}
     </AuthorContext.Provider>
   );

@@ -12,6 +12,7 @@ import { wishListApi } from "../constants/api";
 import useAsyncEffect from "../hooks/useAsyncEffect";
 
 import { waitForAnimationFinish } from "../helpers/waitForAnimationFinish";
+import { LoadingPage } from "../pages/LoadingPage";
 
 type Book = {
   id: string;
@@ -45,7 +46,7 @@ export const WishListProvider = ({ children }: Props) => {
 
   useAsyncEffect(async () => {
     setLoading(true);
-    waitForAnimationFinish()
+    await waitForAnimationFinish();
     try {
       const reponse = await axios.get(wishListApi);
       setWishList(reponse.data);
@@ -89,6 +90,7 @@ export const WishListProvider = ({ children }: Props) => {
   };
   return (
     <WishlistContext.Provider value={providervalues}>
+      {loading && <LoadingPage />}
       {children}
     </WishlistContext.Provider>
   );
