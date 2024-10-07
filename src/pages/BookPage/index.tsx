@@ -32,6 +32,7 @@ export const BookPage = () => {
       (book) =>
         book.title.replace(/ /g, "") === location.pathname.replace("/", "")
     );
+
   if (!currentBook) {
     return null;
   }
@@ -40,23 +41,23 @@ export const BookPage = () => {
 
   const handleGetOtherBookOfAuthor = () =>
     booksList.filter(
-      (b) => b.author === currentBook.author && b.title !== currentBook.title
+      (b) => b.author === author && b.title !== title
     );
 
   const handleGetOtherBooksOfEachgenres = () => {
-    const currentBookgenres = currentBook.genres;
+    const currentBookgenres = genres;
     return booksList.filter((book) => {
       return book.genres
         .filter(
           (v) =>
-            currentBookgenres.includes(v) && book.title !== currentBook.title
+            currentBookgenres.includes(v) && book.title !== title
         )
-        .join("");
+      
     });
   };
 
-  const recommendationBookList = (): Result | undefined => {
-    let result: Result = {
+  const handleGetRecommendationBookList = (): Result | undefined => {
+    const result: Result = {
       data: [],
       title: "",
     };
@@ -64,21 +65,25 @@ export const BookPage = () => {
     const othergenresBooks = handleGetOtherBooksOfEachgenres();
     if (otherAuthorBooks) {
       result.data = otherAuthorBooks;
-      result.title = `Other works of ${currentBook.author}`;
+      result.title = `Other works of ${author}`;
     }
     if (othergenresBooks) {
       result.data = othergenresBooks;
-      result.title = `Other works in genres ${currentBook.genres.join(", ")}`;
+      result.title = `Other works in genres ${genres.join(", ")}`;
     }
     return result;
   };
 
   const isBookInWishList = wishList.find((v) => v.title === title);
 
+  const recommendationBlockTitle = handleGetRecommendationBookList()?.title
+  const recommendationBookList = handleGetRecommendationBookList()?.data
+  
+
   return (
     <div className="book-page">
          {bookListError  || wishlistError &&
-        <AlertWindow error={bookListError? bookListError : wishlistError} onClose={bookListError? handleCloseBooksError : handleCloseWishlistError}/>}
+        <AlertWindow error={bookListError  || wishlistError} onClose={bookListError? handleCloseBooksError : handleCloseWishlistError}/>}
       <div className="wrapper">
         <div className="book-cover-section">
           <img src={coverImage} alt={`${title} cover`} className="book-cover" />
@@ -115,10 +120,10 @@ export const BookPage = () => {
           </div>
           <div className="author-works">
             <h3 className="other-books-title">
-              {recommendationBookList()?.title}
+              {recommendationBlockTitle}
             </h3>
             <div className="other-books-list">
-              {recommendationBookList()?.data?.map(
+              {recommendationBookList?.map(
                 ({ coverImage, title }, index) => (
                   <div
                     className="other-books-section"
