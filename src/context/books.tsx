@@ -70,7 +70,7 @@ export const BooksProvider = ({ children }: Props) => {
           description,
           id,
         }: Response) => ({
-          id: id,
+          id,
           title,
           author,
           publicationYear: publication_year,
