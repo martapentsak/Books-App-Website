@@ -27,9 +27,7 @@ export const Card = ({
     <div className={isAuthorCard ? "author-card" : "book-card"}>
       <CardElement>
         <CardActionArea
-          onClick={() =>
-            navigate(`${isAuthorCard ? "author" : "book"}/${id}`)
-          }
+          onClick={() => navigate(`${isAuthorCard ? "author" : "book"}/${id}`)}
         >
           <div>
             <img

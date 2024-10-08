@@ -76,7 +76,7 @@ export const AuthorProvider = ({ children }: Props) => {
         birth: birth_year,
         death: death_year,
         works: notable_works,
-        ...others
+        ...others,
       })
     );
   };
