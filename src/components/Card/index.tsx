@@ -1,8 +1,8 @@
+import { useNavigate } from "react-router-dom";
+
 import CardElement from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardActionArea from "@mui/material/CardActionArea";
-
-import { useNavigate } from "react-router-dom";
 
 type CardProps = {
   id: string;
@@ -27,9 +27,7 @@ export const Card = ({
     <div className={isAuthorCard ? "author-card" : "book-card"}>
       <CardElement>
         <CardActionArea
-          onClick={() =>
-            navigate(`${isAuthorCard ? "authorId" : "bookId"}/${id}`)
-          }
+          onClick={() => navigate(`${isAuthorCard ? "author" : "book"}/${id}`)}
         >
           <div>
             <img
