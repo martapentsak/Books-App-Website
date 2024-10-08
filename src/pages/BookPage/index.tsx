@@ -7,6 +7,7 @@ import { useBooks } from "../../context/books";
 import { AlertWindow } from "../../components/Alert";
 import { useAuthors } from "../../context/authors";
 import { Loading } from "../../components/Loading";
+import { NotFound } from "../../components/NotFound";
 
 type BookProp = {
   id: string;
@@ -30,15 +31,19 @@ export const BookPage = () => {
     wishlistError,
     handleCloseWishlistError,
   } = useWishlist();
-  const { booksList, bookListError, handleCloseBooksError } = useBooks();
+  const { booksList, bookListError, handleCloseBooksError, booksLoading } = useBooks();
   const { authorsList } = useAuthors();
 
   const navigate = useNavigate();
   const { bookId } = useParams();
 
   const currentBook = booksList.find((book) => book.id === bookId);
-  if (!currentBook) {
+
+  if (!currentBook && booksLoading) {
     return <Loading />;
+  }
+  else if (!currentBook) {
+  return <NotFound/>
   }
   const { title, coverImage, author, publicationYear, description, genres } =
     currentBook;
