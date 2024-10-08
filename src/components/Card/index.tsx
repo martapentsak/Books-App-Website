@@ -28,7 +28,7 @@ export const Card = ({
       <CardElement>
         <CardActionArea
           onClick={() =>
-            navigate(`${isAuthorCard ? "authorId" : "bookId"}/${id}`)
+            navigate(`${isAuthorCard ? "author" : "book"}/${id}`)
           }
         >
           <div>

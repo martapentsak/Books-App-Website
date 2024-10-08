@@ -15,7 +15,7 @@ export const AllRoutes = () => {
         <Menu />
         <Routes>
           <Route path={menuElemenets.links.home} element={<HomePage />} />
-          <Route path={"authorId/:authorId"} element={<AuthorPage />} />
+          <Route path={"author/:authorId"} element={<AuthorPage />} />
         </Routes>
       </div>
     </div>
