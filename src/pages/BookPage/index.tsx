@@ -18,7 +18,7 @@ type BookProp = {
 
 type Result = {
   data: BookProp[];
-  title: string;
+  blockTitle: string;
 };
 
 export const BookPage = () => {
@@ -49,7 +49,7 @@ export const BookPage = () => {
     );
     return {
       data: otherAuthorBooks.length > 0 ? otherAuthorBooks : othergenresBooks,
-      title:
+      blockTitle:
         otherAuthorBooks.length > 0
           ? `Other works of ${author}`
           : `Other works in genres ${genres.join(", ")}`,
@@ -58,12 +58,7 @@ export const BookPage = () => {
 
   const isBookInWishList = wishList.find((v) => v.id === bookId);
 
-  const recommendationBlockTitle = handleGetRecommendationBookList()?.title;
-  const recommendationBookList = handleGetRecommendationBookList()?.data;
-
-  if (bookListError || wishlistError) {
-    throw new Error(bookListError || wishlistError);
-  }
+  const {data, blockTitle} = handleGetRecommendationBookList()
 
   return (
     <div className="book-page">
@@ -111,9 +106,9 @@ export const BookPage = () => {
             </div>
           </div>
           <div className="author-works">
-            <h3 className="other-books-title">{recommendationBlockTitle}</h3>
+            <h3 className="other-books-title">{blockTitle}</h3>
             <div className="other-books-list">
-              {recommendationBookList?.map(({ coverImage, title }, index) => (
+              {data.map(({ coverImage, title }, index) => (
                 <div
                   className="other-books-section"
                   key={index}
