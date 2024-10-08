@@ -1,16 +1,20 @@
 import { useParams } from "react-router-dom";
 
 import { useAuthors } from "../../context/authors";
+import { Loading } from "../../components/Loading";
+import { NotFound } from "../../components/NotFound";
 
 export const AuthorPage = () => {
-  const { authorsList } = useAuthors();
+  const { authorsList, authorLoading } = useAuthors();
 
   const { authorId } = useParams();
 
   const currentAuthor = authorsList.find((v) => v.id == authorId);
 
-  if (!currentAuthor) {
-    return <span>Author not found</span>;
+  if (!currentAuthor && authorLoading) {
+    return <Loading />;
+  } else if (!currentAuthor) {
+    return <NotFound />;
   }
   const { image, author, birth, death, biography, nationality, award, works } =
     currentAuthor;

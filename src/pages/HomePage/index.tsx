@@ -9,15 +9,26 @@ import { homepage } from "../../constants/textValues";
 
 import Alert from "@mui/material/Alert";
 import Stack from "@mui/material/Stack";
+import { Loading } from "../../components/Loading";
 
 export const HomePage = () => {
   const [selectedPoetIndex, setSelectedPoetIndex] = useState<number>(0);
-  const { authorsList, poetsList, authorListError, handleCloseAuthorsError } =
-    useAuthors();
-  const { booksList, bookListError, handleCloseBooksError } = useBooks();
+  const {
+    authorsList,
+    poetsList,
+    authorListError,
+    handleCloseAuthorsError,
+    authorLoading,
+  } = useAuthors();
+  const { booksList, bookListError, handleCloseBooksError, booksLoading } =
+    useBooks();
 
   const currentPoet = poetsList.length > 0 && poetsList[selectedPoetIndex];
   const errorExist = authorListError || bookListError;
+
+  if (authorLoading || booksLoading) {
+    return <Loading />;
+  }
 
   return (
     <div className="home-page">
@@ -74,7 +85,9 @@ export const HomePage = () => {
           <div key={index} className="poet-work-section">
             <span className="work-number">{index + 1}</span>
             <p className="work-name">{value}</p>
-            <span className="author">{poetsList[selectedPoetIndex].author}</span>
+            <span className="author">
+              {poetsList[selectedPoetIndex].author}
+            </span>
           </div>
         ))}
       </div>
