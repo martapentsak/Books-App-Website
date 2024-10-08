@@ -26,7 +26,7 @@ type Book = {
 
 type ProviderValues = {
   wishList: Book[];
-  loading: boolean;
+  wishlistLoading: boolean;
   wishlistError: string;
   handleAddBookToWishlist: (book: Book) => void;
   handleCloseWishlistError: () => void;
@@ -41,10 +41,10 @@ export const WishlistContext = createContext({} as ProviderValues);
 export const WishListProvider = ({ children }: Props) => {
   const [wishList, setWishList] = useState<Book[]>([]);
   const [wishlistError, setWishlistError] = useState<string>("");
-  const [loading, setLoading] = useState<boolean>(false);
+  const [wishlistLoading, setWishlistLoading] = useState<boolean>(false);
 
   useAsyncEffect(async () => {
-    setLoading(true);
+    setWishlistLoading(true);
     await waitForAnimationFinish();
     try {
       const reponse = await axios.get(wishListApi);
@@ -52,7 +52,7 @@ export const WishListProvider = ({ children }: Props) => {
     } catch {
       setWishlistError("Error! Can`t show wishlist");
     } finally {
-      setLoading(false);
+      setWishlistLoading(false);
     }
   }, []);
 
@@ -83,7 +83,7 @@ export const WishListProvider = ({ children }: Props) => {
   const providervalues: ProviderValues = {
     wishlistError,
     wishList,
-    loading,
+    wishlistLoading,
     handleAddBookToWishlist,
     handleCloseWishlistError,
   };
