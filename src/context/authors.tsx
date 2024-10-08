@@ -78,7 +78,6 @@ export const AuthorProvider = ({ children }: Props) => {
     }
   }, []);
 
-  console.log(poetsList);
 
   const handleCloseAuthorsError = useCallback(() => setAuthorListError(""), []);
 

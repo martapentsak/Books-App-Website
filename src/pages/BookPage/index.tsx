@@ -6,6 +6,7 @@ import { Button } from "@mui/material";
 import { useBooks } from "../../context/books";
 import { AlertWindow } from "../../components/Alert";
 import { useAuthors } from "../../context/authors";
+import { Loading } from "../../components/Loading";
 
 type BookProp = {
   id: string;
@@ -37,7 +38,7 @@ export const BookPage = () => {
 
   const currentBook = booksList.find((book) => book.id === bookId);
   if (!currentBook) {
-    return null;
+    return <Loading/>
   }
   const { title, coverImage, author, publicationYear, description, genres } =
     currentBook;
@@ -65,79 +66,79 @@ export const BookPage = () => {
   const authorId = authorsList.find((a) => a.author === author)?.id
 
   return (
-    <div className="book-page">
-      {bookListError ||
-        (wishlistError && (
-          <AlertWindow
-            error={bookListError || wishlistError}
-            onClose={
-              bookListError ? handleCloseBooksError : handleCloseWishlistError
-            }
-          />
-        ))}
-      <div className="wrapper">
-        <div className="book-cover-section">
-          <img src={coverImage} alt={`${title} cover`} className="book-cover" />
-        </div>
-        <div className="book-info-section">
-          <h2 className="book-name">{title}</h2>
-          <div
-            className="book-author"
-            onClick={() => navigate(`/author/${authorId}`)}
-          >
-            {author}
+  <div className="book-page">
+        {bookListError ||
+          (wishlistError && (
+            <AlertWindow
+              error={bookListError || wishlistError}
+              onClose={
+                bookListError ? handleCloseBooksError : handleCloseWishlistError
+              }
+            />
+          ))}
+        <div className="wrapper">
+          <div className="book-cover-section">
+            <img src={coverImage} alt={`${title} cover`} className="book-cover" />
           </div>
-          <Button
-            className="add-to-wishlist-btn"
-            onClick={() => handleAddBookToWishlist(currentBook)}
-          >
-            {isBookInWishList ? "Remove from wishlist" : "Want to read"}
-          </Button>
-          <div className="book-describtion">{description}</div>
-          <div className="book-publication">
-            Publication year:{" "}
-            <span className="publication-year">{publicationYear}</span>
-          </div>
-          <div className="book-genres">
-            genres:{" "}
-            <div className="genres-list">
-              {genres.map((g, index) => (
-                <span className="book-category" key={index}>
-                  {g}
-                  {index < genres.length - 1 ? ", " : ""}
-                </span>
-              ))}
+          <div className="book-info-section">
+            <h2 className="book-name">{title}</h2>
+            <div
+              className="book-author"
+              onClick={() => navigate(`/author/${authorId}`)}
+            >
+              {author}
             </div>
-          </div>
-          <div className="author-works">
-            <h3 className="other-books-title">{blockTitle}</h3>
-            <div className="other-books-list">
-              {data.map(({ coverImage, title, id }, index) => (
-                <div
-                  className="other-books-section"
-                  key={index}
-                  onClick={() => navigate(`/book/${id}`)}
-                >
-                  <img
-                    src={coverImage}
-                    alt={title}
-                    className="other-book-image"
-                  />
-                  <span className="book-name">{title}</span>
-                  <div className="genres">
-                    {genres.map((g, index) => (
-                      <span className="book-category" key={index}>
-                        {g}
-                        {index < genres.length - 1 ? ", " : " "}
-                      </span>
-                    ))}
+            <Button
+              className="add-to-wishlist-btn"
+              onClick={() => handleAddBookToWishlist(currentBook)}
+            >
+              {isBookInWishList ? "Remove from wishlist" : "Want to read"}
+            </Button>
+            <div className="book-describtion">{description}</div>
+            <div className="book-publication">
+              Publication year:{" "}
+              <span className="publication-year">{publicationYear}</span>
+            </div>
+            <div className="book-genres">
+              genres:{" "}
+              <div className="genres-list">
+                {genres.map((g, index) => (
+                  <span className="book-category" key={index}>
+                    {g}
+                    {index < genres.length - 1 ? ", " : ""}
+                  </span>
+                ))}
+              </div>
+            </div>
+            <div className="author-works">
+              <h3 className="other-books-title">{blockTitle}</h3>
+              <div className="other-books-list">
+                {data.map(({ coverImage, title, id }, index) => (
+                  <div
+                    className="other-books-section"
+                    key={index}
+                    onClick={() => navigate(`/book/${id}`)}
+                  >
+                    <img
+                      src={coverImage}
+                      alt={title}
+                      className="other-book-image"
+                    />
+                    <span className="book-name">{title}</span>
+                    <div className="genres">
+                      {genres.map((g, index) => (
+                        <span className="book-category" key={index}>
+                          {g}
+                          {index < genres.length - 1 ? ", " : " "}
+                        </span>
+                      ))}
+                    </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  );
-};
+      </div>)}
+
+   

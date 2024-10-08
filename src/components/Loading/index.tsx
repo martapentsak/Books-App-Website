@@ -1,22 +1,10 @@
 import { websiteName } from "../../constants/textValues";
-import { useAuthors } from "../../context/authors";
-import { useBooks } from "../../context/books";
-import { useWishlist } from "../../context/wishlist";
 
 const createArrayOfLetters = `${websiteName.span} ${websiteName.name}`.split(
   ""
 );
 
-export const Loading = () => {
-  const { authorLoading } = useAuthors();
-  const { booksLoading } = useBooks();
-  const { loading } = useWishlist();
-
-  if (!authorLoading && !booksLoading && !loading) {
-    return null;
-  }
-
-  return (
+export const Loading = () => (
     <div className="loading">
       <div className="flipping-text">
         {createArrayOfLetters.map((letter, index) => (
@@ -31,4 +19,4 @@ export const Loading = () => {
       </div>
     </div>
   );
-};
+
