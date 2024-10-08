@@ -7,9 +7,8 @@ import { useBooks } from "../../context/books";
 
 import { homepage } from "../../constants/textValues";
 
-import Alert from "@mui/material/Alert";
-import Stack from "@mui/material/Stack";
 import { Loading } from "../../components/Loading";
+import { AlertWindow } from "../../components/Alert";
 
 export const HomePage = () => {
   const [selectedPoetIndex, setSelectedPoetIndex] = useState<number>(0);
@@ -35,18 +34,14 @@ export const HomePage = () => {
         <div className="home-page">
           <div className="alert-section">
             {errorExist && (
-              <Stack sx={{ width: "100%" }}>
-                <Alert
-                  severity="error"
-                  onClose={() =>
-                    bookListError
-                      ? handleCloseBooksError()
-                      : handleCloseAuthorsError()
-                  }
-                >
-                  {authorListError || bookListError}
-                </Alert>
-              </Stack>
+              <AlertWindow
+                error={errorExist}
+                onClose={() =>
+                  bookListError
+                    ? handleCloseBooksError()
+                    : handleCloseAuthorsError()
+                }
+              />
             )}
           </div>
           <div className="poets-section">

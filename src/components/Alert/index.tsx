@@ -11,7 +11,7 @@ export const AlertWindow = ({ error, onClose }: Props) => {
     <div className="alert-section">
       <Stack sx={{ width: "100%" }}>
         <Alert severity="error" onClose={onClose}>
-          {error}
+          {"ERROR!" + " " + error}
         </Alert>
       </Stack>
     </div>
