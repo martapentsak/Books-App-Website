@@ -20,7 +20,7 @@ type Book = {
   author: string;
   genres: string[];
   publicationYear: number;
-  coverImage: string;
+  image: string;
   description: string;
 };
 

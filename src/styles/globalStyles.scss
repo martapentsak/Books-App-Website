@@ -6,13 +6,13 @@
     font-size: 22px;
 }
 
-.author-list {
+.flex-list {
     display: flex;
     align-items: center;
     width: 100%;
     overflow-x: scroll;
 }
 
-.author-list::-webkit-scrollbar {
+.flex-list::-webkit-scrollbar {
     display: none;
 }

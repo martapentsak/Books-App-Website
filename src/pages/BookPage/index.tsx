@@ -15,7 +15,7 @@ type BookProp = {
   author: string;
   genres: string[];
   publicationYear: number;
-  coverImage: string;
+  image: string;
   description: string;
 };
 
@@ -31,7 +31,8 @@ export const BookPage = () => {
     wishlistError,
     handleCloseWishlistError,
   } = useWishlist();
-  const { booksList, bookListError, handleCloseBooksError, booksLoading } = useBooks();
+  const { booksList, bookListError, handleCloseBooksError, booksLoading } =
+    useBooks();
   const { authorsList } = useAuthors();
 
   const navigate = useNavigate();
@@ -41,11 +42,10 @@ export const BookPage = () => {
 
   if (!currentBook && booksLoading) {
     return <Loading />;
+  } else if (!currentBook) {
+    return <NotFound />;
   }
-  else if (!currentBook) {
-  return <NotFound/>
-  }
-  const { title, coverImage, author, publicationYear, description, genres } =
+  const { title, image, author, publicationYear, description, genres } =
     currentBook;
 
   const handleGetRecommendationBookList = (): Result => {
@@ -83,7 +83,7 @@ export const BookPage = () => {
         ))}
       <div className="wrapper">
         <div className="book-cover-section">
-          <img src={coverImage} alt={`${title} cover`} className="book-cover" />
+          <img src={image} alt={`${title} cover`} className="book-cover" />
         </div>
         <div className="book-info-section">
           <h2 className="book-name">{title}</h2>
@@ -118,17 +118,13 @@ export const BookPage = () => {
           <div className="author-works">
             <h3 className="other-books-title">{blockTitle}</h3>
             <div className="other-books-list">
-              {data.map(({ coverImage, title, id }, index) => (
+              {data.map(({ image, title, id }, index) => (
                 <div
                   className="other-books-section"
                   key={index}
                   onClick={() => navigate(`/book/${id}`)}
                 >
-                  <img
-                    src={coverImage}
-                    alt={title}
-                    className="other-book-image"
-                  />
+                  <img src={image} alt={title} className="other-book-image" />
                   <span className="book-name">{title}</span>
                   <div className="genres">
                     {genres.map((g, index) => (

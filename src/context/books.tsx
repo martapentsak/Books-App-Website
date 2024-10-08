@@ -20,7 +20,7 @@ type Book = {
   author: string;
   genres: string[];
   publicationYear: number;
-  coverImage: string;
+  image: string;
   description: string;
 };
 
@@ -62,7 +62,7 @@ export const BooksProvider = ({ children }: Props) => {
       const list = reponse.data.map(
         ({ cover_image, publication_year, ...others }: Response) => ({
           publicationYear: publication_year,
-          coverImage: cover_image,
+          image: cover_image,
           ...others,
         })
       );
