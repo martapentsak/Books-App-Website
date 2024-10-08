@@ -31,14 +31,14 @@ export const BookPage = () => {
     handleCloseWishlistError,
   } = useWishlist();
   const { booksList, bookListError, handleCloseBooksError } = useBooks();
-  const {authorsList} = useAuthors()
+  const { authorsList } = useAuthors();
 
   const navigate = useNavigate();
   const { bookId } = useParams();
 
   const currentBook = booksList.find((book) => book.id === bookId);
   if (!currentBook) {
-    return <Loading/>
+    return <Loading />;
   }
   const { title, coverImage, author, publicationYear, description, genres } =
     currentBook;
@@ -61,84 +61,84 @@ export const BookPage = () => {
 
   const isBookInWishList = wishList.find((v) => v.id === bookId);
 
-  const {data, blockTitle} = handleGetRecommendationBookList()
+  const { data, blockTitle } = handleGetRecommendationBookList();
 
-  const authorId = authorsList.find((a) => a.author === author)?.id
+  const authorId = authorsList.find((a) => a.author === author)?.id;
 
   return (
-  <div className="book-page">
-        {bookListError ||
-          (wishlistError && (
-            <AlertWindow
-              error={bookListError || wishlistError}
-              onClose={
-                bookListError ? handleCloseBooksError : handleCloseWishlistError
-              }
-            />
-          ))}
-        <div className="wrapper">
-          <div className="book-cover-section">
-            <img src={coverImage} alt={`${title} cover`} className="book-cover" />
+    <div className="book-page">
+      {bookListError ||
+        (wishlistError && (
+          <AlertWindow
+            error={bookListError || wishlistError}
+            onClose={
+              bookListError ? handleCloseBooksError : handleCloseWishlistError
+            }
+          />
+        ))}
+      <div className="wrapper">
+        <div className="book-cover-section">
+          <img src={coverImage} alt={`${title} cover`} className="book-cover" />
+        </div>
+        <div className="book-info-section">
+          <h2 className="book-name">{title}</h2>
+          <div
+            className="book-author"
+            onClick={() => navigate(`/author/${authorId}`)}
+          >
+            {author}
           </div>
-          <div className="book-info-section">
-            <h2 className="book-name">{title}</h2>
-            <div
-              className="book-author"
-              onClick={() => navigate(`/author/${authorId}`)}
-            >
-              {author}
+          <Button
+            className="add-to-wishlist-btn"
+            onClick={() => handleAddBookToWishlist(currentBook)}
+          >
+            {isBookInWishList ? "Remove from wishlist" : "Want to read"}
+          </Button>
+          <div className="book-describtion">{description}</div>
+          <div className="book-publication">
+            Publication year:{" "}
+            <span className="publication-year">{publicationYear}</span>
+          </div>
+          <div className="book-genres">
+            genres:{" "}
+            <div className="genres-list">
+              {genres.map((g, index) => (
+                <span className="book-category" key={index}>
+                  {g}
+                  {index < genres.length - 1 ? ", " : ""}
+                </span>
+              ))}
             </div>
-            <Button
-              className="add-to-wishlist-btn"
-              onClick={() => handleAddBookToWishlist(currentBook)}
-            >
-              {isBookInWishList ? "Remove from wishlist" : "Want to read"}
-            </Button>
-            <div className="book-describtion">{description}</div>
-            <div className="book-publication">
-              Publication year:{" "}
-              <span className="publication-year">{publicationYear}</span>
-            </div>
-            <div className="book-genres">
-              genres:{" "}
-              <div className="genres-list">
-                {genres.map((g, index) => (
-                  <span className="book-category" key={index}>
-                    {g}
-                    {index < genres.length - 1 ? ", " : ""}
-                  </span>
-                ))}
-              </div>
-            </div>
-            <div className="author-works">
-              <h3 className="other-books-title">{blockTitle}</h3>
-              <div className="other-books-list">
-                {data.map(({ coverImage, title, id }, index) => (
-                  <div
-                    className="other-books-section"
-                    key={index}
-                    onClick={() => navigate(`/book/${id}`)}
-                  >
-                    <img
-                      src={coverImage}
-                      alt={title}
-                      className="other-book-image"
-                    />
-                    <span className="book-name">{title}</span>
-                    <div className="genres">
-                      {genres.map((g, index) => (
-                        <span className="book-category" key={index}>
-                          {g}
-                          {index < genres.length - 1 ? ", " : " "}
-                        </span>
-                      ))}
-                    </div>
+          </div>
+          <div className="author-works">
+            <h3 className="other-books-title">{blockTitle}</h3>
+            <div className="other-books-list">
+              {data.map(({ coverImage, title, id }, index) => (
+                <div
+                  className="other-books-section"
+                  key={index}
+                  onClick={() => navigate(`/book/${id}`)}
+                >
+                  <img
+                    src={coverImage}
+                    alt={title}
+                    className="other-book-image"
+                  />
+                  <span className="book-name">{title}</span>
+                  <div className="genres">
+                    {genres.map((g, index) => (
+                      <span className="book-category" key={index}>
+                        {g}
+                        {index < genres.length - 1 ? ", " : " "}
+                      </span>
+                    ))}
                   </div>
-                ))}
-              </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
-      </div>)}
-
-   
+      </div>
+    </div>
+  );
+};
