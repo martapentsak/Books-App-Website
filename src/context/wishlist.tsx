@@ -12,6 +12,7 @@ import { wishListApi } from "../constants/api";
 import useAsyncEffect from "../hooks/useAsyncEffect";
 
 import { waitForAnimationFinish } from "../helpers/waitForAnimationFinish";
+import { errors } from "../constants/textValues";
 
 type Book = {
   id: string;
@@ -71,7 +72,7 @@ export const WishListProvider = ({ children }: Props) => {
           await axios.post(wishListApi, book);
         }
       } catch {
-        setWishlistError("Error! Can`t add book to wishlist");
+        setWishlistError(errors.getWishList);
       }
     },
     [wishList]

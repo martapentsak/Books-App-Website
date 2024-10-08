@@ -30,4 +30,5 @@ export const homepage = {
 export const errors = {
   getAuthorsList: "ERROR! Can`t get authors list",
   getBooksList: "ERROR! Can`t get books list",
+  getWishList: "ERROR! Can`t add book to wishlist"
 };
