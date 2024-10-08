@@ -5,6 +5,7 @@ import { useWishlist } from "../../context/wishlist";
 import { Button } from "@mui/material";
 import { useBooks } from "../../context/books";
 import { AlertWindow } from "../../components/Alert";
+import { useAuthors } from "../../context/authors";
 
 type BookProp = {
   id: string;
@@ -29,6 +30,7 @@ export const BookPage = () => {
     handleCloseWishlistError,
   } = useWishlist();
   const { booksList, bookListError, handleCloseBooksError } = useBooks();
+  const {authorsList} = useAuthors()
 
   const navigate = useNavigate();
   const { bookId } = useParams();
@@ -60,6 +62,8 @@ export const BookPage = () => {
 
   const {data, blockTitle} = handleGetRecommendationBookList()
 
+  const authorId = authorsList.find((a) => a.author === author)?.id
+
   return (
     <div className="book-page">
       {bookListError ||
@@ -79,7 +83,7 @@ export const BookPage = () => {
           <h2 className="book-name">{title}</h2>
           <div
             className="book-author"
-            onClick={() => navigate(`/${author.replace(/ /g, "")}`)}
+            onClick={() => navigate(`/author/${authorId}`)}
           >
             {author}
           </div>
@@ -108,11 +112,11 @@ export const BookPage = () => {
           <div className="author-works">
             <h3 className="other-books-title">{blockTitle}</h3>
             <div className="other-books-list">
-              {data.map(({ coverImage, title }, index) => (
+              {data.map(({ coverImage, title, id }, index) => (
                 <div
                   className="other-books-section"
                   key={index}
-                  onClick={() => navigate(`/${title.replace(/ /g, "")}`)}
+                  onClick={() => navigate(`/book/${id}`)}
                 >
                   <img
                     src={coverImage}

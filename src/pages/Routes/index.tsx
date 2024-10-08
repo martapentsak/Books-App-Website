@@ -16,7 +16,7 @@ export const AllRoutes = () => {
         <Menu />
         <Routes>
           <Route path={menuElemenets.links.home} element={<HomePage />} />
-          <Route path="bookId/:bookId" element={<BookPage />} />
+          <Route path="book/:bookId" element={<BookPage />} />
         </Routes>
       </div>
     </div>
