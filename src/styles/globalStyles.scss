@@ -1,16 +1,27 @@
-.container-list-title {
+.list-section {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+
+    .list-section-title {
     color: $white;
     font-family: $defaultFontFamily;
     padding-bottom: 10px;
     font-weight: 400;
     font-size: 22px;
-}
+    }
 
-.flex-list {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    overflow-x: scroll;
+    .flex-wrap-list {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        overflow-y: auto;
+        width: 100%;
+        height: 100%;
+        overflow-x: scroll;
+    }
 }
 
 .flex-list::-webkit-scrollbar {
