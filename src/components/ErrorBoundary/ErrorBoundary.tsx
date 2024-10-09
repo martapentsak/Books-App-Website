@@ -32,7 +32,7 @@ class ErrorBoundary extends React.Component<
     if (this.state.hasError) {
       return (
         <div className="error-boundary-page">
-          <img src={somethinWring} className="something-wring-icon" />
+          <img src={somethinWring} className="something-wrong-icon" />
           <h1 className="error">Oops! Something went wrong ....</h1>
         </div>
       );
