@@ -40,7 +40,7 @@ export const BookPage = () => {
 
   const currentBook = booksList.find((book) => book.id === bookId);
 
-  if (!currentBook && booksLoading) {
+  if (booksLoading) {
     return <Loading />;
   } else if (!currentBook) {
     return <NotFound />;
