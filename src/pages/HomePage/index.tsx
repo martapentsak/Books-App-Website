@@ -1,17 +1,19 @@
 import { useState } from "react";
 
+import { Loading } from "../../components/Loading";
+import { AlertWindow } from "../../components/Alert";
+import { AuthorsList } from "../../components/AuthorsList";
+import { BooksList } from "../../components/BooksList";
+import { NotFound } from "../../components/NotFound";
+
 import { useAuthors } from "../../context/authors";
 import { useBooks } from "../../context/books";
 
 import { homepage } from "../../constants/textValues";
-
-import { Loading } from "../../components/Loading";
-import { AlertWindow } from "../../components/Alert";
-import { ListSection } from "../../components/ListSection";
+import { useNavigate } from "react-router-dom";
 
 export const HomePage = () => {
   const [selectedPoetIndex, setSelectedPoetIndex] = useState<number>(0);
-
   const {
     authorsList,
     poetsList,
@@ -21,12 +23,16 @@ export const HomePage = () => {
   } = useAuthors();
   const { booksList, bookListError, handleCloseBooksError, booksLoading } =
     useBooks();
+    const navigate = useNavigate()
 
-  const currentPoet = poetsList.length > 0 && poetsList[selectedPoetIndex];
   const errorExist = authorListError || bookListError;
 
   if (authorLoading || booksLoading) {
     return <Loading />;
+  }
+
+  if (!poetsList[selectedPoetIndex]) {
+    return <NotFound />;
   }
 
   return (
@@ -44,13 +50,16 @@ export const HomePage = () => {
         )}
       </div>
       <div className="poets-section">
-        <div className="selecled-poet-section">
-          <p className="selecled-poet-title">{homepage.postContainerTitle}</p>
-          {currentPoet && (
-            <img src={currentPoet.image} className="selected-poet-image" />
+        <div className="selected-poet-section">
+          <p className="selected-poet-title">{homepage.postContainerTitle}</p>
+          {poetsList[selectedPoetIndex] && (
+            <img
+              src={poetsList[selectedPoetIndex].image}
+              className="selected-poet-image"
+            />
           )}
         </div>
-        <div className="flex-list">
+        <div className="poets-list">
           {poetsList.map(({ image, author }, index) => (
             <div
               key={index}
@@ -76,27 +85,25 @@ export const HomePage = () => {
           ))}
         </div>
         <div className="works-section">
-          <ListSection
-            title={homepage.works}
-            works={poetsList[selectedPoetIndex]?.works}
-            isAuthorCard={false}
-            isWorkslist
-          />
+          <div className="list-section">
+            <h2 className="list-section-title ">{homepage.works}</h2>
+            {poetsList[selectedPoetIndex].works?.map((value, index) => (
+              <div key={index} className="work-element">
+                <span className="work-number">{index + 1}</span>
+                <p className="work-name">{value}</p>
+                <span className="author" onClick={() => navigate(`/author/${poetsList[selectedPoetIndex].id}`)}>
+                  {poetsList[selectedPoetIndex].author}
+                </span>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
       <div className="authors-books-section">
-        <ListSection
-          title={homepage.popularWriter}
-          array={authorsList}
-          isAuthorCard
-          isWorkslist={false}
-        />
-        <ListSection
-          title={homepage.popularBook}
-          array={booksList}
-          isAuthorCard={false}
-          isWorkslist={false}
-        />
+        <div className="popular-writers">
+          <AuthorsList title={homepage.popularWriter} data={authorsList} />
+        </div>
+        <BooksList title={homepage.popularBook} data={booksList} />
       </div>
     </div>
   );

@@ -18,14 +18,14 @@
         border-radius: 14px;
         padding-left: 30px;
 
-        .selecled-poet-section {
+        .selected-poet-section {
             width: 100%;
             display: flex;
             align-items: center;
             justify-content: space-between;
             margin-bottom: 40px;
 
-            .selecled-poet-title {
+            .selected-poet-title {
                 color: $white;
                 font-size: 60px;
                 padding: 0 20px;
@@ -39,6 +39,23 @@
                 border-radius: 14px;
             }
         }
+
+        .poets-list {
+            display: flex;
+            width: 100%;
+            overflow-x: scroll;
+            display: flex;
+
+             .poet-section {
+               margin-right: 8px;
+        }
+        }
+
+        .poets-list::-webkit-scrollbar {
+            display: none;
+        }
+
+       
 
         .active-poet-section {
             display: flex;
@@ -55,6 +72,25 @@
 
         .works-section {
             margin-top: 20px;
+
+            .work-element {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                color: $blackishGrey;
+                width: 70%;
+                margin: 10px 0;;
+            }
+
+            .author,
+            .work-name {
+                cursor: pointer;
+            }
+
+            .author:hover,
+            .work-name:hover {
+                color: $white;
+            }
         }
     }
 
@@ -69,3 +105,4 @@
     border-radius: 14px;
     background-size: cover;
 }
+
