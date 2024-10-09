@@ -6,7 +6,7 @@ import CardActionArea from "@mui/material/CardActionArea";
 
 type CardProps = {
   id: string;
-  isAuthorCard: boolean;
+  className: "author-card" | "book-card";
   image: string;
   title?: string;
   genres: string[];
@@ -15,32 +15,34 @@ type CardProps = {
 
 export const Card = ({
   id,
-  isAuthorCard,
   image,
   title,
   genres,
   author,
+  className
 }: CardProps) => {
   const navigate = useNavigate();
 
+  const isAuthorCard = className.includes("author")
+
   return (
-    <div className={isAuthorCard ? "author-card" : "book-card"}>
+    <div className={className}>
       <CardElement>
         <CardActionArea
-          onClick={() => navigate(`${isAuthorCard ? "author" : "book"}/${id}`)}
+          onClick={() => navigate(`${className.includes("author") ? "author" : "book"}/${id}`)}
         >
           <div>
             <img
               src={image}
-              alt={isAuthorCard ? "author image" : "book image"}
-              className={isAuthorCard ? "author-image" : "book-image"}
+              alt={"card image"}
+              className={"card-image"}
             />
           </div>
           <CardContent>
             {!isAuthorCard && <span className="book-author">{author}</span>}
             <h2 className="card-name">{isAuthorCard ? author : title}</h2>
             {genres.map((g, index) => (
-              <span className="book-category" key={index}>
+              <span className="category" key={index}>
                 {g}
                 {index < genres.length - 1 ? ", " : ""}
               </span>

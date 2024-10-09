@@ -1,22 +1,16 @@
 .author-card {
-    height: 280px;
-    width: 360px;
+    height: 270px;
+    width: 260px;
     margin-right: 25px;
     opacity: 0.8;
 
-    .author-image {
+
+    .card-image {
         height: 180px !important;
         width: 140px !important;
         background-size: contain;
         border-radius: 14px !important;
-    }
-
-    .book-image {
-        height: auto !important;
-        width: 100% !important;
-        background-size: cover;
-        border-radius: 14px !important;
-    }
+    } 
 }
 
 .author-card:hover {
@@ -55,20 +49,20 @@
 }
 
 .book-author,
-.book-category {
+.category {
     color: $blackishGrey;
     font-size: 12px;
 }
 
 
 .book-card {
-    height: 350px;
-    width: 180px;
-    margin-right: 10px;
+    height: 330px;
+    min-width: 200px;
+    // margin-right: 10px;
     opacity: 0.8;
-    margin-bottom: 8px;
+    margin-bottom: 2px;
 
-    .book-image {
+    .card-image {
         height: 240px !important;
         width: 180px !important;
         background-size: cover;
