@@ -58,9 +58,10 @@
 .book-card {
     height: 330px;
     min-width: 200px;
-    // margin-right: 10px;
+    width: 220px;
     opacity: 0.8;
     margin-bottom: 2px;
+    padding-bottom: 10px;
 
     .card-image {
         height: 240px !important;

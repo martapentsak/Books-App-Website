@@ -1,35 +1,34 @@
-import { useNavigate } from "react-router-dom";
-
 import CardElement from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardActionArea from "@mui/material/CardActionArea";
 
 type CardProps = {
-  id: string;
-  className: "author-card" | "book-card";
-  image: string;
-  title?: string;
-  genres: string[];
-  author: string;
+  id: string,
+  title? : string,
+  author: string,
+  genres: string[],
+  image: string
+}
+
+type Props = {
+  className: string;
+  onClick: (id: string) => void,
+  elementInfo: CardProps
 };
 
 export const Card = ({
-  id,
-  image,
-  title,
-  genres,
-  author,
-  className
-}: CardProps) => {
-  const navigate = useNavigate();
+  elementInfo,
+  className,
+  onClick
+}: Props) => {
 
-  const isAuthorCard = className.includes("author")
+  const {title, author, genres, image, id} = elementInfo
 
   return (
     <div className={className}>
       <CardElement>
         <CardActionArea
-          onClick={() => navigate(`${className.includes("author") ? "author" : "book"}/${id}`)}
+          onClick={() => onClick(id)}
         >
           <div>
             <img
@@ -39,8 +38,8 @@ export const Card = ({
             />
           </div>
           <CardContent>
-            {!isAuthorCard && <span className="book-author">{author}</span>}
-            <h2 className="card-name">{isAuthorCard ? author : title}</h2>
+            {title && <span className="book-author">{author}</span>}
+            <h2 className="card-name">{title ? title : author}</h2>
             {genres.map((g, index) => (
               <span className="category" key={index}>
                 {g}

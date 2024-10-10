@@ -1,9 +1,8 @@
 .home-page {
     display: flex;
     justify-content: space-between;
-    height: calc(100% - $menuHeight);
+    height: calc(100vh + 150px);
     padding-top: 40px;
-    height: 80%;
 
     .alert-section {
         position: absolute !important;
@@ -96,6 +95,10 @@
 
     .authors-books-section {
         width: 45%;
+        display: flex;
+        height: 65%;
+        flex-direction: column;
+
     }
 }
 

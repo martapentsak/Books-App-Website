@@ -1,7 +1,6 @@
 import { Card } from "../Card";
 
 type CardProps = {
-  id: string;
   image: string;
   title?: string;
   genres: string[];

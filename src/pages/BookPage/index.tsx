@@ -42,7 +42,8 @@ export const BookPage = () => {
 
   if (booksLoading) {
     return <Loading />;
-  } else if (!currentBook) {
+  } 
+   if (!currentBook) {
     return <NotFound />;
   }
   const { title, image, author, publicationYear, description, genres } =

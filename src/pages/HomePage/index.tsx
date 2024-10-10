@@ -2,8 +2,6 @@ import { useState } from "react";
 
 import { Loading } from "../../components/Loading";
 import { AlertWindow } from "../../components/Alert";
-import { AuthorsList } from "../../components/AuthorsList";
-import { BooksList } from "../../components/BooksList";
 import { NotFound } from "../../components/NotFound";
 
 import { useAuthors } from "../../context/authors";
@@ -11,6 +9,7 @@ import { useBooks } from "../../context/books";
 
 import { homepage } from "../../constants/textValues";
 import { useNavigate } from "react-router-dom";
+import { ListSection } from "../../components/ListSection";
 
 export const HomePage = () => {
   const [selectedPoetIndex, setSelectedPoetIndex] = useState<number>(0);
@@ -100,10 +99,12 @@ export const HomePage = () => {
         </div>
       </div>
       <div className="authors-books-section">
+      <ListSection title={homepage.popularWriter} data={authorsList} className="author-card" onClick={(id: string) => navigate(`/author/${id}`)} blockClassname="flex-list" />
+      <ListSection title={homepage.popularBook} data={booksList} className="book-card" onClick={(id: string) => navigate(`/book/${id}`)} blockClassname="flex-wrap-list"/>
+        
         <div className="popular-writers">
-          <AuthorsList title={homepage.popularWriter} data={authorsList} />
+
         </div>
-        <BooksList title={homepage.popularBook} data={booksList} />
       </div>
     </div>
   );
