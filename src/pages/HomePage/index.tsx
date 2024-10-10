@@ -22,7 +22,7 @@ export const HomePage = () => {
   } = useAuthors();
   const { booksList, bookListError, handleCloseBooksError, booksLoading } =
     useBooks();
-    const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const errorExist = authorListError || bookListError;
 
@@ -90,7 +90,12 @@ export const HomePage = () => {
               <div key={index} className="work-element">
                 <span className="work-number">{index + 1}</span>
                 <p className="work-name">{value}</p>
-                <span className="author" onClick={() => navigate(`/author/${poetsList[selectedPoetIndex].id}`)}>
+                <span
+                  className="author"
+                  onClick={() =>
+                    navigate(`/author/${poetsList[selectedPoetIndex].id}`)
+                  }
+                >
                   {poetsList[selectedPoetIndex].author}
                 </span>
               </div>
@@ -99,12 +104,20 @@ export const HomePage = () => {
         </div>
       </div>
       <div className="authors-books-section">
-      <ListSection title={homepage.popularWriter} data={authorsList} className="author-card" onClick={(id: string) => navigate(`/author/${id}`)} blockClassname="flex-list" />
-      <ListSection title={homepage.popularBook} data={booksList} className="book-card" onClick={(id: string) => navigate(`/book/${id}`)} blockClassname="flex-wrap-list"/>
-        
-        <div className="popular-writers">
-
-        </div>
+        <ListSection
+          title={homepage.popularWriter}
+          data={authorsList}
+          className="author-card"
+          onClick={(id: string) => navigate(`/author/${id}`)}
+          blockClassname="flex-list"
+        />
+        <ListSection
+          title={homepage.popularBook}
+          data={booksList}
+          className="book-card"
+          onClick={(id: string) => navigate(`/book/${id}`)}
+          blockClassname="flex-wrap-list"
+        />
       </div>
     </div>
   );
