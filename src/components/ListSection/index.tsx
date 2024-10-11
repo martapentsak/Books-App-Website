@@ -8,32 +8,50 @@ type DataProps = {
   author: string;
 };
 
-type Props = {
+type Props<T> = {
   title: string;
-  data: DataProps[];
+  data: T[];
   className: string;
   blockClassname: string;
-  onClick: (id: string) => void;
+  handleCardClick: (id: string) => void;
 };
 
-export const ListSection = ({
+export const ListSection = <T extends DataProps>({
   title,
   data,
   className,
-  onClick,
+  handleCardClick,
   blockClassname,
-}: Props) => {
+}: Props<T>) => {
   return (
     <div className="list-section">
       <h2 className="list-section-title ">{title}</h2>
       <div className={blockClassname}>
-        {data.map((element, index) => (
+        {data.map((item, index) => (
           <Card
             key={index}
-            elementInfo={element}
+            onClick={() => handleCardClick(item.id)}
             className={className}
-            onClick={onClick}
-          />
+          >
+            <div>
+              <img
+                src={item.image}
+                alt={"card image"}
+                className={"card-image"}
+              />
+
+              {item.title && <span className="book-author">{item.author}</span>}
+              <h2 className="card-name">
+                {item.title ? item.title : item.author}
+              </h2>
+              {item.genres.map((g, index) => (
+                <span className="category" key={index}>
+                  {g}
+                  {index < item.genres.length - 1 ? ", " : ""}
+                </span>
+              ))}
+            </div>
+          </Card>
         ))}
       </div>
     </div>

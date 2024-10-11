@@ -108,14 +108,15 @@ export const HomePage = () => {
           title={homepage.popularWriter}
           data={authorsList}
           className="author-card"
-          onClick={(id: string) => navigate(`/author/${id}`)}
+          handleCardClick={(id: string) => navigate(`/author/${id}`)}
           blockClassname="flex-list"
         />
+     
         <ListSection
           title={homepage.popularBook}
           data={booksList}
           className="book-card"
-          onClick={(id: string) => navigate(`/book/${id}`)}
+          handleCardClick={(id: string) => navigate(`/book/${id}`)}
           blockClassname="flex-wrap-list"
         />
       </div>
