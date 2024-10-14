@@ -1,57 +1,36 @@
 import { Card } from "../Card";
 
-type DataProps = {
-  id: string;
-  image: string;
-  title?: string;
-  genres: string[];
-  author: string;
-};
+import { UnivarsalProp } from "../../types/UniversalProps";
 
 type Props<T> = {
   title: string;
   data: T[];
   className: string;
-  blockClassname: string;
-  handleCardClick: (id: string) => void;
+  listCardClassname: string;
+  onCardClick: (id: string) => void;
 };
 
-export const ListSection = <T extends DataProps>({
+export const ListSection = <T extends UnivarsalProp>({
   title,
   data,
   className,
-  handleCardClick,
-  blockClassname,
+  onCardClick,
+  listCardClassname,
 }: Props<T>) => {
   return (
     <div className="list-section">
       <h2 className="list-section-title ">{title}</h2>
-      <div className={blockClassname}>
-        {data.map((item, index) => (
+      <div className={listCardClassname}>
+        {data.map(({ title, author, image, id, genres }, index) => (
           <Card
             key={index}
-            onClick={() => handleCardClick(item.id)}
+            name={title ? title : author}
+            subtitle={title && author}
+            image={image}
+            cardList={genres}
+            onClick={() => onCardClick(id)}
             className={className}
-          >
-            <div>
-              <img
-                src={item.image}
-                alt={"card image"}
-                className={"card-image"}
-              />
-
-              {item.title && <span className="book-author">{item.author}</span>}
-              <h2 className="card-name">
-                {item.title ? item.title : item.author}
-              </h2>
-              {item.genres.map((g, index) => (
-                <span className="category" key={index}>
-                  {g}
-                  {index < item.genres.length - 1 ? ", " : ""}
-                </span>
-              ))}
-            </div>
-          </Card>
+          />
         ))}
       </div>
     </div>
