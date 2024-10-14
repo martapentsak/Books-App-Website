@@ -1,15 +1,17 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import { Loading } from "../../components/Loading";
 import { AlertWindow } from "../../components/Alert";
 import { NotFound } from "../../components/NotFound";
+import { PoetsList } from "../../components/PoetsList";
+import { ListSection } from "../../components/ListSection";
+import { AuthorWorks } from "../../components/AuthorWorks";
 
 import { useAuthors } from "../../context/authors";
 import { useBooks } from "../../context/books";
 
 import { homepage } from "../../constants/textValues";
-import { useNavigate } from "react-router-dom";
-import { ListSection } from "../../components/ListSection";
 
 export const HomePage = () => {
   const [selectedPoetIndex, setSelectedPoetIndex] = useState<number>(0);
@@ -58,66 +60,32 @@ export const HomePage = () => {
             />
           )}
         </div>
-        <div className="poets-list">
-          {poetsList.map(({ image, author }, index) => (
-            <div
-              key={index}
-              onClick={() => setSelectedPoetIndex(index)}
-              className={
-                selectedPoetIndex === index
-                  ? "active-poet-section"
-                  : "poet-section"
-              }
-            >
-              <img
-                key={index}
-                src={image}
-                alt={author}
-                className="poet-image"
-              />
-              {selectedPoetIndex === index && (
-                <span style={{ color: "white" }} className="poet-name">
-                  {author}
-                </span>
-              )}
-            </div>
-          ))}
-        </div>
-        <div className="works-section">
-          <div className="list-section">
-            <h2 className="list-section-title ">{homepage.works}</h2>
-            {poetsList[selectedPoetIndex].works?.map((value, index) => (
-              <div key={index} className="work-element">
-                <span className="work-number">{index + 1}</span>
-                <p className="work-name">{value}</p>
-                <span
-                  className="author"
-                  onClick={() =>
-                    navigate(`/author/${poetsList[selectedPoetIndex].id}`)
-                  }
-                >
-                  {poetsList[selectedPoetIndex].author}
-                </span>
-              </div>
-            ))}
-          </div>
-        </div>
+        <PoetsList
+          data={poetsList}
+          selectedPoetIndex={selectedPoetIndex}
+          onClick={(index) => setSelectedPoetIndex(index)}
+        />
+        <AuthorWorks
+          works={poetsList[selectedPoetIndex].works}
+          title={poetsList[selectedPoetIndex].title}
+          author={poetsList[selectedPoetIndex]}
+        />
       </div>
       <div className="authors-books-section">
         <ListSection
           title={homepage.popularWriter}
           data={authorsList}
           className="author-card"
-          handleCardClick={(id: string) => navigate(`/author/${id}`)}
-          blockClassname="flex-list"
+          onCardClick={(id: string) => navigate(`/author/${id}`)}
+          listCardClassname="flex-list"
         />
-     
+
         <ListSection
           title={homepage.popularBook}
           data={booksList}
           className="book-card"
-          handleCardClick={(id: string) => navigate(`/book/${id}`)}
-          blockClassname="flex-wrap-list"
+          onCardClick={(id: string) => navigate(`/book/${id}`)}
+          listCardClassname="flex-wrap-list"
         />
       </div>
     </div>

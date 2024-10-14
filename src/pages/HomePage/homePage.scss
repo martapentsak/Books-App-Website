@@ -37,60 +37,7 @@
                 height: 500px;
                 border-radius: 14px;
             }
-        }
-
-        .poets-list {
-            display: flex;
-            width: 100%;
-            overflow-x: scroll;
-            display: flex;
-
-             .poet-section {
-               margin-right: 8px;
-        }
-        }
-
-        .poets-list::-webkit-scrollbar {
-            display: none;
-        }
-
-       
-
-        .active-poet-section {
-            display: flex;
-            align-items: center;
-            margin-right: 20px;
-            cursor: pointer;
-
-            .poet-name {
-                text-align: center;
-                font-size: 22px;
-                width: 120px;
-            }
-        }
-
-        .works-section {
-            margin-top: 20px;
-
-            .work-element {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                color: $blackishGrey;
-                width: 70%;
-                margin: 10px 0;;
-            }
-
-            .author,
-            .work-name {
-                cursor: pointer;
-            }
-
-            .author:hover,
-            .work-name:hover {
-                color: $white;
-            }
-        }
+        }  
     }
 
     .authors-books-section {
@@ -102,10 +49,4 @@
     }
 }
 
-.poet-image {
-    width: 70px;
-    height: 80px;
-    border-radius: 14px;
-    background-size: cover;
-}
-
+// 
