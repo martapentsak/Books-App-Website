@@ -1,0 +1,22 @@
+.works-section {
+    margin-top: 20px;
+
+    .work-element {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: $blackishGrey;
+        width: 70%;
+        margin: 10px 0;;
+    }
+
+    .author,
+    .work-name {
+        cursor: pointer;
+    }
+
+    .author:hover,
+    .work-name:hover {
+        color: $white;
+    }
+}
