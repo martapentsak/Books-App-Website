@@ -57,7 +57,7 @@ export const Menu = () => {
     currentMenuElement ? currentMenuElement.value : menuElemenets.values.home
   );
 
-  const handleTabChange = (event: React.SyntheticEvent, newValue: string) => {
+  const handleTabChange = (_event: React.SyntheticEvent, newValue: string) => {
     setValue(newValue);
     const currentTabLink = menuElements.find((v) => v.value === newValue);
     const link = currentTabLink ? currentTabLink.link : "/";
