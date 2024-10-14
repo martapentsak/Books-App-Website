@@ -13,22 +13,13 @@ import useAsyncEffect from "../hooks/useAsyncEffect";
 
 import { waitForAnimationFinish } from "../helpers/waitForAnimationFinish";
 import { errors } from "../constants/textValues";
-
-type Book = {
-  id: string;
-  title: string;
-  author: string;
-  genres: string[];
-  publicationYear: number;
-  image: string;
-  description: string;
-};
+import { UnivarsalProp } from "../types/UniversalProps";
 
 type ProviderValues = {
-  wishList: Book[];
+  wishList: UnivarsalProp[];
   wishlistLoading: boolean;
   wishlistError: string;
-  handleAddBookToWishlist: (book: Book) => void;
+  handleAddBookToWishlist: (book: UnivarsalProp) => void;
   handleCloseWishlistError: () => void;
 };
 
@@ -39,7 +30,7 @@ type Props = {
 export const WishlistContext = createContext({} as ProviderValues);
 
 export const WishListProvider = ({ children }: Props) => {
-  const [wishList, setWishList] = useState<Book[]>([]);
+  const [wishList, setWishList] = useState<UnivarsalProp[]>([]);
   const [wishlistError, setWishlistError] = useState<string>("");
   const [wishlistLoading, setWishlistLoading] = useState<boolean>(false);
 
@@ -62,7 +53,7 @@ export const WishListProvider = ({ children }: Props) => {
   }, []);
 
   const handleAddBookToWishlist = useCallback(
-    async (book: Book) => {
+    async (book: UnivarsalProp) => {
       try {
         const bookAlreadyExist = wishList.find((v) => v.title === book.title);
         if (bookAlreadyExist) {

@@ -1,26 +1,19 @@
 import { useNavigate, useParams } from "react-router";
 
+import { Loading } from "../../components/Loading";
+import { AlertWindow } from "../../components/Alert";
+
 import { useWishlist } from "../../context/wishlist";
+import { useBooks } from "../../context/books";
+import { useAuthors } from "../../context/authors";
+
+import { UnivarsalProp } from "../../types/UniversalProps";
 
 import { Button } from "@mui/material";
-import { useBooks } from "../../context/books";
-import { AlertWindow } from "../../components/Alert";
-import { useAuthors } from "../../context/authors";
-import { Loading } from "../../components/Loading";
 import { NotFound } from "../../components/NotFound";
 
-type BookProp = {
-  id: string;
-  title: string;
-  author: string;
-  genres: string[];
-  publicationYear: number;
-  image: string;
-  description: string;
-};
-
 type Result = {
-  data: BookProp[];
+  data: UnivarsalProp[];
   blockTitle: string;
 };
 
@@ -43,11 +36,13 @@ export const BookPage = () => {
   if (booksLoading) {
     return <Loading />;
   }
-  if (!currentBook) {
-    return <NotFound />;
+
+  if (!currentBook){
+    return <NotFound/>
   }
+
   const { title, image, author, publicationYear, description, genres } =
-    currentBook;
+    currentBook 
 
   const handleGetRecommendationBookList = (): Result => {
     const otherAuthorBooks = booksList.filter(
@@ -96,7 +91,7 @@ export const BookPage = () => {
           </div>
           <Button
             className="add-to-wishlist-btn"
-            onClick={() => handleAddBookToWishlist(currentBook)}
+            onClick={() => currentBook && handleAddBookToWishlist(currentBook)}
           >
             {isBookInWishList ? "Remove from wishlist" : "Want to read"}
           </Button>
