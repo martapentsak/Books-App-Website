@@ -12,6 +12,7 @@ import { useAuthors } from "../../context/authors";
 import { useBooks } from "../../context/books";
 
 import { homepage } from "../../constants/textValues";
+import { Card } from "../../components/Card";
 
 export const HomePage = () => {
   const [selectedPoetIndex, setSelectedPoetIndex] = useState<number>(0);
@@ -28,11 +29,13 @@ export const HomePage = () => {
 
   const errorExist = authorListError || bookListError;
 
+  const selectedPoet = poetsList[selectedPoetIndex];
+
   if (authorLoading || booksLoading) {
     return <Loading />;
   }
 
-  if (!poetsList[selectedPoetIndex]) {
+  if (!selectedPoet) {
     return <NotFound />;
   }
 
@@ -53,40 +56,47 @@ export const HomePage = () => {
       <div className="poets-section">
         <div className="selected-poet-section">
           <p className="selected-poet-title">{homepage.postContainerTitle}</p>
-          {poetsList[selectedPoetIndex] && (
-            <img
-              src={poetsList[selectedPoetIndex].image}
-              className="selected-poet-image"
-            />
+          {selectedPoet && (
+            <img src={selectedPoet.image} className="selected-poet-image" />
           )}
         </div>
         <PoetsList
-          data={poetsList}
+          poets={poetsList}
           selectedPoetIndex={selectedPoetIndex}
           onClick={(index) => setSelectedPoetIndex(index)}
         />
         <AuthorWorks
-          works={poetsList[selectedPoetIndex].works}
+          works={selectedPoet.works}
           title={homepage.works}
-          author={poetsList[selectedPoetIndex]}
+          author={selectedPoet}
         />
       </div>
       <div className="authors-books-section">
-        <ListSection
-          title={homepage.popularWriter}
-          data={authorsList}
-          className="author-card"
-          onCardClick={(id: string) => navigate(`/author/${id}`)}
-          listCardClassname="flex-list"
-        />
-
-        <ListSection
-          title={homepage.popularBook}
-          data={booksList}
-          className="book-card"
-          onCardClick={(id: string) => navigate(`/book/${id}`)}
-          listCardClassname="flex-wrap-list"
-        />
+        <ListSection title={homepage.popularWriter} listWrap={false}>
+          {authorsList.map(({ name, genres, image, id }, index) => (
+            <Card
+              key={index}
+              className="author-card"
+              name={name}
+              cardList={genres}
+              image={image}
+              onClick={() => navigate(`/author/${id}`)}
+            />
+          ))}
+        </ListSection>
+        <ListSection title={homepage.popularBook} listWrap>
+          {booksList.map(({ author, title, genres, image, id }, index) => (
+            <Card
+              key={index}
+              className="author-card"
+              name={title}
+              subtitle={author}
+              cardList={genres}
+              image={image}
+              onClick={() => navigate(`/book/${id}`)}
+            />
+          ))}
+        </ListSection>
       </div>
     </div>
   );
