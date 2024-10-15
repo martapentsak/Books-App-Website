@@ -1,10 +1,10 @@
 import { useNavigate } from "react-router-dom";
-import { AuthorProp } from "../../types/AuthorBookType";
+import { Author } from "../../types/AuthorBookType";
 
 type Props = {
   works: string[];
   title: string;
-  author: AuthorProp;
+  author: Author;
 };
 
 export function AuthorWorks({ works, title, author }: Props) {
