@@ -67,7 +67,7 @@ export const HomePage = () => {
         />
         <AuthorWorks
           works={poetsList[selectedPoetIndex].works}
-          title={poetsList[selectedPoetIndex].title}
+          title={homepage.works}
           author={poetsList[selectedPoetIndex]}
         />
       </div>

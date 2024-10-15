@@ -3,6 +3,7 @@
     justify-content: space-between;
     height: calc(100vh + 150px);
     padding-top: 40px;
+    width: 100%;
 
     .alert-section {
         position: absolute !important;
@@ -23,6 +24,7 @@
             align-items: center;
             justify-content: space-between;
             margin-bottom: 40px;
+            height: 50%;
 
             .selected-poet-title {
                 color: $white;
@@ -34,10 +36,11 @@
 
             .selected-poet-image {
                 width: 50%;
-                height: 500px;
+                height: auto;
                 border-radius: 14px;
+                object-fit: contain;
             }
-        }  
+        }
     }
 
     .authors-books-section {
@@ -49,4 +52,94 @@
     }
 }
 
-// 
+@media (max-width: 1200px) {
+    .selected-poet-section {
+        margin-bottom: 30px !important;
+        height: 40% !important;
+    }
+
+    .selected-poet-title {
+        font-size: 45px !important;
+    }
+
+}
+
+@media (max-width: 1100px) {
+    .selected-poet-title {
+        font-size: 40px !important;
+        width: 45% !important;
+    }
+
+    .selected-poet-image {
+        width: 50% !important;
+
+    }
+}
+
+
+
+@media (max-width: 880px) {
+    .home-page {
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .poets-section {
+        margin: 0 auto !important;
+        width: 90% !important;
+        padding-left: 0 !important;
+    }
+
+    .authors-books-section {
+        margin: 0 auto !important;
+        width: 90% !important;
+    }
+
+    .selected-poet-title {
+        font-size: 55px !important;
+    }
+}
+
+
+
+@media (max-width: 700px) {
+    .selected-poet-section {
+        margin-bottom: 20px !important;
+        height: 30% !important;
+    }
+
+    .selected-poet-title {
+        font-size: 50px !important;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .home-page {
+        padding-top: 20px !important;
+    }
+
+    .selected-poet-title {
+        font-size: 40px !important;
+    }
+}
+
+
+@media (max-width: 500px) {
+    .selected-poet-title {
+        font-size: 35px !important;
+    }
+}
+
+@media (max-width: 450px) {
+    .selected-poet-title {
+        font-size: 30px !important;
+    }
+}
+
+@media (max-width: 400px) {
+    .selected-poet-title {
+        font-size: 22px !important;
+    }
+
+}

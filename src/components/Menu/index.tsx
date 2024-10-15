@@ -74,7 +74,7 @@ export const Menu = () => {
             <span className="website-name-span">{websiteName.span}</span>
           </h2>
         </div>
-        <Box sx={{ width: "100%" }}>
+        <Box>
           <Tabs className="tabs" value={value} onChange={handleTabChange}>
             {menuElements.map(({ value, label, link }, index) => (
               <Tab
@@ -84,10 +84,10 @@ export const Menu = () => {
                 onClick={() => navigate(link)}
               />
             ))}
+            {wishList.length > 0 && (
+              <span className="wishlist-badge">{wishList.length}</span>
+            )}
           </Tabs>
-          {wishList.length > 0 && (
-            <span className="wishlist-badge">{wishList.length}</span>
-          )}
         </Box>
       </div>
     </div>

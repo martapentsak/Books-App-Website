@@ -1,16 +1,15 @@
 .author-card {
     height: 270px;
-    width: 250px;
-    margin-right: 5px;
+    width: 140px;
+    margin-right: 15px;
     opacity: 0.8;
-
 
     .card-image {
         height: 180px !important;
         width: 140px !important;
         background-size: contain;
         border-radius: 14px !important;
-    } 
+    }
 }
 
 .author-card:hover {
@@ -29,9 +28,8 @@
     border-radius: 14px !important;
 }
 
-//Card content
 .css-46bh2p-MuiCardContent-root {
-    padding: 8px 10px !important;
+    padding: 8px 0px !important;
     font-family: $defaultFontFamily !important;
 }
 
@@ -46,6 +44,7 @@
     margin: 7px 0 !important;
     font-weight: 400;
     text-transform: capitalize;
+    width: 90%;
 }
 
 .card-subtitle,
@@ -54,18 +53,17 @@
     font-size: 12px;
 }
 
-
 .book-card {
-    height: 330px;
-    min-width: 200px;
+    height: 340px;
+    min-width: 140px;
     width: 220px;
     opacity: 0.8;
     margin-bottom: 2px;
     padding-bottom: 10px;
 
     .card-image {
-        height: 240px !important;
-        width: 180px !important;
+        height: 270px !important;
+        width: 200px !important;
         background-size: cover;
         border-radius: 14px !important;
     }
@@ -73,4 +71,213 @@
 
 .book-card:hover {
     opacity: 1;
+}
+
+@media (max-width: 1500px) {
+    .book-card {
+        height: 330px !important;
+        width: 200px !important;
+
+        .card-image {
+            height: 260px !important;
+            width: 180px !important;
+        }
+    }
+}
+
+@media (max-width: 1330px) {
+    .book-card {
+        width: 32% !important;
+
+        .card-image {
+            height: 240px !important;
+            width: 90% !important;
+        }
+    }
+}
+
+@media (max-width: 1100px) {
+    .author-card {
+        height: 260px;
+        width: 120px;
+        margin-right: 10px;
+
+        .card-image {
+            height: 160px !important;
+            width: 120px !important;
+        }
+    }
+
+    .book-card {
+        .card-image {
+            height: 210px !important;
+            width: 88% !important;
+
+        }
+    }
+}
+
+@media (max-width: 950px) {
+    .book-card {
+        min-width: 120px !important;
+        height: 290px !important;
+
+        .card-image {
+            height: 180px !important;
+            width: 90% !important;
+        }
+    }
+}
+
+@media (max-width: 880px) {
+    .book-card {
+        height: 360px !important;
+        min-width: 170px !important;
+        width: 22% !important;
+
+        .card-image {
+            height: 280px !important;
+            width: 100% !important;
+        }
+    }
+}
+
+@media (max-width: 820px) {
+    .book-card {
+        height: 340px !important;
+        min-width: 160px !important;
+        width: 18% !important;
+
+        .card-image {
+            height: 230px !important;
+            width: 100% !important;
+        }
+    }
+}
+
+@media (max-width: 760px) {
+    .book-card {
+        height: 340px !important;
+        min-width: 145px !important;
+        // width: 17% !important;
+
+        .card-image {
+            height: 230px !important;
+            width: 100% !important;
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    .author-card {
+        height: 250px;
+        width: 110px;
+        margin-right: 15px;
+
+        .card-image {
+            height: 150px !important;
+            width: 110px !important;
+        }
+    }
+    .book-card {
+        height: 320px !important;
+        min-width: 130px !important;
+        width: 18% !important;
+
+        .card-image {
+            height: 200px !important;
+            width: 100% !important;
+        }
+    }
+}
+
+@media (max-width: 680px) {
+    .book-card {
+        min-width: 150px !important;
+        width: 19% !important;
+
+        .card-image {
+            height: 230px !important;
+        }
+    }
+
+    .card-subtitle,
+    .card-list-item {
+        font-size: 11px;
+    }
+
+    .card-name {
+        font-size: 13px;        
+    }
+}
+
+@media (max-width: 550px) {
+    .book-card {
+        min-width: 130px !important;
+        width: 15% !important;
+
+        .card-image {
+            height: 200px !important;
+        }
+    }
+
+  
+}
+
+@media (max-width: 470px) {
+    .author-card {
+        height: 210px;
+        width: 90px;
+        margin-right: 15px;
+
+        .card-image {
+            height: 120px !important;
+            width: 90px !important;
+        }
+    }
+    .book-card {
+        height: 280px !important;
+        min-width: 110px !important;
+        width: 15% !important;
+
+        .card-image {
+            height: 180px !important;
+
+        }
+    }
+    .card-subtitle,
+    .card-list-item {
+        font-size: 10px;
+    }
+
+    .card-name {
+        font-size: 11px;        
+    }
+}
+
+@media (max-width: 420px) {
+    .book-card {
+        height: 260px !important;
+
+        min-width: 100px !important;
+        width: 15% !important;
+
+        .card-image {
+            height: 160px !important;
+
+        }
+    }
+}
+
+@media (max-width: 350px) {
+    .book-card {
+        height: 260px !important;
+        min-width: 125px !important;
+        width: 15% !important;
+
+        .card-image {
+            height: 170px !important;
+
+        }
+    }
 }

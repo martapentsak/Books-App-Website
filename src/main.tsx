@@ -10,7 +10,6 @@ import { composeProviders } from "./utils/composeProviders.tsx";
 import { WishListProvider } from "./context/wishlist.tsx";
 import ErrorBoundary from "./components/ErrorBoundary/ErrorBoundary.tsx";
 
-
 const providers = [
   BrowserRouter,
   AuthorProvider,

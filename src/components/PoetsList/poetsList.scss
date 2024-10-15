@@ -37,5 +37,28 @@
 }
 
 
+@media (max-width: 1100px) {
+
+    .poet-image {
+        width: 60px !important;
+        height: 70px !important;
+    }
+    .poet-name {
+        font-size: 20px !important;
+        width: 110px !important;
+    }
+}
+
+@media (max-width: 680px) {
+    .poet-image {
+        width: 50px !important;
+        height: 60px !important;
+    }
+    .poet-name {
+        font-size: 15px !important;
+        width: 80px !important;
+    }
+}
+
 
     
