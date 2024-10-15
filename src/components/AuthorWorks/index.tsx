@@ -1,10 +1,10 @@
 import { useNavigate } from "react-router-dom";
-import { UnivarsalProp } from "../../types/UniversalProps";
+import { AuthorProp } from "../../types/AuthorBookType";
 
 type Props = {
-  works: string[] | undefined;
-  title: string | undefined;
-  author: UnivarsalProp;
+  works: string[];
+  title: string;
+  author: AuthorProp;
 };
 
 export function AuthorWorks({ works, title, author }: Props) {
@@ -13,7 +13,7 @@ export function AuthorWorks({ works, title, author }: Props) {
     <div className="works-section">
       <div className="list-section">
         <h2 className="list-section-title ">{title}</h2>
-        {works?.map((w, index) => (
+        {works.map((w, index) => (
           <div key={index} className="work-element">
             <span className="work-number">{index + 1}</span>
             <p className="work-name">{w}</p>
@@ -21,7 +21,7 @@ export function AuthorWorks({ works, title, author }: Props) {
               className="author"
               onClick={() => navigate(`/author/${author.id}`)}
             >
-              {author.author}
+              {author.name}
             </span>
           </div>
         ))}

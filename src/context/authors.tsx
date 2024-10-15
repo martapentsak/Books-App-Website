@@ -13,22 +13,22 @@ import { authorsAPi, poetsApi } from "../constants/api";
 import useAsyncEffect from "../hooks/useAsyncEffect";
 
 import { waitForAnimationFinish } from "../helpers/waitForAnimationFinish";
-import { UnivarsalProp } from "../types/UniversalProps";
+import { AuthorProp } from "../types/AuthorBookType";
 
-type Response = {
+type AuthorResponse = {
   id: string;
   name: string;
   image: string;
-  cover_image?: string;
+  cover_image: string;
   genres: string[];
-  notable_works?: string[];
+  notable_works: string[];
 };
 
 type ProviderValues = {
   authorLoading: boolean;
   authorListError: string;
-  authorsList: UnivarsalProp[];
-  poetsList: UnivarsalProp[];
+  authorsList: AuthorProp[];
+  poetsList: AuthorProp[];
   handleCloseAuthorsError: () => void;
 };
 
@@ -38,8 +38,8 @@ type Props = {
 export const AuthorContext = createContext({} as ProviderValues);
 
 export const AuthorProvider = ({ children }: Props) => {
-  const [authorsList, setAuthorsList] = useState<UnivarsalProp[]>([]);
-  const [poetsList, setPoetsList] = useState<UnivarsalProp[]>([]);
+  const [authorsList, setAuthorsList] = useState<AuthorProp[]>([]);
+  const [poetsList, setPoetsList] = useState<AuthorProp[]>([]);
 
   const [authorLoading, setAuthorLoading] = useState<boolean>(false);
 
@@ -56,16 +56,14 @@ export const AuthorProvider = ({ children }: Props) => {
         poetsResponse,
       ]);
       const authors = authorList.data.map(
-        ({ name, notable_works, ...others }: Response) => ({
-          author: name,
+        ({ notable_works, ...others }: AuthorResponse) => ({
           works: notable_works,
           ...others,
         })
       );
       setAuthorsList(authors);
       const poets = poetList.data.map(
-        ({ name, notable_works, ...others }: Response) => ({
-          author: name,
+        ({ notable_works, ...others }: AuthorResponse) => ({
           works: notable_works,
           ...others,
         })

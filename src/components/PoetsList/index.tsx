@@ -1,15 +1,15 @@
-import { UnivarsalProp } from "../../types/UniversalProps";
+import { AuthorProp } from "../../types/AuthorBookType";
 
 type Props = {
-  data: UnivarsalProp[];
+  poets: AuthorProp[];
   selectedPoetIndex: number;
   onClick: (index: number) => void;
 };
 
-export const PoetsList = ({ data, selectedPoetIndex, onClick }: Props) => {
+export const PoetsList = ({ poets, selectedPoetIndex, onClick }: Props) => {
   return (
     <div className="poets-list">
-      {data.map(({ image, author }, index) => (
+      {poets.map(({ image, name }, index) => (
         <div
           key={index}
           onClick={() => onClick(index)}
@@ -17,9 +17,9 @@ export const PoetsList = ({ data, selectedPoetIndex, onClick }: Props) => {
             selectedPoetIndex === index ? "active-poet-section" : "poet-section"
           }
         >
-          <img key={index} src={image} alt={author} className="poet-image" />
+          <img key={index} src={image} alt={name} className="poet-image" />
           {selectedPoetIndex === index && (
-            <span className="poet-name">{author}</span>
+            <span className="poet-name">{name}</span>
           )}
         </div>
       ))}

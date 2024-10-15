@@ -13,13 +13,13 @@ import useAsyncEffect from "../hooks/useAsyncEffect";
 
 import { waitForAnimationFinish } from "../helpers/waitForAnimationFinish";
 import { errors } from "../constants/textValues";
-import { UnivarsalProp } from "../types/UniversalProps";
+import { BookProp } from "../types/AuthorBookType";
 
 type ProviderValues = {
-  wishList: UnivarsalProp[];
+  wishList: BookProp[];
   wishlistLoading: boolean;
   wishlistError: string;
-  handleAddBookToWishlist: (book: UnivarsalProp) => void;
+  handleAddBookToWishlist: (book: BookProp) => void;
   handleCloseWishlistError: () => void;
 };
 
@@ -30,7 +30,7 @@ type Props = {
 export const WishlistContext = createContext({} as ProviderValues);
 
 export const WishListProvider = ({ children }: Props) => {
-  const [wishList, setWishList] = useState<UnivarsalProp[]>([]);
+  const [wishList, setWishList] = useState<BookProp[]>([]);
   const [wishlistError, setWishlistError] = useState<string>("");
   const [wishlistLoading, setWishlistLoading] = useState<boolean>(false);
 
@@ -53,7 +53,7 @@ export const WishListProvider = ({ children }: Props) => {
   }, []);
 
   const handleAddBookToWishlist = useCallback(
-    async (book: UnivarsalProp) => {
+    async (book: BookProp) => {
       try {
         const bookAlreadyExist = wishList.find((v) => v.title === book.title);
         if (bookAlreadyExist) {

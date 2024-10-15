@@ -7,13 +7,14 @@ import { useWishlist } from "../../context/wishlist";
 import { useBooks } from "../../context/books";
 import { useAuthors } from "../../context/authors";
 
-import { UnivarsalProp } from "../../types/UniversalProps";
-
 import { Button } from "@mui/material";
 import { NotFound } from "../../components/NotFound";
+import { BookProp } from "../../types/AuthorBookType";
+import { ListSection } from "../../components/ListSection";
+import { Card } from "../../components/Card";
 
 type Result = {
-  data: UnivarsalProp[];
+  data: BookProp[];
   blockTitle: string;
 };
 
@@ -37,12 +38,12 @@ export const BookPage = () => {
     return <Loading />;
   }
 
-  if (!currentBook){
-    return <NotFound/>
+  if (!currentBook) {
+    return <NotFound />;
   }
 
   const { title, image, author, publicationYear, description, genres } =
-    currentBook 
+    currentBook;
 
   const handleGetRecommendationBookList = (): Result => {
     const otherAuthorBooks = booksList.filter(
@@ -55,7 +56,7 @@ export const BookPage = () => {
       data: otherAuthorBooks.length > 0 ? otherAuthorBooks : othergenresBooks,
       blockTitle:
         otherAuthorBooks.length > 0
-          ? `Other works of ${author}`
+          ? `Other works of ${name}`
           : `Other works in genres ${genres.join(", ")}`,
     };
   };
@@ -64,7 +65,7 @@ export const BookPage = () => {
 
   const { data, blockTitle } = handleGetRecommendationBookList();
 
-  const authorId = authorsList.find((a) => a.author === author)?.id;
+  const authorId = authorsList.find((a) => a.name === author)?.id;
 
   return (
     <div className="book-page">
@@ -91,7 +92,7 @@ export const BookPage = () => {
           </div>
           <Button
             className="add-to-wishlist-btn"
-            onClick={() => currentBook && handleAddBookToWishlist(currentBook)}
+            onClick={() => handleAddBookToWishlist(currentBook)}
           >
             {isBookInWishList ? "Remove from wishlist" : "Want to read"}
           </Button>
@@ -112,27 +113,18 @@ export const BookPage = () => {
             </div>
           </div>
           <div className="author-works">
-            <h3 className="other-books-title">{blockTitle}</h3>
-            <div className="other-books-list">
-              {data.map(({ image, title, id }, index) => (
-                <div
-                  className="other-books-section"
+            <ListSection title={blockTitle} listWrap={false}>
+              {data.map(({ title, genres, image, id }, index) => (
+                <Card
                   key={index}
+                  className="recommendation-item"
+                  name={title}
+                  cardList={genres}
+                  image={image}
                   onClick={() => navigate(`/book/${id}`)}
-                >
-                  <img src={image} alt={title} className="other-book-image" />
-                  <span className="book-name">{title}</span>
-                  <div className="genres">
-                    {genres.map((g, index) => (
-                      <span className="book-category" key={index}>
-                        {g}
-                        {index < genres.length - 1 ? ", " : " "}
-                      </span>
-                    ))}
-                  </div>
-                </div>
+                />
               ))}
-            </div>
+            </ListSection>
           </div>
         </div>
       </div>

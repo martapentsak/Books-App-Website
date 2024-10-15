@@ -13,12 +13,13 @@ import { booksApi } from "../constants/api";
 import useAsyncEffect from "../hooks/useAsyncEffect";
 
 import { waitForAnimationFinish } from "../helpers/waitForAnimationFinish";
-import { UnivarsalProp } from "../types/UniversalProps";
+import { BookProp } from "../types/AuthorBookType";
+
 
 type ProviderValues = {
   booksLoading: boolean;
   bookListError: string;
-  booksList: UnivarsalProp[];
+  booksList: BookProp[];
   handleCloseBooksError: () => void;
 };
 
@@ -39,7 +40,7 @@ type Props = {
 export const BooksContext = createContext({} as ProviderValues);
 
 export const BooksProvider = ({ children }: Props) => {
-  const [booksList, setBooksList] = useState<UnivarsalProp[]>([]);
+  const [booksList, setBooksList] = useState<BookProp[]>([]);
 
   const [bookListError, setBookListError] = useState<string>("");
 
