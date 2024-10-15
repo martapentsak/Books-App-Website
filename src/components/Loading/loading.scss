@@ -37,3 +37,38 @@
       transform: rotateX(360deg);
     }
   }
+
+  @media (max-width: 880px){ 
+    .letter {
+      font-size: 80px !important;
+      
+    }
+  }
+
+  @media (max-width: 650px){ 
+    .letter {
+      font-size: 70px !important;
+      
+    }
+  }
+  @media (max-width: 550px){ 
+    .letter {
+      font-size: 60px !important;
+      
+    }
+  }
+
+  @media (max-width: 550px){ 
+    .letter {
+      font-size: 50px !important;
+      
+    }
+  }
+
+
+  @media (max-width: 450px){ 
+    .letter {
+      font-size: 40px !important;
+      
+    }
+  }

@@ -1,37 +1,17 @@
-import { Card } from "../Card";
+import { ReactNode } from "react";
 
-import { UnivarsalProp } from "../../types/UniversalProps";
-
-type Props<T> = {
+type Props = {
   title: string;
-  data: T[];
-  className: string;
-  listCardClassname: string;
-  onCardClick: (id: string) => void;
+  listWrap: boolean;
+  children: ReactNode;
 };
 
-export const ListSection = <T extends UnivarsalProp>({
-  title,
-  data,
-  className,
-  onCardClick,
-  listCardClassname,
-}: Props<T>) => {
+export const ListSection = ({ title, listWrap, children }: Props) => {
   return (
     <div className="list-section">
       <h2 className="list-section-title ">{title}</h2>
-      <div className={listCardClassname}>
-        {data.map(({ title, author, image, id, genres }, index) => (
-          <Card
-            key={index}
-            name={title ? title : author}
-            subtitle={title && author}
-            image={image}
-            cardList={genres}
-            onClick={() => onCardClick(id)}
-            className={className}
-          />
-        ))}
+      <div className={listWrap ? "flex-wrap-list" : "flex-list"}>
+        {children}
       </div>
     </div>
   );
