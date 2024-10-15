@@ -13,17 +13,16 @@ import { booksApi } from "../constants/api";
 import useAsyncEffect from "../hooks/useAsyncEffect";
 
 import { waitForAnimationFinish } from "../helpers/waitForAnimationFinish";
-import { BookProp } from "../types/AuthorBookType";
-
+import { Book } from "../types/AuthorBookType";
 
 type ProviderValues = {
   booksLoading: boolean;
   bookListError: string;
-  booksList: BookProp[];
+  booksList: Book[];
   handleCloseBooksError: () => void;
 };
 
-type Response = {
+type BookResponse = {
   id: string;
   title: string;
   author: string;
@@ -40,7 +39,7 @@ type Props = {
 export const BooksContext = createContext({} as ProviderValues);
 
 export const BooksProvider = ({ children }: Props) => {
-  const [booksList, setBooksList] = useState<BookProp[]>([]);
+  const [booksList, setBooksList] = useState<Book[]>([]);
 
   const [bookListError, setBookListError] = useState<string>("");
 
@@ -52,7 +51,7 @@ export const BooksProvider = ({ children }: Props) => {
     try {
       const reponse = await axios.get(booksApi);
       const list = reponse.data.map(
-        ({ cover_image, publication_year, ...others }: Response) => ({
+        ({ cover_image, publication_year, ...others }: BookResponse) => ({
           publicationYear: publication_year,
           image: cover_image,
           ...others,

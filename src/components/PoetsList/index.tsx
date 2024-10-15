@@ -1,7 +1,7 @@
-import { AuthorProp } from "../../types/AuthorBookType";
+import { Author } from "../../types/AuthorBookType";
 
 type Props = {
-  poets: AuthorProp[];
+  poets: Author[];
   selectedPoetIndex: number;
   onClick: (index: number) => void;
 };

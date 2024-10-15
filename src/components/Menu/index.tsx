@@ -76,13 +76,8 @@ export const Menu = () => {
         </div>
         <Box>
           <Tabs value={value} onChange={handleTabChange}>
-            {menuElements.map(({ value, label, link }, index) => (
-              <Tab
-                key={index}
-                value={value}
-                label={label}
-                onClick={() => navigate(link)}
-              />
+            {menuElements.map(({ link, ...others }, index) => (
+              <Tab key={index} onClick={() => navigate(link)} {...others} />
             ))}
             {wishList.length > 0 && (
               <span className="wishlist-badge">{wishList.length}</span>

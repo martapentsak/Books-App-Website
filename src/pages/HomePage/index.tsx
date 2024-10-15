@@ -56,14 +56,13 @@ export const HomePage = () => {
       <div className="poets-section">
         <div className="selected-poet-section">
           <p className="selected-poet-title">{homepage.postContainerTitle}</p>
-          {selectedPoet && (
-            <img src={selectedPoet.image} className="selected-poet-image" />
-          )}
+
+          <img src={selectedPoet.image} className="selected-poet-image" />
         </div>
         <PoetsList
           poets={poetsList}
           selectedPoetIndex={selectedPoetIndex}
-          onClick={(index) => setSelectedPoetIndex(index)}
+          onClick={setSelectedPoetIndex}
         />
         <AuthorWorks
           works={selectedPoet.works}
@@ -72,26 +71,26 @@ export const HomePage = () => {
         />
       </div>
       <div className="authors-books-section">
-        <ListSection title={homepage.popularWriter} listWrap={false}>
+        <ListSection title={homepage.popularWriter} wrap={false}>
           {authorsList.map(({ name, genres, image, id }, index) => (
             <Card
               key={index}
               className="author-card"
-              name={name}
-              cardList={genres}
+              title={name}
+              items={genres}
               image={image}
               onClick={() => navigate(`/author/${id}`)}
             />
           ))}
         </ListSection>
-        <ListSection title={homepage.popularBook} listWrap>
+        <ListSection title={homepage.popularBook} wrap>
           {booksList.map(({ author, title, genres, image, id }, index) => (
             <Card
               key={index}
               className="author-card"
-              name={title}
+              title={title}
               subtitle={author}
-              cardList={genres}
+              items={genres}
               image={image}
               onClick={() => navigate(`/book/${id}`)}
             />

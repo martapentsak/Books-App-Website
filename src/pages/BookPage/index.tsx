@@ -9,12 +9,12 @@ import { useAuthors } from "../../context/authors";
 
 import { Button } from "@mui/material";
 import { NotFound } from "../../components/NotFound";
-import { BookProp } from "../../types/AuthorBookType";
+import { Book } from "../../types/AuthorBookType";
 import { ListSection } from "../../components/ListSection";
 import { Card } from "../../components/Card";
 
 type Result = {
-  data: BookProp[];
+  data: Book[];
   blockTitle: string;
 };
 
@@ -63,7 +63,8 @@ export const BookPage = () => {
 
   const isBookInWishList = wishList.find((v) => v.id === bookId);
 
-  const { data, blockTitle } = handleGetRecommendationBookList();
+  const { data: recommendedBooks, blockTitle } =
+    handleGetRecommendationBookList();
 
   const authorId = authorsList.find((a) => a.name === author)?.id;
 
@@ -113,13 +114,13 @@ export const BookPage = () => {
             </div>
           </div>
           <div className="author-works">
-            <ListSection title={blockTitle} listWrap={false}>
-              {data.map(({ title, genres, image, id }, index) => (
+            <ListSection title={blockTitle} wrap={false}>
+              {recommendedBooks.map(({ title, genres, image, id }, index) => (
                 <Card
                   key={index}
                   className="recommendation-item"
-                  name={title}
-                  cardList={genres}
+                  title={title}
+                  items={genres}
                   image={image}
                   onClick={() => navigate(`/book/${id}`)}
                 />
