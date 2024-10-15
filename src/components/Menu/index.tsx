@@ -68,14 +68,14 @@ export const Menu = () => {
     <div className="menu">
       <div className="menu-wrapper">
         <div className="menu-logo-section">
-          <img src={logo} alt="conutry books logo" className="logo" />
+          <img src={logo} alt="country books logo" className="logo" />
           <h2 className="website-name">
             {websiteName.name}
             <span className="website-name-span">{websiteName.span}</span>
           </h2>
         </div>
         <Box>
-          <Tabs className="tabs" value={value} onChange={handleTabChange}>
+          <Tabs value={value} onChange={handleTabChange}>
             {menuElements.map(({ value, label, link }, index) => (
               <Tab
                 key={index}

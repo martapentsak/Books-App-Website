@@ -5,10 +5,10 @@ import CardActionArea from "@mui/material/CardActionArea";
 type Props = {
   className: string;
   image: string;
-  subtitle?: string;
   name: string;
   cardList: string[];
   onClick: () => void;
+  subtitle?: string;
 };
 
 export const Card = ({
@@ -26,7 +26,6 @@ export const Card = ({
           <CardContent>
             <div>
               <img src={image} alt={"card image"} className={"card-image"} />
-
               {subtitle && <span className="card-subtitle">{subtitle}</span>}
               <h2 className="card-name">{name}</h2>
               {cardList.map((g, index) => (

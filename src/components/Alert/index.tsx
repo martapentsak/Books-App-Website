@@ -9,7 +9,7 @@ type Props = {
 export const AlertWindow = ({ error, onClose }: Props) => {
   return (
     <div className="alert-section">
-      <Stack sx={{ width: "100%" }}>
+      <Stack>
         <Alert severity="error" onClose={onClose}>
           ERROR! {error}
         </Alert>
