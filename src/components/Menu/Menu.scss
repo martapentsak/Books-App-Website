@@ -2,6 +2,7 @@
     height: $menuHeight;
     width: 100%;
     border-bottom: 1px solid $coarseWool;
+    overflow: none;
 
     .menu-wrapper {
         width: 90%;
@@ -13,7 +14,7 @@
         .menu-logo-section {
             display: flex;
             align-items: center;
-            width: 30%;
+            width: 25%;
 
             .logo {
                 height: $logoHeight;
@@ -33,14 +34,21 @@
             }
         }
 
-        .css-8atqhb {
-            width: 50% !important;
+        .css-0 {
+            width: 70%;
+        }
+
+        .css-113cboj-MuiTabs-root {
+            width: 100% !important;
         }
 
         .css-heg063-MuiTabs-flexContainer {
             display: flex;
             align-items: center;
-            justify-content: space-between !important;
+            justify-content: space-between;
+            text-align: center;
+            position: relative;
+            width: 100% !important;
         }
 
         .css-19wsa2m-MuiButtonBase-root-MuiTab-root.Mui-selected,
@@ -50,6 +58,13 @@
             font-weight: 400 !important;
             font-family: $defaultFontFamily;
             padding: 26px 16px;
+            width: 15%;
+            min-width: 120px;
+        }
+
+        .css-heg063-MuiTabs-flexContainer .css-19wsa2m-MuiButtonBase-root-MuiTab-root:nth-child(5) {
+            margin-right: 0 !important;
+
         }
 
         .css-19wsa2m-MuiButtonBase-root-MuiTab-root.Mui-selected {
@@ -65,5 +80,197 @@
             background-color: $white !important;
             height: $tabHeight !important;
         }
+
+
+        .wishlist-badge {
+            position: absolute;
+            top: 50%;
+            right: 15px;
+            background-color: $blackishGrey;
+            color: $leadBelcher;
+            padding: 2px 6px;
+            border-radius: 50%;
+        }
+    }
+
+}
+
+@media (max-width: 950px) {
+    .menu {
+        height: $tabletMenuHeight;
+
+        .menu-wrapper {
+            .menu-logo-section {
+                width: 20%;
+
+                .logo {
+                    height: 45px;
+                    width: 45px;
+                }
+
+                .website-name {
+                    font-size: 14px;
+
+                    .website-name-span {
+                        font-size: 20px;
+                    }
+                }
+            }
+
+            .css-0 {
+                width: 75%;
+            }
+
+            .css-19wsa2m-MuiButtonBase-root-MuiTab-root.Mui-selected,
+            .css-19wsa2m-MuiButtonBase-root-MuiTab-root {
+                font-size: 13px !important;
+                min-width: 100px;
+            }
+
+            .wishlist-badge {
+                right: 5px;
+            }
+        }
+
+    }
+}
+
+
+@media (max-width: 750px) {
+    .menu {
+        .menu-wrapper {
+            .menu-logo-section {
+                width: 18%;
+
+                .logo {
+                    height: 35px;
+                    width: 35px;
+                }
+
+                .website-name {
+                    font-size: 12px;
+
+                    .website-name-span {
+                        font-size: 18px;
+                    }
+                }
+            }
+
+            .css-19wsa2m-MuiButtonBase-root-MuiTab-root.Mui-selected,
+            .css-19wsa2m-MuiButtonBase-root-MuiTab-root {
+                font-size: 12px !important;
+                min-width: 85px;
+                padding: 26px 8px !important;
+            }
+
+            .wishlist-badge {
+                right: 5px;
+                font-size: 12px;
+            }
+        }
+
+    }
+}
+
+@media (max-width: 650px) {
+    .menu {
+        .menu-wrapper {
+            .menu-logo-section {
+                width: 18%;
+
+                .logo {
+                    height: 35px;
+                    width: 35px;
+                }
+
+                .website-name {
+                    font-size: 12px;
+
+                    .website-name-span {
+                        font-size: 18px;
+                    }
+                }
+            }
+
+            .css-19wsa2m-MuiButtonBase-root-MuiTab-root.Mui-selected,
+            .css-19wsa2m-MuiButtonBase-root-MuiTab-root {
+                font-size: 12px !important;
+                min-width: 78px;
+                padding: 26px 0px !important;
+            }
+
+            .wishlist-badge {
+                right: 2px;
+            }
+        }
+
+    }
+}
+
+@media (max-width: 580px) {
+    .menu {
+        .menu-wrapper {
+            .menu-logo-section {
+                width: 15% !important;
+
+                .logo {
+                    height: 30px;
+                }
+
+                .website-name {
+                    display: none;
+                }
+            }
+            .css-0 {
+                width: 85%;
+            }
+
+
+            .css-19wsa2m-MuiButtonBase-root-MuiTab-root.Mui-selected,
+            .css-19wsa2m-MuiButtonBase-root-MuiTab-root {
+                min-width: 70px;
+            }
+
+            .wishlist-badge {
+                right: 0px;
+                font-size: 10px;
+
+            }
+        }
+
+    }
+}
+
+
+@media (max-width: 460px) {
+    .menu {
+        .menu-wrapper {
+            .menu-logo-section {
+                width: 12%;
+
+                .logo {
+                    height: 30px;
+                }
+
+                .website-name {
+                    display: none;
+                }
+            }
+            .css-0 {
+                width: 85%;
+            }
+
+
+            .css-19wsa2m-MuiButtonBase-root-MuiTab-root.Mui-selected,
+            .css-19wsa2m-MuiButtonBase-root-MuiTab-root {
+                min-width: 55px;
+                font-size: 10px !important;
+            }
+
+            .wishlist-badge {
+                right: 0px;
+            }
+        }
+
     }
 }

@@ -1,0 +1,42 @@
+.works-section {
+    margin-top: 20px;
+
+    .work-element {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: $blackishGrey;
+        width: 70%;
+        margin: 10px 0;
+        ;
+    }
+
+    .author,
+    .work-name {
+        cursor: pointer;
+        width: 40%;
+    }
+
+    .author:hover,
+    .work-name:hover {
+        color: $white;
+    }
+}
+
+@media (max-width: 1100px) {
+    .work-element {
+        width: 90% !important;
+    }
+}
+
+@media (max-width: 880px) {
+    .work-element {
+        width: 100% !important;
+    }
+}
+
+@media (max-width: 500px) {
+    .work-element {
+        font-size: 14px;
+    }
+}

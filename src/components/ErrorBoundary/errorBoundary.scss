@@ -1,0 +1,21 @@
+.error-boundary-page {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: black;
+
+    .something-wrong-icon {
+        height: 200px;
+        width: auto;
+    }
+
+    .error {
+        color: red;
+        font-weight: 400;
+        font-size: 30px;
+        font-family: $defaultFontFamily;
+    }
+}
