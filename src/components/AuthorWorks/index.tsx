@@ -6,8 +6,8 @@ type Props = {
   author: Author;
 };
 
-export function AuthorWorks({ title, author }: Props) {
-  const { id, works, name } = author;
+export function AuthorWorks({ title, author : {id, works, name} }: Props) {
+
   const navigate = useNavigate();
   return (
     <div className="works-section">

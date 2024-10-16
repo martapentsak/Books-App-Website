@@ -14,8 +14,7 @@ import useAsyncEffect from "../hooks/useAsyncEffect";
 
 import { waitForAnimationFinish } from "../helpers/waitForAnimationFinish";
 import { Author } from "../types/AuthorBookType";
-
-type AuthorResponse = Omit<Author, "works">;
+import { formatAuthorResponse } from "../utils/formatAuthorResponce";
 
 type ProviderValues = {
   loading: boolean;
@@ -28,6 +27,9 @@ type ProviderValues = {
 type Props = {
   children: ReactNode;
 };
+
+
+
 export const AuthorContext = createContext({} as ProviderValues);
 
 export const AuthorProvider = ({ children }: Props) => {
@@ -38,12 +40,7 @@ export const AuthorProvider = ({ children }: Props) => {
 
   const [error, setError] = useState<string>("");
 
-  const formatAuthorResponse = (response: AuthorResponse[]): Author[] => {
-    return response.map(({ notable_works, ...others }) => ({
-      works: notable_works || [],
-      ...others,
-    }));
-  };
+  
 
   useAsyncEffect(async () => {
     setLoading(true);
@@ -55,8 +52,8 @@ export const AuthorProvider = ({ children }: Props) => {
         authorResponse,
         poetsResponse,
       ]);
-      setAuthors(formatAuthorResponse(authorList.data));
-      setPoets(formatAuthorResponse(poetList.data));
+      setAuthors(formatAuthorResponse(authorList));
+      setPoets(formatAuthorResponse(poetList));
     } catch {
       setError(errors.getauthors);
     } finally {
