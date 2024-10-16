@@ -2,47 +2,39 @@ import CardElement from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardActionArea from "@mui/material/CardActionArea";
 
-import { useNavigate } from "react-router-dom";
-
-type CardProps = {
-  id: string;
-  isAuthorCard: boolean;
+type Props = {
+  className: string;
   image: string;
-  title?: string;
-  genres: string[];
-  author: string;
+  title: string;
+  items: string[];
+  onClick: () => void;
+  subtitle?: string;
 };
 
 export const Card = ({
-  id,
-  isAuthorCard,
+  className,
   image,
+  onClick,
+  subtitle,
   title,
-  genres,
-  author,
-}: CardProps) => {
-  const navigate = useNavigate();
-
+  items,
+}: Props) => {
   return (
-    <div className={isAuthorCard ? "author-card" : "book-card"}>
-      <CardElement>
-        <CardActionArea onClick={() => navigate(id)}>
-          <div>
-            <img
-              src={image}
-              alt={isAuthorCard ? "author image" : "book image"}
-              className={isAuthorCard ? "author-image" : "book-image"}
-            />
-          </div>
+    <div className={className}>
+      <CardElement onClick={onClick}>
+        <CardActionArea>
           <CardContent>
-            {!isAuthorCard && <span className="book-author">{author}</span>}
-            <h2 className="card-name">{isAuthorCard ? author : title}</h2>
-            {genres.map((g, index) => (
-              <span className="book-category" key={index}>
-                {g}
-                {index < genres.length - 1 ? ", " : ""}
-              </span>
-            ))}
+            <div>
+              <img src={image} alt={"card image"} className={"card-image"} />
+              {subtitle && <span className="card-subtitle">{subtitle}</span>}
+              <h2 className="card-name">{title}</h2>
+              {items.map((g, index) => (
+                <span className="card-list-item" key={index}>
+                  {g}
+                  {index < items.length - 1 ? ", " : ""}
+                </span>
+              ))}
+            </div>
           </CardContent>
         </CardActionArea>
       </CardElement>

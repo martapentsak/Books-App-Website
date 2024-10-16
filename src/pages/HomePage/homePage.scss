@@ -1,31 +1,24 @@
 .home-page {
     display: flex;
     justify-content: space-between;
-    height: calc(100% - $menuHeight);
+    height: calc(100vh + 150px);
     padding-top: 40px;
-    height: 80%;
-
-    .alert-section {
-        position: absolute !important;
-        top: 2%;
-        width: 40%;
-        right: 30%;
-        background-color: rgb(22 11 11) !important;
-    }
+    width: 100%;
 
     .poets-section {
         width: 48%;
         border-radius: 14px;
         padding-left: 30px;
 
-        .selecled-poet-section {
+        .selected-poet-section {
             width: 100%;
             display: flex;
             align-items: center;
             justify-content: space-between;
             margin-bottom: 40px;
+            height: 50%;
 
-            .selecled-poet-title {
+            .selected-poet-title {
                 color: $white;
                 font-size: 60px;
                 padding: 0 20px;
@@ -35,108 +28,110 @@
 
             .selected-poet-image {
                 width: 50%;
-                height: 500px;
+                height: auto;
                 border-radius: 14px;
-            }
-        }
-
-        .active-poet-section {
-            display: flex;
-            align-items: center;
-            margin-right: 20px;
-            cursor: pointer;
-
-            .poet-name {
-                text-align: center;
-                font-size: 22px;
-                width: 120px;
-            }
-        }
-
-        .poet-section {
-            opacity: 0.6;
-            display: flex;
-            align-items: center;
-            margin-right: 20px;
-            cursor: pointer;
-        }
-
-        .poet-section:hover {
-            opacity: 1;
-        }
-
-        .popular-poet-work-title {
-            color: $blackishGrey;
-            font-weight: 400;
-            font-family: $defaultFontFamily;
-            font-size: 22px;
-            margin: 30px 0;
-        }
-
-        .poet-work-section {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            height: 40px;
-            width: 80%;
-
-            .work-number {
-                width: 10%;
-                color: $blackishGrey;
-            }
-
-            .work-name {
-                width: 50%;
-                color: $blackishGrey;
-                text-align: center;
-                cursor: pointer;
-            }
-
-            .work-name:hover {
-                color: $white;
-            }
-
-            .author {
-                width: 40%;
-                color: $blackishGrey;
-                text-align: right;
+                object-fit: contain;
             }
         }
     }
 
     .authors-books-section {
         width: 45%;
+        display: flex;
+        height: 65%;
+        flex-direction: column;
 
-        .authors-list-section {
-            display: flex;
-            align-items: center;
-            overflow-x: scroll;
-            width: 100%;
-        }
-
-        .authors-list-section::-webkit-scrollbar {
-            display: none;
-        }
-
-        .books-list-section {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            height: 600px;
-            overflow-y: auto;
-        }
-
-        .books-list-section::-webkit-scrollbar {
-            display: none;
-        }
     }
 }
 
-.poet-image {
-    width: 70px;
-    height: 80px;
-    border-radius: 14px;
-    background-size: cover;
+@media (max-width: 1200px) {
+    .selected-poet-section {
+        margin-bottom: 30px !important;
+        height: 40% !important;
+    }
+
+    .selected-poet-title {
+        font-size: 45px !important;
+    }
+
+}
+
+@media (max-width: 1100px) {
+    .selected-poet-title {
+        font-size: 40px !important;
+        width: 45% !important;
+    }
+
+    .selected-poet-image {
+        width: 50% !important;
+
+    }
 }
 
 
+
+@media (max-width: 880px) {
+    .home-page {
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .poets-section {
+        margin: 0 auto !important;
+        width: 90% !important;
+        padding-left: 0 !important;
+    }
+
+    .authors-books-section {
+        margin: 0 auto !important;
+        width: 90% !important;
+    }
+
+    .selected-poet-title {
+        font-size: 55px !important;
+    }
+}
+
+
+
+@media (max-width: 700px) {
+    .selected-poet-section {
+        margin-bottom: 20px !important;
+        height: 30% !important;
+    }
+
+    .selected-poet-title {
+        font-size: 50px !important;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .home-page {
+        padding-top: 20px !important;
+    }
+
+    .selected-poet-title {
+        font-size: 40px !important;
+    }
+}
+
+
+@media (max-width: 500px) {
+    .selected-poet-title {
+        font-size: 35px !important;
+    }
+}
+
+@media (max-width: 450px) {
+    .selected-poet-title {
+        font-size: 30px !important;
+    }
+}
+
+@media (max-width: 400px) {
+    .selected-poet-title {
+        font-size: 22px !important;
+    }
+
+}

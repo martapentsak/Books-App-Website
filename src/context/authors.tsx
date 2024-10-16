@@ -6,90 +6,76 @@ import {
   useContext,
   useState,
 } from "react";
-import { v4 as uuidv4 } from "uuid";
 
 import { errors } from "../constants/textValues";
 import { authorsAPi, poetsApi } from "../constants/api";
-import { loadingDuration } from "../constants/duration";
+
+import { Author } from "../types/AuthorBookType";
 
 import useAsyncEffect from "../hooks/useAsyncEffect";
 
-import { sleep } from "../helpers/sleep";
-
-type Author = {
-  author: string;
-  name: string;
-  image: string;
-  cover_image?: string;
-  genre: string[];
-  genres: string[];
-  notable_works?: string[];
-  works?: string[];
-  id: string;
-};
+import { waitForAnimationFinish } from "../helpers/waitForAnimationFinish";
 
 type ProviderValues = {
   loading: boolean;
-  authorListError: string;
-  authorsList: Author[];
-  poetsList: Author[];
+  error: string;
+  authors: Author[];
+  poets: Author[];
   handleCloseAuthorsError: () => void;
 };
+type AuthorResponse = Omit<Author, "works">;
 
 type Props = {
   children: ReactNode;
 };
+
+type DataProp = {
+  data: AuthorResponse[];
+};
+
+const formatAuthorResponse = (response: DataProp): Author[] => {
+  return response.data.map(({ notable_works, ...others }) => ({
+    works: notable_works || [],
+    ...others,
+  }));
+};
+
 export const AuthorContext = createContext({} as ProviderValues);
 
 export const AuthorProvider = ({ children }: Props) => {
-  const [authorsList, setAuthorsList] = useState<Author[]>([]);
-  const [poetsList, setPoetsList] = useState<Author[]>([]);
-
-  const [authorListError, setAuthorListError] = useState<string>("");
+  const [authors, setAuthors] = useState<Author[]>([]);
+  const [poets, setPoets] = useState<Author[]>([]);
 
   const [loading, setLoading] = useState<boolean>(false);
 
+  const [error, setError] = useState<string>("");
+
   useAsyncEffect(async () => {
     setLoading(true);
-    await sleep(loadingDuration);
+    await waitForAnimationFinish();
     try {
       const authorResponse = await axios.get(authorsAPi);
       const poetsResponse = await axios.get(poetsApi);
-      const [authorList, poetList] = await Promise.all([authorResponse, poetsResponse]);
-      const authors = authorList.data.map(
-        ({ name, image, genre }: Author) => ({
-          id: uuidv4(),
-          author: name,
-          image,
-          genres: genre,
-        })
-      );
-      setAuthorsList(authors);
-      const poets = poetList.data.map(
-        ({ name, image, genre, notable_works }: Author) => ({
-          id: uuidv4(),
-          author: name,
-          image,
-          genres: genre,
-          works: notable_works,
-        })
-      );
-      setPoetsList(poets);
-    } catch (err) {
-      console.error("Get authors list", err);
-      setAuthorListError(errors.getAuthorsList);
+      const [authorList, poetList] = await Promise.all([
+        authorResponse,
+        poetsResponse,
+      ]);
+      setAuthors(formatAuthorResponse(authorList));
+      setPoets(formatAuthorResponse(poetList));
+    } catch {
+      setError(errors.getauthors);
     } finally {
       setLoading(false);
     }
   }, []);
 
-  const handleCloseAuthorsError = useCallback(() => setAuthorListError(""), []);
+  const handleCloseAuthorsError = useCallback(() => setError(""), []);
 
   const providerValue: ProviderValues = {
     loading,
-    authorListError,
-    poetsList,
-    authorsList,
+    error,
+    poets,
+    authors,
     handleCloseAuthorsError,
   };
 
