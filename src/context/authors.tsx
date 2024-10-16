@@ -10,10 +10,11 @@ import {
 import { errors } from "../constants/textValues";
 import { authorsAPi, poetsApi } from "../constants/api";
 
+import { Author } from "../types/AuthorBookType";
+
 import useAsyncEffect from "../hooks/useAsyncEffect";
 
 import { waitForAnimationFinish } from "../helpers/waitForAnimationFinish";
-import { Author } from "../types/AuthorBookType";
 
 type ProviderValues = {
   loading: boolean;
@@ -32,7 +33,7 @@ type DataProp = {
   data: AuthorResponse[];
 };
 
-export const formatAuthorResponse = (response: DataProp): Author[] => {
+const formatAuthorResponse = (response: DataProp): Author[] => {
   return response.data.map(({ notable_works, ...others }) => ({
     works: notable_works || [],
     ...others,
