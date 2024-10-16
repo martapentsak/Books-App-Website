@@ -1,7 +1,7 @@
 import { useNavigate, useParams } from "react-router";
 
 import { Loading } from "../../components/Loading";
-import { AlertWindow } from "../../components/Alert";
+import { Alert } from "../../components/Alert";
 
 import { useWishlist } from "../../context/wishlist";
 import { useBooks } from "../../context/books";
@@ -22,17 +22,21 @@ export const BookPage = () => {
   const {
     handleAddBookToWishlist,
     wishList,
-    wishlistError,
+    error: wishlistError,
     handleCloseWishlistError,
   } = useWishlist();
-  const { booksList, bookListError, handleCloseBooksError, booksLoading } =
-    useBooks();
-  const { authorsList } = useAuthors();
+  const {
+    books,
+    error: bookListError,
+    handleCloseBooksError,
+    loading: booksLoading,
+  } = useBooks();
+  const { authors } = useAuthors();
 
   const navigate = useNavigate();
   const { bookId } = useParams();
 
-  const currentBook = booksList.find((book) => book.id === bookId);
+  const currentBook = books.find((book) => book.id === bookId);
 
   if (booksLoading) {
     return <Loading />;
@@ -46,10 +50,10 @@ export const BookPage = () => {
     currentBook;
 
   const handleGetRecommendationBookList = (): Result => {
-    const otherAuthorBooks = booksList.filter(
+    const otherAuthorBooks = books.filter(
       (b) => b.author === author && b.title !== title
     );
-    const othergenresBooks = booksList.filter((book) =>
+    const othergenresBooks = books.filter((book) =>
       book.genres.some((genre) => genres.includes(genre) && book.id !== bookId)
     );
     return {
@@ -66,13 +70,13 @@ export const BookPage = () => {
   const { data: recommendedBooks, blockTitle } =
     handleGetRecommendationBookList();
 
-  const authorId = authorsList.find((a) => a.name === author)?.id;
+  const currentAuthorId = authors.find((a) => a.name === author)?.id;
 
   return (
     <div className="book-page">
       {bookListError ||
         (wishlistError && (
-          <AlertWindow
+          <Alert
             error={bookListError || wishlistError}
             onClose={
               bookListError ? handleCloseBooksError : handleCloseWishlistError
@@ -87,7 +91,7 @@ export const BookPage = () => {
           <h2 className="book-name">{title}</h2>
           <div
             className="book-author"
-            onClick={() => navigate(`/author/${authorId}`)}
+            onClick={() => navigate(`/author/${currentAuthorId}`)}
           >
             {author}
           </div>
@@ -115,13 +119,12 @@ export const BookPage = () => {
           </div>
           <div className="author-works">
             <ListSection title={blockTitle} wrap={false}>
-              {recommendedBooks.map(({ title, genres, image, id }, index) => (
+              {recommendedBooks.map(({ genres, id, ...others }, index) => (
                 <Card
                   key={index}
                   className="recommendation-item"
-                  title={title}
                   items={genres}
-                  image={image}
+                  {...others}
                   onClick={() => navigate(`/book/${id}`)}
                 />
               ))}

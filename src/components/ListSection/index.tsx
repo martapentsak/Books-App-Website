@@ -2,8 +2,8 @@ import { ReactNode } from "react";
 
 type Props = {
   title: string;
-  wrap?: boolean;
   children: ReactNode;
+  wrap?: boolean;
 };
 
 export const ListSection = ({ title, wrap, children }: Props) => {

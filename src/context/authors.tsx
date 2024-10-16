@@ -18,10 +18,10 @@ import { Author } from "../types/AuthorBookType";
 type AuthorResponse = Omit<Author, "works">;
 
 type ProviderValues = {
-  authorLoading: boolean;
-  authorListError: string;
-  authorsList: Author[];
-  poetsList: Author[];
+  loading: boolean;
+  error: string;
+  authors: Author[];
+  poets: Author[];
   handleCloseAuthorsError: () => void;
 };
 
@@ -31,15 +31,22 @@ type Props = {
 export const AuthorContext = createContext({} as ProviderValues);
 
 export const AuthorProvider = ({ children }: Props) => {
-  const [authorsList, setAuthorsList] = useState<Author[]>([]);
-  const [poetsList, setPoetsList] = useState<Author[]>([]);
+  const [authors, setAuthors] = useState<Author[]>([]);
+  const [poets, setPoets] = useState<Author[]>([]);
 
-  const [authorLoading, setAuthorLoading] = useState<boolean>(false);
+  const [loading, setLoading] = useState<boolean>(false);
 
-  const [authorListError, setAuthorListError] = useState<string>("");
+  const [error, setError] = useState<string>("");
+
+  const formatAuthorResponse = (response: AuthorResponse[]): Author[] => {
+    return response.map(({ notable_works, ...others }) => ({
+      works: notable_works || [],
+      ...others,
+    }));
+  };
 
   useAsyncEffect(async () => {
-    setAuthorLoading(true);
+    setLoading(true);
     await waitForAnimationFinish();
     try {
       const authorResponse = await axios.get(authorsAPi);
@@ -48,35 +55,22 @@ export const AuthorProvider = ({ children }: Props) => {
         authorResponse,
         poetsResponse,
       ]);
-
-      const authors = authorList.data.map(
-        ({ notable_works, ...others }: AuthorResponse) => ({
-          works: notable_works,
-          ...others,
-        })
-      );
-      setAuthorsList(authors);
-      const poets = poetList.data.map(
-        ({ notable_works, ...others }: AuthorResponse) => ({
-          works: notable_works,
-          ...others,
-        })
-      );
-      setPoetsList(poets);
+      setAuthors(formatAuthorResponse(authorList.data));
+      setPoets(formatAuthorResponse(poetList.data));
     } catch {
-      setAuthorListError(errors.getAuthorsList);
+      setError(errors.getauthors);
     } finally {
-      setAuthorLoading(false);
+      setLoading(false);
     }
   }, []);
 
-  const handleCloseAuthorsError = useCallback(() => setAuthorListError(""), []);
+  const handleCloseAuthorsError = useCallback(() => setError(""), []);
 
   const providerValue: ProviderValues = {
-    authorLoading,
-    authorListError,
-    poetsList,
-    authorsList,
+    loading,
+    error,
+    poets,
+    authors,
     handleCloseAuthorsError,
   };
 

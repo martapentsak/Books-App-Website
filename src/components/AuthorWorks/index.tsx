@@ -2,12 +2,12 @@ import { useNavigate } from "react-router-dom";
 import { Author } from "../../types/AuthorBookType";
 
 type Props = {
-  works: string[];
   title: string;
   author: Author;
 };
 
-export function AuthorWorks({ works, title, author }: Props) {
+export function AuthorWorks({ title, author }: Props) {
+  const { id, works, name } = author;
   const navigate = useNavigate();
   return (
     <div className="works-section">
@@ -17,11 +17,8 @@ export function AuthorWorks({ works, title, author }: Props) {
           <div key={index} className="work-element">
             <span className="work-number">{index + 1}</span>
             <p className="work-name">{w}</p>
-            <span
-              className="author"
-              onClick={() => navigate(`/author/${author.id}`)}
-            >
-              {author.name}
+            <span className="author" onClick={() => navigate(`/author/${id}`)}>
+              {name}
             </span>
           </div>
         ))}

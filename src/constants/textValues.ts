@@ -28,7 +28,7 @@ export const homepage = {
 };
 
 export const errors = {
-  getAuthorsList: "Can`t get authors list",
-  getBooksList: "Can`t get books list",
+  getauthors: "Can`t get authors list",
+  getbooks: "Can`t get books list",
   getWishList: "Can`t add book to wishlist"
 };

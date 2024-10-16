@@ -20,4 +20,6 @@ export type Book = {
   description: string;
   publicationYear: number;
   title: string;
+  cover_image?: string;
+  publication_year?: number;
 };

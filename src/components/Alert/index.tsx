@@ -1,4 +1,4 @@
-import Alert from "@mui/material/Alert";
+import AlertWindow from "@mui/material/Alert";
 import Stack from "@mui/material/Stack";
 
 type Props = {
@@ -6,13 +6,13 @@ type Props = {
   onClose: () => void;
 };
 
-export const AlertWindow = ({ error, onClose }: Props) => {
+export const Alert = ({ error, onClose }: Props) => {
   return (
     <div className="alert-section">
       <Stack>
-        <Alert severity="error" onClose={onClose}>
+        <AlertWindow severity="error" onClose={onClose}>
           ERROR! {error}
-        </Alert>
+        </AlertWindow>
       </Stack>
     </div>
   );

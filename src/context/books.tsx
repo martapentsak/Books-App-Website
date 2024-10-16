@@ -16,21 +16,13 @@ import { waitForAnimationFinish } from "../helpers/waitForAnimationFinish";
 import { Book } from "../types/AuthorBookType";
 
 type ProviderValues = {
-  booksLoading: boolean;
-  bookListError: string;
-  booksList: Book[];
+  loading: boolean;
+  error: string;
+  books: Book[];
   handleCloseBooksError: () => void;
 };
 
-type BookResponse = {
-  id: string;
-  title: string;
-  author: string;
-  genres: string[];
-  cover_image: string;
-  publication_year: number;
-  description: string;
-};
+type BookResponse = Omit<Book, "publicationYear" | "image">;
 
 type Props = {
   children: ReactNode;
@@ -39,14 +31,14 @@ type Props = {
 export const BooksContext = createContext({} as ProviderValues);
 
 export const BooksProvider = ({ children }: Props) => {
-  const [booksList, setBooksList] = useState<Book[]>([]);
+  const [books, setBooks] = useState<Book[]>([]);
 
-  const [bookListError, setBookListError] = useState<string>("");
+  const [error, setError] = useState<string>("");
 
-  const [booksLoading, setBooksLoading] = useState<boolean>(false);
+  const [loading, setLoading] = useState<boolean>(false);
 
   useAsyncEffect(async () => {
-    setBooksLoading(true);
+    setLoading(true);
     await waitForAnimationFinish();
     try {
       const reponse = await axios.get(booksApi);
@@ -57,20 +49,20 @@ export const BooksProvider = ({ children }: Props) => {
           ...others,
         })
       );
-      setBooksList(list);
+      setBooks(list);
     } catch {
-      setBookListError(errors.getBooksList);
+      setError(errors.getbooks);
     } finally {
-      setBooksLoading(false);
+      setLoading(false);
     }
   }, []);
 
-  const handleCloseBooksError = useCallback(() => setBookListError(""), []);
+  const handleCloseBooksError = useCallback(() => setError(""), []);
 
   const providervalues: ProviderValues = {
-    booksLoading,
-    bookListError,
-    booksList,
+    loading,
+    error,
+    books,
     handleCloseBooksError,
   };
   return (

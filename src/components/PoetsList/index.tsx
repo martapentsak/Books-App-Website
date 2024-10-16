@@ -6,7 +6,7 @@ type Props = {
   onClick: (index: number) => void;
 };
 
-export const PoetsList = ({ poets, selectedPoetIndex, onClick }: Props) => {
+export const PoetList = ({ poets, selectedPoetIndex, onClick }: Props) => {
   return (
     <div className="poets-list">
       {poets.map(({ image, name }, index) => (
