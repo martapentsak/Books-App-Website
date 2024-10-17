@@ -1,33 +1,22 @@
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
-import { useAuthors } from "../../context/authors";
 import { Loading } from "../../components/Loading";
 import { NotFound } from "../../components/NotFound";
 import { ListSection } from "../../components/ListSection";
 import { Card } from "../../components/Card";
-import { useEffect, useState } from "react";
+
+import { useAuthors } from "../../context/authors";
 
 export const AuthorPage = () => {
   const [windowWidth, setWindowWidth] = useState<number>(window.innerWidth);
   const { authors, loading } = useAuthors();
 
   useEffect(() => {
-    const handleResize = () => {
-      const newWidth = window.innerWidth;
-      setWindowWidth(newWidth);
-      console.log("Window resized to:", newWidth);
-    };
-
-    // Initial log
-    console.log("Initial window width:", window.innerWidth);
-
+    const handleResize = () => setWindowWidth(window.innerWidth);
     window.addEventListener("resize", handleResize);
-
-    // Cleanup function
     return () => window.removeEventListener("resize", handleResize);
   }, []);
-
-  console.log(window.innerWidth);
 
   const { authorId } = useParams();
 
@@ -50,8 +39,6 @@ export const AuthorPage = () => {
     award,
     works,
   } = currentAuthor;
-
-  console.log(window.innerWidth);
 
   return (
     <div className="author-page">
