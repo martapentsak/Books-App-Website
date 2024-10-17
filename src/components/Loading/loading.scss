@@ -1,38 +1,74 @@
 .loading {
-    height: 100vh;
-    width: 100vw;
-    background-color: $black;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    z-index: 100;
-    top: 0;
-  
-    .flipping-text {
-      display: inline-flex;
-    }
-  
-    .letter {
-      font-size: 100px;
-      display: inline-block;
-      font-weight: bold;
-      animation: flip 2s infinite ease-in-out;
-      color: $white;
-    }
+  height: 100vh;
+  width: 100vw;
+  background-color: $black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  overflow:  hidden;
+
+  .flipping-text {
+    display: inline-flex;
   }
-  
-  @keyframes flip {
-    0% {
-      transform: rotateX(0);
-    }
-  
-    50% {
-      transform: rotateX(180deg);
-    }
-  
-    100% {
-      transform: rotateX(360deg);
-    }
+
+  .letter {
+    font-size: 100px;
+    display: inline-block;
+    font-weight: bold;
+    animation: flip 2s infinite ease-in-out;
+    color: $white;
   }
+}
+
+@keyframes flip {
+  0% {
+    transform: rotateX(0);
+  }
+
+  50% {
+    transform: rotateX(180deg);
+  }
+
+  100% {
+    transform: rotateX(360deg);
+  }
+}
+
+@media (max-width: 880px){ 
+  .letter {
+    font-size: 80px !important;
+    
+  }
+}
+
+@media (max-width: 650px){ 
+  .letter {
+    font-size: 70px !important;
+    
+  }
+}
+@media (max-width: 550px){ 
+  .letter {
+    font-size: 60px !important;
+    
+  }
+}
+
+@media (max-width: 550px){ 
+  .letter {
+    font-size: 50px !important;
+    
+  }
+}
+
+
+@media (max-width: 450px){ 
+  .letter {
+    font-size: 40px !important;
+    
+  }
+}

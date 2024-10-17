@@ -3,6 +3,8 @@ import { useLocation, useNavigate } from "react-router-dom";
 
 import { menuElemenets, websiteName } from "../../constants/textValues";
 
+import { useWishlist } from "../../context/wishlist";
+
 import logo from "../../assets/countryBooks.logo.png";
 
 import Tabs from "@mui/material/Tabs";
@@ -44,6 +46,7 @@ const menuElements: MenuElements[] = [
 ];
 
 export const Menu = () => {
+  const { wishList } = useWishlist();
   const location = useLocation();
   const navigate = useNavigate();
   const currentMenuElement = menuElements.find(
@@ -54,7 +57,7 @@ export const Menu = () => {
     currentMenuElement ? currentMenuElement.value : menuElemenets.values.home
   );
 
-  const handleTabChange = (event: React.SyntheticEvent, newValue: string) => {
+  const handleTabChange = (_event: React.SyntheticEvent, newValue: string) => {
     setValue(newValue);
     const currentTabLink = menuElements.find((v) => v.value === newValue);
     const link = currentTabLink ? currentTabLink.link : "/";
@@ -65,17 +68,20 @@ export const Menu = () => {
     <div className="menu">
       <div className="menu-wrapper">
         <div className="menu-logo-section">
-          <img src={logo} alt="conutry books logo" className="logo" />
+          <img src={logo} alt="country books logo" className="logo" />
           <h2 className="website-name">
             {websiteName.name}
             <span className="website-name-span">{websiteName.span}</span>
           </h2>
         </div>
-        <Box sx={{ width: "100%" }}>
-          <Tabs className="tabs" value={value} onChange={handleTabChange}>
-            {menuElements.map(({ value, label }, index) => (
-              <Tab key={index} value={value} label={label} />
+        <Box>
+          <Tabs value={value} onChange={handleTabChange}>
+            {menuElements.map(({ link, ...others }, index) => (
+              <Tab key={index} onClick={() => navigate(link)} {...others} />
             ))}
+            {wishList.length > 0 && (
+              <span className="wishlist-badge">{wishList.length}</span>
+            )}
           </Tabs>
         </Box>
       </div>

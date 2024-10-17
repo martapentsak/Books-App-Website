@@ -1,0 +1,64 @@
+.poets-list {
+    display: flex;
+    width: 100%;
+    overflow-x: scroll;
+    display: flex;
+
+    .poet-section {
+        margin-right: 8px;
+        cursor: pointer;
+        opacity: 0.7;
+    }
+
+    .poet-image {
+        width: 70px;
+        height: 80px;
+        border-radius: 14px;
+        background-size: cover;
+    }
+
+    .active-poet-section {
+        display: flex;
+        align-items: center;
+        margin-right: 20px;
+        cursor: pointer;
+    
+        .poet-name {
+            text-align: center;
+            font-size: 22px;
+            width: 120px;
+            color: $white;
+        }
+    }
+}
+
+.poets-list::-webkit-scrollbar {
+    display: none;
+}
+
+
+@media (max-width: 1100px) {
+
+    .poet-image {
+        width: 60px !important;
+        height: 70px !important;
+    }
+    .poet-name {
+        font-size: 20px !important;
+        width: 110px !important;
+    }
+}
+
+@media (max-width: 680px) {
+    .poet-image {
+        width: 50px !important;
+        height: 60px !important;
+    }
+    .poet-name {
+        font-size: 15px !important;
+        width: 80px !important;
+    }
+}
+
+
+    

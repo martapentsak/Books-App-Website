@@ -11,24 +11,18 @@ import { errors } from "../constants/textValues";
 import { booksApi } from "../constants/api";
 
 import useAsyncEffect from "../hooks/useAsyncEffect";
-import { sleep } from "../helpers/sleep";
-import { loadingDuration } from "../constants/duration";
 
-type Book = {
-  id: string;
-  title: string;
-  author: string;
-  genres: string[];
-  coverImage: string;
-  cover_image?: string;
-};
+import { waitForAnimationFinish } from "../helpers/waitForAnimationFinish";
+import { Book } from "../types/AuthorBookType";
 
 type ProviderValues = {
-  booksLoading: boolean;
-  bookListError: string;
-  booksList: Book[];
+  loading: boolean;
+  error: string;
+  books: Book[];
   handleCloseBooksError: () => void;
 };
+
+type BookResponse = Omit<Book, "publicationYear" | "image">;
 
 type Props = {
   children: ReactNode;
@@ -37,37 +31,38 @@ type Props = {
 export const BooksContext = createContext({} as ProviderValues);
 
 export const BooksProvider = ({ children }: Props) => {
-  const [booksList, setBooksList] = useState<Book[]>([]);
+  const [books, setBooks] = useState<Book[]>([]);
 
-  const [bookListError, setBookListError] = useState<string>("");
+  const [error, setError] = useState<string>("");
 
-  const [booksLoading, setBooksLoading] = useState<boolean>(false);
+  const [loading, setLoading] = useState<boolean>(false);
 
   useAsyncEffect(async () => {
-    setBooksLoading(true);
-    await sleep(loadingDuration);
+    setLoading(true);
+    await waitForAnimationFinish();
     try {
       const reponse = await axios.get(booksApi);
       const list = reponse.data.map(
-        ({ coverImage, cover_image, ...others }: Book) => ({
-          coverImage: cover_image,
+        ({ cover_image, publication_year, ...others }: BookResponse) => ({
+          publicationYear: publication_year,
+          image: cover_image,
           ...others,
         })
       );
-      setBooksList(list);
-    } catch (err) {
-      setBookListError(errors.getBooksList);
+      setBooks(list);
+    } catch {
+      setError(errors.getbooks);
     } finally {
-      setBooksLoading(false);
+      setLoading(false);
     }
   }, []);
 
-  const handleCloseBooksError = useCallback(() => setBookListError(""), []);
+  const handleCloseBooksError = useCallback(() => setError(""), []);
 
   const providervalues: ProviderValues = {
-    booksLoading,
-    bookListError,
-    booksList,
+    loading,
+    error,
+    books,
     handleCloseBooksError,
   };
   return (

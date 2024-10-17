@@ -1,8 +1,6 @@
 import { websiteName } from "../../constants/textValues";
 
-const arrayOfLetters = `${websiteName.span} ${websiteName.name}`.split(
-  ""
-);
+const arrayOfLetters = `${websiteName.span} ${websiteName.name}`.split("");
 
 export const Loading = () => (
   <div className="loading">

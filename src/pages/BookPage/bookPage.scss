@@ -1,0 +1,121 @@
+.book-page {
+    height: calc(100% - $menuHeight - 41px);
+    min-height: calc(100vh - $menuHeight - 41px);;
+    padding-top: 40px;
+    overflow: none;
+
+    .wrapper {
+        height: 100%;
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        position: relative;
+
+        .book-cover-section {
+            max-height: 100%;
+            width: 40%;
+            margin-right: 40px;
+
+            .book-cover {
+                height: auto;
+                max-height: 92%;
+                max-width: 100%;
+            }
+        }
+
+        .book-info-section {
+            width: 60%;
+
+            .book-name {
+                font-size: 68px;
+                font-family: $titleFontFamily;
+                color: $leadBelcher;
+            }
+
+            .book-author{
+                margin: 5px 0;
+                color: $blackishGrey;
+                font-size: 20px;
+                cursor: pointer;
+            }
+
+            .book-author:hover {
+                color: $leadBelcher;
+            }
+
+            .add-to-wishlist-btn {
+                margin: 10px 0;
+                padding: 8px 15px;
+                background-color: transparent;
+                border: 1px solid $blackishGrey;
+                
+            }
+
+            .add-to-wishlist-btn:hover {
+                border: 1px solid $leadBelcher;
+
+            }
+
+            .book-publication,
+            .book-genres {
+                color: $blackishGrey;
+                margin: 8px 0;
+                display: flex;
+            }
+
+            .genres-list {
+                margin-left: 5px;
+            }
+
+            .book-category {
+                color: $leadBelcher;
+                font-size: 16px;
+            }
+
+            .publication-year {
+                color: $leadBelcher;
+
+            }
+
+            .book-describtion {
+                color: $leadBelcher;
+                margin: 8px 0;
+                line-height: 25px;
+            }
+
+            .author-works {
+                margin-top: 15px;
+
+
+                .recommendation-item {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    cursor: pointer;
+                    margin-right: 30px;
+                    width: 180px;
+
+                    .card-image {
+                        height: 280px;
+                        width: 180px;
+                        border-radius: 14px;
+                    }
+
+                    .card-name {
+                        margin: 15px 0 10px 0;
+                        color: $leadBelcher;
+                        font-size: 14px;
+                    }
+
+                    .card-list-item {
+                        font-size: 12px;
+                        color: $blackishGrey;
+                        margin-right: 5px;
+   
+                    }
+
+                }
+                }
+            }
+        }
+    }
