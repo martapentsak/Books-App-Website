@@ -10,24 +10,13 @@ import {
 import { errors } from "../constants/textValues";
 import { authorsAPi, poetsApi } from "../constants/api";
 
-import { Author } from "../types/AuthorBookType";
+import {Author} from '../types/AuthorBookType'
 
 import useAsyncEffect from "../hooks/useAsyncEffect";
 
 import { waitForAnimationFinish } from "../helpers/waitForAnimationFinish";
 
 
-type Author = {
-  author: string;
-  name: string;
-  image: string;
-  cover_image?: string;
-  genre: string[];
-  genres: string[];
-  notable_works?: string[];
-  works?: string[];
-  id: string;
-};
 
 type ProviderValues = {
   loading: boolean;

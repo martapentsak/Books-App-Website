@@ -3,21 +3,55 @@ import { useParams } from "react-router-dom";
 import { useAuthors } from "../../context/authors";
 import { Loading } from "../../components/Loading";
 import { NotFound } from "../../components/NotFound";
+import { ListSection } from "../../components/ListSection";
+import { Card } from "../../components/Card";
+import { useEffect, useState } from "react";
 
 export const AuthorPage = () => {
-  const { authorsList, authorLoading } = useAuthors();
+  const [windowWidth, setWindowWidth] = useState<number>(window.innerWidth);
+  const { authors, loading } = useAuthors();
+
+  useEffect(() => {
+    const handleResize = () => {
+      const newWidth = window.innerWidth;
+      setWindowWidth(newWidth);
+      console.log("Window resized to:", newWidth);
+    };
+
+    // Initial log
+    console.log("Initial window width:", window.innerWidth);
+
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup function
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  console.log(window.innerWidth);
 
   const { authorId } = useParams();
 
-  const currentAuthor = authorsList.find((v) => v.id == authorId);
+  const currentAuthor = authors.find((v) => v.id == authorId);
 
-  if (!currentAuthor && authorLoading) {
+  if (loading) {
     return <Loading />;
-  } else if (!currentAuthor) {
+  }
+  if (!currentAuthor) {
     return <NotFound />;
   }
-  const { image, author, birth, death, biography, nationality, award, works } =
-    currentAuthor;
+
+  const {
+    image,
+    name,
+    birth_year,
+    death_year,
+    biography,
+    nationality,
+    award,
+    works,
+  } = currentAuthor;
+
+  console.log(window.innerWidth);
 
   return (
     <div className="author-page">
@@ -26,7 +60,7 @@ export const AuthorPage = () => {
           <img src={image} className="author-image" />
         </div>
         <div className="author-info-section">
-          <h2 className="author-name">{author}</h2>
+          <h2 className="author-name">{name}</h2>
           <div className="author-nationality">{nationality}</div>
           <div className="author-biography">{biography}</div>
           <div className="author-award">
@@ -35,30 +69,51 @@ export const AuthorPage = () => {
           <div className="author-birth-section">
             <div className="born-section">
               <span className="born-section-category">Born</span>
-              <p className="birth-year">{birth}</p>
+              <p className="birth-year">{birth_year}</p>
             </div>
             <div className="space"></div>
             <div className="death-section">
               <span className="born-section-category">Died</span>
-              <p className="death-year">{death}</p>
+              <p className="death-year">{death_year}</p>
             </div>
           </div>
-          <div className="author-works">
-            <h3 className="works-title">Notable works</h3>
-            <div className="works-list">
-              {works.map((work, index) => (
-                <div key={index} className="work-element">
-                  <img
-                    src="https://m.media-amazon.com/images/I/61LQf6GWT4L._AC_UF1000,1000_QL80_.jpg"
-                    className="work-image"
-                  />
-                  <span className="work-name">{work}</span>
-                </div>
+          <div className={windowWidth >= 1100 ? "author-works" : "no-display"}>
+            <ListSection title={"Notable works"}>
+              {works.map((value, index) => (
+                <Card
+                  key={index}
+                  className="works-card"
+                  items={[""]}
+                  title={value}
+                  onClick={() => null}
+                  image={
+                    "https://m.media-amazon.com/images/I/61LQf6GWT4L._AC_UF1000,1000_QL80_.jpg"
+                  }
+                />
               ))}
-            </div>
+            </ListSection>
           </div>
         </div>
+        <div></div>
       </div>
+      {windowWidth <= 1100 && (
+        <div className="works-section">
+          <ListSection title={"Notable works"}>
+            {works.map((value, index) => (
+              <Card
+                key={index}
+                className="works-card"
+                items={[""]}
+                title={value}
+                onClick={() => null}
+                image={
+                  "https://m.media-amazon.com/images/I/61LQf6GWT4L._AC_UF1000,1000_QL80_.jpg"
+                }
+              />
+            ))}
+          </ListSection>
+        </div>
+      )}
     </div>
   );
 };
