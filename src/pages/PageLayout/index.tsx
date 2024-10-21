@@ -138,6 +138,7 @@ export const PageLayout = () => {
         (result.route = menuElemenets.links.poets);
     }
     if (isBooksPage) {
+      (result.data = books as T[]),
       (result.data = books as T[]), (result.className = "book-card");
       result.route = menuElemenets.links.bookStore;
     }
@@ -187,6 +188,10 @@ export const PageLayout = () => {
     return <NotFound />;
   }
 
+  const mapListSection = () => {
+    
+  }
+
   return (
     <div className="page-layout">
       <div className="page-layout-wrapper">
@@ -205,7 +210,7 @@ export const PageLayout = () => {
               },
             }}
           />
-          {currentSelector.selector?.map(
+          {currentSelector.selector.map(
             ({ label, name, options }: SelectorsArray, index) => (
               <FormControl key={index}>
                 <InputLabel variant="standard" htmlFor="uncontrolled-native">
