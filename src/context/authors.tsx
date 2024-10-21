@@ -10,11 +10,11 @@ import {
 import { errors } from "../constants/textValues";
 import { authorsAPi, poetsApi } from "../constants/api";
 
-import { Author } from "../types/AuthorBookType";
-
 import useAsyncEffect from "../hooks/useAsyncEffect";
 
 import { waitForAnimationFinish } from "../helpers/waitForAnimationFinish";
+
+import { Author } from "../types/AuthorBookType";
 
 type ProviderValues = {
   loading: boolean;
@@ -23,21 +23,9 @@ type ProviderValues = {
   poets: Author[];
   handleCloseAuthorsError: () => void;
 };
-type AuthorResponse = Omit<Author, "works">;
 
 type Props = {
   children: ReactNode;
-};
-
-type DataProp = {
-  data: AuthorResponse[];
-};
-
-const formatAuthorResponse = (response: DataProp): Author[] => {
-  return response.data.map(({ notable_works, ...others }) => ({
-    works: notable_works || [],
-    ...others,
-  }));
 };
 
 export const AuthorContext = createContext({} as ProviderValues);
@@ -60,9 +48,9 @@ export const AuthorProvider = ({ children }: Props) => {
         authorResponse,
         poetsResponse,
       ]);
-      setAuthors(formatAuthorResponse(authorList));
-      setPoets(formatAuthorResponse(poetList));
-    } catch (err) {
+      setAuthors(authorList.data);
+      setPoets(poetList.data);
+    } catch {
       setError(errors.getauthors);
     } finally {
 setLoading(false);

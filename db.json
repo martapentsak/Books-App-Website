@@ -3,14 +3,14 @@
     {
       "id": "1",
       "name": "William Shakespeare",
-      "birth_year": 1564,
-      "death_year": 1616,
+      "birthYear": 1564,
+      "deathYear": 1616,
       "nationality": "English",
       "genres": [
         "Drama",
         "Poetry"
       ],
-      "notable_works": [
+      "works": [
         "Hamlet",
         "Romeo and Juliet",
         "Macbeth",
@@ -24,13 +24,13 @@
     {
       "id": "2",
       "name": "Emily Dickinson",
-      "birth_year": 1830,
-      "death_year": 1886,
+      "birthYear": 1830,
+      "deathYear": 1886,
       "nationality": "American",
       "genres": [
         "Poetry"
       ],
-      "notable_works": [
+      "works": [
         "Because I could not stop for Death",
         "Hope is the thing with feathers",
         "I'm Nobody! Who are you?"
@@ -42,13 +42,13 @@
     {
       "id": "3",
       "name": "Edgar Allan Poe",
-      "birth_year": 1809,
-      "death_year": 1849,
+      "birthYear": 1809,
+      "deathYear": 1849,
       "nationality": "American",
       "genres": [
         "Poetry"
       ],
-      "notable_works": [
+      "works": [
         "The Raven",
         "Annabel Lee",
         "The Tell-Tale Heart",
@@ -61,13 +61,13 @@
     {
       "id": "4",
       "name": "William Wordsworth",
-      "birth_year": 1770,
-      "death_year": 1850,
+      "birthYear": 1770,
+      "deathYear": 1850,
       "nationality": "British",
       "genres": [
         "Poetry"
       ],
-      "notable_works": [
+      "works": [
         "Lines Composed a Few Miles Above Tintern Abbey",
         "I Wandered Lonely as a Cloud",
         "The Prelude",
@@ -80,13 +80,13 @@
     {
       "id": "5",
       "name": "John Keats",
-      "birth_year": 1795,
-      "death_year": 1821,
+      "birthYear": 1795,
+      "deathYear": 1821,
       "nationality": "British",
       "genres": [
         "Poetry"
       ],
-      "notable_works": [
+      "works": [
         "Ode to a Nightingale",
         "Ode on a Grecian Urn",
         "To Autumn",
@@ -99,13 +99,13 @@
     {
       "id": "6",
       "name": "Walt Whitman",
-      "birth_year": 1819,
-      "death_year": 1892,
+      "birthYear": 1819,
+      "deathYear": 1892,
       "nationality": "American",
       "genres": [
         "Poetry"
       ],
-      "notable_works": [
+      "works": [
         "Leaves of Grass",
         "Song of Myself",
         "O Captain! My Captain!",
@@ -118,13 +118,13 @@
     {
       "id": "7",
       "name": "E.E. Cummings",
-      "birth_year": 1894,
-      "death_year": 1962,
+      "birthYear": 1894,
+      "deathYear": 1962,
       "nationality": "American",
       "genres": [
         "Poetry"
       ],
-      "notable_works": [
+      "works": [
         "i carry your heart with me",
         "somewhere i have never travelled, gladly beyond"
       ],
@@ -135,15 +135,15 @@
     {
       "id": "8",
       "name": "Langston Hughes",
-      "birth_year": 1902,
-      "death_year": 1967,
+      "birthYear": 1902,
+      "deathYear": 1967,
       "nationality": "American",
       "genres": [
         "Poetry",
         "Novel",
         "Essay"
       ],
-      "notable_works": [
+      "works": [
         "The Negro Speaks of Rivers",
         "Harlem",
         "Let America Be America Again",
@@ -156,13 +156,13 @@
     {
       "id": "9",
       "name": "Rumi",
-      "birth_year": 1207,
-      "death_year": 1273,
+      "birthYear": 1207,
+      "deathYear": 1273,
       "nationality": "Persian",
       "genres": [
         "Poetry"
       ],
-      "notable_works": [
+      "works": [
         "The Masnavi",
         "Divan-e Shams",
         "Diwan-e Kabir",
@@ -175,14 +175,14 @@
     {
       "id": "10",
       "name": "Maya Angelou",
-      "birth_year": 1928,
-      "death_year": 2014,
+      "birthYear": 1928,
+      "deathYear": 2014,
       "nationality": "American",
       "genres": [
         "Poetry",
         "Autobiography"
       ],
-      "notable_works": [
+      "works": [
         "I Know Why the Caged Bird Sings",
         "Phenomenal Woman",
         "Still I Rise",
@@ -195,13 +195,13 @@
     {
       "id": "11",
       "name": "Sylvia Plath",
-      "birth_year": 1932,
-      "death_year": 1963,
+      "birthYear": 1932,
+      "deathYear": 1963,
       "nationality": "American",
       "genres": [
         "Poetry"
       ],
-      "notable_works": [
+      "works": [
         "Daddy",
         "The Bell Jar",
         "Ariel",
@@ -214,13 +214,13 @@
     {
       "id": "12",
       "name": "Rabindranath Tagore",
-      "birth_year": 1861,
-      "death_year": 1941,
+      "birthYear": 1861,
+      "deathYear": 1941,
       "nationality": "Indian",
       "genres": [
         "Poetry"
       ],
-      "notable_works": [
+      "works": [
         "Gitanjali",
         "The Gardener",
         "The Post Office",
@@ -233,13 +233,13 @@
     {
       "id": "13",
       "name": "Christina Rossetti",
-      "birth_year": 1830,
-      "death_year": 1894,
+      "birthYear": 1830,
+      "deathYear": 1894,
       "nationality": "British",
       "genres": [
         "Poetry"
       ],
-      "notable_works": [
+      "works": [
         "Goblin Market",
         "Remember",
         "In the Bleak Midwinter",
@@ -252,13 +252,13 @@
     {
       "id": "14",
       "name": "Robert Frost",
-      "birth_year": 1874,
-      "death_year": 1963,
+      "birthYear": 1874,
+      "deathYear": 1963,
       "nationality": "American",
       "genres": [
         "Poetry"
       ],
-      "notable_works": [
+      "works": [
         "The Road Not Taken",
         "Stopping by Woods on a Snowy Evening",
         "Fire and Ice"
@@ -270,14 +270,14 @@
     {
       "id": "15",
       "name": "Seamus Heaney",
-      "birth_year": 1939,
-      "death_year": 2013,
+      "birthYear": 1939,
+      "deathYear": 2013,
       "nationality": "Irish",
       "genres": [
         "Poetry",
         "Translation"
       ],
-      "notable_works": [
+      "works": [
         "Digging",
         "Death of a Naturalist",
         "The Forge",
@@ -290,13 +290,13 @@
     {
       "id": "16",
       "name": "Anne Sexton",
-      "birth_year": 1928,
-      "death_year": 1974,
+      "birthYear": 1928,
+      "deathYear": 1974,
       "nationality": "American",
       "genres": [
         "Poetry"
       ],
-      "notable_works": [
+      "works": [
         "Live or Die",
         "Transformations",
         "The Awful Rowing Toward God"
@@ -308,14 +308,14 @@
     {
       "id": "17",
       "name": "Patti Smith",
-      "birth_year": 1946,
-      "death_year": null,
+      "birthYear": 1946,
+      "deathYear": null,
       "nationality": "American",
       "genres": [
         "Poetry",
         "Rock"
       ],
-      "notable_works": [
+      "works": [
         "Just Kids",
         "Horses",
         "M Train",
@@ -330,14 +330,14 @@
     {
       "id": "1",
       "name": "William Shakespeare",
-      "birth_year": 1564,
-      "death_year": 1616,
+      "birthYear": 1564,
+      "deathYear": 1616,
       "nationality": "English",
       "genres": [
         "Drama",
         "Poetry"
       ],
-      "notable_works": [
+      "works": [
         "Hamlet",
         "Romeo and Juliet",
         "Macbeth",
@@ -351,14 +351,14 @@
     {
       "id": "2",
       "name": "Leo Tolstoy",
-      "birth_year": 1828,
-      "death_year": 1910,
+      "birthYear": 1828,
+      "deathYear": 1910,
       "nationality": "Russian",
       "genres": [
         "Historical Fiction",
         "Realism"
       ],
-      "notable_works": [
+      "works": [
         "War and Peace",
         "Anna Karenina",
         "The Death of Ivan Ilyich",
@@ -371,14 +371,14 @@
     {
       "id": "3",
       "name": "Mark Twain",
-      "birth_year": 1835,
-      "death_year": 1910,
+      "birthYear": 1835,
+      "deathYear": 1910,
       "nationality": "American",
       "genres": [
         "Humor",
         "Adventure"
       ],
-      "notable_works": [
+      "works": [
         "The Adventures of Tom Sawyer",
         "Adventures of Huckleberry Finn",
         "The Prince and the Pauper"
@@ -390,14 +390,14 @@
     {
       "id": "4",
       "name": "Herman Melville",
-      "birth_year": 1819,
-      "death_year": 1891,
+      "birthYear": 1819,
+      "deathYear": 1891,
       "nationality": "American",
       "genres": [
         "Adventure",
         "Sea Fiction"
       ],
-      "notable_works": [
+      "works": [
         "Moby-Dick",
         "Typee",
         "Billy Budd, Sailor"
@@ -409,14 +409,14 @@
     {
       "id": "5",
       "name": "Fyodor Dostoevsky",
-      "birth_year": 1821,
-      "death_year": 1881,
+      "birthYear": 1821,
+      "deathYear": 1881,
       "nationality": "Russian",
       "genres": [
         "Psychological Fiction",
         "Philosophical"
       ],
-      "notable_works": [
+      "works": [
         "Crime and Punishment",
         "The Brothers Karamazov",
         "The Idiot"
@@ -428,14 +428,14 @@
     {
       "id": "6",
       "name": "Charles Dickens",
-      "birth_year": 1812,
-      "death_year": 1870,
+      "birthYear": 1812,
+      "deathYear": 1870,
       "nationality": "English",
       "genres": [
         "Classic",
         "Victorian Fiction"
       ],
-      "notable_works": [
+      "works": [
         "Great Expectations",
         "Oliver Twist",
         "A Tale of Two Cities"
@@ -447,14 +447,14 @@
     {
       "id": "7",
       "name": "Gustave Flaubert",
-      "birth_year": 1821,
-      "death_year": 1880,
+      "birthYear": 1821,
+      "deathYear": 1880,
       "nationality": "French",
       "genres": [
         "Realism",
         "Novel"
       ],
-      "notable_works": [
+      "works": [
         "Madame Bovary",
         "Sentimental Education",
         "Salammbô"
@@ -466,14 +466,14 @@
     {
       "id": "8",
       "name": "Edgar Allan Poe",
-      "birth_year": 1809,
-      "death_year": 1849,
+      "birthYear": 1809,
+      "deathYear": 1849,
       "nationality": "American",
       "genres": [
         "Gothic",
         "Horror"
       ],
-      "notable_works": [
+      "works": [
         "The Raven",
         "The Tell-Tale Heart",
         "The Fall of the House of Usher"
@@ -485,14 +485,14 @@
     {
       "id": "9",
       "name": "Mary Shelley",
-      "birth_year": 1797,
-      "death_year": 1851,
+      "birthYear": 1797,
+      "deathYear": 1851,
       "nationality": "English",
       "genres": [
         "Gothic",
         "Science Fiction"
       ],
-      "notable_works": [
+      "works": [
         "Frankenstein; or, The Modern Prometheus",
         "The Last Man",
         "Mathilda"
@@ -504,13 +504,13 @@
     {
       "id": "10",
       "name": "Emily Dickinson",
-      "birth_year": 1830,
-      "death_year": 1886,
+      "birthYear": 1830,
+      "deathYear": 1886,
       "nationality": "American",
       "genres": [
         "Poetry"
       ],
-      "notable_works": [
+      "works": [
         "Selected Poems of Emily Dickinson",
         "The Complete Poems of Emily Dickinson"
       ],
@@ -521,14 +521,14 @@
     {
       "id": "11",
       "name": "Jane Austen",
-      "birth_year": 1775,
-      "death_year": 1817,
+      "birthYear": 1775,
+      "deathYear": 1817,
       "nationality": "English",
       "genres": [
         "Romance",
         "Classic"
       ],
-      "notable_works": [
+      "works": [
         "Pride and Prejudice",
         "Sense and Sensibility",
         "Emma",
@@ -541,14 +541,14 @@
     {
       "id": "12",
       "name": "Harper Lee",
-      "birth_year": 1926,
-      "death_year": 2016,
+      "birthYear": 1926,
+      "deathYear": 2016,
       "nationality": "American",
       "genres": [
         "Southern Gothic",
         "Coming-of-Age"
       ],
-      "notable_works": [
+      "works": [
         "To Kill a Mockingbird",
         "Go Set a Watchman"
       ],
@@ -559,14 +559,14 @@
     {
       "id": "13",
       "name": "Agatha Christie",
-      "birth_year": 1890,
-      "death_year": 1976,
+      "birthYear": 1890,
+      "deathYear": 1976,
       "nationality": "English",
       "genres": [
         "Mystery",
         "Detective Fiction"
       ],
-      "notable_works": [
+      "works": [
         "Murder on the Orient Express",
         "The Murder of Roger Ackroyd",
         "And Then There Were None"
@@ -578,14 +578,14 @@
     {
       "id": "14",
       "name": "J.R.R. Tolkien",
-      "birth_year": 1892,
-      "death_year": 1973,
+      "birthYear": 1892,
+      "deathYear": 1973,
       "nationality": "English",
       "genres": [
         "Fantasy",
         "High Fantasy"
       ],
-      "notable_works": [
+      "works": [
         "The Hobbit",
         "The Lord of the Rings",
         "The Silmarillion"
@@ -597,14 +597,14 @@
     {
       "id": "15",
       "name": "Virginia Woolf",
-      "birth_year": 1882,
-      "death_year": 1941,
+      "birthYear": 1882,
+      "deathYear": 1941,
       "nationality": "English",
       "genres": [
         "Modernist",
         "Feminist Literature"
       ],
-      "notable_works": [
+      "works": [
         "Mrs Dalloway",
         "To the Lighthouse",
         "Orlando"
@@ -616,14 +616,14 @@
     {
       "id": "16",
       "name": "James Joyce",
-      "birth_year": 1882,
-      "death_year": 1941,
+      "birthYear": 1882,
+      "deathYear": 1941,
       "nationality": "Irish",
       "genres": [
         "Modernist",
         "Stream of Consciousness"
       ],
-      "notable_works": [
+      "works": [
         "Ulysses",
         "Dubliners",
         "A Portrait of the Artist as a Young Man"
@@ -635,14 +635,14 @@
     {
       "id": "17",
       "name": "George Bernard Shaw",
-      "birth_year": 1856,
-      "death_year": 1950,
+      "birthYear": 1856,
+      "deathYear": 1950,
       "nationality": "Irish",
       "genres": [
         "Drama",
         "Satire"
       ],
-      "notable_works": [
+      "works": [
         "Pygmalion",
         "Man and Superman",
         "Saint Joan"
@@ -654,14 +654,14 @@
     {
       "id": "18",
       "name": "George Orwell",
-      "birth_year": 1903,
-      "death_year": 1950,
+      "birthYear": 1903,
+      "deathYear": 1950,
       "nationality": "English",
       "genres": [
         "Dystopian",
         "Political Fiction"
       ],
-      "notable_works": [
+      "works": [
         "Nineteen Eighty-Four",
         "Animal Farm",
         "Down and Out in Paris and London"
@@ -673,14 +673,14 @@
     {
       "id": "19",
       "name": "Rabindranath Tagore",
-      "birth_year": 1861,
-      "death_year": 1941,
+      "birthYear": 1861,
+      "deathYear": 1941,
       "nationality": "Indian",
       "genres": [
         "Poetry",
         "Short Stories"
       ],
-      "notable_works": [
+      "works": [
         "Gitanjali",
         "The Home and the World",
         "The Post Office"
@@ -692,14 +692,14 @@
     {
       "id": "20",
       "name": "Gabriel Garcia Marquez",
-      "birth_year": 1927,
-      "death_year": 2014,
+      "birthYear": 1927,
+      "deathYear": 2014,
       "nationality": "Colombian",
       "genres": [
         "Magical Realism",
         "Literary Fiction"
       ],
-      "notable_works": [
+      "works": [
         "One Hundred Years of Solitude",
         "Love in the Time of Cholera",
         "Chronicle of a Death Foretold"
@@ -711,13 +711,13 @@
     {
       "id": "21",
       "name": "Haruki Murakami",
-      "birth_year": 1949,
+      "birthYear": 1949,
       "nationality": "Japanese",
       "genres": [
         "Magical Realism",
         "Contemporary Fiction"
       ],
-      "notable_works": [
+      "works": [
         "Norwegian Wood",
         "Kafka on the Shore",
         "1Q84"
@@ -729,14 +729,14 @@
     {
       "id": "22",
       "name": "J.D. Salinger",
-      "birth_year": 1919,
-      "death_year": 2010,
+      "birthYear": 1919,
+      "deathYear": 2010,
       "nationality": "American",
       "genres": [
         "Coming-of-Age",
         "Literary Fiction"
       ],
-      "notable_works": [
+      "works": [
         "The Catcher in the Rye",
         "Franny and Zooey",
         "Nine Stories"
@@ -748,14 +748,14 @@
     {
       "id": "23",
       "name": "Franz Kafka",
-      "birth_year": 1883,
-      "death_year": 1924,
+      "birthYear": 1883,
+      "deathYear": 1924,
       "nationality": "Czech",
       "genres": [
         "Absurdist Fiction",
         "Existentialism"
       ],
-      "notable_works": [
+      "works": [
         "The Metamorphosis",
         "The Trial",
         "The Castle",
@@ -768,14 +768,14 @@
     {
       "id": "24",
       "name": "Aldous Huxley",
-      "birth_year": 1894,
-      "death_year": 1963,
+      "birthYear": 1894,
+      "deathYear": 1963,
       "nationality": "English",
       "genres": [
         "Dystopian",
         "Science Fiction"
       ],
-      "notable_works": [
+      "works": [
         "Brave New World",
         "Island",
         "Eyeless in Gaza"
@@ -787,14 +787,14 @@
     {
       "id": "25",
       "name": "Hermann Hesse",
-      "birth_year": 1877,
-      "death_year": 1962,
+      "birthYear": 1877,
+      "deathYear": 1962,
       "nationality": "German",
       "genres": [
         "Siddhartha",
         "Steppenwolf"
       ],
-      "notable_works": [
+      "works": [
         "Siddhartha",
         "Steppenwolf",
         "Narcissus and Goldmund"
@@ -806,14 +806,14 @@
     {
       "id": "26",
       "name": "Kurt Vonnegut",
-      "birth_year": 1922,
-      "death_year": 2007,
+      "birthYear": 1922,
+      "deathYear": 2007,
       "nationality": "American",
       "genres": [
         "Satire",
         "Science Fiction"
       ],
-      "notable_works": [
+      "works": [
         "Slaughterhouse-Five",
         "Cat's Cradle",
         "Breakfast of Champions"
@@ -825,14 +825,14 @@
     {
       "id": "27",
       "name": "Octavia E. Butler",
-      "birth_year": 1947,
-      "death_year": 2006,
+      "birthYear": 1947,
+      "deathYear": 2006,
       "nationality": "American",
       "genres": [
         "Science Fiction",
         "Afrofuturism"
       ],
-      "notable_works": [
+      "works": [
         "Kindred",
         "Parable of the Sower",
         "Dawn"
@@ -844,14 +844,14 @@
     {
       "id": "28",
       "name": "Albert Camus",
-      "birth_year": 1913,
-      "death_year": 1960,
+      "birthYear": 1913,
+      "deathYear": 1960,
       "nationality": "French",
       "genres": [
         "Existentialism",
         "Absurdist Fiction"
       ],
-      "notable_works": [
+      "works": [
         "The Stranger",
         "The Plague",
         "The Fall"
@@ -863,14 +863,14 @@
     {
       "id": "29",
       "name": "John Steinbeck",
-      "birth_year": 1902,
-      "death_year": 1968,
+      "birthYear": 1902,
+      "deathYear": 1968,
       "nationality": "American",
       "genres": [
         "Grapes of Wrath",
         "Of Mice and Men"
       ],
-      "notable_works": [
+      "works": [
         "The Grapes of Wrath",
         "Of Mice and Men",
         "East of Eden"
@@ -882,14 +882,14 @@
     {
       "id": "30",
       "name": "Ernest Hemingway",
-      "birth_year": 1899,
-      "death_year": 1961,
+      "birthYear": 1899,
+      "deathYear": 1961,
       "nationality": "American",
       "genres": [
         "Modernist",
         "War Fiction"
       ],
-      "notable_works": [
+      "works": [
         "The Old Man and the Sea",
         "A Farewell to Arms",
         "For Whom the Bell Tolls"
@@ -901,14 +901,14 @@
     {
       "id": "31",
       "name": "Oscar Wilde",
-      "birth_year": 1854,
-      "death_year": 1900,
+      "birthYear": 1854,
+      "deathYear": 1900,
       "nationality": "Irish",
       "genres": [
         "Comedy",
         "Satire"
       ],
-      "notable_works": [
+      "works": [
         "The Picture of Dorian Gray",
         "The Importance of Being Earnest",
         "Lady Windermere's Fan"
@@ -920,14 +920,14 @@
     {
       "id": "32",
       "name": "Jorge Luis Borges",
-      "birth_year": 1899,
-      "death_year": 1986,
+      "birthYear": 1899,
+      "deathYear": 1986,
       "nationality": "Argentine",
       "genres": [
         "Magic Realism",
         "Short Stories"
       ],
-      "notable_works": [
+      "works": [
         "Ficciones",
         "The Aleph",
         "Labyrinths"
@@ -939,14 +939,14 @@
     {
       "id": "33",
       "name": "F. Scott Fitzgerald",
-      "birth_year": 1896,
-      "death_year": 1940,
+      "birthYear": 1896,
+      "deathYear": 1940,
       "nationality": "American",
       "genres": [
         "Jazz Age",
         "Lost Generation"
       ],
-      "notable_works": [
+      "works": [
         "The Great Gatsby",
         "Tender Is the Night",
         "This Side of Paradise"
@@ -958,14 +958,14 @@
     {
       "id": "34",
       "name": "Dante Alighieri",
-      "birth_year": 1265,
-      "death_year": 1321,
+      "birthYear": 1265,
+      "deathYear": 1321,
       "nationality": "Italian",
       "genres": [
         "Epic Poetry",
         "Allegory"
       ],
-      "notable_works": [
+      "works": [
         "Divine Comedy",
         "Inferno",
         "Purgatorio",
@@ -978,14 +978,14 @@
     {
       "id": "35",
       "name": "Yukio Mishima",
-      "birth_year": 1925,
-      "death_year": 1970,
+      "birthYear": 1925,
+      "deathYear": 1970,
       "nationality": "Japanese",
       "genres": [
         "Modernist",
         "Historical Fiction"
       ],
-      "notable_works": [
+      "works": [
         "Confessions of a Mask",
         "The Temple of the Golden Pavilion",
         "Spring Snow"
@@ -997,13 +997,13 @@
     {
       "id": "36",
       "name": "Margaret Atwood",
-      "birth_year": 1939,
+      "birthYear": 1939,
       "nationality": "Canadian",
       "genres": [
         "Dystopian",
         "Speculative Fiction"
       ],
-      "notable_works": [
+      "works": [
         "The Handmaid's Tale",
         "Alias Grace",
         "Oryx and Crake"
@@ -1015,14 +1015,14 @@
     {
       "id": "37",
       "name": "Zora Neale Hurston",
-      "birth_year": 1891,
-      "death_year": 1960,
+      "birthYear": 1891,
+      "deathYear": 1960,
       "nationality": "American",
       "genres": [
         "African-American Literature",
         "Anthropology"
       ],
-      "notable_works": [
+      "works": [
         "Their Eyes Were Watching God",
         "Mules and Men",
         "Dust Tracks on a Road"
@@ -1034,14 +1034,14 @@
     {
       "id": "38",
       "name": "J.R.R. Tolkien",
-      "birth_year": 1892,
-      "death_year": 1973,
+      "birthYear": 1892,
+      "deathYear": 1973,
       "nationality": "British",
       "genres": [
         "Fantasy",
         "Adventure"
       ],
-      "notable_works": [
+      "works": [
         "The Lord of the Rings",
         "The Hobbit",
         "The Silmarillion"
@@ -1053,13 +1053,13 @@
     {
       "id": "39",
       "name": "Khaled Hosseini",
-      "birth_year": 1965,
+      "birthYear": 1965,
       "nationality": "Afghan-American",
       "genres": [
         "Contemporary Fiction",
         "Historical Fiction"
       ],
-      "notable_works": [
+      "works": [
         "The Kite Runner",
         "A Thousand Splendid Suns",
         "And the Mountains Echoed"
@@ -1071,14 +1071,14 @@
     {
       "id": "40",
       "name": "Ray Bradbury",
-      "birth_year": 1920,
-      "death_year": 2012,
+      "birthYear": 1920,
+      "deathYear": 2012,
       "nationality": "American",
       "genres": [
         "Science Fiction",
         "Fantasy"
       ],
-      "notable_works": [
+      "works": [
         "Fahrenheit 451",
         "The Martian Chronicles",
         "Something Wicked This Way Comes"
@@ -1090,14 +1090,14 @@
     {
       "id": "41",
       "name": "Toni Morrison",
-      "birth_year": 1931,
-      "death_year": 2019,
+      "birthYear": 1931,
+      "deathYear": 2019,
       "nationality": "American",
       "genres": [
         "African-American Literature",
         "Magical Realism"
       ],
-      "notable_works": [
+      "works": [
         "Beloved",
         "Song of Solomon",
         "The Bluest Eye"
@@ -1109,13 +1109,13 @@
     {
       "id": "42",
       "name": "J.K. Rowling",
-      "birth_year": 1965,
+      "birthYear": 1965,
       "nationality": "British",
       "genres": [
         "Fantasy",
         "Young Adult"
       ],
-      "notable_works": [
+      "works": [
         "Harry Potter Series",
         "The Casual Vacancy",
         "Fantastic Beasts and Where to Find Them"
@@ -1130,589 +1130,589 @@
       "id": "1",
       "title": "The Brothers Karamazov",
       "author": "Fyodor Dostoevsky",
-      "publication_year": 1880,
+      "publicationYear": 1880,
       "genres": [
         "Classic",
         "Philosophical Fiction"
       ],
       "description": "A complex novel exploring themes of spirituality, morality, and human nature.",
-      "cover_image": "https://cdn.kobo.com/book-images/c3a484bc-73d8-4412-94d0-cf36f9e21bbe/1200/1200/False/the-brothers-karamazov-7.jpg"
+      "image": "https://cdn.kobo.com/book-images/c3a484bc-73d8-4412-94d0-cf36f9e21bbe/1200/1200/False/the-brothers-karamazov-7.jpg"
     },
     {
       "id": "2",
       "title": "Crime and Punishment",
       "author": "Fyodor Dostoevsky",
-      "publication_year": 1866,
+      "publicationYear": 1866,
       "genres": [
         "Classic",
         "Psychological Fiction"
       ],
       "description": "A psychological thriller revolving around guilt, conscience, and redemption.",
-      "cover_image": "https://m.media-amazon.com/images/I/71++AI6Lk+L._AC_UF1000,1000_QL80_.jpg"
+      "image": "https://m.media-amazon.com/images/I/71++AI6Lk+L._AC_UF1000,1000_QL80_.jpg"
     },
     {
       "id": "3",
       "title": "The Picture of Dorian Gray",
       "author": "Oscar Wilde",
-      "publication_year": 1890,
+      "publicationYear": 1890,
       "genres": [
         "Gothic",
         "Philosophical Fiction"
       ],
       "description": "A novel about a man whose portrait ages while he retains his youth and beauty.",
-      "cover_image": "https://m.media-amazon.com/images/I/71fm0Ap7JcL._AC_UF894,1000_QL80_.jpg"
+      "image": "https://m.media-amazon.com/images/I/71fm0Ap7JcL._AC_UF894,1000_QL80_.jpg"
     },
     {
       "id": "4",
       "title": "The Count of Monte Cristo",
       "author": "Alexandre Dumas",
-      "publication_year": 1844,
+      "publicationYear": 1844,
       "genres": [
         "Adventure",
         "Historical Fiction"
       ],
       "description": "An adventure novel of revenge, love, and redemption set in the early 19th century.",
-      "cover_image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1692339248i/197029269.jpg"
+      "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1692339248i/197029269.jpg"
     },
     {
       "id": "5",
       "title": "To Kill a Mockingbird",
       "author": "Harper Lee",
-      "publication_year": 1960,
+      "publicationYear": 1960,
       "genres": [
         "Fiction",
         "Classic"
       ],
       "description": "A classic novel depicting racial injustice in the American South.",
-      "cover_image": "https://m.media-amazon.com/images/I/81aY1lxk+9L._AC_UF1000,1000_QL80_.jpg"
+      "image": "https://m.media-amazon.com/images/I/81aY1lxk+9L._AC_UF1000,1000_QL80_.jpg"
     },
     {
       "id": "6",
       "title": "1984",
       "author": "George Orwell",
-      "publication_year": 1949,
+      "publicationYear": 1949,
       "genres": [
         "Dystopian",
         "Science Fiction"
       ],
       "description": "A dystopian novel portraying a totalitarian society.",
-      "cover_image": "https://m.media-amazon.com/images/I/71rpa1-kyvL._AC_UF1000,1000_QL80_.jpg"
+      "image": "https://m.media-amazon.com/images/I/71rpa1-kyvL._AC_UF1000,1000_QL80_.jpg"
     },
     {
       "id": "7",
       "title": "Pride and Prejudice",
       "author": "Jane Austen",
-      "publication_year": 1813,
+      "publicationYear": 1813,
       "genres": [
         "Classic",
         "Romance"
       ],
       "description": "A classic novel exploring themes of love, marriage, and social norms.",
-      "cover_image": "https://images.squarespace-cdn.com/content/v1/58c180edff7c50dd0e51a2ad/1596042032039-IN7LLXRVDKGVC854LVHE/9780241375273.jpg"
+      "image": "https://images.squarespace-cdn.com/content/v1/58c180edff7c50dd0e51a2ad/1596042032039-IN7LLXRVDKGVC854LVHE/9780241375273.jpg"
     },
     {
       "id": "8",
       "title": "The Great Gatsby",
       "author": "F. Scott Fitzgerald",
-      "publication_year": 1925,
+      "publicationYear": 1925,
       "genres": [
         "Fiction",
         "Classic"
       ],
       "description": "A tale of the American Dream, wealth, and love during the Roaring Twenties.",
-      "cover_image": "https://static01.nyt.com/images/2013/04/26/business/Gatsbyjp/Gatsbyjp-superJumbo.jpg"
+      "image": "https://static01.nyt.com/images/2013/04/26/business/Gatsbyjp/Gatsbyjp-superJumbo.jpg"
     },
     {
       "id": "9",
       "title": "Moby-Dick",
       "author": "Herman Melville",
-      "publication_year": 1851,
+      "publicationYear": 1851,
       "genres": [
         "Fiction",
         "Adventure"
       ],
       "description": "The epic tale of Captain Ahab's obsession with the white whale.",
-      "cover_image": "https://static.yakaboo.ua/media/catalog/product/8/1/81wuzjpmxjl.jpg"
+      "image": "https://static.yakaboo.ua/media/catalog/product/8/1/81wuzjpmxjl.jpg"
     },
     {
       "id": "10",
       "title": "The Lord of the Rings",
       "author": "J.R.R. Tolkien",
-      "publication_year": 1954,
+      "publicationYear": 1954,
       "genres": [
         "Fantasy",
         "Adventure"
       ],
       "description": "An epic fantasy saga about the quest to destroy the One Ring.",
-      "cover_image": "https://m.media-amazon.com/images/I/7125+5E40JL._AC_UF1000,1000_QL80_.jpg"
+      "image": "https://m.media-amazon.com/images/I/7125+5E40JL._AC_UF1000,1000_QL80_.jpg"
     },
     {
       "id": "11",
       "title": "The Catcher in the Rye",
       "author": "J.D. Salinger",
-      "publication_year": 1951,
+      "publicationYear": 1951,
       "genres": [
         "Fiction",
         "Coming-of-age"
       ],
       "description": "A classic coming-of-age novel following Holden Caulfield's journey.",
-      "cover_image": "https://cdn.britannica.com/94/181394-050-2F76F7EE/Reproduction-cover-edition-The-Catcher-in-the.jpg"
+      "image": "https://cdn.britannica.com/94/181394-050-2F76F7EE/Reproduction-cover-edition-The-Catcher-in-the.jpg"
     },
     {
       "id": "12",
       "title": "The Hobbit",
       "author": "J.R.R. Tolkien",
-      "publication_year": 1937,
+      "publicationYear": 1937,
       "genres": [
         "Fantasy",
         "Adventure"
       ],
       "description": "The prequel to The Lord of the Rings, following Bilbo Baggins' journey.",
-      "cover_image": "https://m.media-amazon.com/images/I/712cDO7d73L._AC_UF1000,1000_QL80_.jpg"
+      "image": "https://m.media-amazon.com/images/I/712cDO7d73L._AC_UF1000,1000_QL80_.jpg"
     },
     {
       "id": "13",
       "title": "One Hundred Years of Solitude",
       "author": "Gabriel Garcia Marquez",
-      "publication_year": 1967,
+      "publicationYear": 1967,
       "genres": [
         "Magical Realism",
         "Literary Fiction"
       ],
       "description": "A multi-generational saga of the Buendía family in the fictional town of Macondo.",
-      "cover_image": "https://m.media-amazon.com/images/I/81MI6+TpYkL._AC_UF1000,1000_QL80_.jpg"
+      "image": "https://m.media-amazon.com/images/I/81MI6+TpYkL._AC_UF1000,1000_QL80_.jpg"
     },
     {
       "id": "14",
       "title": "War and Peace",
       "author": "Leo Tolstoy",
-      "publication_year": 1869,
+      "publicationYear": 1869,
       "genres": [
         "Historical Fiction",
         "Epic"
       ],
       "description": "A monumental work depicting the events of Russian society during the Napoleonic era.",
-      "cover_image": "https://m.media-amazon.com/images/I/81oHM-dzefL._AC_UF1000,1000_QL80_.jpg"
+      "image": "https://m.media-amazon.com/images/I/81oHM-dzefL._AC_UF1000,1000_QL80_.jpg"
     },
     {
       "id": "15",
       "title": "The Odyssey",
       "author": "Homer",
-      "publication_year": "8th century BCE",
+      "publicationYear": "8th century BCE",
       "genres": [
         "Epic",
         "Mythology"
       ],
       "description": "An ancient Greek epic poem recounting Odysseus' ten-year journey home after the Trojan War.",
-      "cover_image": "https://monsieurdidot.com/wp-content/uploads/2020/02/The-Odyssey.jpg"
+      "image": "https://monsieurdidot.com/wp-content/uploads/2020/02/The-Odyssey.jpg"
     },
     {
       "id": "16",
       "title": "The Divine Comedy",
       "author": "Dante Alighieri",
-      "publication_year": "1320",
+      "publicationYear": "1320",
       "genres": [
         "Epic",
         "Poetry"
       ],
       "description": "An epic poem that follows the journey of the soul through Hell, Purgatory, and Heaven.",
-      "cover_image": "https://m.media-amazon.com/images/I/61EWhC9E6IL._AC_UF1000,1000_QL80_.jpg"
+      "image": "https://m.media-amazon.com/images/I/61EWhC9E6IL._AC_UF1000,1000_QL80_.jpg"
     },
     {
       "id": "17",
       "title": "Brave New World",
       "author": "Aldous Huxley",
-      "publication_year": 1932,
+      "publicationYear": 1932,
       "genres": [
         "Dystopian",
         "Science Fiction"
       ],
       "description": "A dystopian vision of a future society obsessed with pleasure and conformity.",
-      "cover_image": "https://2084futurosimaginados.org/wp-content/uploads/2021/03/20da22f3dfa2a5393fc3e1a2bf986012.jpg"
+      "image": "https://2084futurosimaginados.org/wp-content/uploads/2021/03/20da22f3dfa2a5393fc3e1a2bf986012.jpg"
     },
     {
       "id": "18",
       "title": "Anna Karenina",
       "author": "Leo Tolstoy",
-      "publication_year": 1877,
+      "publicationYear": 1877,
       "genres": [
         "Classic",
         "Romance"
       ],
       "description": "A tragic love story set against the backdrop of Russian high society.",
-      "cover_image": "https://m.media-amazon.com/images/I/71dfDiH-BKL._AC_UF1000,1000_QL80_.jpg"
+      "image": "https://m.media-amazon.com/images/I/71dfDiH-BKL._AC_UF1000,1000_QL80_.jpg"
     },
     {
       "id": "19",
       "title": "The Alchemist",
       "author": "Paulo Coelho",
-      "publication_year": 1988,
+      "publicationYear": 1988,
       "genres": [
         "Fiction",
         "Philosophical"
       ],
       "description": "A philosophical novel about a shepherd boy's journey to find his personal legend.",
-      "cover_image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1654371463i/18144590.jpg"
+      "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1654371463i/18144590.jpg"
     },
     {
       "id": "20",
       "title": "The Adventures of Huckleberry Finn",
       "author": "Mark Twain",
-      "publication_year": 1884,
+      "publicationYear": 1884,
       "genres": [
         "Adventure",
         "Satire"
       ],
       "description": "A satirical novel following Huck Finn's journey down the Mississippi River.",
-      "cover_image": "https://cdn.kobo.com/book-images/672378fc-47c4-421b-96dd-f36b82572030/1200/1200/False/adventures-of-huckleberry-finn-125.jpg"
+      "image": "https://cdn.kobo.com/book-images/672378fc-47c4-421b-96dd-f36b82572030/1200/1200/False/adventures-of-huckleberry-finn-125.jpg"
     },
     {
       "id": "21",
       "title": "The Iliad",
       "author": "Homer",
-      "publication_year": "8th century BCE",
+      "publicationYear": "8th century BCE",
       "genres": [
         "Epic",
         "Mythology"
       ],
       "description": "An ancient Greek epic poem about the Trojan War and the hero Achilles.",
-      "cover_image": "https://m.media-amazon.com/images/I/71FVVdj9w4L._AC_UF1000,1000_QL80_.jpg"
+      "image": "https://m.media-amazon.com/images/I/71FVVdj9w4L._AC_UF1000,1000_QL80_.jpg"
     },
     {
       "id": "22",
       "title": "Don Quixote",
       "author": "Miguel de Cervantes",
-      "publication_year": 1605,
+      "publicationYear": 1605,
       "genres": [
         "Classic",
         "Satire"
       ],
       "description": "A satirical novel about a deluded knight and his faithful squire, Sancho Panza.",
-      "cover_image": "https://cdn.kobo.com/book-images/392971e9-4f19-4827-a041-3abe4d0e1f54/1200/1200/False/don-quixote-111.jpg"
+      "image": "https://cdn.kobo.com/book-images/392971e9-4f19-4827-a041-3abe4d0e1f54/1200/1200/False/don-quixote-111.jpg"
     },
     {
       "id": "23",
       "title": "Frankenstein",
       "author": "Mary Shelley",
-      "publication_year": 1818,
+      "publicationYear": 1818,
       "genres": [
         "Gothic",
         "Science Fiction"
       ],
       "description": "A novel about the creation of a monster and the consequences of playing god.",
-      "cover_image": "https://m.media-amazon.com/images/I/710p9SUfZtL._AC_UF1000,1000_QL80_.jpg"
+      "image": "https://m.media-amazon.com/images/I/710p9SUfZtL._AC_UF1000,1000_QL80_.jpg"
     },
     {
       "id": "24",
       "title": "Alice's Adventures in Wonderland",
       "author": "Lewis Carroll",
-      "publication_year": 1865,
+      "publicationYear": 1865,
       "genres": [
         "Fantasy",
         "Children's Literature"
       ],
       "description": "A whimsical tale about a girl named Alice who falls into a magical world.",
-      "cover_image": "https://m.media-amazon.com/images/I/71aWNbRZizL._AC_UF1000,1000_QL80_.jpg"
+      "image": "https://m.media-amazon.com/images/I/71aWNbRZizL._AC_UF1000,1000_QL80_.jpg"
     },
     {
       "id": "25",
       "title": "The Little Prince",
       "author": "Antoine de Saint-Exupéry",
-      "publication_year": 1943,
+      "publicationYear": 1943,
       "genres": [
         "Fable",
         "Children's Literature"
       ],
       "description": "A philosophical novella about a young prince's journey through the universe.",
-      "cover_image": "https://m.media-amazon.com/images/I/81G2R0luQJL._AC_UF1000,1000_QL80_.jpg"
+      "image": "https://m.media-amazon.com/images/I/81G2R0luQJL._AC_UF1000,1000_QL80_.jpg"
     },
     {
       "id": "26",
       "title": "The Book Thief",
       "author": "Markus Zusak",
-      "publication_year": 2005,
+      "publicationYear": 2005,
       "genres": [
         "Historical Fiction",
         "War"
       ],
       "description": "A story of a girl living in Nazi Germany, narrated by Death.",
-      "cover_image": "https://m.media-amazon.com/images/I/71H2SJik5AL._AC_UF1000,1000_QL80_.jpg"
+      "image": "https://m.media-amazon.com/images/I/71H2SJik5AL._AC_UF1000,1000_QL80_.jpg"
     },
     {
       "id": "27",
       "title": "Slaughterhouse-Five",
       "author": "Kurt Vonnegut",
-      "publication_year": 1969,
+      "publicationYear": 1969,
       "genres": [
         "Satire",
         "Science Fiction"
       ],
       "description": "An anti-war novel that mixes science fiction and dark humor.",
-      "cover_image": "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/a6f12b36647613.57239ae80c140.png"
+      "image": "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/a6f12b36647613.57239ae80c140.png"
     },
     {
       "id": "28",
       "title": "The Grapes of Wrath",
       "author": "John Steinbeck",
-      "publication_year": 1939,
+      "publicationYear": 1939,
       "genres": [
         "Historical Fiction",
         "Social Commentary"
       ],
       "description": "A novel about the plight of migrant workers during the Great Depression.",
-      "cover_image": "https://upload.wikimedia.org/wikipedia/commons/a/ad/The_Grapes_of_Wrath_%281939_1st_ed_cover%29.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/a/ad/The_Grapes_of_Wrath_%281939_1st_ed_cover%29.jpg"
     },
     {
       "id": "29",
       "title": "Fahrenheit 451",
       "author": "Ray Bradbury",
-      "publication_year": 1953,
+      "publicationYear": 1953,
       "genres": [
         "Dystopian",
         "Science Fiction"
       ],
       "description": "A dystopian novel depicting a future society where books are banned.",
-      "cover_image": "https://m.media-amazon.com/images/I/81hP6SAlxQL._AC_UF1000,1000_QL80_.jpg"
+      "image": "https://m.media-amazon.com/images/I/81hP6SAlxQL._AC_UF1000,1000_QL80_.jpg"
     },
     {
       "id": "30",
       "title": "The Lord of the Flies",
       "author": "William Golding",
-      "publication_year": 1954,
+      "publicationYear": 1954,
       "genres": [
         "Dystopian",
         "Psychological Fiction"
       ],
       "description": "A novel about a group of British boys stranded on an uninhabited island.",
-      "cover_image": "https://knygynas.biz/cdn/shop/products/lordofthefliesUS_1200x1200.jpg?v=1586947352"
+      "image": "https://knygynas.biz/cdn/shop/products/lordofthefliesUS_1200x1200.jpg?v=1586947352"
     },
     {
       "id": "31",
       "title": "The Hitchhiker's Guide to the Galaxy",
       "author": "Douglas Adams",
-      "publication_year": 1979,
+      "publicationYear": 1979,
       "genres": [
         "Science Fiction",
         "Comedy"
       ],
       "description": "A comedic science fiction series about the misadventures of Arthur Dent.",
-      "cover_image": "https://assets-eu-01.kc-usercontent.com/bcd02f72-b50c-0179-8b4b-5e44f5340bd4/0731ccbe-23bb-43a5-9e0e-9a33fbc9213f/hitchhikers-guide-to-the-galaxy-42nd-anniversary-cover.jpg?w=660&h=1000&auto=format&bg=%23efefef&fit=crop"
+      "image": "https://assets-eu-01.kc-usercontent.com/bcd02f72-b50c-0179-8b4b-5e44f5340bd4/0731ccbe-23bb-43a5-9e0e-9a33fbc9213f/hitchhikers-guide-to-the-galaxy-42nd-anniversary-cover.jpg?w=660&h=1000&auto=format&bg=%23efefef&fit=crop"
     },
     {
       "id": "32",
       "title": "A Tale of Two Cities",
       "author": "Charles Dickens",
-      "publication_year": 1859,
+      "publicationYear": 1859,
       "genres": [
         "Historical Fiction",
         "Classic"
       ],
       "description": "A historical novel set during the French Revolution, exploring themes of sacrifice and resurrection.",
-      "cover_image": "https://m.media-amazon.com/images/I/71CQFGiPA+L._AC_UF894,1000_QL80_.jpg"
+      "image": "https://m.media-amazon.com/images/I/71CQFGiPA+L._AC_UF894,1000_QL80_.jpg"
     },
     {
       "id": "33",
       "title": "The Chronicles of Narnia",
       "author": "C.S. Lewis",
-      "publication_year": 1950,
+      "publicationYear": 1950,
       "genres": [
         "Fantasy",
         "Children's Literature"
       ],
       "description": "A series of fantasy novels set in the magical land of Narnia.",
-      "cover_image": "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/35b58377580807.5c8b908b455d6.jpg"
+      "image": "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/35b58377580807.5c8b908b455d6.jpg"
     },
     {
       "id": "34",
       "title": "The Handmaid's Tale",
       "author": "Margaret Atwood",
-      "publication_year": 1985,
+      "publicationYear": 1985,
       "genres": [
         "Dystopian",
         "Feminist Fiction"
       ],
       "description": "A dystopian novel set in a totalitarian society where women are subjugated.",
-      "cover_image": "https://m.media-amazon.com/images/I/61su39k8NUL._AC_UF1000,1000_QL80_.jpg"
+      "image": "https://m.media-amazon.com/images/I/61su39k8NUL._AC_UF1000,1000_QL80_.jpg"
     },
     {
       "id": "35",
       "title": "The Name of the Rose",
       "author": "Umberto Eco",
-      "publication_year": 1980,
+      "publicationYear": 1980,
       "genres": [
         "Historical Fiction",
         "Mystery"
       ],
       "description": "A medieval mystery novel set in an Italian monastery.",
-      "cover_image": "https://m.media-amazon.com/images/I/91-O6LnH1ML._AC_UF894,1000_QL80_.jpg"
+      "image": "https://m.media-amazon.com/images/I/91-O6LnH1ML._AC_UF894,1000_QL80_.jpg"
     },
     {
       "id": "36",
       "title": "The Trial",
       "author": "Franz Kafka",
-      "publication_year": 1925,
+      "publicationYear": 1925,
       "genres": [
         "Absurdist Fiction",
         "Existential"
       ],
       "description": "A surreal novel exploring themes of guilt, law, and justice.",
-      "cover_image": "https://m.media-amazon.com/images/I/913pYEZyNXL._AC_UF894,1000_QL80_.jpg"
+      "image": "https://m.media-amazon.com/images/I/913pYEZyNXL._AC_UF894,1000_QL80_.jpg"
     },
     {
       "id": "37",
       "title": "The Kite Runner",
       "author": "Khaled Hosseini",
-      "publication_year": 2003,
+      "publicationYear": 2003,
       "genres": [
         "Historical Fiction",
         "Drama"
       ],
       "description": "A novel about friendship, redemption, and the impact of war in Afghanistan.",
-      "cover_image": "https://m.media-amazon.com/images/I/71CKjYXMJrL._AC_UF1000,1000_QL80_.jpg"
+      "image": "https://m.media-amazon.com/images/I/71CKjYXMJrL._AC_UF1000,1000_QL80_.jpg"
     },
     {
       "id": "38",
       "title": "The Pillars of the Earth",
       "author": "Ken Follett",
-      "publication_year": 1989,
+      "publicationYear": 1989,
       "genres": [
         "Historical Fiction",
         "Adventure"
       ],
       "description": "An epic historical novel set in 12th-century England, centered around the construction of a cathedral.",
-      "cover_image": "https://m.media-amazon.com/images/I/91ciGpH9rQL._AC_UF1000,1000_QL80_.jpg"
+      "image": "https://m.media-amazon.com/images/I/91ciGpH9rQL._AC_UF1000,1000_QL80_.jpg"
     },
     {
       "id": "39",
       "title": "The Shadow of the Wind",
       "author": "Carlos Ruiz Zafón",
-      "publication_year": 2001,
+      "publicationYear": 2001,
       "genres": [
         "Mystery",
         "Gothic"
       ],
       "description": "A mystery novel set in post-war Barcelona, revolving around a forgotten book and its author.",
-      "cover_image": "https://m.media-amazon.com/images/I/913DdP7RflL._AC_UF894,1000_QL80_.jpg"
+      "image": "https://m.media-amazon.com/images/I/913DdP7RflL._AC_UF894,1000_QL80_.jpg"
     },
     {
       "id": "40",
       "title": "The Secret Garden",
       "author": "Frances Hodgson Burnett",
-      "publication_year": 1911,
+      "publicationYear": 1911,
       "genres": [
         "Children's Literature",
         "Classic"
       ],
       "description": "A classic children's novel about a young girl who discovers a hidden garden.",
-      "cover_image": "https://m.media-amazon.com/images/I/81K8MI7oH8S._AC_UF1000,1000_QL80_.jpg"
+      "image": "https://m.media-amazon.com/images/I/81K8MI7oH8S._AC_UF1000,1000_QL80_.jpg"
     },
     {
       "id": "41",
       "title": "The Giver",
       "author": "Lois Lowry",
-      "publication_year": 1993,
+      "publicationYear": 1993,
       "genres": [
         "Dystopian",
         "Young Adult"
       ],
       "description": "A dystopian novel about a society with strict control over emotions and memories.",
-      "cover_image": "https://m.media-amazon.com/images/I/81cJChEQjSL._AC_UF1000,1000_QL80_.jpg"
+      "image": "https://m.media-amazon.com/images/I/81cJChEQjSL._AC_UF1000,1000_QL80_.jpg"
     },
     {
       "id": "42",
       "title": "The Metamorphosis",
       "author": "Franz Kafka",
-      "publication_year": 1915,
+      "publicationYear": 1915,
       "genres": [
         "Absurdist Fiction",
         "Existential"
       ],
       "description": "A novella about a man who wakes up one morning transformed into a giant insect.",
-      "cover_image": "https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781609775704/the-metamorphosis-9781609775704_hr.jpg"
+      "image": "https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781609775704/the-metamorphosis-9781609775704_hr.jpg"
     },
     {
       "id": "43",
       "title": "Gone with the Wind",
       "author": "Margaret Mitchell",
-      "publication_year": 1936,
+      "publicationYear": 1936,
       "genres": [
         "Historical Fiction",
         "Romance"
       ],
       "description": "A historical novel set during the American Civil War, centered around Scarlett O'Hara.",
-      "cover_image": "https://m.media-amazon.com/images/I/718gkx8l6pL._AC_UF1000,1000_QL80_.jpg"
+      "image": "https://m.media-amazon.com/images/I/718gkx8l6pL._AC_UF1000,1000_QL80_.jpg"
     },
     {
       "id": "44",
       "title": "The Wind in the Willows",
       "author": "Kenneth Grahame",
-      "publication_year": 1908,
+      "publicationYear": 1908,
       "genres": [
         "Children's Literature",
         "Fantasy"
       ],
       "description": "A children's novel about the adventures of anthropomorphic animals.",
-      "cover_image": "https://upload.wikimedia.org/wikipedia/commons/1/15/The_Wind_in_the_Willows_cover.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/1/15/The_Wind_in_the_Willows_cover.jpg"
     },
     {
       "id": "45",
       "title": "Dracula",
       "author": "Bram Stoker",
-      "publication_year": 1897,
+      "publicationYear": 1897,
       "genres": [
         "Gothic",
         "Horror"
       ],
       "description": "A Gothic horror novel about the vampire Count Dracula's attempt to move to England.",
-      "cover_image": "https://mpd-biblio-covers.imgix.net/9780312148263.jpg"
+      "image": "https://mpd-biblio-covers.imgix.net/9780312148263.jpg"
     },
     {
       "id": "46",
       "title": "The Call of the Wild",
       "author": "Jack London",
-      "publication_year": 1903,
+      "publicationYear": 1903,
       "genres": [
         "Adventure",
         "Nature"
       ],
       "description": "An adventure novel about a domestic dog's life in the wilds of the Yukon.",
-      "cover_image": "https://digital.lib.usu.edu/digital/api/singleitem/image/jacklondon/688/default.jpg"
+      "image": "https://digital.lib.usu.edu/digital/api/singleitem/image/jacklondon/688/default.jpg"
     },
     {
       "id": "47",
       "title": "The Stand",
       "author": "Stephen King",
-      "publication_year": 1978,
+      "publicationYear": 1978,
       "genres": [
         "Horror",
         "Post-Apocalyptic"
       ],
       "description": "A post-apocalyptic horror novel about a deadly pandemic and its aftermath.",
-      "cover_image": "https://www.hachette.co.uk/wp-content/uploads/2020/11/hbg-title-9781529370515-25.jpg"
+      "image": "https://www.hachette.co.uk/wp-content/uploads/2020/11/hbg-title-9781529370515-25.jpg"
     },
     {
       "id": "48",
       "title": "The Color Purple",
       "author": "Alice Walker",
-      "publication_year": 1982,
+      "publicationYear": 1982,
       "genres": [
         "Fiction",
         "Historical"
       ],
       "description": "A novel about the life of African-American women in the Southern United States.",
-      "cover_image": "https://i.cbc.ca/1.4055260.1491334408!/fileImage/httpImage/image.jpg_gen/derivatives/original_780/book-cover-the-color-purple-by-alice-walker.jpg"
+      "image": "https://i.cbc.ca/1.4055260.1491334408!/fileImage/httpImage/image.jpg_gen/derivatives/original_780/book-cover-the-color-purple-by-alice-walker.jpg"
     },
     {
       "id": "49",
       "title": "The Silmarillion",
       "author": "J.R.R. Tolkien",
-      "publication_year": 1977,
+      "publicationYear": 1977,
       "genres": [
         "Fantasy",
         "Mythopoeia"
       ],
       "description": "A collection of mythopoeic stories about the history of Middle-earth.",
-      "cover_image": "https://i.harperapps.com/covers/9780008433949/y648.jpg"
+      "image": "https://i.harperapps.com/covers/9780008433949/y648.jpg"
     }
   ],
   "wishlist": [
@@ -1726,7 +1726,7 @@
         "Philosophical Fiction"
       ],
       "description": "A complex novel exploring themes of spirituality, morality, and human nature.",
-      "coverImage": "https://cdn.kobo.com/book-images/c3a484bc-73d8-4412-94d0-cf36f9e21bbe/1200/1200/False/the-brothers-karamazov-7.jpg"
+      "image": "https://cdn.kobo.com/book-images/c3a484bc-73d8-4412-94d0-cf36f9e21bbe/1200/1200/False/the-brothers-karamazov-7.jpg"
     },
     {
       "id": "2",
@@ -1738,7 +1738,7 @@
         "Psychological Fiction"
       ],
       "description": "A psychological thriller revolving around guilt, conscience, and redemption.",
-      "coverImage": "https://m.media-amazon.com/images/I/71++AI6Lk+L._AC_UF1000,1000_QL80_.jpg"
+      "image": "https://m.media-amazon.com/images/I/71++AI6Lk+L._AC_UF1000,1000_QL80_.jpg"
     }
   ]
 }

@@ -73,6 +73,31 @@
     opacity: 1;
 }
 
+.notable-work-card {
+    height: 340px;
+    min-width: 200px;
+    width: 220px;
+    opacity: 0.8;
+    margin-bottom: 2px;
+    padding-bottom: 10px;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .card-image {
+        height: 270px !important;
+        width: 200px !important;
+        background-size: cover;
+        border-radius: 14px !important;
+    }
+
+    .card-name {
+        text-align: center;
+    }
+
+}
+
 @media (max-width: 1500px) {
     .book-card {
         height: 330px !important;
@@ -127,6 +152,16 @@
             width: 90% !important;
         }
     }
+
+    .notable-work-card {
+        height: 320px !important;
+        min-width: 180px !important;
+
+        .card-image {
+            height: 250px !important;
+            width: 180px !important;
+        }
+    }
 }
 
 @media (max-width: 880px) {
@@ -153,13 +188,22 @@
             width: 100% !important;
         }
     }
+
+    .notable-work-card {
+        height: 300px !important;
+        min-width: 150px !important;
+
+        .card-image {
+            height: 220px !important;
+            width: 160px !important;
+        }
+    }
 }
 
 @media (max-width: 760px) {
     .book-card {
         height: 340px !important;
         min-width: 145px !important;
-        // width: 17% !important;
 
         .card-image {
             height: 230px !important;
@@ -179,6 +223,7 @@
             width: 110px !important;
         }
     }
+
     .book-card {
         height: 320px !important;
         min-width: 130px !important;
@@ -207,7 +252,7 @@
     }
 
     .card-name {
-        font-size: 13px;        
+        font-size: 13px;
     }
 }
 
@@ -221,7 +266,17 @@
         }
     }
 
-  
+    .notable-work-card {
+        height: 280px !important;
+        min-width: 150px !important;
+
+        .card-image {
+            height: 220px !important;
+            width: 140px !important;
+        }
+    }
+
+
 }
 
 @media (max-width: 470px) {
@@ -235,6 +290,7 @@
             width: 90px !important;
         }
     }
+
     .book-card {
         height: 280px !important;
         min-width: 110px !important;
@@ -245,13 +301,14 @@
 
         }
     }
+
     .card-subtitle,
     .card-list-item {
         font-size: 10px;
     }
 
     .card-name {
-        font-size: 11px;        
+        font-size: 11px;
     }
 }
 
@@ -267,6 +324,17 @@
 
         }
     }
+
+    .notable-work-card {
+        height: 250px !important;
+        min-width: 130px !important;
+
+        .card-image {
+            height: 190px !important;
+            width: 120px !important;
+        }
+    }
+
 }
 
 @media (max-width: 350px) {

@@ -5,23 +5,20 @@ export type Author = {
   image: string;
   award: string;
   biography: string;
-  birth_year: number;
-  death_year: number;
   nationality: string;
+  birthYear: number;
+  deathYear: number;
   works: string[];
-  notable_works?: string[];
 };
 
 export type Book = {
   id: string;
+  title: string;
   author: string;
+  publicationYear: number;
   genres: string[];
   image: string;
   description: string;
-  publicationYear: number;
-  title: string;
-  cover_image?: string;
-  publication_year?: number;
 };
 
 

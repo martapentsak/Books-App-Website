@@ -45,5 +45,12 @@ export const selectorsValues = {
     genres: "Genres",
     nationality: "Nationality",
     century: "Century",
-  },
+  }
+}
+
+export const authorPageTitles = {
+  award: "Award",
+  born: "Born",
+  died: "Died",
+  worksTitle: "Notable works",
 };

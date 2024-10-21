@@ -16,7 +16,6 @@ const providers = [
   BooksProvider,
   WishListProvider,
 ];
-
 const CombinedProviders = composeProviders(providers);
 
 createRoot(document.getElementById("root")!).render(
