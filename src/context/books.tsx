@@ -40,10 +40,7 @@ export const BooksProvider = ({ children }: Props) => {
     await waitForAnimationFinish();
     try {
       const reponse = await axios.get(booksApi);
-      const list = reponse.data.map(({ ...others }: Book) => ({
-        ...others,
-      }));
-      setBooks(list);
+      setBooks(reponse.data);
     } catch {
       setError(errors.getbooks);
     } finally {

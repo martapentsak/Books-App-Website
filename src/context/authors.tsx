@@ -24,18 +24,8 @@ type ProviderValues = {
   handleCloseAuthorsError: () => void;
 };
 
-type DataProp = {
-  data: Author[];
-};
-
 type Props = {
   children: ReactNode;
-};
-
-const formatAuthorResponse = (response: DataProp): Author[] => {
-  return response.data.map(({ ...others }) => ({
-    ...others,
-  }));
 };
 
 export const AuthorContext = createContext({} as ProviderValues);
@@ -58,8 +48,8 @@ export const AuthorProvider = ({ children }: Props) => {
         authorResponse,
         poetsResponse,
       ]);
-      setAuthors(formatAuthorResponse(authorList));
-      setPoets(formatAuthorResponse(poetList));
+      setAuthors(authorList.data);
+      setPoets(poetList.data);
     } catch {
       setError(errors.getauthors);
     } finally {
