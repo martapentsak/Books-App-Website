@@ -22,8 +22,6 @@ type ProviderValues = {
   handleCloseBooksError: () => void;
 };
 
-type BookResponse = Omit<Book, "publicationYear" | "image">;
-
 type Props = {
   children: ReactNode;
 };
@@ -42,13 +40,9 @@ export const BooksProvider = ({ children }: Props) => {
     await waitForAnimationFinish();
     try {
       const reponse = await axios.get(booksApi);
-      const list = reponse.data.map(
-        ({ cover_image, publication_year, ...others }: BookResponse) => ({
-          publicationYear: publication_year,
-          image: cover_image,
-          ...others,
-        })
-      );
+      const list = reponse.data.map(({ ...others }: Book) => ({
+        ...others,
+      }));
       setBooks(list);
     } catch {
       setError(errors.getbooks);

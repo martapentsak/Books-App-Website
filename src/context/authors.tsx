@@ -13,6 +13,7 @@ import { authorsAPi, poetsApi } from "../constants/api";
 import useAsyncEffect from "../hooks/useAsyncEffect";
 
 import { waitForAnimationFinish } from "../helpers/waitForAnimationFinish";
+
 import { Author } from "../types/AuthorBookType";
 
 type ProviderValues = {
@@ -23,16 +24,8 @@ type ProviderValues = {
   handleCloseAuthorsError: () => void;
 };
 
-type AuthorBase = Omit<Author, "birthYear" | "deathYear" | "works">;
-
-type AuthorResponse = AuthorBase & {
-  birth_year: number;
-  death_year: number;
-  notable_works: string[];
-};
-
 type DataProp = {
-  data: AuthorResponse[];
+  data: Author[];
 };
 
 type Props = {
@@ -40,14 +33,9 @@ type Props = {
 };
 
 const formatAuthorResponse = (response: DataProp): Author[] => {
-  return response.data.map(
-    ({ notable_works, birth_year, death_year, ...others }) => ({
-      birthYear: birth_year || 0,
-      deathYear: death_year || 0,
-      works: notable_works || [],
-      ...others,
-    })
-  );
+  return response.data.map(({ ...others }) => ({
+    ...others,
+  }));
 };
 
 export const AuthorContext = createContext({} as ProviderValues);
