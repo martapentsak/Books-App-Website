@@ -9,9 +9,6 @@ export type Author = {
   works: string[];
   birthYear: number;
   deathYear: number;
-  notable_works?: string[];
-  death_year?: number;
-  birth_year?: number;
 };
 
 export type Book = {

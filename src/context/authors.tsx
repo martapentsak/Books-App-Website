@@ -23,7 +23,18 @@ type ProviderValues = {
   poets: Author[];
   handleCloseAuthorsError: () => void;
 };
-type AuthorResponse = Omit<Author, "works" | "birthYear" | "deathYear">;
+type AuthorResponse = {
+  id: string;
+  name: string,
+  genres: string[];
+  image: string;
+  award: string;
+  biography: string;
+  nationality: string;
+  notable_works?: string[];
+  death_year?: number;
+  birth_year?: number;
+}
 
 type Props = {
   children: ReactNode;
