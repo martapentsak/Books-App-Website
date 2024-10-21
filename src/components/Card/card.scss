@@ -73,7 +73,7 @@
     opacity: 1;
 }
 
-.works-card {
+.notable-work-card {
     height: 340px;
     min-width: 200px;
     width: 220px;
@@ -83,7 +83,7 @@
     margin-right: 10px;
     display: flex;
     flex-direction: column;
-    justify-content:  center;
+    justify-content: center;
 
     .card-image {
         height: 270px !important;
@@ -93,7 +93,7 @@
     }
 
     .card-name {
-     text-align: center;
+        text-align: center;
     }
 
 }
@@ -153,10 +153,10 @@
         }
     }
 
-    .works-card {
+    .notable-work-card {
         height: 320px !important;
         min-width: 180px !important;
-    
+
         .card-image {
             height: 250px !important;
             width: 180px !important;
@@ -189,20 +189,10 @@
         }
     }
 
-    .works-card {
-        height: 300px !important;
-        min-width: 160px !important;
-    
-        .card-image {
-            height: 240px !important;
-            width: 160px !important;
-        }
-    }
-
-    .works-card {
+    .notable-work-card {
         height: 300px !important;
         min-width: 150px !important;
-    
+
         .card-image {
             height: 220px !important;
             width: 160px !important;
@@ -214,7 +204,6 @@
     .book-card {
         height: 340px !important;
         min-width: 145px !important;
-        // width: 17% !important;
 
         .card-image {
             height: 230px !important;
@@ -234,6 +223,7 @@
             width: 110px !important;
         }
     }
+
     .book-card {
         height: 320px !important;
         min-width: 130px !important;
@@ -262,7 +252,7 @@
     }
 
     .card-name {
-        font-size: 13px;        
+        font-size: 13px;
     }
 }
 
@@ -276,17 +266,17 @@
         }
     }
 
-    .works-card {
+    .notable-work-card {
         height: 280px !important;
         min-width: 150px !important;
-    
+
         .card-image {
             height: 220px !important;
             width: 140px !important;
         }
     }
 
-  
+
 }
 
 @media (max-width: 470px) {
@@ -300,6 +290,7 @@
             width: 90px !important;
         }
     }
+
     .book-card {
         height: 280px !important;
         min-width: 110px !important;
@@ -310,13 +301,14 @@
 
         }
     }
+
     .card-subtitle,
     .card-list-item {
         font-size: 10px;
     }
 
     .card-name {
-        font-size: 11px;        
+        font-size: 11px;
     }
 }
 
@@ -333,10 +325,10 @@
         }
     }
 
-    .works-card {
+    .notable-work-card {
         height: 250px !important;
         min-width: 130px !important;
-    
+
         .card-image {
             height: 190px !important;
             width: 120px !important;

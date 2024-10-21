@@ -10,13 +10,11 @@ import {
 import { errors } from "../constants/textValues";
 import { authorsAPi, poetsApi } from "../constants/api";
 
-import {Author} from '../types/AuthorBookType'
+import { Author } from "../types/AuthorBookType";
 
 import useAsyncEffect from "../hooks/useAsyncEffect";
 
 import { waitForAnimationFinish } from "../helpers/waitForAnimationFinish";
-
-
 
 type ProviderValues = {
   loading: boolean;
@@ -25,7 +23,7 @@ type ProviderValues = {
   poets: Author[];
   handleCloseAuthorsError: () => void;
 };
-type AuthorResponse = Omit<Author, "works">;
+type AuthorResponse = Omit<Author, "works" | "birthYear" | "deathYear">;
 
 type Props = {
   children: ReactNode;
@@ -36,10 +34,14 @@ type DataProp = {
 };
 
 const formatAuthorResponse = (response: DataProp): Author[] => {
-  return response.data.map(({ notable_works, ...others }) => ({
-    works: notable_works || [],
-    ...others,
-  }));
+  return response.data.map(
+    ({ notable_works, birth_year, death_year, ...others }) => ({
+      birthYear: birth_year !== undefined ? birth_year : 0,
+      deathYear: death_year !== undefined ? death_year : 0,
+      works: notable_works || [],
+      ...others,
+    })
+  );
 };
 
 export const AuthorContext = createContext({} as ProviderValues);
@@ -47,7 +49,6 @@ export const AuthorContext = createContext({} as ProviderValues);
 export const AuthorProvider = ({ children }: Props) => {
   const [authors, setAuthors] = useState<Author[]>([]);
   const [poets, setPoets] = useState<Author[]>([]);
-  
 
   const [loading, setLoading] = useState<boolean>(false);
 

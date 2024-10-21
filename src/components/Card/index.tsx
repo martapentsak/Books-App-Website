@@ -6,8 +6,8 @@ type Props = {
   className: string;
   image: string;
   title: string;
-  items: string[];
-  onClick: () => void;
+  items?: string[];
+  onClick?: () => void;
   subtitle?: string;
 };
 
@@ -21,14 +21,14 @@ export const Card = ({
 }: Props) => {
   return (
     <div className={className}>
-    <CardElement onClick={onClick}>
-      <CardActionArea>
+      <CardElement onClick={onClick}>
+        <CardActionArea>
           <CardContent>
             <div>
               <img src={image} alt={"card image"} className={"card-image"} />
               {subtitle && <span className="card-subtitle">{subtitle}</span>}
               <h2 className="card-name">{title}</h2>
-              {items.map((g, index) => (
+              {items?.map((g, index) => (
                 <span className="card-list-item" key={index}>
                   {g}
                   {index < items.length - 1 ? ", " : ""}

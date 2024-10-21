@@ -10,14 +10,12 @@ import { AuthorPage } from "../AuthorPage";
 export const AllRoutes = () => {
   return (
     <div className="books-app">
-     <div>
+      <div>
         <Menu />
         <Routes>
           <Route path={menuElemenets.links.home} element={<HomePage />} />
           <Route path="book/:bookId" element={<BookPage />} />
           <Route path="author/:authorId" element={<AuthorPage />} />
-
-
         </Routes>
       </div>
     </div>
