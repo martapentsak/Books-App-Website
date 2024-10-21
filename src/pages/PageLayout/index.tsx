@@ -2,11 +2,16 @@ import { useCallback, useMemo, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
 import { Card } from "../../components/Card";
+import { Loading } from "../../components/Loading";
+import { NotFound } from "../../components/NotFound";
+import { ListSection } from "../../components/ListSection";
 
 import { useAuthors } from "../../context/authors";
 import { useBooks } from "../../context/books";
 
-import { menuElemenets } from "../../constants/textValues";
+import { menuElemenets, selectorsValues } from "../../constants/textValues";
+
+import { Data } from "../../types/AuthorBookType";
 
 import { handleGetGenres } from "../../utils/handleGetGenres";
 import { handleGetNationality } from "../../utils/handleGetNationality";
@@ -21,10 +26,6 @@ import SearchIcon from "@mui/icons-material/Search";
 import InputLabel from "@mui/material/InputLabel";
 import FormControl from "@mui/material/FormControl";
 import NativeSelect from "@mui/material/NativeSelect";
-import { NotFound } from "../../components/NotFound";
-import { ListSection } from "../../components/ListSection";
-import { Data } from "../../types/AuthorBookType";
-import { Loading } from "../../components/Loading";
 
 type SelectorsArray = {
   label: string;
@@ -62,13 +63,13 @@ export const PageLayout = () => {
       link: menuElemenets.links.authors,
       selector: [
         {
-          label: "Genres",
-          name: "genres",
+          label: selectorsValues.label.genres,
+          name: selectorsValues.values.genres,
           options: handleGetGenres(authors),
         },
         {
-          label: "Nationality",
-          name: "nationality",
+          label: selectorsValues.label.nationality,
+          name: selectorsValues.values.nationality,
           options: handleGetNationality(authors),
         },
       ],
@@ -77,13 +78,13 @@ export const PageLayout = () => {
       link: menuElemenets.links.poets,
       selector: [
         {
-          label: "Genres",
-          name: "genres",
+          label: selectorsValues.label.genres,
+          name: selectorsValues.values.genres,
           options: handleGetGenres(poets),
         },
         {
-          label: "Nationality",
-          name: "nationality",
+          label: selectorsValues.label.nationality,
+          name: selectorsValues.values.nationality,
           options: handleGetNationality(poets),
         },
       ],
@@ -92,13 +93,13 @@ export const PageLayout = () => {
       link: menuElemenets.links.bookStore,
       selector: [
         {
-          label: "Genres",
-          name: "genres",
+          label: selectorsValues.label.genres,
+          name: selectorsValues.values.genres,
           options: handleGetGenres(books),
         },
         {
-          label: "Century",
-          name: "century",
+          label: selectorsValues.label.century,
+          name: selectorsValues.values.century,
           options: handleGetCentuary(books),
         },
       ],
@@ -116,27 +117,29 @@ export const PageLayout = () => {
     []
   );
 
+  const isAuthorsPage = location.pathname === menuElemenets.links.authors;
+  const isPoetsPage = location.pathname === menuElemenets.links.poets;
+  const isBooksPage = location.pathname === menuElemenets.links.bookStore;
+
   const mapCurrentData = <T extends Data>(): Result<T> => {
     let result: Result<T> = {
       data: [],
       className: "",
-      route: ""
+      route: "",
     };
-    if (location.pathname === menuElemenets.links.authors) {
+    if (isAuthorsPage) {
       (result.data = authors as T[]),
         (result.className = "author-card"),
-        (result.route = "/author/");
-      
+        (result.route = menuElemenets.links.authors);
     }
-    if (location.pathname === menuElemenets.links.poets) {
+    if (isPoetsPage) {
       (result.data = poets as T[]),
         (result.className = "author-card"),
-        (result.route = "/poet/");
+        (result.route = menuElemenets.links.poets);
     }
-    if (location.pathname === menuElemenets.links.bookStore) {
-      (result.data = books as T[]), 
-      (result.className = "book-card");
-      result.route = "/book/";
+    if (isBooksPage) {
+      (result.data = books as T[]), (result.className = "book-card");
+      result.route = menuElemenets.links.bookStore;
     }
     return result;
   };
@@ -177,7 +180,7 @@ export const PageLayout = () => {
   const currentSelector = selectors.find((v) => v.link === location.pathname);
 
   if (booksLoading || authorLoading) {
-    return <Loading/>
+    return <Loading />;
   }
 
   if (!currentSelector) {
@@ -232,7 +235,7 @@ export const PageLayout = () => {
                   <Card
                     key={index}
                     className={className}
-                    onClick={() => navigate(`${route}${id}`)}
+                    onClick={() => navigate(`${route}/${id}`)}
                     title={title ? title : name || "Untitled"}
                     items={genres}
                     subtitle={title && name}

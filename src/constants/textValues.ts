@@ -30,7 +30,20 @@ export const homepage = {
 export const errors = {
   getauthors: "Can`t get authors list",
   getbooks: "Can`t get books list",
-  getWishList: "Can`t add book to wishlist"
+  getWishList: "Can`t add book to wishlist",
 };
 
-export const all = "All"
+export const all = "All";
+
+export const selectorsValues = {
+  values: {
+    genres: "genres",
+    nationality: "nationality",
+    century: "century",
+  },
+  label: {
+    genres: "Genres",
+    nationality: "Nationality",
+    century: "Century",
+  },
+};
