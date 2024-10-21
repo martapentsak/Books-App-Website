@@ -10,11 +10,10 @@ import {
 import { errors } from "../constants/textValues";
 import { authorsAPi, poetsApi } from "../constants/api";
 
-import { Author } from "../types/AuthorBookType";
-
 import useAsyncEffect from "../hooks/useAsyncEffect";
 
 import { waitForAnimationFinish } from "../helpers/waitForAnimationFinish";
+import { Author } from "../types/AuthorBookType";
 
 type ProviderValues = {
   loading: boolean;
@@ -23,25 +22,21 @@ type ProviderValues = {
   poets: Author[];
   handleCloseAuthorsError: () => void;
 };
-type AuthorResponse = {
-  id: string;
-  name: string,
-  genres: string[];
-  image: string;
-  award: string;
-  biography: string;
-  nationality: string;
-  notable_works: string[];
-  death_year: number;
-  birth_year: number;
-}
 
-type Props = {
-  children: ReactNode;
+type AuthorBase = Omit<Author, "birthYear" | "deathYear" | "works">;
+
+type AuthorResponse = AuthorBase & {
+  birth_year: number;
+  death_year: number;
+  notable_works: string[];
 };
 
 type DataProp = {
   data: AuthorResponse[];
+};
+
+type Props = {
+  children: ReactNode;
 };
 
 const formatAuthorResponse = (response: DataProp): Author[] => {
