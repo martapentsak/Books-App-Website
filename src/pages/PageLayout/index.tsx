@@ -139,7 +139,8 @@ export const PageLayout = () => {
     }
     if (isBooksPage) {
       (result.data = books as T[]),
-      (result.data = books as T[]), (result.className = "book-card");
+        (result.data = books as T[]),
+        (result.className = "book-card");
       result.route = menuElemenets.links.bookStore;
     }
     return result;
@@ -188,10 +189,6 @@ export const PageLayout = () => {
     return <NotFound />;
   }
 
-  const mapListSection = () => {
-    
-  }
-
   return (
     <div className="page-layout">
       <div className="page-layout-wrapper">
@@ -234,7 +231,7 @@ export const PageLayout = () => {
         </div>
         <div className="page-layout-list-section">
           {filteredList.length > 0 ? (
-            <ListSection title="" wrap>
+            <ListSection wrap>
               {filteredList.map(
                 ({ title, name, id, genres, ...others }, index) => (
                   <Card
