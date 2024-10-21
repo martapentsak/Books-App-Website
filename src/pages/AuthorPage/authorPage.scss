@@ -88,7 +88,7 @@
         }
     }
 
-    .smallwindow-width-notable-works-section {
+    .smallwidth-notable-works {
         display: none;
     }
 }
@@ -127,13 +127,15 @@
         width: 90%;
         margin: 0px auto;
     }
+}
 
+@media (max-width: 1000px) {
     .notable-works {
         display: none;
 
     }
 
-    .smallwindow-width-notable-works-section {
+    .smallwidth-notable-works {
         display: flex !important;
         width: 90% !important;
         margin: 0 auto;
@@ -155,6 +157,8 @@
     .author-name {
         font-size: 50px !important;
     }
+
+
 }
 
 
@@ -221,8 +225,6 @@
         padding-left: 20px !important;
     }
 }
-
-
 
 @media (max-width: 650px) {
     .author-name {

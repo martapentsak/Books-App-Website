@@ -36,8 +36,8 @@ type DataProp = {
 const formatAuthorResponse = (response: DataProp): Author[] => {
   return response.data.map(
     ({ notable_works, birth_year, death_year, ...others }) => ({
-      birthYear: birth_year !== undefined ? birth_year : 0,
-      deathYear: death_year !== undefined ? death_year : 0,
+      birthYear: birth_year || 0,
+      deathYear: death_year || 0,
       works: notable_works || [],
       ...others,
     })

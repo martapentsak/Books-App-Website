@@ -33,7 +33,7 @@ export const errors = {
   getWishList: "Can`t add book to wishlist",
 };
 
-export const authorPage = {
+export const authorPageTitles = {
   award: "Award",
   born: "Born",
   died: "Died",
