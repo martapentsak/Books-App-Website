@@ -1,15 +1,14 @@
 export type Author = {
   id: string;
-  name: string;
+  name: string,
   genres: string[];
   image: string;
   award: string;
   biography: string;
-  birth_year: number;
-  death_year: number;
   nationality: string;
-  works: string[];
-  notable_works?: string[];
+  birthYear: number;
+  deathYear: number;
+  works: string[]; 
 };
 
 export type Book = {

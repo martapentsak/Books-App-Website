@@ -6,13 +6,12 @@ import { Alert } from "../../components/Alert";
 import { NotFound } from "../../components/NotFound";
 import { ListSection } from "../../components/ListSection";
 import { AuthorWorks } from "../../components/AuthorWorks";
-
-import { useAuthors } from "../../context/authors";
-import { useBooks } from "../../context/books";
-
 import { homepage } from "../../constants/textValues";
 import { Card } from "../../components/Card";
 import { PoetList } from "../../components/PoetsList";
+
+import { useAuthors } from "../../context/authors";
+import { useBooks } from "../../context/books";
 
 export const HomePage = () => {
   const [selectedPoetIndex, setSelectedPoetIndex] = useState<number>(0);

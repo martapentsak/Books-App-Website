@@ -30,5 +30,12 @@ export const homepage = {
 export const errors = {
   getauthors: "Can`t get authors list",
   getbooks: "Can`t get books list",
-  getWishList: "Can`t add book to wishlist"
+  getWishList: "Can`t add book to wishlist",
+};
+
+export const authorPageTitles = {
+  award: "Award",
+  born: "Born",
+  died: "Died",
+  worksTitle: "Notable works",
 };
