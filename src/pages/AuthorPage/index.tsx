@@ -1,7 +1,6 @@
 import { useParams } from "react-router-dom";
 
 import { Loading } from "../../components/Loading";
-// import { NotFound } from "../../components/NotFound";
 
 import { useAuthors } from "../../context/authors";
 import { NotableWorks } from "./components/NotableWorks";
@@ -14,7 +13,7 @@ export const AuthorPage = () => {
 
   const {
     image,
-    name : authorName,
+    name: authorName,
     birthYear,
     deathYear,
     biography,
@@ -27,7 +26,7 @@ export const AuthorPage = () => {
     return <Loading />;
   }
   if (!authorName) {
-    return <NotFound/>
+    return <NotFound />;
   }
 
   return (
@@ -46,12 +45,16 @@ export const AuthorPage = () => {
           </div>
           <div className="author-birth-section">
             <div className="born-section">
-              <span className="born-section-category">{authorPageTitles.born}</span>
+              <span className="born-section-category">
+                {authorPageTitles.born}
+              </span>
               <p className="birth-year">{birthYear}</p>
             </div>
             <div className="space"></div>
             <div className="death-section">
-              <span className="born-section-category">{authorPageTitles.died}</span>
+              <span className="born-section-category">
+                {authorPageTitles.died}
+              </span>
               <p className="death-year">{deathYear}</p>
             </div>
           </div>
