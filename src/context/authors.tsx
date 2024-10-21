@@ -31,9 +31,9 @@ type AuthorResponse = {
   award: string;
   biography: string;
   nationality: string;
-  notable_works?: string[];
-  death_year?: number;
-  birth_year?: number;
+  notable_works: string[];
+  death_year: number;
+  birth_year: number;
 }
 
 type Props = {
