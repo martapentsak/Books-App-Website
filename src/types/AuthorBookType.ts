@@ -1,6 +1,6 @@
 export type Author = {
   id: string;
-  name: string,
+  name: string;
   genres: string[];
   image: string;
   award: string;
@@ -8,17 +8,15 @@ export type Author = {
   nationality: string;
   birthYear: number;
   deathYear: number;
-  works: string[]; 
+  works: string[];
 };
 
 export type Book = {
   id: string;
+  title: string;
   author: string;
+  publicationYear: number;
   genres: string[];
   image: string;
   description: string;
-  publicationYear: number;
-  title: string;
-  cover_image?: string;
-  publication_year?: number;
 };
