@@ -18,8 +18,8 @@
             .css-1u3bzj6-MuiFormControl-root-MuiTextField-root {
                 background: linear-gradient(0deg, rgba(29, 42, 65, 1) 16%, rgba(5, 10, 21, 1) 100%) !important;
                 border-radius: 14px;
-                width: 30% !important;
-                min-width: 280px !important;
+                width: 30%;
+                min-width: 280px;
                 margin-right: 20px;
                 height: 50px !important;
 
@@ -39,39 +39,10 @@
                     color: $white !important;
                 }
             }
+        }
 
-            .css-1nrlq1o-MuiFormControl-root {
-                background: linear-gradient(0deg, rgba(29, 42, 65, 1) 16%, rgba(5, 10, 21, 1) 100%) !important;
-                border-radius: 14px;
-                width: 20% !important;
-                min-width: 200px !important;
-                margin-right: 20px;
-                height: 50px !important;
-            }
-
-            .css-nmluci-MuiFormLabel-root-MuiInputLabel-root {
-                color: $blackishGrey !important;
-                padding-left: 18px !important;
-            }
-
-            .css-r5in8e-MuiInputBase-root-MuiInput-root {
-                color: $white !important;
-            }
-
-            .css-v6vh93-MuiNativeSelect-select-MuiInputBase-input-MuiInput-input {
-                padding: 6px 15px !important;
-                text-transform: capitalize !important;
-            }
-
-            .css-19fz36k-MuiFormLabel-root-MuiInputLabel-root {
-                padding: 0 15px !important;
-                transform: translate(0, 16px) scale(1) !important;
-                color: $blackishGrey !important;
-            }
-
-            .css-r5in8e-MuiInputBase-root-MuiInput-root::after {
-                border-bottom: none !important;
-            }
+        .smaller-width-select-section {
+            display: none;
         }
 
         .page-layout-list-section {
@@ -91,3 +62,47 @@
     }
 }
 
+@media (max-width: 950px) {
+    .page-layout {
+        min-height: calc(100vh - 100px);
+    }
+    .page-layout-wrapper {
+        width: 90% !important
+    }
+}
+
+
+@media (max-width: 720px) {
+    .css-1u3bzj6-MuiFormControl-root-MuiTextField-root {
+        min-width: 35% !important;
+    }
+}
+
+@media (max-width: 650px) {
+    .page-layout {
+        padding-top: 20px;
+        min-height: calc(100vh - 70px);
+    }
+    .css-1u3bzj6-MuiFormControl-root-MuiTextField-root {
+        min-width: 100% !important;
+        height: 45px !important;
+
+    }
+
+    .css-2a7nsh-MuiInputBase-root-MuiOutlinedInput-root {
+        font-size: 13px !important ;
+        padding: 3px 14px !important;
+    }
+
+    .smaller-width-select-section {
+        display: flex !important;
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+
+    .filter-section {
+        display: none !important;
+    }
+
+}

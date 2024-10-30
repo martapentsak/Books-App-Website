@@ -13,6 +13,7 @@ import { booksApi } from "../constants/api";
 import useAsyncEffect from "../hooks/useAsyncEffect";
 
 import { waitForAnimationFinish } from "../helpers/waitForAnimationFinish";
+
 import { Book } from "../types/AuthorBookType";
 
 type ProviderValues = {
@@ -34,13 +35,14 @@ export const BooksProvider = ({ children }: Props) => {
   const [error, setError] = useState<string>("");
 
   const [loading, setLoading] = useState<boolean>(false);
-
+ 
   useAsyncEffect(async () => {
     setLoading(true);
     await waitForAnimationFinish();
     try {
-      const reponse = await axios.get(booksApi);
-      setBooks(reponse.data);
+      const response = await axios.get(booksApi);
+
+      setBooks((response.data));
     } catch {
       setError(errors.getbooks);
     } finally {

@@ -4,12 +4,17 @@ import { Loading } from "../../components/Loading";
 
 import { useAuthors } from "../../context/authors";
 import { NotableWorks } from "./components/NotableWorks";
-import { authorPageTitles } from "../../constants/textValues";
+import { AuthorPoetPageTitles } from "../../constants/textValues";
 import { NotFound } from "../../components/NotFound";
+type Prop = {
+  isPoetPage: boolean;
+};
 
-export const AuthorPage = () => {
-  const { authors, loading } = useAuthors();
+export const AuthorPoetPage = ({ isPoetPage }: Prop) => {
+  const { poets, authors, loading } = useAuthors();
   const { authorId } = useParams();
+
+  const curentList = isPoetPage ? poets : authors;
 
   const {
     image,
@@ -20,7 +25,7 @@ export const AuthorPage = () => {
     nationality,
     award,
     works = [],
-  } = authors.find((v) => v.id == authorId) || {};
+  } = curentList.find((v) => v.id == authorId) || {};
 
   if (loading) {
     return <Loading />;
@@ -40,20 +45,20 @@ export const AuthorPage = () => {
           <div className="author-nationality">{nationality}</div>
           <div className="author-biography">{biography}</div>
           <div className="author-award">
-            {authorPageTitles.award}
+            {AuthorPoetPageTitles.award}
             <span className="award">{award}</span>
           </div>
           <div className="author-birth-section">
             <div className="born-section">
               <span className="born-section-category">
-                {authorPageTitles.born}
+                {AuthorPoetPageTitles.born}
               </span>
               <p className="birth-year">{birthYear}</p>
             </div>
             <div className="space"></div>
             <div className="death-section">
               <span className="born-section-category">
-                {authorPageTitles.died}
+                {AuthorPoetPageTitles.died}
               </span>
               <p className="death-year">{deathYear}</p>
             </div>

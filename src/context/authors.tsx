@@ -35,7 +35,7 @@ export const AuthorProvider = ({ children }: Props) => {
   const [poets, setPoets] = useState<Author[]>([]);
 
   const [loading, setLoading] = useState<boolean>(false);
-  
+
   const [error, setError] = useState<string>("");
 
   useAsyncEffect(async () => {
@@ -53,7 +53,7 @@ export const AuthorProvider = ({ children }: Props) => {
     } catch {
       setError(errors.getauthors);
     } finally {
-setLoading(false);
+      setLoading(false);
     }
   }, []);
 

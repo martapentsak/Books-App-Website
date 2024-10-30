@@ -1,13 +1,10 @@
-import { UniversalListItem } from "../types/UniversalListItem";
+import { Author } from "../types/AuthorBookType";
 
-export const handleGetNationality = (list: UniversalListItem[]) => {
+export const handleGetNationality = (list: Author[]) => {
   const allNationality = list.map(({ nationality }) => nationality);
-  const nationalityWithoutDuplicates = allNationality
-    .filter((item, index) => allNationality.indexOf(item) === index)
+  return allNationality
+    .reduce((acc: string[], item: string) => {
+      return acc.includes(item) ? acc : [...acc, item];
+    }, [])
     .sort();
-  const newFirstElement = "All";
-  const newNationalityArray = [newFirstElement].concat(
-    nationalityWithoutDuplicates
-  );
-  return newNationalityArray;
 };

@@ -11,13 +11,6 @@ export const menuElemenets = {
     bookStore: "Book store",
     wishList: "Wishlist",
   },
-  links: {
-    home: "/",
-    authors: "/authors",
-    poets: "/poets",
-    bookStore: "/bookstore",
-    wishList: "/wishlist",
-  },
 };
 
 export const homepage = {
@@ -33,9 +26,7 @@ export const errors = {
   getWishList: "Can`t add book to wishlist",
 };
 
-export const all = "All";
-
-export const selectorsValues = {
+export const selectors = {
   values: {
     genres: "genres",
     nationality: "nationality",
@@ -45,12 +36,30 @@ export const selectorsValues = {
     genres: "Genres",
     nationality: "Nationality",
     century: "Century",
-  }
-}
+  },
+};
 
-export const authorPageTitles = {
+export const AuthorPoetPageTitles = {
   award: "Award",
   born: "Born",
   died: "Died",
   worksTitle: "Notable works",
 };
+
+export const link = {
+  home: "/",
+  authors: "/authors",
+  poets: "/poets",
+  bookStore: "/bookstore",
+  wishList: "/wishlist",
+  curentBook: "book/:bookId",
+  currentAuthor: "author/:authorId",
+  currentPoet: "poet/:authorId",
+};
+
+export const allValue = "All";
+
+export const wishListPage = {
+  btn: "Go to bookstore",
+  message: "Nothing in wishlist..."
+}

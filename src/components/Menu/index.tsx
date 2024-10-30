@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
-import { menuElemenets, websiteName } from "../../constants/textValues";
+import { link, menuElemenets, websiteName } from "../../constants/textValues";
 
 import { useWishlist } from "../../context/wishlist";
 
@@ -21,27 +21,27 @@ const menuElements: MenuElements[] = [
   {
     value: menuElemenets.values.home,
     label: menuElemenets.values.home,
-    link: menuElemenets.links.home,
+    link: link.home,
   },
   {
     value: menuElemenets.values.authors,
     label: menuElemenets.values.authors,
-    link: menuElemenets.links.authors,
+    link: link.authors,
   },
   {
     value: menuElemenets.values.poets,
     label: menuElemenets.values.poets,
-    link: menuElemenets.links.poets,
+    link: link.poets,
   },
   {
     value: menuElemenets.values.bookStore,
     label: menuElemenets.values.bookStore,
-    link: menuElemenets.links.bookStore,
+    link: link.bookStore,
   },
   {
     value: menuElemenets.values.wishList,
     label: menuElemenets.values.wishList,
-    link: menuElemenets.links.wishList,
+    link: link.wishList,
   },
 ];
 

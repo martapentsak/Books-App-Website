@@ -1,24 +1,31 @@
-import { UniversalListItem } from "../types/UniversalListItem";
+import { Book } from "../types/AuthorBookType";
 
-export function centuryFromYear(year: number | undefined) {
-  return year && Math.floor((year - 1) / 100) + 1;
+export function centuryFromYear(year: number) {
+  return `${Math.floor((year - 1) / 100) + 1}`;
 }
 
-export const handleGetCentuary = (list: UniversalListItem[]) => {
-  const allCenturies = list.map(({ year }) =>
-    typeof year === "string" ? year : centuryFromYear(year) + "th century"
+export const yearToCentury = (publicationYear: string) =>
+  isNaN(+publicationYear) ? publicationYear : centuryFromYear(+publicationYear);
+
+export const handleGetCentuary = (list: Book[]) => {
+  const allCenturies = list.map(({ publicationYear }) =>
+  yearToCentury(publicationYear)
   );
-  const centuriesWithoutDuplicates = allCenturies.filter(
-    (item, index) => allCenturies.indexOf(item) === index
+
+  const centuryesWithoutDublocates = allCenturies.reduce(
+    (acc: string[], item: string) => {
+      return acc.includes(item) ? acc : [...acc, item];
+    },
+    []
   );
-  const sortedCenturies = centuriesWithoutDuplicates.sort(
+
+  const sortedCenturies = centuryesWithoutDublocates.sort(
     (a: string, b: string) => {
       const centuryA = parseInt(a);
       const centuryB = parseInt(b);
       return centuryA - centuryB;
     }
   );
-  const newFirstElement = "All";
-  const newCenturiesArray = [newFirstElement].concat(sortedCenturies);
-  return newCenturiesArray;
+
+  return sortedCenturies;
 };

@@ -63,11 +63,11 @@ export const HomePage = () => {
           poets={poets}
           selectedPoetIndex={selectedPoetIndex}
           onClick={setSelectedPoetIndex}
-          />
-          <AuthorWorks title={homepage.works} author={selectedPoet} />
+        />
+        <AuthorWorks title={homepage.works} author={selectedPoet} />
       </div>
       <div className="authors-books-section">
-      <ListSection title={homepage.popularWriter} wrap={false}>
+        <ListSection title={homepage.popularWriter}>
           {authors.map(({ name, genres, image, id }, index) => (
             <Card
               key={index}
