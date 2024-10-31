@@ -1,8 +1,8 @@
-import { useState } from "react";
+import { ChangeEvent, useState } from "react";
 
 import { Book } from "../types/AuthorBookType";
 import { useSearchable } from "./useSearchable";
-import { yearToCentury } from "../utils/handleGetCentury";
+import { yearToCentury } from "../utils/getSortedListOfCentury";
 import { allValue } from "../constants/textValues";
 
 type FilterValues = {
@@ -17,7 +17,7 @@ export function useFilterBooks(books: Book[]) {
     century: allValue,
   });
 
-  const filterAuthors = (data: Book[]) => {
+  const filterBooks = (data: Book[]) => {
     let result = [...data];
     const { genres, century } = filterValues;
     if (genres !== allValue) {
@@ -32,10 +32,13 @@ export function useFilterBooks(books: Book[]) {
     return result;
   };
 
-  const onFilterValueChange = (name: string, value: string) =>
+  const onFilterValueChange = ({
+    target: { name, value },
+  }: ChangeEvent<HTMLSelectElement>) => {
     setFilterValues((prev) => ({ ...prev, [name]: value }));
+  };
 
-  const filteredAuthors = filterAuthors(books);
+  const filteredAuthors = filterBooks(books);
 
   const searchResults = useSearchable(filteredAuthors, searchValue, (book) => [
     book.title,

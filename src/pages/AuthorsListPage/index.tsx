@@ -10,14 +10,14 @@ import { useAuthors } from "../../context/authors";
 
 import { selectors } from "../../constants/textValues";
 
-import { handleGetGenres } from "../../utils/handleGetGenres";
-import { handleGetNationality } from "../../utils/handleGetNationality";
+import { getGenres } from "../../utils/getGenres";
+import { getAuthorNationality } from "../../utils/getAuthorNationality";
 
 import { useFilterPoetsAuthors } from "../../hooks/useFilterAuthorPoets";
 import { NotFound } from "../../components/NotFound";
 
 type Prop = {
-  isPoetPage: boolean;
+  isPoetPage?: boolean;
 };
 
 export const AuthorsPoetsListPage = ({ isPoetPage }: Prop) => {
@@ -32,12 +32,12 @@ export const AuthorsPoetsListPage = ({ isPoetPage }: Prop) => {
 
   const selector = [
     {
-      label: selectors.label.genres,
-      options: handleGetGenres(list),
+      label: selectors.genres,
+      options: getGenres(list),
     },
     {
-      label: selectors.label.nationality,
-      options: handleGetNationality(list),
+      label: selectors.nationality,
+      options: getAuthorNationality(list),
     },
   ];
 

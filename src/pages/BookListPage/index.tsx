@@ -10,8 +10,8 @@ import { useBooks } from "../../context/books";
 
 import { selectors } from "../../constants/textValues";
 
-import { handleGetGenres } from "../../utils/handleGetGenres";
-import { handleGetCentuary } from "../../utils/handleGetCentury";
+import { getGenres } from "../../utils/getGenres";
+import { getSortedListOfCentury } from "../../utils/getSortedListOfCentury";
 
 import { useFilterBooks } from "../../hooks/useFilterBooks";
 import { NotFound } from "../../components/NotFound";
@@ -24,12 +24,12 @@ export const BookListPage = () => {
   const navigate = useNavigate();
   const selector = [
     {
-      label: selectors.label.genres,
-      options: handleGetGenres(books),
+      label: selectors.genres,
+      options: getGenres(books),
     },
     {
-      label: selectors.label.century,
-      options: handleGetCentuary(books),
+      label: selectors.century,
+      options: getSortedListOfCentury(books),
     },
   ];
 

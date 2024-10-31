@@ -5,20 +5,15 @@ export function centuryFromYear(year: number) {
 }
 
 export const yearToCentury = (publicationYear: string) =>
-  isNaN(+publicationYear) ? publicationYear : centuryFromYear(+publicationYear);
+  isNaN(+publicationYear)
+    ? publicationYear
+    : centuryFromYear(+publicationYear) + "th century";
 
-export const handleGetCentuary = (list: Book[]) => {
+export const getSortedListOfCentury = (list: Book[]) => {
   const allCenturies = list.map(({ publicationYear }) =>
-  yearToCentury(publicationYear)
+    yearToCentury(publicationYear)
   );
-
-  const centuryesWithoutDublocates = allCenturies.reduce(
-    (acc: string[], item: string) => {
-      return acc.includes(item) ? acc : [...acc, item];
-    },
-    []
-  );
-
+  const centuryesWithoutDublocates = [...new Set(allCenturies)];
   const sortedCenturies = centuryesWithoutDublocates.sort(
     (a: string, b: string) => {
       const centuryA = parseInt(a);

@@ -6,10 +6,9 @@ import { BookPage } from "../BookPage";
 import { AuthorPoetPage } from "../AuthorPoetPage";
 import { WishList } from "../WishList";
 import { AuthorsPoetsListPage } from "../AuthorsListPage";
-
 import { BookListPage } from "../BookListPage";
 
-import { link } from "../../constants/textValues";
+import { routes } from "../../constants/textValues";
 
 export const AllRoutes = () => {
   return (
@@ -17,26 +16,20 @@ export const AllRoutes = () => {
       <div>
         <Menu />
         <Routes>
-          <Route path={link.home} element={<HomePage />} />
-          <Route path={link.curentBook} element={<BookPage />} />
+          <Route path={routes.home} element={<HomePage />} />
+          <Route path={routes.curentBook} element={<BookPage />} />
+          <Route path={routes.currentAuthor} element={<AuthorPoetPage />} />
           <Route
-            path={link.currentAuthor}
-            element={<AuthorPoetPage isPoetPage={false} />}
-          />
-          <Route
-            path={link.currentPoet}
+            path={routes.currentPoet}
             element={<AuthorPoetPage isPoetPage />}
           />
+          <Route path={routes.authors} element={<AuthorsPoetsListPage />} />
           <Route
-            path={link.authors}
-            element={<AuthorsPoetsListPage isPoetPage={false} />}
-          />
-          <Route
-            path={link.poets}
+            path={routes.poets}
             element={<AuthorsPoetsListPage isPoetPage />}
           />
-          <Route path={link.bookStore} element={<BookListPage />} />
-          <Route path={link.wishList} element={<WishList />} />
+          <Route path={routes.bookStore} element={<BookListPage />} />
+          <Route path={routes.wishList} element={<WishList />} />
         </Routes>
       </div>
     </div>

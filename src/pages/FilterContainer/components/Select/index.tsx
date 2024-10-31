@@ -9,7 +9,7 @@ import NativeSelect from "@mui/material/NativeSelect";
 type Prop = {
   label: string;
   options: string[];
-  onChange: (name: string, value: string) => void;
+  onChange: (e: ChangeEvent<HTMLSelectElement>) => void;
 };
 
 export const Select = ({ label, onChange, options }: Prop) => {
@@ -21,14 +21,12 @@ export const Select = ({ label, onChange, options }: Prop) => {
       <NativeSelect
         name={label.toLowerCase()}
         defaultValue={allValue}
-        onChange={({
-          target: { name, value },
-        }: ChangeEvent<HTMLSelectElement>) => onChange(name, value)}
-      >
+        onChange={(e: ChangeEvent<HTMLSelectElement>) => onChange(e)}
+        >
         <option>{allValue}</option>
         {options.map((o, optionIndex) => (
           <option value={o} key={optionIndex}>
-            {isNaN(+o) ? o : o + "th century"}
+            {o}
           </option>
         ))}
       </NativeSelect>

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { ChangeEvent, useState } from "react";
 
 import { Author } from "../types/AuthorBookType";
 import { useSearchable } from "./useSearchable";
@@ -16,7 +16,7 @@ export function useFilterPoetsAuthors(authors: Author[]) {
     nationality: allValue,
   });
 
-  const onFilterValueChange = (name: string, value: string) =>
+  const onFilterValueChange = ({target: { name, value } }: ChangeEvent<HTMLSelectElement>) =>
     setFilterValues((prev) => ({ ...prev, [name]: value }));
 
   const filterAuthors = (data: Author[]) => {

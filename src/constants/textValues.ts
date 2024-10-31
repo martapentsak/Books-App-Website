@@ -4,13 +4,11 @@ export const websiteName = {
 };
 
 export const menuElemenets = {
-  values: {
     home: "Home",
     authors: "Authors",
     poets: "Poets",
     bookStore: "Book store",
     wishList: "Wishlist",
-  },
 };
 
 export const homepage = {
@@ -27,26 +25,19 @@ export const errors = {
 };
 
 export const selectors = {
-  values: {
-    genres: "genres",
-    nationality: "nationality",
-    century: "century",
-  },
-  label: {
     genres: "Genres",
     nationality: "Nationality",
     century: "Century",
-  },
 };
 
-export const AuthorPoetPageTitles = {
+export const authorPoetPageTitles = {
   award: "Award",
   born: "Born",
   died: "Died",
   worksTitle: "Notable works",
 };
 
-export const link = {
+export const routes = {
   home: "/",
   authors: "/authors",
   poets: "/poets",

@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { ChangeEvent, ReactNode } from "react";
 
 import { Select } from "./components/Select";
 
@@ -14,7 +14,7 @@ type SelectorsArray = {
 type Props = {
   children: ReactNode;
   selector: SelectorsArray[];
-  onFilterValueChange: (name: string, value: string) => void;
+  onFilterValueChange: (e: ChangeEvent<HTMLSelectElement>) => void;
   onSearchValueChange: (value: string) => void;
 };
 
@@ -48,7 +48,7 @@ export function FilterContainer({
                 key={index}
                 label={label}
                 options={options}
-                onChange={(name, value) => onFilterValueChange(name, value)}
+                onChange={onFilterValueChange}
               />
             ))}
           </div>
@@ -59,7 +59,7 @@ export function FilterContainer({
               key={index}
               label={label}
               options={options}
-              onChange={(name, value) => onFilterValueChange(name, value)}
+              onChange={onFilterValueChange}
             />
           ))}
         </div>

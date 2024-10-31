@@ -41,8 +41,7 @@ export const BooksProvider = ({ children }: Props) => {
     await waitForAnimationFinish();
     try {
       const response = await axios.get(booksApi);
-
-      setBooks((response.data));
+      setBooks(response.data);
     } catch {
       setError(errors.getbooks);
     } finally {

@@ -1,13 +1,14 @@
 import { useNavigate } from "react-router-dom";
 
+import { Loading } from "../../components/Loading";
+import { Alert } from "../../components/Alert";
+
 import { useWishlist } from "../../context/wishlist";
 
-import { link, wishListPage } from "../../constants/textValues";
+import { routes, wishListPage } from "../../constants/textValues";
 
 import DeleteIcon from "@mui/icons-material/Delete";
 import { Button } from "@mui/material";
-import { Loading } from "../../components/Loading";
-import { Alert } from "../../components/Alert";
 
 export const WishList = () => {
   const {
@@ -49,7 +50,7 @@ export const WishList = () => {
                     <h4 className="wishlist-author">{author}</h4>
                     <h4 className="wishlist-year">{publicationYear}</h4>
                     <p className="wishlist-description">{description}</p>
-                    {genres?.map((g, index) => (
+                    {genres.map((g, index) => (
                       <span className="card-list-item" key={index}>
                         {g}
                         {index < genres.length - 1 ? ", " : ""}
@@ -62,7 +63,7 @@ export const WishList = () => {
                   className="delete-btn"
                   onClick={() => handleRemoveBookFromWishlist(id)}
                 >
-                  {<DeleteIcon />}
+                  <DeleteIcon />
                 </i>
               </div>
             )
@@ -72,7 +73,7 @@ export const WishList = () => {
             <span className="empty-wishlist">{wishListPage.message}</span>
             <Button
               className="navigate-bookstore-btn"
-              onClick={() => navigate(link.bookStore)}
+              onClick={() => navigate(routes.bookStore)}
             >
               {wishListPage.btn}
             </Button>
