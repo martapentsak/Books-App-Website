@@ -12,7 +12,12 @@
 @import "../components/AuthorWorks/authorWorks.scss";
 @import "../components/PoetsList/poetsList.scss";
 @import "../components/ListSection/listSection.scss";
+@import "../components/WishListElement/wishlistElement.scss";
 
 @import "../pages/HomePage/homePage.scss";
 @import "../pages/BookPage/bookPage.scss";
-@import "../pages/AuthorPage/authorPage.scss";
+@import "../pages/AuthorPoetPage/authorPoetPage.scss";
+@import "../pages/FilterContainer/FilterContainer.scss";
+@import "../pages/WishList/wishlist.scss";
+
+@import "../pages/FilterContainer/components/Select/select.scss";

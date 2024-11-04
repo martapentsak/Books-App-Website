@@ -4,20 +4,11 @@ export const websiteName = {
 };
 
 export const menuElemenets = {
-  values: {
     home: "Home",
     authors: "Authors",
     poets: "Poets",
     bookStore: "Book store",
     wishList: "Wishlist",
-  },
-  links: {
-    home: "/",
-    authors: "/authors",
-    poets: "/poets",
-    bookStore: "/bookstore",
-    wishList: "/wishlist",
-  },
 };
 
 export const homepage = {
@@ -33,9 +24,33 @@ export const errors = {
   getWishList: "Can`t add book to wishlist",
 };
 
-export const authorPageTitles = {
+export const selectors = {
+    genres: "Genres",
+    nationality: "Nationality",
+    century: "Century",
+};
+
+export const authorPoetPageTitles = {
   award: "Award",
   born: "Born",
   died: "Died",
   worksTitle: "Notable works",
 };
+
+export const routes = {
+  home: "/",
+  authors: "/authors",
+  poets: "/poets",
+  bookStore: "/bookstore",
+  wishList: "/wishlist",
+  curentBook: "book/:bookId",
+  currentAuthor: "author/:authorId",
+  currentPoet: "poet/:authorId",
+};
+
+export const allValue = "All";
+
+export const wishListPage = {
+  btn: "Go to bookstore",
+  message: "Nothing in wishlist..."
+}

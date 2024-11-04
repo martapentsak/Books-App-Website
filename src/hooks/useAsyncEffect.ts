@@ -8,7 +8,6 @@ function useAsyncEffect(
     const executeEffect = async () => {
       await effect();
     };
-
     executeEffect();
   }, deps);
 }

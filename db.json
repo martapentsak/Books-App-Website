@@ -1298,7 +1298,7 @@
       "id": "15",
       "title": "The Odyssey",
       "author": "Homer",
-      "publicationYear": "8th century BCE",
+      "publicationYear": "8th century",
       "genres": [
         "Epic",
         "Mythology"
@@ -1370,7 +1370,7 @@
       "id": "21",
       "title": "The Iliad",
       "author": "Homer",
-      "publicationYear": "8th century BCE",
+      "publicationYear": "8th century",
       "genres": [
         "Epic",
         "Mythology"
@@ -1717,28 +1717,16 @@
   ],
   "wishlist": [
     {
-      "id": "1",
-      "title": "The Brothers Karamazov",
-      "author": "Fyodor Dostoevsky",
-      "publicationYear": 1880,
+      "id": "5",
+      "title": "To Kill a Mockingbird",
+      "author": "Harper Lee",
+      "publicationYear": 1960,
       "genres": [
-        "Classic",
-        "Philosophical Fiction"
+        "Fiction",
+        "Classic"
       ],
-      "description": "A complex novel exploring themes of spirituality, morality, and human nature.",
-      "image": "https://cdn.kobo.com/book-images/c3a484bc-73d8-4412-94d0-cf36f9e21bbe/1200/1200/False/the-brothers-karamazov-7.jpg"
-    },
-    {
-      "id": "2",
-      "title": "Crime and Punishment",
-      "author": "Fyodor Dostoevsky",
-      "publicationYear": 1866,
-      "genres": [
-        "Classic",
-        "Psychological Fiction"
-      ],
-      "description": "A psychological thriller revolving around guilt, conscience, and redemption.",
-      "image": "https://m.media-amazon.com/images/I/71++AI6Lk+L._AC_UF1000,1000_QL80_.jpg"
+      "description": "A classic novel depicting racial injustice in the American South.",
+      "image": "https://m.media-amazon.com/images/I/81aY1lxk+9L._AC_UF1000,1000_QL80_.jpg"
     }
   ]
 }

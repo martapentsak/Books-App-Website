@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
-import { menuElemenets, websiteName } from "../../constants/textValues";
+import { routes, menuElemenets, websiteName } from "../../constants/textValues";
 
 import { useWishlist } from "../../context/wishlist";
 
@@ -19,29 +19,29 @@ type MenuElements = {
 
 const menuElements: MenuElements[] = [
   {
-    value: menuElemenets.values.home,
-    label: menuElemenets.values.home,
-    link: menuElemenets.links.home,
+    value: menuElemenets.home,
+    label: menuElemenets.home,
+    link: routes.home,
   },
   {
-    value: menuElemenets.values.authors,
-    label: menuElemenets.values.authors,
-    link: menuElemenets.links.authors,
+    value: menuElemenets.authors,
+    label: menuElemenets.authors,
+    link: routes.authors,
   },
   {
-    value: menuElemenets.values.poets,
-    label: menuElemenets.values.poets,
-    link: menuElemenets.links.poets,
+    value: menuElemenets.poets,
+    label: menuElemenets.poets,
+    link: routes.poets,
   },
   {
-    value: menuElemenets.values.bookStore,
-    label: menuElemenets.values.bookStore,
-    link: menuElemenets.links.bookStore,
+    value: menuElemenets.bookStore,
+    label: menuElemenets.bookStore,
+    link: routes.bookStore,
   },
   {
-    value: menuElemenets.values.wishList,
-    label: menuElemenets.values.wishList,
-    link: menuElemenets.links.wishList,
+    value: menuElemenets.wishList,
+    label: menuElemenets.wishList,
+    link: routes.wishList,
   },
 ];
 
@@ -54,7 +54,7 @@ export const Menu = () => {
   );
 
   const [value, setValue] = useState<string>(
-    currentMenuElement ? currentMenuElement.value : menuElemenets.values.home
+    currentMenuElement ? currentMenuElement.value : menuElemenets.home
   );
 
   const handleTabChange = (_event: React.SyntheticEvent, newValue: string) => {

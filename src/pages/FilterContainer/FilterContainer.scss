@@ -1,0 +1,108 @@
+.page-layout {
+    height: calc(100% - $menuHeight);
+    width: 100%;
+    padding-top: 40px;
+    min-height: calc(100vh - $menuHeight - 40px);
+
+    .page-layout-wrapper {
+        height: 100%;
+        width: 80%;
+        margin: 0 auto;
+
+        .page-layout-search-filter-section {
+            display: flex;
+            align-items: center;
+            width: 100%;
+
+            //SEARCH
+            .css-1u3bzj6-MuiFormControl-root-MuiTextField-root {
+                background: linear-gradient(0deg, rgba(29, 42, 65, 1) 16%, rgba(5, 10, 21, 1) 100%) !important;
+                border-radius: 14px;
+                width: 30%;
+                min-width: 280px;
+                margin-right: 20px;
+                height: 50px !important;
+
+                .css-2a7nsh-MuiInputBase-root-MuiOutlinedInput-root {
+                    color: $blackishGrey !important;
+                }
+
+                .css-2a7nsh-MuiInputBase-root-MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+                    border: none !important;
+                }
+
+                .css-6ga8lj-MuiInputAdornment-root {
+                    color: $blackishGrey !important;
+                }
+
+                .css-19j5ahi-MuiInputBase-input-MuiOutlinedInput-input {
+                    color: $white !important;
+                }
+            }
+        }
+
+        .smaller-width-select-section {
+            display: none;
+        }
+
+        .page-layout-list-section {
+            margin-top: 20px;
+            width: 100%;
+            height: 100%;
+
+            .no-found {
+                height: calc(100vh - $menuHeight - 200px);
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: $white;
+            }
+        }
+    }
+}
+
+@media (max-width: 950px) {
+    .page-layout {
+        min-height: calc(100vh - 100px);
+    }
+    .page-layout-wrapper {
+        width: 90% !important
+    }
+}
+
+
+@media (max-width: 720px) {
+    .css-1u3bzj6-MuiFormControl-root-MuiTextField-root {
+        min-width: 35% !important;
+    }
+}
+
+@media (max-width: 650px) {
+    .page-layout {
+        padding-top: 20px;
+        min-height: calc(100vh - 70px);
+    }
+    .css-1u3bzj6-MuiFormControl-root-MuiTextField-root {
+        min-width: 100% !important;
+        height: 45px !important;
+
+    }
+
+    .css-2a7nsh-MuiInputBase-root-MuiOutlinedInput-root {
+        font-size: 13px !important ;
+        padding: 3px 14px !important;
+    }
+
+    .smaller-width-select-section {
+        display: flex !important;
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+
+    .filter-section {
+        display: none !important;
+    }
+
+}

@@ -1,8 +1,8 @@
 import { ReactNode } from "react";
 
 type Props = {
-  title: string;
   children: ReactNode;
+  title?: string;
   wrap?: boolean;
 };
 

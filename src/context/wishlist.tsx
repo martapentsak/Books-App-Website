@@ -21,6 +21,7 @@ type ProviderValues = {
   error: string;
   handleAddBookToWishlist: (book: Book) => void;
   handleCloseWishlistError: () => void;
+  handleRemoveBookFromWishlist: (bookId: string) => void
 };
 
 type Props = {
@@ -79,6 +80,7 @@ export const WishListProvider = ({ children }: Props) => {
     loading,
     handleAddBookToWishlist,
     handleCloseWishlistError,
+    handleRemoveBookFromWishlist
   };
   return (
     <WishlistContext.Provider value={providervalues}>

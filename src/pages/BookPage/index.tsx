@@ -118,7 +118,7 @@ export const BookPage = () => {
             </div>
           </div>
           <div className="author-works">
-            <ListSection title={blockTitle} wrap={false}>
+            <ListSection title={blockTitle}>
               {recommendedBooks.map(({ genres, id, ...others }, index) => (
                 <Card
                   key={index}
