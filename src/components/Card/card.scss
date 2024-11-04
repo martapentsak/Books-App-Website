@@ -1,8 +1,8 @@
 .author-card {
     height: 270px;
     width: 140px;
-    margin-right: 15px;
     opacity: 0.8;
+    margin-right: 15px;
 
     .card-image {
         height: 180px !important;
@@ -12,30 +12,18 @@
     }
 }
 
-.author-card:hover {
-    opacity: 1;
-}
+.author-list-card {
+    flex: 1 1 calc(14% - 10px);
+    max-width: calc(14.5% - 10px);
+    height: 280px;
+    width: 180px;
 
-.css-xiduvl-MuiPaper-root-MuiCard-root {
-    width: 100% !important;
-    height: 100% !important;
-    background-color: transparent !important;
-
-}
-
-.css-1oitmrd-MuiButtonBase-root-MuiCardActionArea-root {
-    width: 100% !important;
-    border-radius: 14px !important;
-}
-
-.css-46bh2p-MuiCardContent-root {
-    padding: 8px 0px !important;
-    font-family: $defaultFontFamily !important;
-}
-
-.css-6fm6rz-MuiPaper-root-MuiCard-root {
-    background-color: transparent !important;
-    border-radius: 14px !important;
+    .card-image {
+        height: 210px !important;
+        width: 100% !important;
+        background-size: cover;
+        border-radius: 14px !important;
+    }
 }
 
 .card-name {
@@ -51,27 +39,36 @@
 .card-list-item {
     color: $blackishGrey;
     font-size: 12px;
+    width: 100%;
 }
+
 
 .book-card,
 .book-list-card {
-    height: 340px;
-    min-width: 140px;
-    width: 220px;
+    height: 360px;
     opacity: 0.8;
-    margin-bottom: 2px;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
 
     .card-image {
-        height: 270px !important;
-        width: 200px !important;
+        height: 280px !important;
+        width: 100% !important;
+        max-width: 200px;
         background-size: cover;
         border-radius: 14px !important;
     }
 }
 
-.book-card:hover {
-    opacity: 1;
+.book-card {
+    flex: 1 1 calc(33% - 16px);
+    max-width: 30%;
+}
+
+.book-list-card {
+    flex: 1 1 calc(16.66% - 10px);
+    max-width: calc(17% - 10px);
 }
 
 .notable-work-card {
@@ -79,7 +76,6 @@
     min-width: 200px;
     width: 220px;
     opacity: 0.8;
-    margin-bottom: 2px;
     padding-bottom: 10px;
     margin-right: 10px;
     display: flex;
@@ -87,7 +83,7 @@
     justify-content: center;
 
     .card-image {
-        height: 270px !important;
+        height: 260px !important;
         width: 200px !important;
         background-size: cover;
         border-radius: 14px !important;
@@ -96,290 +92,201 @@
     .card-name {
         text-align: center;
     }
-
 }
 
-@media (max-width: 1500px) {
+.author-card:hover,
+.book-card:hover {
+    opacity: 1;
+}
+
+@media (max-width: 1385px) {
     .book-card {
-        height: 330px !important;
-        width: 200px !important;
-
-        .card-image {
-            height: 260px !important;
-            width: 180px !important;
-        }
-    }
-}
-
-@media (max-width: 1380px) {
-    .book-list-card {
-        width: 20% !important;
+        height: 340px !important;
 
         .card-image {
             height: 250px !important;
-            width: 90% !important;
         }
     }
-}
 
-@media (max-width: 1330px) {
-    .book-card {
-        width: 32% !important;
-
-        .card-image {
-            height: 240px !important;
-            width: 90% !important;
-        }
-    }
-}
-
-
-@media (max-width: 1100px) {
     .author-card {
-        height: 260px;
-        width: 120px;
-        margin-right: 10px;
+        height: 260px !important;
+        width: 130px !important;
 
         .card-image {
-            height: 160px !important;
-            width: 120px !important;
+            width: 130px !important;
+            height: 170px !important;
         }
     }
 
+    .author-list-card {
+        height: 260px !important;
+
+        .card-image {
+            height: 170px !important;
+        }
+
+        .card-name {
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+    }
+}
+
+@media (max-width: 1200px) {
     .book-card {
+        height: 315px !important;
+        padding-bottom: 10px !important;
+
         .card-image {
             height: 210px !important;
-            width: 88% !important;
+        }
+    }
 
+    .card-name {
+        font-size: 14px;
+    }
+
+    .card-subtitle,
+    .card-list-item {
+        font-size: 12px;
+    }
+
+    .author-card {
+        height: 250px !important;
+        width: 120px !important;
+
+        .card-image {
+            width: 120px !important;
+            height: 160px !important;
         }
     }
 
     .book-list-card {
+        height: 340px !important;
+
         .card-image {
-            height: 220px !important;
-            width: 90% !important;
+            height: 230px !important;
+        }
+    }
+
+    .author-list-card {
+        flex: 1 1 calc(16.6% - 10px);
+        max-width: calc(17% - 10px);
+
+        .card-image {
+            height: 170px !important;
+        }
+
+        .card-name {
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
         }
     }
 }
 
-@media (max-width: 950px) {
-    .book-card {
-        min-width: 120px !important;
-        height: 290px !important;
-
-        .card-image {
-            height: 180px !important;
-            width: 90% !important;
-        }
-    }
-
-    .notable-work-card {
-        height: 320px !important;
-        min-width: 180px !important;
-
-        .card-image {
-            height: 250px !important;
-            width: 180px !important;
-        }
-    }
-
+@media (max-width: 1050px) {
     .book-list-card {
-        width: 25% !important;
+        height: 320px !important;
 
         .card-image {
-            height: 240px !important;
-            width: 90% !important;
+            height: 210px !important;
+        }
+    }
+
+    .author-card {
+        height: 240px !important;
+        width: 110px !important;
+
+        .card-image {
+            width: 110px !important;
+            height: 140px !important;
+        }
+
+        .card-list-item {
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
         }
     }
 }
 
 @media (max-width: 880px) {
     .book-card {
-        height: 360px !important;
-        min-width: 170px !important;
-        width: 22% !important;
-
-        .card-image {
-            height: 280px !important;
-            width: 100% !important;
-        }
-    }
-}
-
-@media (max-width: 820px) {
-    .book-card {
-        height: 340px !important;
-        min-width: 160px !important;
-        width: 18% !important;
+        flex: 1 1 calc(25% - 10px) !important;
+        max-width: calc(25% - 8px) !important;
 
         .card-image {
             height: 230px !important;
-            width: 100% !important;
         }
+    }
+
+    .card-name,
+    .card-subtitle {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+
+    .book-list-card {
+        height: 270px !important;
+        flex: 1 1 calc(20% - 10px);
+        max-width: calc(20% - 10px);
+
+        .card-image {
+            height: 190px !important;
+        }
+    }
+
+    .author-list-card {
+        flex: 1 1 calc(20% - 10px);
+        max-width: calc(20% - 10px);
     }
 
     .notable-work-card {
         height: 300px !important;
         min-width: 150px !important;
-
+        width: 150px !important;
+    
         .card-image {
-            height: 220px !important;
-            width: 160px !important;
+            height: 240px !important;
+            width: 150px !important;
         }
     }
 }
 
-@media (max-width: 760px) {
-    .book-card {
-        height: 340px !important;
-        min-width: 145px !important;
-
-        .card-image {
-            height: 230px !important;
-            width: 100% !important;
-        }
-    }
-
+@media (max-width: 780px) {
     .book-list-card {
-        width: 25% !important;
+        height: 275px !important;
+        flex: 1 1 calc(25% - 10px);
+        max-width: calc(25% - 10px);
 
         .card-image {
-            height: 220px !important;
-            width: 90% !important;
+            height: 200px !important;
         }
     }
-}
 
-@media (max-width: 700px) {
-    .author-card {
-        height: 250px;
-        width: 110px;
-        margin-right: 15px;
+    .author-list-card {
+        height: 240px !important;
 
         .card-image {
             height: 150px !important;
-            width: 110px !important;
-        }
-    }
-
-    .book-card {
-        height: 320px !important;
-        min-width: 130px !important;
-        width: 18% !important;
-
-        .card-image {
-            height: 200px !important;
-            width: 100% !important;
-        }
-    }
-}
-
-@media (max-width: 680px) {
-    .book-card {
-        min-width: 150px !important;
-        width: 19% !important;
-
-        .card-image {
-            height: 230px !important;
-        }
-    }
-
-    .card-subtitle,
-    .card-list-item {
-        font-size: 11px;
-    }
-
-    .card-name {
-        font-size: 13px;
-    }
-
-    .book-list-card {
-        width: 22% !important;
-        height: 320px;
-
-        .card-image {
-            height: 200px !important;
-            width: 90% !important;
         }
     }
 }
 
 @media (max-width: 650px) {
-    .book-list-card {
-        width: 33% !important;
-        height: 320px;
-    
-
-        .card-image {
-            height: 240px !important;
-            width: 90% !important;
-        }
-    }
-}
-
-@media (max-width: 550px) {
     .book-card {
-        min-width: 130px !important;
-        width: 15% !important;
+        height: 305px !important;
 
         .card-image {
             height: 200px !important;
         }
     }
 
-    .notable-work-card {
-        height: 280px !important;
-        min-width: 150px !important;
-
-        .card-image {
-            height: 220px !important;
-            width: 140px !important;
-        }
-    }
-    
-    .book-list-card {
-        .card-image {
-            height: 220px !important;
-            width: 90% !important;
-        }
-    }
-
-}
-
-
-@media (max-width: 500px) {
-    .book-list-card {
-        width: 50% !important;
-        height: 320px;
-
-        .card-image {
-            height: 250px !important;
-            width: 90% !important;
-        }
-    }
-}
-
-@media (max-width: 470px) {
-    .author-card {
-        height: 210px;
-        width: 90px;
-        margin-right: 15px;
-
-        .card-image {
-            height: 120px !important;
-            width: 90px !important;
-        }
-    }
-
-    .book-card {
-        height: 280px !important;
-        min-width: 110px !important;
-        width: 15% !important;
-
-        .card-image {
-            height: 180px !important;
-
-        }
+    .card-name {
+        font-size: 13px;
     }
 
     .card-subtitle,
@@ -387,54 +294,126 @@
         font-size: 10px;
     }
 
-    .card-name {
-        font-size: 11px;
-    }
-}
-
-@media (max-width: 420px) {
-    .book-card {
-        height: 260px !important;
-
-        min-width: 100px !important;
-        width: 15% !important;
+    .book-list-card {
+        height: 265px !important;
 
         .card-image {
-            height: 160px !important;
-
+            height: 180px !important;
         }
     }
 
-    .notable-work-card {
-        height: 250px !important;
-        min-width: 130px !important;
+    .author-card {
+        height: 200px !important;
+        width: 100px !important;
+        margin-right: 8px !important;
+
+        .card-image {
+            width: 100px !important;
+            height: 120px !important;
+        }
+    }
+
+    .author-list-card {
+        flex: 1 1 calc(25% - 10px);
+        max-width: calc(25.5% - 10px);
+
+        .card-image {
+            height: 160px !important;
+        }
+    }
+}
+
+@media (max-width: 550px) {
+    .book-card {
+        flex: 1 1 calc(35% - 10px) !important;
+        max-width: calc(34% - 10px) !important;
+        height: 290px !important;
 
         .card-image {
             height: 190px !important;
-            width: 120px !important;
         }
     }
 
     .book-list-card {
-        height: 300px;
+        height: 270px !important;
+        flex: 1 1 calc(33.33% - 10px);
+        max-width: calc(34% - 10px);
 
         .card-image {
-            height: 220px !important;
-            width: 90% !important;
+            height: 200px !important;
         }
     }
 
-}
-
-@media (max-width: 350px) {
-    .book-card {
-        height: 260px !important;
-        min-width: 125px !important;
-        width: 15% !important;
+    .author-list-card {
+        flex: 1 1 calc(33% - 10px);
+        max-width: calc(33.5% - 10px);
 
         .card-image {
-            height: 170px !important;
+            height: 180px !important;
+        }
+    }
 
+    .notable-work-card {
+        height: 300px !important;
+        min-width: 130px !important;
+        width: 130px !important;
+    
+        .card-image {
+            height: 220px !important;
+            width: 130px !important;
+        }
+    }
+}
+
+@media (max-width: 450px) {
+    .book-card {
+        flex: 1 1 50% !important;
+        max-width: calc(50% - 10px) !important;
+        height: 305px !important;
+
+        .card-image {
+            height: 220px !important;
+        }
+    }
+
+    .author-list-card {
+        height: 220px !important;
+
+        .card-image {
+            height: 150px !important;
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .book-list-card {
+        height: 270px !important;
+        flex: 1 1 calc(50% - 10px);
+        max-width: calc(51% - 10px);
+
+        .card-image {
+            height: 200px !important;
+        }
+    }
+
+    .author-list-card {
+        height: 210px !important;
+
+        .card-image {
+            height: 130px !important;
+        }
+    }
+}
+
+
+@media (max-width: 310px) {
+    .book-card {
+        flex: 1 1 50% !important;
+        max-width: 48% !important;
+        height: 290px !important;
+
+        .card-image {
+            height: 200px !important;
         }
     }
 }

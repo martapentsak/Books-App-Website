@@ -31,7 +31,7 @@ export const selectors = {
 };
 
 export const authorPoetPageTitles = {
-  award: "Award",
+  award: "Award:",
   born: "Born",
   died: "Died",
   worksTitle: "Notable works",
