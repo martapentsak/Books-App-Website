@@ -79,18 +79,20 @@ export const HomePage = () => {
             />
           ))}
         </ListSection>
-        <ListSection title={homepage.popularBook} wrap>
-          {books.map(({ author, genres, id, ...others }, index) => (
-            <Card
-              key={index}
-              className="book-card"
-              subtitle={author}
-              items={genres}
-              {...others}
-              onClick={() => navigate(`/book/${id}`)}
-            />
-          ))}
-        </ListSection>
+        <div className="home-page-book-list">
+          <ListSection title={homepage.popularBook} wrap>
+            {books.map(({ author, genres, id, ...others }, index) => (
+              <Card
+                key={index}
+                className="book-card"
+                subtitle={author}
+                items={genres}
+                {...others}
+                onClick={() => navigate(`/book/${id}`)}
+              />
+            ))}
+          </ListSection>
+        </div>
       </div>
     </div>
   );

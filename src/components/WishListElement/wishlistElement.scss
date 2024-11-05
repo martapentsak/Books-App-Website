@@ -2,7 +2,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     width: 100%;
     margin: 10px 0;
 
@@ -15,8 +14,6 @@
         opacity: 0.8;
     }
 
-
-
     .wishlist-image {
         height: 200px;
         width: 150px;
@@ -24,8 +21,6 @@
         margin-right: 20px;
         cursor: pointer;
     }
-
-
 
     .wishlist-info {
         width: 65%;
@@ -57,7 +52,6 @@
         }
     }
 
-
     .delete-btn {
         color: $blackishGrey;
         cursor: pointer;
@@ -66,4 +60,27 @@
     .delete-btn:hover {
         color: $white;
     }
+}
+
+
+@media (max-width: 500px) {
+        .wishlist-image {
+            height: 160px !important;
+            width: 120px !important;
+            margin-right: 15px !important;
+        }
+
+        .wishlist-name {
+            font-size: 14px !important;
+            margin: 2px 0 !important;
+        }
+
+        .wishlist-author,
+        .wishlist-year {
+            font-size: 14px !important;
+        }
+
+        .wishlist-description {
+            font-size: 12px !important;
+        }
 }

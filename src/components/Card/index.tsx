@@ -19,6 +19,8 @@ export const Card = ({
   title,
   items,
 }: Props) => {
+
+
   return (
     <div className={className}>
       <CardElement onClick={onClick}>
@@ -28,12 +30,15 @@ export const Card = ({
               <img src={image} alt={"card image"} className={"card-image"} />
               {subtitle && <span className="card-subtitle">{subtitle}</span>}
               <h2 className="card-name">{title}</h2>
+          
               {items?.map((g, index) => (
                 <span className="card-list-item" key={index}>
                   {g}
                   {index < items.length - 1 ? ", " : ""}
                 </span>
               ))}
+  
+            
             </div>
           </CardContent>
         </CardActionArea>

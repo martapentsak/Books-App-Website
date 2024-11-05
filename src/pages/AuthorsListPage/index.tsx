@@ -58,7 +58,7 @@ export const AuthorsPoetsListPage = ({ isPoetPage }: Prop) => {
             {filteredAuthors.map(({ name, genres, id, ...other }, index) => (
               <Card
                 key={index}
-                className="author-card"
+                className="author-list-card"
                 title={name}
                 items={genres}
                 {...other}
