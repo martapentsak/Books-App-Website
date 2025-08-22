@@ -8,7 +8,6 @@ import {
 } from "react";
 
 import { errors } from "../constants/textValues";
-import { booksApi } from "../constants/api";
 
 import useAsyncEffect from "../hooks/useAsyncEffect";
 
@@ -40,8 +39,8 @@ export const BooksProvider = ({ children }: Props) => {
     setLoading(true);
     await waitForAnimationFinish();
     try {
-      const response = await axios.get(booksApi);
-      setBooks(response.data);
+      const response = await axios.get("/db.json")
+      setBooks(response.data.books);
     } catch {
       setError(errors.getbooks);
     } finally {

@@ -32,7 +32,7 @@ export const Card = ({
               <h2 className="card-name">{title}</h2>
           
               {items?.map((g, index) => (
-                <span className="card-list-item" key={index}>
+                <span key={index} className="card-list-item" >
                   {g}
                   {index < items.length - 1 ? ", " : ""}
                 </span>

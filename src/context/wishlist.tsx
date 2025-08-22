@@ -1,17 +1,13 @@
-import axios from "axios";
+
 import {
   ReactNode,
   createContext,
-  useCallback,
   useContext,
+  useEffect,
   useState,
 } from "react";
 
-import { wishListApi } from "../constants/api";
 
-import useAsyncEffect from "../hooks/useAsyncEffect";
-
-import { waitForAnimationFinish } from "../helpers/waitForAnimationFinish";
 import { errors } from "../constants/textValues";
 import { Book } from "../types/AuthorBookType";
 
@@ -21,7 +17,7 @@ type ProviderValues = {
   error: string;
   handleAddBookToWishlist: (book: Book) => void;
   handleCloseWishlistError: () => void;
-  handleRemoveBookFromWishlist: (bookId: string) => void
+  handleRemoveBookFromWishlist: (bookId: string) => void;
 };
 
 type Props = {
@@ -37,12 +33,12 @@ export const WishListProvider = ({ children }: Props) => {
 
   const [loading, setLoading] = useState<boolean>(false);
 
-  useAsyncEffect(async () => {
-    setLoading(true);
-    await waitForAnimationFinish();
+  useEffect(() => {
     try {
-      const reponse = await axios.get(wishListApi);
-      setWishList(reponse.data);
+      const wishList = localStorage.getItem("wishlist");
+      console.log(wishList);
+      wishList ? JSON.parse(wishList) : [];
+      setWishList(wishList ? JSON.parse(wishList) : []);
     } catch {
       setError(errors.getWishList);
     } finally {
@@ -50,27 +46,27 @@ export const WishListProvider = ({ children }: Props) => {
     }
   }, []);
 
-  const handleRemoveBookFromWishlist = useCallback(async (bookId: string) => {
-    setWishList((prev) => prev.filter((v) => v.id !== bookId));
-    await axios.delete(`${wishListApi}/${bookId}`);
-  }, []);
+  const handleRemoveBookFromWishlist = (bookId: string) => {
+    setWishList((prev) => {
+      const updated = prev.filter((v) => v.id !== bookId);
+      localStorage.setItem("wishlist", JSON.stringify(updated));
+      return updated;
+    });
+  };
 
-  const handleAddBookToWishlist = useCallback(
-    async (book: Book) => {
-      try {
-        const bookAlreadyExist = wishList.find((v) => v.title === book.title);
-        if (bookAlreadyExist) {
-          await handleRemoveBookFromWishlist(bookAlreadyExist.id);
-        } else {
-          setWishList((prev) => [...prev, book]);
-          await axios.post(wishListApi, book);
-        }
-      } catch {
-        setError(errors.getWishList);
+  const handleAddBookToWishlist = (book: Book) => {
+    setWishList((prev) => {
+      const exists = prev.find((v) => v.title === book.title);
+      let updated: Book[];
+      if (exists) {
+        updated = prev.filter((v) => v.id !== exists.id);
+      } else {
+        updated = [...prev, book];
       }
-    },
-    [wishList]
-  );
+      localStorage.setItem("wishlist", JSON.stringify(updated));
+      return updated;
+    });
+  };
 
   const handleCloseWishlistError = () => setError("");
 
@@ -80,7 +76,7 @@ export const WishListProvider = ({ children }: Props) => {
     loading,
     handleAddBookToWishlist,
     handleCloseWishlistError,
-    handleRemoveBookFromWishlist
+    handleRemoveBookFromWishlist,
   };
   return (
     <WishlistContext.Provider value={providervalues}>

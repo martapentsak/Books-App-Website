@@ -25,7 +25,7 @@ export const Select = ({ label, onChange, options }: Prop) => {
         >
         <option>{allValue}</option>
         {options.map((o, optionIndex) => (
-          <option value={o} key={optionIndex}>
+          <option key={optionIndex} value={o} >
             {o}
           </option>
         ))}
