@@ -23,8 +23,8 @@ export const WishList = () => {
       {error && <Alert error={error} onClose={handleCloseWishlistError} />}
       <div className="wishlist-wrapper">
         {wishList.length ? (
-          wishList.map((element) => (
-            <WishListElement wishListElement={element} />
+          wishList.map((element, index) => (
+            <WishListElement  key={index} wishListElement={element} />
           ))
         ) : (
           <div className="empty-wishlist-section">

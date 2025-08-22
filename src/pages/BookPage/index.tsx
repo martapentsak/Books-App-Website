@@ -110,7 +110,7 @@ export const BookPage = () => {
             genres:{" "}
             <div className="genres-list">
               {genres.map((g, index) => (
-                <span className="book-category" key={index}>
+                <span key={index} className="book-category" >
                   {g}
                   {index < genres.length - 1 ? ", " : ""}
                 </span>

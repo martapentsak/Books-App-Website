@@ -8,7 +8,6 @@ import {
 } from "react";
 
 import { errors } from "../constants/textValues";
-import { authorsAPi, poetsApi } from "../constants/api";
 
 import useAsyncEffect from "../hooks/useAsyncEffect";
 
@@ -42,14 +41,11 @@ export const AuthorProvider = ({ children }: Props) => {
     setLoading(true);
     await waitForAnimationFinish();
     try {
-      const authorResponse = await axios.get(authorsAPi);
-      const poetsResponse = await axios.get(poetsApi);
-      const [authorList, poetList] = await Promise.all([
-        authorResponse,
-        poetsResponse,
-      ]);
-      setAuthors(authorList.data);
-      setPoets(poetList.data);
+      const response = await axios.get("/db.json");
+      const authorList = response.data.writers;
+      const poetList = response.data.poets;
+      setAuthors(authorList);
+      setPoets(poetList);
     } catch {
       setError(errors.getauthors);
     } finally {

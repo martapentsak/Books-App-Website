@@ -36,7 +36,7 @@ export const WishListElement = ({
           <h4 className="wishlist-year">{publicationYear}</h4>
           <p className="wishlist-description">{description}</p>
           {genres.map((g, index) => (
-            <span className="card-list-item" key={index}>
+            <span key={index} className="card-list-item" >
               {g}
               {index < genres.length - 1 ? ", " : ""}
             </span>
