@@ -9,17 +9,15 @@ type Props = {
   works: string[];
 };
 
-export const NotableWorks = ({ works }: Props) => {
-  return (
-    <ListSection title={authorPoetPageTitles.worksTitle}>
-      {works.map((work, index) => (
-        <Card
-          key={index}
-          className="notable-work-card"
-          title={work}
-          image={bookPlaceholder}
-        />
-      ))}
-    </ListSection>
-  );
-};
+export const NotableWorks = ({ works }: Props) => (
+  <ListSection title={authorPoetPageTitles.worksTitle}>
+    {works.map((work, index) => (
+      <Card
+        key={index}
+        className="notable-work-card"
+        title={work}
+        image={bookPlaceholder}
+      />
+    ))}
+  </ListSection>
+);

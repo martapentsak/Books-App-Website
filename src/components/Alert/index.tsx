@@ -6,14 +6,12 @@ type Props = {
   onClose: () => void;
 };
 
-export const Alert = ({ error, onClose }: Props) => {
-  return (
-    <div className="alert-section">
-      <Stack>
-        <AlertWindow severity="error" onClose={onClose}>
-          ERROR! {error}
-        </AlertWindow>
-      </Stack>
-    </div>
-  );
-};
+export const Alert = ({ error, onClose }: Props) => (
+  <div className="alert-section">
+    <Stack>
+      <AlertWindow severity="error" onClose={onClose}>
+        ERROR! {error}
+      </AlertWindow>
+    </Stack>
+  </div>
+);

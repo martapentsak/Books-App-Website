@@ -46,7 +46,7 @@ export const AuthorsPoetsListPage = ({ isPoetPage }: Prop) => {
   }
 
   return (
-    <div>
+    <main>
       {error && <Alert error={error} onClose={handleCloseAuthorsError} />}
       <FilterContainer
         selector={selector}
@@ -72,6 +72,6 @@ export const AuthorsPoetsListPage = ({ isPoetPage }: Prop) => {
           <NotFound />
         )}
       </FilterContainer>
-    </div>
+    </main>
   );
 };

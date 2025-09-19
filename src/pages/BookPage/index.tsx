@@ -73,7 +73,7 @@ export const BookPage = () => {
   const currentAuthorId = authors.find((a) => a.name === author)?.id;
 
   return (
-    <div className="book-page">
+    <main className="book-page">
       {bookListError ||
         (wishlistError && (
           <Alert
@@ -87,7 +87,7 @@ export const BookPage = () => {
         <div className="book-cover-section">
           <img src={image} alt={`${title} cover`} className="book-cover" />
         </div>
-        <div className="book-info-section">
+        <section className="book-info-section">
           <h2 className="book-name">{title}</h2>
           <div
             className="book-author"
@@ -130,8 +130,8 @@ export const BookPage = () => {
               ))}
             </ListSection>
           </div>
-        </div>
+        </section>
       </div>
-    </div>
+    </main>
   );
 };

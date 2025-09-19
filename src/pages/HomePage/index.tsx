@@ -43,7 +43,7 @@ export const HomePage = () => {
   }
 
   return (
-    <div className="home-page">
+    <main className="home-page">
       {errorExist && (
         <Alert
           error={errorExist}
@@ -53,11 +53,15 @@ export const HomePage = () => {
         />
       )}
 
-      <div className="poets-section">
+      <section className="poets-section">
         <div className="selected-poet-section">
           <p className="selected-poet-title">{homepage.postContainerTitle}</p>
 
-          <img src={selectedPoet.image} className="selected-poet-image" />
+          <img
+            src={selectedPoet.image}
+            className="selected-poet-image"
+            alt="poet"
+          />
         </div>
         <PoetList
           poets={poets}
@@ -65,8 +69,8 @@ export const HomePage = () => {
           onClick={setSelectedPoetIndex}
         />
         <AuthorWorks title={homepage.works} author={selectedPoet} />
-      </div>
-      <div className="authors-books-section">
+      </section>
+      <section className="authors-books-section">
         <ListSection title={homepage.popularWriter}>
           {authors.map(({ name, genres, image, id }, index) => (
             <Card
@@ -93,7 +97,7 @@ export const HomePage = () => {
             ))}
           </ListSection>
         </div>
-      </div>
-    </div>
+      </section>
+    </main>
   );
 };

@@ -38,7 +38,7 @@ export const BookListPage = () => {
   }
 
   return (
-    <div>
+    <main>
       {error && <Alert error={error} onClose={handleCloseBooksError} />}
       <FilterContainer
         selector={selector}
@@ -62,6 +62,6 @@ export const BookListPage = () => {
           <NotFound />
         )}
       </FilterContainer>
-    </div>
+    </main>
   );
 };
