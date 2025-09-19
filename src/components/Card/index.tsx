@@ -18,31 +18,25 @@ export const Card = ({
   subtitle,
   title,
   items,
-}: Props) => {
+}: Props) => (
+  <div className={className}>
+    <CardElement onClick={onClick}>
+      <CardActionArea>
+        <CardContent>
+          <div>
+            <img src={image} alt={"card image"} className={"card-image"} />
+            {subtitle && <span className="card-subtitle">{subtitle}</span>}
+            <h2 className="card-name">{title}</h2>
 
-
-  return (
-    <div className={className}>
-      <CardElement onClick={onClick}>
-        <CardActionArea>
-          <CardContent>
-            <div>
-              <img src={image} alt={"card image"} className={"card-image"} />
-              {subtitle && <span className="card-subtitle">{subtitle}</span>}
-              <h2 className="card-name">{title}</h2>
-          
-              {items?.map((g, index) => (
-                <span key={index} className="card-list-item" >
-                  {g}
-                  {index < items.length - 1 ? ", " : ""}
-                </span>
-              ))}
-  
-            
-            </div>
-          </CardContent>
-        </CardActionArea>
-      </CardElement>
-    </div>
-  );
-};
+            {items?.map((g, index) => (
+              <span key={index} className="card-list-item">
+                {g}
+                {index < items.length - 1 ? ", " : ""}
+              </span>
+            ))}
+          </div>
+        </CardContent>
+      </CardActionArea>
+    </CardElement>
+  </div>
+);

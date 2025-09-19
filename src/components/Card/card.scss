@@ -2,14 +2,19 @@
     height: 270px;
     width: 140px;
     opacity: 0.8;
+    border-radius: 14px !important;
     margin-right: 15px;
 
     .card-image {
-        height: 180px !important;
+        height: 170px !important;
         width: 140px !important;
         background-size: contain;
         border-radius: 14px !important;
     }
+}
+
+.css-1j74uew-MuiPaper-root-MuiCard-root {
+    background-color: transparent !important;
 }
 
 .author-list-card {

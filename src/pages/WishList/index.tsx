@@ -19,15 +19,15 @@ export const WishList = () => {
   }
 
   return (
-    <div className="wishlist-page">
+    <main className="wishlist-page">
       {error && <Alert error={error} onClose={handleCloseWishlistError} />}
       <div className="wishlist-wrapper">
         {wishList.length ? (
           wishList.map((element, index) => (
-            <WishListElement  key={index} wishListElement={element} />
+            <WishListElement key={index} wishListElement={element} />
           ))
         ) : (
-          <div className="empty-wishlist-section">
+          <section className="empty-wishlist-section">
             <span className="empty-wishlist">{wishListPage.message}</span>
             <Button
               className="navigate-bookstore-btn"
@@ -35,9 +35,9 @@ export const WishList = () => {
             >
               {wishListPage.btn}
             </Button>
-          </div>
+          </section>
         )}
       </div>
-    </div>
+    </main>
   );
 };

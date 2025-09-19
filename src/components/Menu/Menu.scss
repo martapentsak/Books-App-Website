@@ -10,6 +10,7 @@
         margin: 0 auto;
         display: flex;
         align-items: center;
+        justify-content: space-evenly;
 
         .menu-logo-section {
             display: flex;
@@ -60,6 +61,7 @@
             padding: 26px 16px;
             width: 15%;
             min-width: 120px;
+            color: white !important;
         }
 
         .css-heg063-MuiTabs-flexContainer .css-19wsa2m-MuiButtonBase-root-MuiTab-root:nth-child(5) {
@@ -91,6 +93,13 @@
             padding: 2px 6px;
             border-radius: 50%;
         }
+
+        .css-1usuzwp-MuiButtonBase-root-MuiTab-root {
+            color: white;
+            padding: 0 40px;
+        }
+
+        
     }
 
 }

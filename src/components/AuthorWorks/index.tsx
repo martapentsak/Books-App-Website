@@ -6,11 +6,10 @@ type Props = {
   author: Author;
 };
 
-export function AuthorWorks({ title, author : {id, works, name} }: Props) {
-
+export function AuthorWorks({ title, author: { id, works, name } }: Props) {
   const navigate = useNavigate();
   return (
-    <div className="works-section">
+    <section className="works-section">
       <div className="list-section">
         <h2 className="list-section-title ">{title}</h2>
         {works.map((w, index) => (
@@ -23,6 +22,6 @@ export function AuthorWorks({ title, author : {id, works, name} }: Props) {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 }

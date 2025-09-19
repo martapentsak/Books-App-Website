@@ -35,19 +35,19 @@ export const AuthorPoetPage = ({ isPoetPage }: Prop) => {
   }
 
   return (
-    <div className="author-page">
+    <main className="author-page">
       <div className="wrapper">
         <div className="author-image-section">
-          <img src={image} className="author-image" />
+          <img src={image} className="author-image" alt={authorName} />
         </div>
-        <div className="author-info-section">
+        <section className="author-info-section">
           <h2 className="author-name">{authorName}</h2>
-          <div className="author-nationality">{nationality}</div>
-          <div className="author-biography">{biography}</div>
-          <div className="author-award">
+          <p className="author-nationality">{nationality}</p>
+          <p className="author-biography">{biography}</p>
+          <p className="author-award">
             {authorPoetPageTitles.award}
             <span className="award">{award}</span>
-          </div>
+          </p>
           <div className="author-birth-section">
             <div className="born-section">
               <span className="born-section-category">
@@ -66,11 +66,11 @@ export const AuthorPoetPage = ({ isPoetPage }: Prop) => {
           <div className="notable-works">
             <NotableWorks works={works} />
           </div>
-        </div>
+        </section>
       </div>
       <div className="smallwidth-notable-works">
         <NotableWorks works={works} />
       </div>
-    </div>
+    </main>
   );
 };
