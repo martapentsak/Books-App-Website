@@ -11,11 +11,27 @@
         "Poetry"
       ],
       "works": [
-        "Hamlet",
-        "Romeo and Juliet",
-        "Macbeth",
-        "Othello",
-        "King Lear"
+          {
+            "name": "Hamlet",
+            "image": "https://static.yakaboo.ua/media/cloudflare/product/webp/600x840/c/o/cover1_503_20.jpg"
+          },
+          {
+            "name": "Macbeth",
+            "image": "https://m.media-amazon.com/images/I/619FRe1mEqL._UF1000,1000_QL80_.jpg"
+          },
+          {
+            "name": "Romeo and Juliet",
+            "image": "https://m.media-amazon.com/images/I/61LQf6GWT4L.jpg"
+          },
+          {
+            "name": "Othello",
+            "image": "https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781501146299/othello-9781501146299_hr.jpg"
+          },
+          {
+            "name": "King Lear",
+            "image": "https://covers.shakespeareandcompany.com/97818532/9781853260957.jpg"
+          }
+        
       ],
       "award": "None",
       "biography": "William Shakespeare was an English playwright, poet, and actor, widely regarded as the greatest writer in the English language and the world's greatest dramatist.",
@@ -31,9 +47,20 @@
         "Poetry"
       ],
       "works": [
-        "Because I could not stop for Death",
-        "Hope is the thing with feathers",
-        "I'm Nobody! Who are you?"
+        
+          {
+            "name": "Because I Could Not Stop for Death",
+            "image": "https://m.media-amazon.com/images/I/915MPQVlH-L._UF1000,1000_QL80_.jpg"
+          },
+          {
+            "name": "Hope Is the Thing with Feathers",
+            "image": "https://m.media-amazon.com/images/I/91-wt7+RVQL._UF894,1000_QL80_.jpg"
+          },
+          {
+            "name": "I'm Nobody! Who Are You?",
+            "image": "https://img.btimages.net/k1r/44001.jpg"
+          }
+        
       ],
       "award": "None",
       "biography": "Emily Dickinson was an American poet known for her unique and innovative style of poetry. Though she lived a reclusive life, her poems have since become highly regarded for their profound insights and emotional depth.",
@@ -49,10 +76,23 @@
         "Poetry"
       ],
       "works": [
-        "The Raven",
-        "Annabel Lee",
-        "The Tell-Tale Heart",
-        "The Bells"
+        
+          {
+            "name": "The Raven",
+            "image": "https://m.media-amazon.com/images/I/51O1TEQcsVL._UF1000,1000_QL80_.jpg"
+          },
+          {
+            "name": "Annabel Lee",
+            "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1692328468i/197146552.jpg"
+          },
+          {
+            "name": "The Tell-Tale Heart",
+            "image": "https://m.media-amazon.com/images/I/61K+rPzJXIL._UF1000,1000_QL80_.jpg"
+          },
+          {
+            "name": "The Bells",
+            "image": "https://m.media-amazon.com/images/I/81+nAHJbyrL._UF1000,1000_QL80_.jpg"
+          }
       ],
       "award": "None",
       "biography": "Edgar Allan Poe was an American writer, poet, and literary critic. He is best known for his macabre and Gothic tales and poems, which have greatly influenced the horror genres.",
@@ -68,10 +108,23 @@
         "Poetry"
       ],
       "works": [
-        "Lines Composed a Few Miles Above Tintern Abbey",
-        "I Wandered Lonely as a Cloud",
-        "The Prelude",
-        "Ode: Intimations of Immortality"
+        
+          {
+            "name": "Lines Composed a Few Miles Above Tintern Abbey",
+            "image": "https://owl-static.enotescdn.net/uploads/covers/095711-16-04-2018.jpeg"
+          },
+          {
+            "name": "I Wandered Lonely as a Cloud",
+            "image": "https://m.media-amazon.com/images/I/81Vbxhl3JEL._UF1000,1000_QL80_.jpg"
+          },
+          {
+            "name": "The Prelude",
+            "image": "https://m.media-amazon.com/images/I/71W-2iffanL._UF1000,1000_QL80_.jpg"
+          },
+          {
+            "name": "Ode: Intimations of Immortality",
+            "image": "https://m.media-amazon.com/images/I/61OlbBNT4QL._UF1000,1000_QL80_.jpg"
+          }
       ],
       "award": "None",
       "biography": "William Wordsworth was an English Romantic poet who, with Samuel Taylor Coleridge, helped launch the Romantic Age in English literature. His poetry emphasizes nature, imagination, and the human spirit.",
@@ -87,10 +140,22 @@
         "Poetry"
       ],
       "works": [
-        "Ode to a Nightingale",
-        "Ode on a Grecian Urn",
-        "To Autumn",
-        "Bright Star"
+        {
+          "name": "Ode to a Nightingale",
+          "image": "https://m.media-amazon.com/images/I/81WhLcxicVL._UF1000,1000_QL80_.jpg"
+        },
+        {
+          "name": "Ode on a Grecian Urn",
+          "image": "https://m.media-amazon.com/images/I/81ol5EFbI1L._UF1000,1000_QL80_.jpg"
+        },
+        {
+          "name": "To Autumn",
+          "image": "https://www.ombooksinternational.com/wp-content/uploads/2023/11/9788196044749_1-450x694.jpg"
+        },
+        {
+          "name": "Bright Star",
+          "image": "https://m.media-amazon.com/images/I/81qqSUQgAkL._UF894,1000_QL80_.jpg"
+        }
       ],
       "award": "None",
       "biography": "John Keats was an English Romantic poet known for his odes and sonnets. His poetry is characterized by its sensuous imagery and exploration of the beauty of the natural world.",
@@ -106,10 +171,22 @@
         "Poetry"
       ],
       "works": [
-        "Leaves of Grass",
-        "Song of Myself",
-        "O Captain! My Captain!",
-        "When Lilacs Last in the Dooryard Bloom'd"
+        {
+          "name": "Leaves of Grass",
+          "image": "https://m.media-amazon.com/images/I/81TR5FC0OmS._UF1000,1000_QL80_.jpg"
+        },
+        {
+          "name": "Song of Myself",
+          "image": "https://m.media-amazon.com/images/I/61wsWTej-7L._UF1000,1000_QL80_.jpg"
+        },
+        {
+          "name": "O Captain! My Captain!",
+          "image": "https://f4.bcbits.com/img/a2002182551_10.jpg"
+        },
+        {
+          "name": "When Lilacs Last in the Dooryard Bloom'd",
+          "image": "https://rememberinglincoln.fords.org/sites/default/files/Capture.PNG"
+        }
       ],
       "award": "None",
       "biography": "Walt Whitman was an American poet, essayist, and journalist. He is best known for his collection 'Leaves of Grass', which celebrates the beauty of nature, the individual, and the human experience.",
@@ -125,8 +202,14 @@
         "Poetry"
       ],
       "works": [
-        "i carry your heart with me",
-        "somewhere i have never travelled, gladly beyond"
+        {
+          "name": "i carry your heart with me",
+          "image": "https://i5.walmartimages.com/seo/I-Carry-Your-Heart-with-Me-Board-Book-9781944903206_7c015382-eb1e-4039-b3ff-ddfdf2a3fb0c.0ec9a547ecfed2b85d374c109b450398.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF"
+        },
+        {
+          "name": "somewhere i have never travelled, gladly beyond",
+          "image": "https://m.media-amazon.com/images/I/51oATtfKelL._UF1000,1000_QL80_.jpg"
+        }
       ],
       "award": "None",
       "biography": "E.E. Cummings was an American poet, painter, essayist, and playwright. His poetry is known for its innovative style, experimentation with language, and use of lowercase letters and unconventional punctuation. Cummings' unique approach to poetry has made him one of the most distinctive voices in American literature.",
@@ -144,10 +227,22 @@
         "Essay"
       ],
       "works": [
-        "The Negro Speaks of Rivers",
-        "Harlem",
-        "Let America Be America Again",
-        "Montage of a Dream Deferred"
+        {
+          "name": "The Negro Speaks of Rivers",
+          "image": "https://m.media-amazon.com/images/I/513XgPgF4TL._UF1000,1000_QL80_.jpg"
+        },
+        {
+          "name": "Harlem",
+          "image": "https://ecdn.teacherspayteachers.com/cdn-cgi/image/format=avif,quality=70,onerror=redirect/thumbitem/Harlem-by-Langston-Hughes-3523530-1512320146/750f-3523530-1.jpg"
+        },
+        {
+          "name": "Let America Be America Again",
+          "image": "https://m.media-amazon.com/images/I/61P--Y7o2OL._UF1000,1000_QL80_.jpg"
+        },
+        {
+          "name": "Montage of a Dream Deferred",
+          "image": "https://images.genius.com/187acf98bf0a2dab1085121f7329dd6a.748x1000x1.jpg"
+        }
       ],
       "award": "Anisfield-Wolf Book Award",
       "biography": "Langston Hughes was an American poet, social activist, novelist, and playwright. He was a leading figure of the Harlem Renaissance, and his poetry often explored the experiences of African Americans and the complexities of identity and race in America.",
@@ -163,10 +258,22 @@
         "Poetry"
       ],
       "works": [
-        "The Masnavi",
-        "Divan-e Shams",
-        "Diwan-e Kabir",
-        "Fihi Ma Fihi"
+        {
+          "name": "The Masnavi",
+          "image": "https://dynamic.indigoimages.ca/v1/books/books/1463510160/1.jpg?width=810&maxHeight=810&quality=85"
+        },
+        {
+          "name": "Divan-e Shams",
+          "image": "https://m.media-amazon.com/images/I/61CQxGfBX6L.jpg"
+        },
+        {
+          "name": "Diwan-e Kabir",
+          "image": "https://m.media-amazon.com/images/I/51Jaks1oDkL._UF1000,1000_QL80_.jpg"
+        },
+        {
+          "name": "Fihi Ma Fihi",
+          "image": "https://ibtbooks.com/wp-content/uploads/2019/07/Fihi-ma-fihi.jpg"
+        }
       ],
       "award": "None",
       "biography": "Rumi, also known as Jalāl al-Dīn Muḥammad Rūmī, was a 13th-century Persian poet, Islamic scholar, theologian, and Sufi mystic. His poetry is deeply spiritual and explores themes of love, unity, and the divine.",
@@ -183,10 +290,22 @@
         "Autobiography"
       ],
       "works": [
-        "I Know Why the Caged Bird Sings",
-        "Phenomenal Woman",
-        "Still I Rise",
-        "And Still I Rise"
+        {
+          "name": "I Know Why the Caged Bird Sings",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/1/17/I_Know_Why_the_Caged_Bird_Sings_front_cover%2C_1969_first_edition.jpg"
+        },
+        {
+          "name": "Phenomenal Woman",
+          "image": "https://m.media-amazon.com/images/I/61kiEFubSeL._UF1000,1000_QL80_.jpg"
+        },
+        {
+          "name": "Still I Rise",
+          "image": "https://m.media-amazon.com/images/I/81uLhapGKRL._UF1000,1000_QL80_.jpg"
+        },
+        {
+          "name": "And Still I Rise",
+          "image": "https://m.media-amazon.com/images/I/51k0ec5zpAL._UF1000,1000_QL80_.jpg"
+        }
       ],
       "award": "Presidential Medal of Freedom",
       "biography": "Maya Angelou was an American poet, memoirist, and civil rights activist. Her autobiographical works and poetry reflect her experiences as an African American woman and explore themes of racism, identity, and personal growth.",
@@ -198,16 +317,26 @@
       "birthYear": 1932,
       "deathYear": 1963,
       "nationality": "American",
-      "genres": [
-        "Poetry"
-      ],
+      "genres": ["Poetry", "Novel"],
       "works": [
-        "Daddy",
-        "The Bell Jar",
-        "Ariel",
-        "Lady Lazarus"
+        {
+          "name": "Daddy",
+          "image": "https://media.s-bol.com/rxQ7Y2n2DZGE/WnP5Z0v/535x840.jpg"
+        },
+        {
+          "name": "The Bell Jar",
+          "image": "https://m.media-amazon.com/images/I/81wUVpREPSL._UF1000,1000_QL80_.jpg"
+        },
+        {
+          "name": "Ariel",
+          "image": "https://m.media-amazon.com/images/I/91WvylZXNxL._UF1000,1000_QL80_.jpg"
+        },
+        {
+          "name": "Lady Lazarus",
+          "image": "https://m.media-amazon.com/images/I/81CnVdHZOML._UF1000,1000_QL80_.jpg"
+        }
       ],
-      "award": "Pulitzer Prize for Poetry",
+      "award": "Pulitzer Prize for Poetry (1982, posthumous)",
       "biography": "Sylvia Plath was an American poet, novelist, and short story writer. Her poetry is known for its intense and confessional style, exploring themes of mental illness, gender roles, and personal struggle.",
       "image": "https://assets.vogue.com/photos/59564c52f1a5f21be8588617/master/w_1600%2Cc_limit/03-sylvia-plath%2520exhibition.jpg"
     },
@@ -217,17 +346,23 @@
       "birthYear": 1861,
       "deathYear": 1941,
       "nationality": "Indian",
-      "genres": [
-        "Poetry"
-      ],
+      "genres": ["Poetry", "Short Stories"],
       "works": [
-        "Gitanjali",
-        "The Gardener",
-        "The Post Office",
-        "The Home and the World"
+        {
+          "name": "Gitanjali",
+          "image": "https://m.media-amazon.com/images/I/81cuCwoEu3L._UF1000,1000_QL80_.jpg"
+        },
+        {
+          "name": "The Home and the World",
+          "image": "https://m.media-amazon.com/images/I/81nBtEM3mKL._UF1000,1000_QL80_.jpg"
+        },
+        {
+          "name": "The Post Office",
+          "image": "https://m.media-amazon.com/images/I/61utkAFI+uL._UF1000,1000_QL80_.jpg"
+        }
       ],
-      "award": "Nobel Prize in Literature",
-      "biography": "Rabindranath Tagore, also known as Gurudev, was an Indian poet, philosopher, and Nobel laureate. He was a key figure of the Bengal Renaissance and is best known for his poetry, which reflects his deep love for nature and humanity.",
+      "award": "Nobel Prize in Literature (1913)",
+      "biography": "Rabindranath Tagore was an Indian poet, philosopher, and writer. He was the first non-European to be awarded the Nobel Prize in Literature, primarily for his collection of poems 'Gitanjali.'",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Rabindranath_Tagore.jpg/800px-Rabindranath_Tagore.jpg"
     },
     {
@@ -236,14 +371,24 @@
       "birthYear": 1830,
       "deathYear": 1894,
       "nationality": "British",
-      "genres": [
-        "Poetry"
-      ],
+      "genres": ["Poetry"],
       "works": [
-        "Goblin Market",
-        "Remember",
-        "In the Bleak Midwinter",
-        "A Birthday"
+        {
+          "name": "Goblin Market",
+          "image": "https://m.media-amazon.com/images/I/81MSXN6+FwL._UF1000,1000_QL80_.jpg"
+        },
+        {
+          "name": "Remember",
+          "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1615241718i/43679662.jpg"
+        },
+        {
+          "name": "In the Bleak Midwinter",
+          "image": "https://m.media-amazon.com/images/I/71HB7NSd9FL._UF1000,1000_QL80_.jpg"
+        },
+        {
+          "name": "A Birthday",
+          "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1394250793i/21134980.jpg"
+        }
       ],
       "award": "None",
       "biography": "Christina Rossetti was an English poet of the Victorian era. Her poetry is known for its rich symbolism, religious themes, and lyrical style.",
@@ -255,17 +400,24 @@
       "birthYear": 1874,
       "deathYear": 1963,
       "nationality": "American",
-      "genres": [
-        "Poetry"
-      ],
+      "genres": ["Poetry"],
       "works": [
-        "The Road Not Taken",
-        "Stopping by Woods on a Snowy Evening",
-        "Fire and Ice"
+        {
+          "name": "The Road Not Taken",
+          "image": "https://m.media-amazon.com/images/I/A12cqDU59TL._UF1000,1000_QL80_.jpg"
+        },
+        {
+          "name": "Stopping by Woods on a Snowy Evening",
+          "image": "https://m.media-amazon.com/images/I/915zSOG+m1L._UF1000,1000_QL80_.jpg"
+        },
+        {
+          "name": "Fire and Ice",
+          "image": "https://owl-static.enotescdn.net/uploads/covers/034702-03-05-2021.jpeg"
+        }
       ],
       "award": "Four Pulitzer Prizes for Poetry",
-      "biography": "Robert Frost was an American poet known for his vivid depictions of rural life and the New England landscape. His poetry often explored themes of nature, human struggles, and the complexities of the human mind. Frost's accessible style and use of everyday language endeared him to readers of all ages.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Robert_Frost_NYWTS_4.jpg/1200px-Robert_Frost_NYWTS_4.jpg"
+      "biography": "Robert Frost was an American poet known for his vivid depictions of rural life and the New England landscape. His poetry often explored themes of nature, human struggles, and the complexities of the human mind.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Robert_Frost_NYWTS_4.jpg"
     },
     {
       "id": "15",
@@ -273,18 +425,27 @@
       "birthYear": 1939,
       "deathYear": 2013,
       "nationality": "Irish",
-      "genres": [
-        "Poetry",
-        "Translation"
-      ],
+      "genres": ["Poetry", "Translation"],
       "works": [
-        "Digging",
-        "Death of a Naturalist",
-        "The Forge",
-        "Beowulf (translation)"
+        {
+          "name": "Wintering out",
+          "image": "https://m.media-amazon.com/images/I/61M0O5WGj-L.jpg"
+        },
+        {
+          "name": "Death of a Naturalist",
+          "image": "https://m.media-amazon.com/images/I/91JWK54EMWL._UF1000,1000_QL80_.jpg"
+        },
+        {
+          "name": "The Forge",
+          "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1394346027i/21343929.jpg"
+        },
+        {
+          "name": "Beowulf",
+          "image": "https://static.yakaboo.ua/media/cloudflare/product/webp/600x840/i/m/img783_2_4.jpg"
+        }
       ],
-      "award": "Nobel Prize in Literature",
-      "biography": "Seamus Heaney was an Irish poet, playwright, and translator. He is considered one of the greatest poets of the 20th century and was renowned for his lyrical and evocative use of language. Heaney's poetry often explored themes of Irish history, rural life, and the complexities of human emotions.",
+      "award": "Nobel Prize in Literature (1995)",
+      "biography": "Seamus Heaney was an Irish poet, playwright, and translator. He is considered one of the greatest poets of the 20th century and was renowned for his lyrical and evocative use of language.",
       "image": "https://paxosfestival.com/wp-content/uploads/2023/07/seamus-heaney.jpg"
     },
     {
@@ -293,16 +454,23 @@
       "birthYear": 1928,
       "deathYear": 1974,
       "nationality": "American",
-      "genres": [
-        "Poetry"
-      ],
+      "genres": ["Poetry"],
       "works": [
-        "Live or Die",
-        "Transformations",
-        "The Awful Rowing Toward God"
+        {
+          "name": "Live or Die",
+          "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1474950534i/118285.jpg"
+        },
+        {
+          "name": "Transformations",
+          "image": "https://acappellabooks.cdn.bibliopolis.com/pictures/244227_1.jpg?auto=webp&v=1621975174"
+        },
+        {
+          "name": "The Awful Rowing Toward God",
+          "image": "https://lornebair.cdn.bibliopolis.com/pictures/60180.jpg?auto=webp&v=1671498431"
+        }
       ],
-      "award": "Pulitzer Prize for Poetry",
-      "biography": "Anne Sexton was an American poet known for her confessional style and candid exploration of personal experiences and emotions. Her poetry often delved into themes of mental illness, family, and relationships. Sexton's bold and honest approach to writing continues to resonate with readers today.",
+      "award": "Pulitzer Prize for Poetry (1967)",
+      "biography": "Anne Sexton was an American poet known for her confessional style and candid exploration of personal experiences and emotions. Her poetry often delved into themes of mental illness, family, and relationships.",
       "image": "https://theamericanreader.com/wp-content/uploads/2015/02/anne-sexton-1-e1423950003705.jpg"
     },
     {
@@ -311,20 +479,25 @@
       "birthYear": 1946,
       "deathYear": null,
       "nationality": "American",
-      "genres": [
-        "Poetry",
-        "Rock"
-      ],
+      "genres": ["Poetry", "Rock"],
       "works": [
-        "Just Kids",
-        "Horses",
-        "M Train",
-        "Babel"
+        {
+          "name": "Just Kids",
+          "image": "https://m.media-amazon.com/images/I/61SZH1+PalL.jpg"
+        },
+        {
+          "name": "M Train",
+          "image": "https://res.cloudinary.com/holtzbrinck-buchverlage/image/fetch/w_1200,c_fill,g_auto,q_auto,f_jpg/https%3A%2F%2Fpondus-hpg.s3.eu-central-1.amazonaws.com%2Fkiwi%2Fpublic%2FU1_978-3-462-04863-6.png"
+        },
+        {
+          "name": "Babel",
+          "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1600265302i/788585.jpg"
+        }
       ],
-      "award": "National Book Award",
+      "award": "National Book Award (2010)",
       "biography": "Patti Smith is an American poet, singer-songwriter, and visual artist. She gained fame in the punk rock movement and is known for her poetic lyrics and unique blend of rock and poetry in her music.",
       "image": "https://upload.wikimedia.org/wikipedia/commons/7/75/Patti_Smith%2C_1978_%28cropped%29.jpg"
-    }
+    }    
   ],
   "writers": [
     {
@@ -333,16 +506,28 @@
       "birthYear": 1564,
       "deathYear": 1616,
       "nationality": "English",
-      "genres": [
-        "Drama",
-        "Poetry"
-      ],
+      "genres": ["Drama", "Poetry"],
       "works": [
-        "Hamlet",
-        "Romeo and Juliet",
-        "Macbeth",
-        "Othello",
-        "King Lear"
+        {
+          "name": "Hamlet",
+          "image": "https://static.yakaboo.ua/media/cloudflare/product/webp/600x840/c/o/cover1_503_20.jpg"
+        },
+        {
+          "name": "Macbeth",
+          "image": "https://m.media-amazon.com/images/I/619FRe1mEqL._UF1000,1000_QL80_.jpg"
+        },
+        {
+          "name": "Romeo and Juliet",
+          "image": "https://m.media-amazon.com/images/I/61LQf6GWT4L.jpg"
+        },
+        {
+          "name": "Othello",
+          "image": "https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781501146299/othello-9781501146299_hr.jpg"
+        },
+        {
+          "name": "King Lear",
+          "image": "https://covers.shakespeareandcompany.com/97818532/9781853260957.jpg"
+        }
       ],
       "award": "None",
       "biography": "William Shakespeare was an English playwright, poet, and actor, widely regarded as the greatest writer in the English language and the world's greatest dramatist.",
@@ -354,15 +539,24 @@
       "birthYear": 1828,
       "deathYear": 1910,
       "nationality": "Russian",
-      "genres": [
-        "Historical Fiction",
-        "Realism"
-      ],
+      "genres": ["Historical Fiction", "Realism"],
       "works": [
-        "War and Peace",
-        "Anna Karenina",
-        "The Death of Ivan Ilyich",
-        "Resurrection"
+        {
+          "name": "War and Peace",
+          "image": "https://m.media-amazon.com/images/I/81W6BFaJJWL._UF1000,1000_QL80_.jpg"
+        },
+        {
+          "name": "Anna Karenina",
+          "image": "https://m.media-amazon.com/images/I/71dfDiH-BKL._AC_UF1000,1000_QL80_.jpg"
+        },
+        {
+          "name": "The Death of Ivan Ilyich",
+          "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1663546974i/18386.jpg"
+        },
+        {
+          "name": "Resurrection",
+          "image": "https://m.media-amazon.com/images/I/41tNdD5bMkL._UF1000,1000_QL80_.jpg"
+        }
       ],
       "award": "Nominated for Nobel Prize in Literature",
       "biography": "Leo Tolstoy was a Russian writer who is regarded as one of the greatest authors of all time. His epic novels are considered masterpieces of world literature.",
@@ -374,14 +568,20 @@
       "birthYear": 1835,
       "deathYear": 1910,
       "nationality": "American",
-      "genres": [
-        "Humor",
-        "Adventure"
-      ],
+      "genres": ["Humor", "Adventure"],
       "works": [
-        "The Adventures of Tom Sawyer",
-        "Adventures of Huckleberry Finn",
-        "The Prince and the Pauper"
+        {
+          "name": "The Adventures of Tom Sawyer",
+          "image": "https://m.media-amazon.com/images/I/71v0aOpjrEL._UF1000,1000_QL80_.jpg"
+        },
+        {
+          "name": "Adventures of Huckleberry Finn",
+          "image": "https://webfiles.ucpress.edu/coverimage/isbn13/9780520343641.jpg"
+        },
+        {
+          "name": "The Prince and the Pauper",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/9/98/The_Prince_and_the_pauper_bookcover.jpg"
+        }
       ],
       "award": "None",
       "biography": "Mark Twain, pen name of Samuel Langhorne Clemens, was an American writer known for his humor and satirical wit. He is best remembered for his novels about adventurous boys growing up along the Mississippi River.",
@@ -393,14 +593,20 @@
       "birthYear": 1819,
       "deathYear": 1891,
       "nationality": "American",
-      "genres": [
-        "Adventure",
-        "Sea Fiction"
-      ],
+      "genres": ["Adventure", "Sea Fiction"],
       "works": [
-        "Moby-Dick",
-        "Typee",
-        "Billy Budd, Sailor"
+        {
+          "name": "Moby-Dick",
+          "image": "https://static.yakaboo.ua/media/catalog/product/8/1/81wuzjpmxjl.jpg"
+        },
+        {
+          "name": "Typee",
+          "image": "https://cdn.kobo.com/book-images/b054af7d-8e5e-4c29-be16-7ec79aadeebb/1200/1200/False/typee-26.jpg"
+        },
+        {
+          "name": "Billy Budd, Sailor",
+          "image": "https://m.media-amazon.com/images/I/41dstNvvEHS._UF1000,1000_QL80_.jpg"
+        }
       ],
       "award": "None",
       "biography": "Herman Melville was an American novelist, short story writer, and poet. He is best known for his novel 'Moby-Dick,' considered one of the greatest works of American literature.",
@@ -417,9 +623,18 @@
         "Philosophical"
       ],
       "works": [
-        "Crime and Punishment",
-        "The Brothers Karamazov",
-        "The Idiot"
+        {
+          "name": "Crime and Punishment",
+          "image": "https://mir-s3-cdn-cf.behance.net/project_modules/hd/02bbc540531495.57836e92d8e40.jpg"
+        },
+        {
+          "name": "The Brothers Karamazov",
+          "image": "https://images.squarespace-cdn.com/content/623bb042c872f068e627ada5/1661468758643-GA68K7K6TC2HII528U5I/Karamazov_title3_forweb.jpg?content-type=image%2Fjpeg"
+        },
+        {
+          "name": "The Idiot",
+          "image": "https://m.media-amazon.com/images/I/81R0hEWva1L._UF1000,1000_QL80_.jpg"
+        }
       ],
       "award": "None",
       "biography": "Fyodor Dostoevsky was a Russian novelist, philosopher, and journalist. His works explore human psychology, ethics, and the dark aspects of the human psyche.",
@@ -431,18 +646,28 @@
       "birthYear": 1812,
       "deathYear": 1870,
       "nationality": "English",
-      "genres": [
-        "Classic",
-        "Victorian Fiction"
-      ],
+      "genres": ["Social Criticism", "Realism"],
       "works": [
-        "Great Expectations",
-        "Oliver Twist",
-        "A Tale of Two Cities"
+        {
+          "name": "A Tale of Two Cities",
+          "image": "https://m.media-amazon.com/images/I/813Yv-lescL._UF1000,1000_QL80_.jpg"
+        },
+        {
+          "name": "Great Expectations",
+          "image": "https://m.media-amazon.com/images/I/715lBsaI4sL._UF1000,1000_QL80_.jpg"
+        },
+        {
+          "name": "Oliver Twist",
+          "image": "https://m.media-amazon.com/images/I/81QGqaKWjXL._UF1000,1000_QL80_.jpg"
+        },
+        {
+          "name": "David Copperfield",
+          "image": "https://m.media-amazon.com/images/I/81vxI-RbP3L._UF1000,1000_QL80_.jpg"
+        }
       ],
       "award": "None",
-      "biography": "Charles Dickens was an English writer and social critic. He created some of the world's best-known fictional characters and is regarded as one of the greatest novelists of the Victorian era.",
-      "image": "https://cdn2.oceansbridge.com/2017/11/24134134/Charles-Dickens-Henry-Charles-Bryant-Oil-Painting.jpg"
+      "biography": "Charles Dickens was an English writer and social critic. His works enjoyed unprecedented popularity during his lifetime, and by the 20th century, critics and scholars had recognized him as a literary genius.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/a/aa/Dickens_Gurney_head.jpg"
     },
     {
       "id": "7",
@@ -455,9 +680,18 @@
         "Novel"
       ],
       "works": [
-        "Madame Bovary",
-        "Sentimental Education",
-        "Salammbô"
+        {
+          "name": "Madame Bovary",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Madame_Bovary_1857_%28hi-res%29.jpg"
+        },
+        {
+          "name": "Sentimental Education",
+          "image": "https://m.media-amazon.com/images/I/71fcWYmo5iL._UF1000,1000_QL80_.jpg"
+        },
+        {
+          "name": "Salammbô",
+          "image": "https://m.media-amazon.com/images/I/71xz1bL+BYL._UF1000,1000_QL80_.jpg"
+        }
       ],
       "award": "None",
       "biography": "Gustave Flaubert was a French novelist known for his contributions to literary realism. His novel 'Madame Bovary' is considered one of the greatest works in the history of fiction.",
@@ -474,9 +708,18 @@
         "Horror"
       ],
       "works": [
-        "The Raven",
-        "The Tell-Tale Heart",
-        "The Fall of the House of Usher"
+        {
+          "name": "The Raven",
+          "image": "https://static.yakaboo.ua/media/catalog/product/5/1/511njozbxml.jpg"
+        },
+        {
+          "name": "The Tell-Tale Heart",
+          "image": "https://m.media-amazon.com/images/I/61K+rPzJXIL._UF1000,1000_QL80_.jpg"
+        },
+        {
+          "name": "The Fall of the House of Usher",
+          "image": "https://m.media-amazon.com/images/I/81-2W1g4cUL._UF1000,1000_QL80_.jpg"
+        }
       ],
       "award": "None",
       "biography": "Edgar Allan Poe was an American writer, poet, and literary critic. He is best known for his macabre and Gothic tales and his influential contributions to the development of the mystery and horror genres.",
@@ -493,9 +736,18 @@
         "Science Fiction"
       ],
       "works": [
-        "Frankenstein; or, The Modern Prometheus",
-        "The Last Man",
-        "Mathilda"
+        {
+          "name": "Frankenstein; or, The Modern Prometheus",
+          "image": "https://m.media-amazon.com/images/I/61SuMopQ9NL._UF1000,1000_QL80_.jpg"
+        },
+        {
+          "name": "The Last Man",
+          "image": "https://m.media-amazon.com/images/I/61m8WKN7FgL._UF1000,1000_QL80_.jpg"
+        },
+        {
+          "name": "Mathilda",
+          "image": "https://m.media-amazon.com/images/I/A1gru-+AXNL._UF1000,1000_QL80_.jpg"
+        }
       ],
       "award": "None",
       "biography": "Mary Shelley was an English novelist best known for her novel 'Frankenstein,' which is considered one of the earliest works of science fiction.",
@@ -511,8 +763,14 @@
         "Poetry"
       ],
       "works": [
-        "Selected Poems of Emily Dickinson",
-        "The Complete Poems of Emily Dickinson"
+        {
+          "name": "Selected Poems of Emily Dickinson",
+          "image": "https://m.media-amazon.com/images/I/61K8aIMRsVL._UF1000,1000_QL80_.jpg"
+        },
+        {
+          "name": "The Complete Poems of Emily Dickinson",
+          "image": "https://m.media-amazon.com/images/I/711+jtnjyJL._UF1000,1000_QL80_.jpg"
+        }
       ],
       "award": "None",
       "biography": "Emily Dickinson was an American poet known for her innovative use of language and her unconventional approach to poetry. She is considered one of the most important poets in American literature.",
@@ -529,10 +787,22 @@
         "Classic"
       ],
       "works": [
-        "Pride and Prejudice",
-        "Sense and Sensibility",
-        "Emma",
-        "Mansfield Park"
+        {
+          "name": "Pride and Prejudice",
+          "image": "https://m.media-amazon.com/images/I/51bsVdt2XcL._AC_UF1000,1000_QL80_.jpg"
+        },
+        {
+          "name": "Sense and Sensibility",
+          "image": "https://m.media-amazon.com/images/I/81inTOHSS8L._UF1000,1000_QL80_.jpg"
+        },
+        {
+          "name": "Emma",
+          "image": "https://m.media-amazon.com/images/I/71VwB0LGjOL._UF1000,1000_QL80_.jpg"
+        },
+        {
+          "name": "Mansfield Park",
+          "image": "https://anylang.net/sites/default/files/covers/mansfield-park.jpg"
+        }
       ],
       "award": "None",
       "biography": "Jane Austen was an English novelist known primarily for her six major novels, which interpret, critique, and comment upon the British landed gentry at the end of the 18th century.",
@@ -549,8 +819,14 @@
         "Coming-of-Age"
       ],
       "works": [
-        "To Kill a Mockingbird",
-        "Go Set a Watchman"
+        {
+          "name": "To Kill a Mockingbird",
+          "image": "https://media.glamour.com/photos/56e1f3c562b398fa64cbd310/master/w_1600%2Cc_limit/entertainment-2016-02-07-main.jpg"
+        },
+        {
+          "name": "Go Set a Watchman",
+          "image": "https://m.media-amazon.com/images/I/71FvjHzolbL._UF1000,1000_QL80_.jpg"
+        }
       ],
       "award": "Pulitzer Prize for Fiction (1961)",
       "biography": "Harper Lee was an American novelist known for her novel 'To Kill a Mockingbird,' a classic of modern American literature. She received the Pulitzer Prize for Fiction for this novel.",
@@ -567,9 +843,18 @@
         "Detective Fiction"
       ],
       "works": [
-        "Murder on the Orient Express",
-        "The Murder of Roger Ackroyd",
-        "And Then There Were None"
+        {
+          "name": "Murder on the Orient Express",
+          "image": "https://m.media-amazon.com/images/I/71ihbKf67RL._UF1000,1000_QL80_.jpg"
+        },
+        {
+          "name": "The Murder of Roger Ackroyd",
+          "image": "https://m.media-amazon.com/images/I/81ps3TVSfSL._UF1000,1000_QL80_.jpg"
+        },
+        {
+          "name": "And Then There Were None",
+          "image": "https://m.media-amazon.com/images/I/81nChcVy7CL._UF1000,1000_QL80_.jpg"
+        }
       ],
       "award": "None",
       "biography": "Agatha Christie was an English writer known for her detective novels and short stories. She is often called the 'Queen of Mystery' and is one of the best-selling authors in history.",
@@ -586,9 +871,18 @@
         "High Fantasy"
       ],
       "works": [
-        "The Hobbit",
-        "The Lord of the Rings",
-        "The Silmarillion"
+        {
+          "name": "The Hobbit",
+          "image": "https://cdn11.bigcommerce.com/s-nfxi2m/images/stencil/1280x1280/products/646/3216/Hobbit-book2__13763.1694542278.jpg?c=2"
+        },
+        {
+          "name": "The Lord of the Rings",
+          "image": "https://m.media-amazon.com/images/I/913sMwNHsBL._UF1000,1000_QL80_.jpg"
+        },
+        {
+          "name": "The Silmarillion",
+          "image": "https://m.media-amazon.com/images/I/71Gt0U59D3L._UF1000,1000_QL80_.jpg"
+        }
       ],
       "award": "None",
       "biography": "J.R.R. Tolkien was an English writer, poet, philologist, and university professor. He is best known for his high-fantasy works, 'The Hobbit' and 'The Lord of the Rings,' which have had a major impact on the fantasy genres.",
@@ -605,9 +899,18 @@
         "Feminist Literature"
       ],
       "works": [
-        "Mrs Dalloway",
-        "To the Lighthouse",
-        "Orlando"
+        {
+          "name": "Mrs Dalloway",
+          "image": "https://m.media-amazon.com/images/I/71gFRamMa1L._UF1000,1000_QL80_.jpg"
+        },
+        {
+          "name": "To the Lighthouse",
+          "image": "https://upload.wikimedia.org/wikipedia/en/8/8c/ToTheLighthouse.jpg"
+        },
+        {
+          "name": "Orlando",
+          "image": "https://m.media-amazon.com/images/I/81ASQBNXclL._UF1000,1000_QL80_.jpg"
+        }
       ],
       "award": "None",
       "biography": "Virginia Woolf was an English writer and one of the foremost modernists of the 20th century. She is known for her innovative narrative techniques and her exploration of the inner lives of her characters.",
@@ -624,9 +927,18 @@
         "Stream of Consciousness"
       ],
       "works": [
-        "Ulysses",
-        "Dubliners",
-        "A Portrait of the Artist as a Young Man"
+        {
+          "name": "Ulysses",
+          "image": "https://m.media-amazon.com/images/I/61yRWyQkxKL._UF1000,1000_QL80_.jpg"
+        },
+        {
+          "name": "Dubliners",
+          "image": "https://www.hachette.co.uk/wp-content/uploads/2023/03/hbg-title-dubliners-5.jpg"
+        },
+        {
+          "name": "A Portrait of the Artist as a Young Man",
+          "image": "https://m.media-amazon.com/images/I/71zYs2K8VpL._UF1000,1000_QL80_.jpg"
+        }
       ],
       "award": "None",
       "biography": "James Joyce was an Irish novelist and poet, regarded as one of the most influential modernist writers of the 20th century. His novel 'Ulysses' is considered one of the greatest works of literature.",
@@ -638,14 +950,20 @@
       "birthYear": 1856,
       "deathYear": 1950,
       "nationality": "Irish",
-      "genres": [
-        "Drama",
-        "Satire"
-      ],
+      "genres": ["Drama", "Satire"],
       "works": [
-        "Pygmalion",
-        "Man and Superman",
-        "Saint Joan"
+        {
+          "name": "Pygmalion",
+          "image": "https://m.media-amazon.com/images/I/A1PCMiQxLgL._UF1000,1000_QL80_.jpg"
+        },
+        {
+          "name": "Man and Superman",
+          "image": "https://m.media-amazon.com/images/I/61MPSwhok3L._UF1000,1000_QL80_.jpg"
+        },
+        {
+          "name": "Saint Joan",
+          "image": "https://www.thegreatbritishbookshop.co.uk/cdn/shop/products/9786057566935_1000x.jpg?v=1656317319"
+        }
       ],
       "award": "Nobel Prize in Literature (1925)",
       "biography": "George Bernard Shaw was an Irish playwright, critic, and polemicist. He was a prominent figure in the Fabian Society and a leading playwright of the late 19th and early 20th centuries.",
@@ -657,14 +975,20 @@
       "birthYear": 1903,
       "deathYear": 1950,
       "nationality": "English",
-      "genres": [
-        "Dystopian",
-        "Political Fiction"
-      ],
+      "genres": ["Dystopian", "Political Fiction"],
       "works": [
-        "Nineteen Eighty-Four",
-        "Animal Farm",
-        "Down and Out in Paris and London"
+        {
+          "name": "Nineteen Eighty-Four",
+          "image": "https://static.yakaboo.ua/media/cloudflare/product/webp/600x840/g/e/george_orwell_.jpg"
+        },
+        {
+          "name": "Animal Farm",
+          "image": "https://m.media-amazon.com/images/I/71JUJ6pGoIL.jpg"
+        },
+        {
+          "name": "Down and Out in Paris and London",
+          "image": "https://m.media-amazon.com/images/I/81XJ1Fl4YtL._UF1000,1000_QL80_.jpg"
+        }
       ],
       "award": "None",
       "biography": "George Orwell, pen name of Eric Arthur Blair, was an English novelist, essayist, and critic. He is best known for his dystopian novel 'Nineteen Eighty-Four,' which has become a classic of modern literature.",
@@ -676,454 +1000,25 @@
       "birthYear": 1861,
       "deathYear": 1941,
       "nationality": "Indian",
-      "genres": [
-        "Poetry",
-        "Short Stories"
-      ],
+      "genres": ["Poetry", "Short Stories"],
       "works": [
-        "Gitanjali",
-        "The Home and the World",
-        "The Post Office"
+        {
+          "name": "Gitanjali",
+          "image": "https://m.media-amazon.com/images/I/81cuCwoEu3L._UF1000,1000_QL80_.jpg"
+        },
+        {
+          "name": "The Home and the World",
+          "image": "https://m.media-amazon.com/images/I/812xGT25dKL.jpg"
+        },
+        {
+          "name": "The Post Office",
+          "image": "https://m.media-amazon.com/images/I/61utkAFI+uL._UF1000,1000_QL80_.jpg"
+        }
       ],
       "award": "Nobel Prize in Literature (1913)",
       "biography": "Rabindranath Tagore was an Indian poet, philosopher, and writer. He was the first non-European to be awarded the Nobel Prize in Literature, primarily for his collection of poems 'Gitanjali.'",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Rabindranath_Tagore.jpg/800px-Rabindranath_Tagore.jpg"
-    },
-    {
-      "id": "20",
-      "name": "Gabriel Garcia Marquez",
-      "birthYear": 1927,
-      "deathYear": 2014,
-      "nationality": "Colombian",
-      "genres": [
-        "Magical Realism",
-        "Literary Fiction"
-      ],
-      "works": [
-        "One Hundred Years of Solitude",
-        "Love in the Time of Cholera",
-        "Chronicle of a Death Foretold"
-      ],
-      "award": "Nobel Prize in Literature (1982)",
-      "biography": "Gabriel Garcia Marquez was a Colombian novelist and Nobel laureate, best known for his magical realism and portrayal of Latin American life.",
-      "image": "https://cdn.britannica.com/03/11603-050-85A0D5EA/Gabriel-Garcia-Marquez-1982.jpg"
-    },
-    {
-      "id": "21",
-      "name": "Haruki Murakami",
-      "birthYear": 1949,
-      "nationality": "Japanese",
-      "genres": [
-        "Magical Realism",
-        "Contemporary Fiction"
-      ],
-      "works": [
-        "Norwegian Wood",
-        "Kafka on the Shore",
-        "1Q84"
-      ],
-      "award": "None",
-      "biography": "Haruki Murakami is a Japanese novelist and translator. He is considered one of the most significant contemporary authors and has gained international acclaim for his unique storytelling style.",
-      "image": "https://i.guim.co.uk/img/media/9d0618336a3d4b7ea3e6cec4bb8e781670c140bc/0_50_1943_2427/master/1943.jpg?width=445&dpr=1&s=none"
-    },
-    {
-      "id": "22",
-      "name": "J.D. Salinger",
-      "birthYear": 1919,
-      "deathYear": 2010,
-      "nationality": "American",
-      "genres": [
-        "Coming-of-Age",
-        "Literary Fiction"
-      ],
-      "works": [
-        "The Catcher in the Rye",
-        "Franny and Zooey",
-        "Nine Stories"
-      ],
-      "award": "None",
-      "biography": "J.D. Salinger was an American writer known for his novel 'The Catcher in the Rye,' which has become a classic of modern American literature.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/9/93/J._D._Salinger_%28Catcher_in_the_Rye_portrait%29.jpg"
-    },
-    {
-      "id": "23",
-      "name": "Franz Kafka",
-      "birthYear": 1883,
-      "deathYear": 1924,
-      "nationality": "Czech",
-      "genres": [
-        "Absurdist Fiction",
-        "Existentialism"
-      ],
-      "works": [
-        "The Metamorphosis",
-        "The Trial",
-        "The Castle",
-        "A Hunger Artist"
-      ],
-      "award": "None",
-      "biography": "Franz Kafka was a Czech writer known for his surreal and complex narratives. His works have had a profound influence on literature and continue to captivate readers with their enigmatic themes.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/2/26/Franz_Kafka%2C_1923.jpg"
-    },
-    {
-      "id": "24",
-      "name": "Aldous Huxley",
-      "birthYear": 1894,
-      "deathYear": 1963,
-      "nationality": "English",
-      "genres": [
-        "Dystopian",
-        "Science Fiction"
-      ],
-      "works": [
-        "Brave New World",
-        "Island",
-        "Eyeless in Gaza"
-      ],
-      "award": "None",
-      "biography": "Aldous Huxley was an English writer and philosopher known for his dystopian novel 'Brave New World.' He also explored spiritual and philosophical themes in his works.",
-      "image": "https://www.thoughtco.com/thmb/ZQ07PCnunXkY_ytpjqstZ7FoqUo=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/aldous-huxley-2665140-1b1b01d044c3464e955af162f5467ba7.jpg"
-    },
-    {
-      "id": "25",
-      "name": "Hermann Hesse",
-      "birthYear": 1877,
-      "deathYear": 1962,
-      "nationality": "German",
-      "genres": [
-        "Siddhartha",
-        "Steppenwolf"
-      ],
-      "works": [
-        "Siddhartha",
-        "Steppenwolf",
-        "Narcissus and Goldmund"
-      ],
-      "award": "Nobel Prize in Literature (1946)",
-      "biography": "Hermann Hesse was a German-born Swiss poet, novelist, and painter. He is best known for his novels that explore themes of spirituality and self-discovery.",
-      "image": "https://algundiaenalgunaparte.com/wp-content/uploads/2015/09/hesse_escalones.jpg?w=640"
-    },
-    {
-      "id": "26",
-      "name": "Kurt Vonnegut",
-      "birthYear": 1922,
-      "deathYear": 2007,
-      "nationality": "American",
-      "genres": [
-        "Satire",
-        "Science Fiction"
-      ],
-      "works": [
-        "Slaughterhouse-Five",
-        "Cat's Cradle",
-        "Breakfast of Champions"
-      ],
-      "award": "None",
-      "biography": "Kurt Vonnegut was an American writer known for his satirical novels that blend science fiction, dark humor, and social commentary.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Kurt_Vonnegut_1972.jpg/640px-Kurt_Vonnegut_1972.jpg"
-    },
-    {
-      "id": "27",
-      "name": "Octavia E. Butler",
-      "birthYear": 1947,
-      "deathYear": 2006,
-      "nationality": "American",
-      "genres": [
-        "Science Fiction",
-        "Afrofuturism"
-      ],
-      "works": [
-        "Kindred",
-        "Parable of the Sower",
-        "Dawn"
-      ],
-      "award": "MacArthur Fellowship (1995)",
-      "biography": "Octavia E. Butler was an American science fiction writer, considered one of the most significant voices in the genres. She was the first science fiction writer to receive the MacArthur Fellowship.",
-      "image": "https://images.squarespace-cdn.com/content/v1/5af9a86fc3c16a3922fe3d13/1633709567752-YTANLX708KW0LXMZGU0Q/OEBHR-21070462_0084B_RBJ.jpeg"
-    },
-    {
-      "id": "28",
-      "name": "Albert Camus",
-      "birthYear": 1913,
-      "deathYear": 1960,
-      "nationality": "French",
-      "genres": [
-        "Existentialism",
-        "Absurdist Fiction"
-      ],
-      "works": [
-        "The Stranger",
-        "The Plague",
-        "The Fall"
-      ],
-      "award": "Nobel Prize in Literature (1957)",
-      "biography": "Albert Camus was a French philosopher, author, and journalist. He is known for his philosophical works and novels that explore themes of existentialism and the absurd.",
-      "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiLTq9gZ-R33shXO3Wrdp95e9wq9N1ToERsO_FTNueX-rvwa-J8QP_NoT1l3aKdU13U-TBeoLBkhMKAWnqFLnnW_u9lW7cmObsPJuyx8eqTVi7si0zYlpjUeGvHAczYoWmsvetTStbJ4-M/s1600/albert+camus+002_alta.jpg"
-    },
-    {
-      "id": "29",
-      "name": "John Steinbeck",
-      "birthYear": 1902,
-      "deathYear": 1968,
-      "nationality": "American",
-      "genres": [
-        "Grapes of Wrath",
-        "Of Mice and Men"
-      ],
-      "works": [
-        "The Grapes of Wrath",
-        "Of Mice and Men",
-        "East of Eden"
-      ],
-      "award": "Nobel Prize in Literature (1962)",
-      "biography": "John Steinbeck was an American author known for his realistic and socially conscious novels, including 'The Grapes of Wrath,' which earned him the Nobel Prize in Literature.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/d/d7/John_Steinbeck_1939_%28cropped%29.jpg"
-    },
-    {
-      "id": "30",
-      "name": "Ernest Hemingway",
-      "birthYear": 1899,
-      "deathYear": 1961,
-      "nationality": "American",
-      "genres": [
-        "Modernist",
-        "War Fiction"
-      ],
-      "works": [
-        "The Old Man and the Sea",
-        "A Farewell to Arms",
-        "For Whom the Bell Tolls"
-      ],
-      "award": "Nobel Prize in Literature (1954)",
-      "biography": "Ernest Hemingway was an American novelist, short story writer, and journalist. He is considered one of the most influential writers of the 20th century and was awarded the Nobel Prize in Literature.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/ErnestHemingway.jpg/1200px-ErnestHemingway.jpg"
-    },
-    {
-      "id": "31",
-      "name": "Oscar Wilde",
-      "birthYear": 1854,
-      "deathYear": 1900,
-      "nationality": "Irish",
-      "genres": [
-        "Comedy",
-        "Satire"
-      ],
-      "works": [
-        "The Picture of Dorian Gray",
-        "The Importance of Being Earnest",
-        "Lady Windermere's Fan"
-      ],
-      "award": "None",
-      "biography": "Oscar Wilde was an Irish playwright, poet, and author. He is best known for his plays and novel 'The Picture of Dorian Gray,' which are celebrated for their wit and social commentary.",
-      "image": "https://cdn.britannica.com/21/94621-050-58D29508/Oscar-Wilde-1882.jpg"
-    },
-    {
-      "id": "32",
-      "name": "Jorge Luis Borges",
-      "birthYear": 1899,
-      "deathYear": 1986,
-      "nationality": "Argentine",
-      "genres": [
-        "Magic Realism",
-        "Short Stories"
-      ],
-      "works": [
-        "Ficciones",
-        "The Aleph",
-        "Labyrinths"
-      ],
-      "award": "Cervantes Prize (1979)",
-      "biography": "Jorge Luis Borges was an Argentine writer and one of the most prominent literary figures of the 20th century. His works often explored themes of labyrinths, mirrors, and infinite realities.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Jorge_Luis_Borges_1951%2C_by_Grete_Stern.jpg/800px-Jorge_Luis_Borges_1951%2C_by_Grete_Stern.jpg"
-    },
-    {
-      "id": "33",
-      "name": "F. Scott Fitzgerald",
-      "birthYear": 1896,
-      "deathYear": 1940,
-      "nationality": "American",
-      "genres": [
-        "Jazz Age",
-        "Lost Generation"
-      ],
-      "works": [
-        "The Great Gatsby",
-        "Tender Is the Night",
-        "This Side of Paradise"
-      ],
-      "award": "None",
-      "biography": "F. Scott Fitzgerald was an American novelist and short story writer, widely regarded as one of the greatest American writers of the 20th century.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/d/d7/F._Scott_Fitzgerald_Publicity_Photograph_circa_1920.jpg"
-    },
-    {
-      "id": "34",
-      "name": "Dante Alighieri",
-      "birthYear": 1265,
-      "deathYear": 1321,
-      "nationality": "Italian",
-      "genres": [
-        "Epic Poetry",
-        "Allegory"
-      ],
-      "works": [
-        "Divine Comedy",
-        "Inferno",
-        "Purgatorio",
-        "Paradiso"
-      ],
-      "award": "None",
-      "biography": "Dante Alighieri was an Italian poet, writer, and philosopher. He is best known for his epic poem 'Divine Comedy,' which is considered a masterpiece of world literature.",
-      "image": "https://www.infoescola.com/wp-content/uploads/2017/11/Dante-Alighieri_81843370.jpg"
-    },
-    {
-      "id": "35",
-      "name": "Yukio Mishima",
-      "birthYear": 1925,
-      "deathYear": 1970,
-      "nationality": "Japanese",
-      "genres": [
-        "Modernist",
-        "Historical Fiction"
-      ],
-      "works": [
-        "Confessions of a Mask",
-        "The Temple of the Golden Pavilion",
-        "Spring Snow"
-      ],
-      "award": "None",
-      "biography": "Yukio Mishima was a Japanese author, poet, and playwright. He is considered one of the most important Japanese authors of the 20th century.",
-      "image": "https://cdn.britannica.com/45/197045-050-842A4A43/Mishima-Yukio-1966.jpg"
-    },
-    {
-      "id": "36",
-      "name": "Margaret Atwood",
-      "birthYear": 1939,
-      "nationality": "Canadian",
-      "genres": [
-        "Dystopian",
-        "Speculative Fiction"
-      ],
-      "works": [
-        "The Handmaid's Tale",
-        "Alias Grace",
-        "Oryx and Crake"
-      ],
-      "award": "Booker Prize (2000) - 'The Blind Assassin'",
-      "biography": "Margaret Atwood is a Canadian author known for her dystopian and speculative fiction. She is a Booker Prize winner and has received numerous awards for her literary contributions.",
-      "image": "https://thegentlewoman.co.uk/img/YWJOYkVodmFUNHM5bTArbWhuY1pHdz09/margaret-2.jpg"
-    },
-    {
-      "id": "37",
-      "name": "Zora Neale Hurston",
-      "birthYear": 1891,
-      "deathYear": 1960,
-      "nationality": "American",
-      "genres": [
-        "African-American Literature",
-        "Anthropology"
-      ],
-      "works": [
-        "Their Eyes Were Watching God",
-        "Mules and Men",
-        "Dust Tracks on a Road"
-      ],
-      "award": "None",
-      "biography": "Zora Neale Hurston was an American author, anthropologist, and filmmaker. She is best known for her novel 'Their Eyes Were Watching God,' which is considered a classic of African-American literature.",
-      "image": "https://cdn.britannica.com/33/227033-050-743B4E1A/Zora-Neale-Hurston.jpg"
-    },
-    {
-      "id": "38",
-      "name": "J.R.R. Tolkien",
-      "birthYear": 1892,
-      "deathYear": 1973,
-      "nationality": "British",
-      "genres": [
-        "Fantasy",
-        "Adventure"
-      ],
-      "works": [
-        "The Lord of the Rings",
-        "The Hobbit",
-        "The Silmarillion"
-      ],
-      "award": "None",
-      "biography": "J.R.R. Tolkien was a British writer, poet, philologist, and university professor. He is best known for his high-fantasy works 'The Lord of the Rings' and 'The Hobbit,' which have become classics of the genres.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/d/d4/J._R._R._Tolkien%2C_ca._1925.jpg"
-    },
-    {
-      "id": "39",
-      "name": "Khaled Hosseini",
-      "birthYear": 1965,
-      "nationality": "Afghan-American",
-      "genres": [
-        "Contemporary Fiction",
-        "Historical Fiction"
-      ],
-      "works": [
-        "The Kite Runner",
-        "A Thousand Splendid Suns",
-        "And the Mountains Echoed"
-      ],
-      "award": "None",
-      "biography": "Khaled Hosseini is an Afghan-American author and physician. He gained international recognition with his debut novel 'The Kite Runner,' which explores themes of friendship, betrayal, and redemption.",
-      "image": "https://cdn.britannica.com/08/110308-050-F1681975/Khaled-Hosseini.jpg"
-    },
-    {
-      "id": "40",
-      "name": "Ray Bradbury",
-      "birthYear": 1920,
-      "deathYear": 2012,
-      "nationality": "American",
-      "genres": [
-        "Science Fiction",
-        "Fantasy"
-      ],
-      "works": [
-        "Fahrenheit 451",
-        "The Martian Chronicles",
-        "Something Wicked This Way Comes"
-      ],
-      "award": "National Medal of Arts (2004)",
-      "biography": "Ray Bradbury was an American author and screenwriter known for his works in the genres of science fiction, fantasy, and horror. His novel 'Fahrenheit 451' is regarded as a classic of dystopian literature.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Ray_Bradbury_%281975%29.jpg/800px-Ray_Bradbury_%281975%29.jpg"
-    },
-    {
-      "id": "41",
-      "name": "Toni Morrison",
-      "birthYear": 1931,
-      "deathYear": 2019,
-      "nationality": "American",
-      "genres": [
-        "African-American Literature",
-        "Magical Realism"
-      ],
-      "works": [
-        "Beloved",
-        "Song of Solomon",
-        "The Bluest Eye"
-      ],
-      "award": "Nobel Prize in Literature (1993)",
-      "biography": "Toni Morrison was an American novelist, essayist, and professor. She was awarded the Nobel Prize in Literature for her novels, which gave voice to the African-American experience.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Toni_Morrison.jpg/800px-Toni_Morrison.jpg"
-    },
-    {
-      "id": "42",
-      "name": "J.K. Rowling",
-      "birthYear": 1965,
-      "nationality": "British",
-      "genres": [
-        "Fantasy",
-        "Young Adult"
-      ],
-      "works": [
-        "Harry Potter Series",
-        "The Casual Vacancy",
-        "Fantastic Beasts and Where to Find Them"
-      ],
-      "award": "None",
-      "biography": "J.K. Rowling is a British author and philanthropist. She is best known for writing the 'Harry Potter' fantasy series, which has won multiple awards and become one of the best-selling book series in history.",
-      "image": "https://static01.nyt.com/images/2012/10/14/books/review/1014BTB/1014BTB-superJumbo.jpg"
-    }
+    }    
   ],
   "books": [
     {
@@ -1508,7 +1403,7 @@
         "Classic"
       ],
       "description": "A historical novel set during the French Revolution, exploring themes of sacrifice and resurrection.",
-      "image": "https://m.media-amazon.com/images/I/71CQFGiPA+L._AC_UF894,1000_QL80_.jpg"
+      "image": "https://m.media-amazon.com/images/I/813Yv-lescL._UF1000,1000_QL80_.jpg"
     },
     {
       "id": "33",

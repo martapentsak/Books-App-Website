@@ -6,15 +6,19 @@
     margin-right: 15px;
 
     .card-image {
-        height: 170px !important;
+        height: 160px !important;
         width: 140px !important;
         background-size: contain;
         border-radius: 14px !important;
     }
 }
 
-.css-1j74uew-MuiPaper-root-MuiCard-root {
+.MuiCard-root {
     background-color: transparent !important;
+}
+
+.MuiCardContent-root {
+    padding: 0 !important;
 }
 
 .author-list-card {
@@ -86,6 +90,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    cursor: none;
 
     .card-image {
         height: 260px !important;

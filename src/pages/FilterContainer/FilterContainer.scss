@@ -15,7 +15,7 @@
             width: 100%;
 
             //SEARCH
-            .css-1u3bzj6-MuiFormControl-root-MuiTextField-root {
+            .MuiTextField-root {
                 background: linear-gradient(0deg, rgba(29, 42, 65, 1) 16%, rgba(5, 10, 21, 1) 100%) !important;
                 border-radius: 14px;
                 width: 30%;
@@ -23,19 +23,19 @@
                 margin-right: 20px;
                 height: 50px !important;
 
-                .css-2a7nsh-MuiInputBase-root-MuiOutlinedInput-root {
+                .MuiOutlinedInput-root {
                     color: $blackishGrey !important;
                 }
 
-                .css-2a7nsh-MuiInputBase-root-MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+                .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
                     border: none !important;
                 }
 
-                .css-6ga8lj-MuiInputAdornment-root {
+                .MuiInputAdornment-root {
                     color: $blackishGrey !important;
                 }
 
-                .css-19j5ahi-MuiInputBase-input-MuiOutlinedInput-input {
+                .MuiOutlinedInput-input {
                     color: $white !important;
                 }
             }
@@ -73,7 +73,7 @@
 }
 
 @media (max-width: 720px) {
-    .css-1u3bzj6-MuiFormControl-root-MuiTextField-root {
+    .MuiTextField-root {
         min-width: 35% !important;
     }
 }
@@ -84,12 +84,12 @@
         min-height: calc(100vh - 70px);
     }
 
-    .css-1u3bzj6-MuiFormControl-root-MuiTextField-root {
+    .MuiTextField-root {
         min-width: 100% !important;
         height: 45px !important;
     }
 
-    .css-2a7nsh-MuiInputBase-root-MuiOutlinedInput-root {
+    .MuiOutlinedInput-root {
         font-size: 13px !important;
         padding: 3px 14px !important;
     }

@@ -52,15 +52,13 @@ export const HomePage = () => {
           }
         />
       )}
-
       <section className="poets-section">
         <div className="selected-poet-section">
           <p className="selected-poet-title">{homepage.postContainerTitle}</p>
-
           <img
             src={selectedPoet.image}
             className="selected-poet-image"
-            alt="poet"
+            alt={selectedPoet.name}
           />
         </div>
         <PoetList

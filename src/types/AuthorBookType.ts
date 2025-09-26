@@ -1,14 +1,17 @@
-export type Author = {
-  id: string;
+export type Work = {
   name: string;
-  genres: string[];
   image: string;
+};
+
+export type Author = Work & {
+  id: string;
+  genres: string[];
   award: string;
   biography: string;
   nationality: string;
   birthYear: number;
   deathYear: number;
-  works: string[];
+  works: Work[];
 };
 
 export type Book = {

@@ -36,7 +36,6 @@ export const WishListProvider = ({ children }: Props) => {
   useEffect(() => {
     try {
       const wishList = localStorage.getItem("wishlist");
-      console.log(wishList);
       wishList ? JSON.parse(wishList) : [];
       setWishList(wishList ? JSON.parse(wishList) : []);
     } catch {
