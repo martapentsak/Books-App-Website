@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
 import { routes, menuElemenets, websiteName } from "../../constants/textValues";
@@ -55,10 +55,12 @@ const getTabValueFromPath = (path: string): string => {
 };
 
 export const Menu = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { wishList } = useWishlist();
   const location = useLocation();
   const navigate = useNavigate();
   const currentMenuElement = getTabValueFromPath(location.pathname);
+  const menuRef = useRef<HTMLDivElement | null>(null);
 
   const [value, setValue] = useState<string>(currentMenuElement);
 
@@ -68,6 +70,20 @@ export const Menu = () => {
     const link = currentTabLink ? currentTabLink.link : "/";
     navigate(link);
   };
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+        setIsMenuOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   return (
     <div className="menu">
@@ -89,7 +105,28 @@ export const Menu = () => {
             )}
           </Tabs>
         </Box>
-        <MenuIcon />
+        <button
+          onClick={() => setIsMenuOpen((prev) => !prev)}
+          className="burger-menu"
+        >
+          <MenuIcon />
+        </button>
+        {isMenuOpen && (
+          <nav className="burger-menu-section">
+            {menuElements.map(({ link, value }) => (
+              <a
+                key={value}
+                className="burger-menu-link"
+                onClick={() => {
+                  navigate(link);
+                  setIsMenuOpen(false);
+                }}
+              >
+                {value}
+              </a>
+            ))}
+          </nav>
+        )}
       </div>
     </div>
   );
