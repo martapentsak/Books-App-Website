@@ -20,17 +20,18 @@
 
             .selected-poet-title {
                 color: $white;
-                font-size: 60px;
+                font-size: 50px;
                 padding: 0 20px;
                 font-family: $titleFontFamily;
                 width: 50%
             }
 
             .selected-poet-image {
-                width: 50%;
-                height: auto;
+                max-width: 50%;
+                height: 400px;
+                max-height: auto;
                 border-radius: 14px;
-                object-fit: contain;
+                object-fit: cover;
             }
         }
     }
@@ -106,6 +107,10 @@
     .selected-poet-title {
         font-size: 50px !important;
     }
+
+    .selected-poet-image {
+        height: 350px !important;
+    }
 }
 
 @media (max-width: 600px) {
@@ -122,6 +127,10 @@
     .selected-poet-title {
         font-size: 35px !important;
     }
+
+    .selected-poet-image {
+        height: 280px !important;
+    }
 }
 
 @media (max-width: 450px) {
@@ -133,5 +142,9 @@
 @media (max-width: 400px) {
     .selected-poet-title {
         font-size: 22px !important;
+    }
+
+    .selected-poet-image {
+        height: 250px !important;
     }
 }
